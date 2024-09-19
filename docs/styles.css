@@ -20,7 +20,7 @@
 
 /* Full-page background with subtle gradient for modern look */
 body {
-  background: linear-gradient(135deg, #f5f5f5 30%, #e0e0e0 100%);
+  background: linear-gradient(180deg,#e0e0e0  10%, #003366 100%);
   color: #333; /* Dark text for contrast */
   font-family: 'Roboto', sans-serif;
   margin: 0;
