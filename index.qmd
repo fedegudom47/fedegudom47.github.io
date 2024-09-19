@@ -1,11 +1,21 @@
 ---
-title: "fedegudom47.github.io"
+title: "Federica Domecq Lacroze"
+image: media/IMG_4956.PNG
+toc: false
+about: 
+  template: jolla
+  image-shape: round
+  image-width: 17em
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/samanthacsik/
+    - icon: github
+      text: GitHub
+      href: https://github.com/samanthacsik
+    - icon: envelope
+      text: Email
+      href: mailto:fgdd2022@mymail.pomona.edu
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+Hi! My name is Fede (pronounced "Feh-deh") and I'm a junior majoring in Maths and Computer Science at \[Pomona College\](<https://www.pomona.edu/>){:target="\_blank"}.

@@ -1,19 +1,31 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "fedegudom47.github.io"
+  title: "Fede's Hub"
+  favicon: media/favicon.jpg
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - golf.qmd
+      - projects
+    title: My things # override printing your website `title` (e.g. "Sam Csik" on line 6) in the top left corner of your navbar
+    logo: media/favicon.jpg
+    logo-alt: "FDL logo"
+  page-footer:
+    background: darkblue # or `dark`
+    left: Copyright 2024, Federica Domecq
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://fedegudom47.github.io/){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
   html:
-    theme: cosmo
+    theme: quartz
     css: styles.css
     toc: true
+    page-layout: full
 
-editor: visual
+editor: source
 
