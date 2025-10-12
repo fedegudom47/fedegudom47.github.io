@@ -1,5 +1,5 @@
 /*-- scss:defaults --*/
-@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 // 🎨 Color variables
 $alabaster:  #ebeddf;// #F0F8FF;    //
@@ -7,7 +7,7 @@ $denim:      #275DAD;
 $persian-green:    #2F9C95;
 $pumpkin:       #FE7F2D;
 $our-pink: #E08DAC;
-$dark-green:   #14281D;
+$dark-green:   #4A4A4A;
 $raisin-black:   #252323;
 
 // Headings and Display font
@@ -35,7 +35,7 @@ $info:  $denim;
 /* Text */
 $font-family-base:      'Inter', sans-serif;
 $font-family-headings:  'Merriweather', serif;
-$font-size-base:        1rem;     // ~16px
+$font-size-base:        0.8rem;     // ~16px
 $headings-font-weight:  700;
 $line-height-base:      1.6;
 
@@ -44,14 +44,25 @@ $line-height-base:      1.6;
 h1 { 
   font-family: $font-family-headings;
   color: $primary;
+  
+  padding: 0.8rem;
   text-decoration: underline;
   text-decoration-color: $accent;
   text-decoration-style: wavy;
+  text-decoration-thickness: 4px;
   font-weight: $headings-font-weight;
   font-size: 2rem;
 }
 
-h2, h3, h4, h5, h6{
+h2, {
+  font-family: $font-family-headings;
+  color: $primary;
+  font-weight: $headings-font-weight;
+  font-size: 1.5rem;
+  padding-left: 1rem ;
+}
+
+h3, h4, h5, h6{
   font-family: $font-family-headings;
   color: $background;
   font-weight: $headings-font-weight;
@@ -79,21 +90,27 @@ a:hover {
 
 li::marker {
   color: $denim; /* Using a hex color as an example, since $secondary is likely not defined here */
-  font-family: "Font Awesome 6 Free";
+  content: ">";
+  margin: .2rem;
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 1rem;
 }
 
 /*-----------------------------------------
-📐 3. GLOBAL LAYOUT
+ GLOBAL LAYOUT
 ------------------------------------------*/
 body {
   background-color: $background;
   color: $text-color;
+  font-size: $font-size-base;
   font-family: $font-family-base;
   line-height: $line-height-base;
   margin: 0;
   padding: 0;
+}
+
+.left-align{
+  text-align: left;
 }
 
 .container {
@@ -102,66 +119,188 @@ body {
   padding: 0 1.5rem;
 }
 
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: $alabaster; 
+  border: 2px solid $text-color;
+  color: $text-color !important;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+:not(pre) > code {
+  font-family: "Fira Code", monospace;
+  font-size: font-size-base;
+  background: $background;
+  color: $secondary;
+  border: 1px solid $text-color;
+  border-radius: 0.75rem;
+}
+
+li {
+  color: $text-color;
+  padding: .2rem;
+  margin-bottom: .2px;
+  font-size: $font-size-base;
+}
+
+.table-of-contents ul, .table-of-contents ol {
+      list-style: none; /* Removes bullets or numbers */
+      padding: 0;
+      margin: 0;
+}
+
+
+/*ABOUT SECTION*/
+
+.about-links a:hover {
+   box-shadow: rgba(254, 127, 45, 0.4) 0px -5px, rgba(254, 127, 45, 0.3) 0px -10px;
+}
+
+.about-links a .bi {
+  font-size: $font-size-base;
+}
+
+.link-buttons a {
+  display: inline-block;
+  color: $text-color;
+  text-decoration: underline solid $secondary 2px;
+  margin: 0.05rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.link-buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(254, 127, 45, 0.4) 0px -3px, rgba(254, 127, 45, 0.3) 0px -6px;
+}
+
 
 /*-----------------------------------------
-🧭 4. NAVBAR / HEADER
+NAVBAR / HEADER
 ------------------------------------------*/
 .navbar {
   background-color: $primary;
   color: $alabaster;
-
+  
   .navbar-brand {
-    // logo or title styles
     font-family: $font-family-brand;
-    font-size: 2.2em; // Example: Larger font size for the brand name
-    font-weight: bold; // Example: Bold text
-    text-decoration: none; // Example: Remove underline from brand link
-    color: inherit; // Example: Inherit the color from the parent .navbar
-    padding: 0.2rem .2rem; // Example: Add some padding around the brand
+    font-size: 2.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.2rem 0.2rem;
   }
-
+  
   .navbar-brand img {
-    // Styles for an image within the navbar-brand
-    height: 50px; // Example: Set a fixed height for the logo
-    width: auto; // Example: Maintain aspect ratio
-    margin-right: 10px; // Example: Space between logo and text (if both are present)
-    vertical-align: middle; // Example: Align image vertically with text
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
   }
-
+  
+  /* ---- MAIN NAV LINKS ---- */
   .nav-link {
     color: $background;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 0.75rem; // gives you rounded corners
+    border-radius: 0.75rem;
     position: relative;
     margin: 0.5rem;
-    transition: 
+    transition:
       color 0.3s ease,
       background-color 0.3s ease,
       box-shadow 0.3s ease,
       transform 0.2s ease;
-
+    
     &:hover {
       color: $background;
-      border: 2px solid;
-      border-color: $background;
-      //background-color: $background; // light overlay
-      box-shadow: rgba(235, 237, 223, 0.4) 0px -5px, rgba(235, 237, 223, 0.3) 0px -10px;
-      //box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); // soft "button" shadow
-      transform: translateY(-5px); // subtle lift effect
+      border: 2px solid $background;
+      box-shadow: rgba(235, 237, 223, 0.4) 0px -5px,
+                  rgba(235, 237, 223, 0.3) 0px -10px;
+      transform: translateY(-5px);
     }
-
+    
     &:active {
-      transform: translateY(0); // presses down slightly when clicked
+      transform: translateY(0);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
   }
+  
+  /* ---- DROPDOWN MENU ---- */
+  .dropdown-menu {
+    background-color: $primary;
+    border: none;
+    padding: 0.5rem 0;
+    margin-top: 0.4rem !important;
+    //box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    //opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+  
+  .dropdown-item {
+    color: $primary;
+    background-color: $background;
+    padding: 0.3rem 0.75rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 0.75rem;
+    margin: 0.25rem 0.5rem;
+    font-size: $font-size-base ;
+    transition: 
+      background-color 0.3s ease,
+      color 0.3s ease,
+      transform 0.2s ease,
+      box-shadow 0.3s ease;
+    
+    &:hover {
+      color: $primary;
+      box-shadow: rgba(235, 237, 223, 0.2) 0px -5px;
+      border: 2px solid $background;
+      transform: translateY(5px);
+      margin: 3px;
+    }
+    
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+  
+  /* Make dropdown open on hover */
+  .dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Arrow styling */
+  .dropdown-toggle::after {
+    vertical-align: 0.1em;
+    margin-left: 0.3rem;
+    border-top-color: $background;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown:hover > .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
 }
+  
+
+
 
 
 
 /*-----------------------------------------
-🏠 5. HERO / LANDING SECTION
+HERO / LANDING SECTION
 ------------------------------------------*/
 .hero {
   // 🎨 Choose your base background color
@@ -188,7 +327,7 @@ body {
 
   p {
     font-family: $font-family-base;
-    font-size: 1 rem;
+    font-size: $font-size-base;
     max-width: 600px;
     color: $raisin-black;
     margin-bottom: 2.5rem;
@@ -220,9 +359,8 @@ body {
   }
 }
 
-
 /*-----------------------------------------
-🧱 6. BUTTONS
+ BUTTONS
 ------------------------------------------*/
 .btn {
   display: inline-block;
@@ -233,7 +371,7 @@ body {
   transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: rgba(47, 156, 149, 0.4) 0px 5px, rgba(47, 156, 149, 0.3) 0px 10px, rgba(47, 156, 149, 0.2) 0px 15px, rgba(47, 156, 149, 0.1) 0px 20px, rgba(47, 156, 149, 0.05) 0px 25px;
   }
 }

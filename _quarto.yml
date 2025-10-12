@@ -7,12 +7,20 @@ website:
   favicon: media/fdl-high-resolution-logo-transparent.png
   navbar:
     right:
-      - href: golf.qmd
-        text: Golf
-      - href: projects.qmd
-        text: Projects
+      - href: about.qmd
+        text: About Me
+      - text: Projects
+        menu: 
+          - href: academicprojects/gpr4golf.qmd
+            text: Gaussian Process Regression For Golf
+          - href: academicprojects/timeCourse.qmd
+            text: Validating sicegar
+      - text: Off My Laptop
+        menu:
+          - href: golf/index.qmd
+            text: Overview
       - href: smallprojs/index.qmd
-        text: Tiny Data Lab
+        text: Byte-Sized Projects
     title: Fede on Par
     logo: media/fdl-high-resolution-logo-transparent.png
     logo-alt: "FDL logo"

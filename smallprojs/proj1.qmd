@@ -9,7 +9,7 @@ execute:
   warning: false
 ---
 
-:::{.callout-note title ="Extra Feature!"}
+:::{.callout-warning title ="Extra Feature!" icon=false}
 On the different coordinate axes, you can use your cursor to select on or more lines you'd like to highlight!
 :::
 

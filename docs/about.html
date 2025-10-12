@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Fede’s Hub</title>
+<title>about – Fede's Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -73,7 +39,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-1a6990bc43ec1e9077967a0257133f15.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-40693b996c9441a52fbaf131ae31e562.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-01ff1525810a70ad09911eda306d4185.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -129,15 +95,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">About Me</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./golf.html"> 
-<span class="menu-text">Golf</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="./academicprojects/gpr4golf.html">
+ <span class="dropdown-text">Gaussian Process Regression For Golf</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./academicprojects/timeCourse.html">
+ <span class="dropdown-text">Validating sicegar</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-off-my-laptop" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Off My Laptop</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-off-my-laptop">    
+        <li>
+    <a class="dropdown-item" href="./golf/index.qmd">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="./smallprojs/index.html"> 
+<span class="menu-text">Byte-Sized Projects</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -150,40 +138,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#hi-there" id="toc-hi-there" class="nav-link active" data-scroll-target="#hi-there">Hi There! 👋</a>
+  <ul class="collapse">
+  <li><a href="#lengthy-projects" id="toc-lengthy-projects" class="nav-link" data-scroll-target="#lengthy-projects">Lengthy Projects</a></li>
+  <li><a href="#a-little-about-me" id="toc-a-little-about-me" class="nav-link" data-scroll-target="#a-little-about-me">A little about me</a></li>
+  <li><a href="#tech-tools" id="toc-tech-tools" class="nav-link" data-scroll-target="#tech-tools">Tech &amp; tools</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
+
+
+
+<section id="hi-there" class="level2">
+<h2 class="anchored" data-anchor-id="hi-there">Hi There! 👋</h2>
+<p>My name is <strong>Federica</strong>, and I am a senior at <strong>Pomona College</strong>, double majoring in <strong>Mathematics &amp; Computer Science</strong>. Originally from <strong>Madrid, Spain 🇪🇸</strong>, I moved to the U.S. to pursue new opportunities and currently live in <strong>Claremont, California</strong>.</p>
+<p>Over the last four years, I have come to love using data to turn messy problems into clear decisions. My work sits at the intersection of <strong>statistical modeling, optimisation, machine learning, and data visualisation</strong> - I enjoy everything from building predictive models to crafting visual stories that make results accessible.</p>
+<section id="lengthy-projects" class="level3">
+<h3 class="anchored" data-anchor-id="lengthy-projects">Lengthy Projects</h3>
+<p>I have spent the past two summers in <a href="https://www.pomona.edu/">Pomona College</a> doing some really exciting work alongside some of my favourite Professors:</p>
+<ul>
+<li><strong>Summer ’25, Simulating Golf Strategy using Gaussian Process Regression</strong> During this project we developed a novel data-driven framework to help golfers make better strategic decisions on the course. We modeled golf as a sequential decision-making problem under uncertainty, creating a tool that offers personalized, data-backed recommendations. Using 2D Gaussian Process Regression (GPR), we built a model that assesses the scoring impact of different club and aimpoint combinations. The framework can be tailored to an individual golfer’s tendencies (recorded on Trackman data) and needs, alongside the specific golf course layout, and can be adjusted to either minimise expected strokes (the best score on average) or maximise birdie odds (for high-stakes situations). The work establishes a scalable foundation for a future decision-support tool that provides dynamic, adaptive strategy in real-time based on shot outcomes. I produced this work alongside <a href="https://www.pomona.edu/directory/people/gabriel-chandler">Professor Gabriel Chandler</a>. Find out more about this work <a href="./academicprojects/gpr4golf.html">here</a>.</li>
+<li><strong>Summer ’24, Evaluating the Reliability of Sicegar for Timing Analysis of RpoS-Dependent Gene Expression</strong> We used a simulation-based approach to evaluate the <code>sicegar</code> R package, a tool used by biologists to analyse gene expression data. The project focused on assessing whether the package could reliably detect sigmoidal and double-sigmoidal curves and accurately estimate their onset times - the points where gene expression significantly increases and therefore is activated. By generating synthetic data with known parameters and then introducing noise, we tested the software’s performance under various conditions. The results showed that sicegar tends to underestimate the true onset time as data dispersion increases. We then developed a parametric bootstrapping method to correct this bias, demonstrating that this fix can produce estimates that are closer to the real values. I produced this work alongside <a href="https://hardin47.netlify.app/">Professor Jo Hardin</a>. Find out more about this work <a href="./academicprojects/timeCourse.html">here</a>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Extensions on GPR for Golf Modelling">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-
-
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>About this site</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="callout-title-container flex-fill">
+Extensions on GPR for Golf Modelling
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>I am currently working on publishing this summer’s findings and am currently expanding on this paper by working on a topological interpretation of our work for my Senior excercise.</p>
+</div>
+</div>
+<p>Approximately every week for the last two years, I have participated in <a href="https://github.com/rfordatascience/tidytuesday">tidytuesday</a>, which is a weekly social data project with the opportunity to wrangle analyse and visualise new datasets everyweek. As of the creation of this website, I will start to upload my work <a href="./smallprojs/index.html">here</a>.</p>
+</section>
+<section id="a-little-about-me" class="level3">
+<h3 class="anchored" data-anchor-id="a-little-about-me">A little about me</h3>
+<p>When I’m not working on a problem set or on my thesis, I’m usually outside - golfing, doing something creative, or - lately - learning pickleball. I like trying new sports and staying active.</p>
+<p>I am currently part of the <strong><span style="color: #275DAD; text-decoration: underline;   text-decoration-style: wavy;">Pomona</span>-<span style="color: #FE7F2D; text-decoration: underline;   text-decoration-style: wavy;">Pitzer</span></strong>’s Varsity Women’s Golf team, hence this colourful theme!</p>
+</section>
+<section id="tech-tools" class="level3">
+<h3 class="anchored" data-anchor-id="tech-tools">Tech &amp; tools</h3>
+<p>Tools I feel comfortable with include <code>R</code>, <code>Python</code>, <code>Java</code>, <code>JavaScript</code>, and <code>HTML</code> / <code>SCSS</code>. I use tidyverse-style workflows for data wrangling and visualization, and I’ve worked with HPC for large simulations.</p>
+<hr>
+<p>I’m currently seeking <strong>data science / analytics roles</strong> that combine problem-solving, creativity, and impact - where I can keep learning and contribute to meaningful projects. If that sounds like a fit, let’s connect! ✨</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
