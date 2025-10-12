@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Federica Domecq Lacroze",
     "section": "",
-    "text": "Hi! My name is Fede (pronounced “Feh-deh”) and I’m a junior majoring in Maths and Computer Science at [Pomona College](https://www.pomona.edu/){:target=“_blank”}."
+    "text": "Hello There! 👋\nI’m Federica Domecq Lacroze, a senior at Pomona College, double majoring in Mathematics & Computer Science. Originally from Madrid, Spain 🇪🇸, I moved to the U.S. to pursue new opportunities and currently live in Claremont, California.\nI love using data to turn messy problems into clear decisions. My work sits at the intersection of statistical modeling, optimisation, machine learning, and data visualization - I enjoy everything from building predictive models to crafting visual stories that make results accessible.\n\nA few projects I’ve worked on\n\nSimulating golf strategy using Gaussian Process Regression - modeling shots and aimpoints across rasterized hole layouts.\n\nValidating gene expression models - running large-scale simulations and benchmarking packages on HPC.\n\nWeekly data visualizations - I participate in Tidy Tuesday and love turning datasets into bite-sized, insightful visuals.\n\n\n\nA little about me\nWhen working on a problem set or on my thesis, I’m usually outside - golfing, playing tennis, or - lately - learning pickleball. I like trying new sports and staying active.\nI am currently part of the PP Women’s Golf team, hence this colourful theme!\n\n\nTech & tools\nR, Python, Java, JavaScript, Observable, and comfortable with HTML / CSS. I use tidyverse-style workflows for data wrangling and visualization, and I’ve worked with HPC for large simulations.\n\nI’m currently seeking data science / analytics roles that combine problem-solving, creativity, and impact - where I can keep learning and contribute to meaningful projects. If that sounds like a fit, let’s connect! ✨"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,33 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#hello-there-im-federica-domecq",
+    "href": "index.html#hello-there-im-federica-domecq",
+    "title": "Federica Domecq Lacroze",
+    "section": "",
+    "text": "I’m a senior at Pomona College, double majoring in Mathematics and Computer Science, with a passion for applying data-driven reasoning to real-world problems. My prior work and research sits at the intersection of *statistical modeling, optimisation, machine learning and data visualisation - from simulating golf strategy with GPR to validating gene expression models leveraging the power of high-performance clusters to making visuals out of random datasets weekly!\nWhat drives me is curiosity: I love turning complex ideas into tangible insights, whether that’s through elegant data visualisations, predictive models, or research that bridges different disciplines.\nI’m currently seeking opportunities that combine data science, problem-solving, and impact—where I can continue growing while contributing to innovative projects that make a difference."
+  },
+  {
+    "objectID": "index.html#hello-there",
+    "href": "index.html#hello-there",
+    "title": "Federica Domecq Lacroze",
+    "section": "",
+    "text": "My name is Federica and I’m a senior at Pomona College, double majoring in Mathematics and Computer Science, with a passion for applying data-driven reasoning to real-world problems.\nMy prior work and research sits at the intersection of statistical modeling, optimisation, machine learning and data visualisation. What drives me is curiosity: I love turning complex ideas into tangible insights, whether that’s through elegant data visualisations, predictive models, or research that bridges different disciplines. Projects I have carried out include:\n\nSimulating golf strategy with Gaussian Process Regression\nValidating gene expression models leveraging the power of high-performance\nWeekly data visuals!\n\nI’m currently seeking opportunities that combine data science, problem-solving, and impact - where I can continue growing while contributing to innovative projects that make a difference."
+  },
+  {
+    "objectID": "smallprojs/index.html",
+    "href": "smallprojs/index.html",
+    "title": "The Data Lab",
+    "section": "",
+    "text": "Welcome to my blog — where I share ideas, projects, and reflections on data science, golf analytics, and more.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTidy Tuesday - EuroBasket League\n\n\n\n\n\n\nFederica & TidyTuesday Friends\n\n\nOctober 7, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "smallprojs/proj1.html",
+    "href": "smallprojs/proj1.html",
+    "title": "Tidy Tuesday - EuroBasket League",
+    "section": "",
+    "text": "Extra Feature!\n\n\n\nOn the different coordinate axes, you can use your cursor to select on or more lines you’d like to highlight!"
   }
 ]

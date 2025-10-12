@@ -1,0 +1,67 @@
+---
+title: "Tidy Tuesday - EuroBasket League"
+author: Federica & TidyTuesday Friends
+image: "media/golfgreen.png"
+date: 10/07/2025
+date-format: "D MMM, YYYY"
+execute: 
+  echo: false
+  warning: false
+---
+
+:::{.callout-note title ="Extra Feature!"}
+On the different coordinate axes, you can use your cursor to select on or more lines you'd like to highlight!
+:::
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(plotly)
+library(stringr)
+el_basket <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-07/euroleague_basketball.csv') |> 
+  mutate(capacity = str_split(Capacity, ", ")) |> 
+  unnest(capacity) |> 
+  mutate(capacity = as.numeric(str_replace_all(capacity, ",", ""))) |> 
+  mutate(lastrank = as.numeric(str_extract(`Last season`, "\\d+")),
+         lastrank = ifelse(is.na(lastrank), 20, lastrank)) |> 
+  select(Team, Country, capacity, lastrank, FinalFour_Appearances, Titles_Won, everything()) 
+```
+
+```{r}
+el_basket_plot <- el_basket |> 
+  mutate(
+    team_id = as.numeric(factor(Team)),
+    country_id = as.numeric(factor(Country))
+  )
+
+el_basket_plot |> 
+  plot_ly(
+    type = 'parcoords',
+    line = list(color = ~country_id, colorscale = 'Rainbow'),
+    dimensions = list(
+      list(label = 'Team', values = ~team_id, tickvals = unique(el_basket_plot$team_id), 
+           ticktext = unique(el_basket_plot$Team)),
+      list(label = 'Country', values = ~country_id, tickvals = unique(el_basket_plot$country_id), 
+           ticktext = unique(el_basket_plot$Country)),
+      list(label = 'Capacity', values = ~capacity),
+      list(label = 'Final Four Appearances', 
+           values = ~FinalFour_Appearances),
+      list(label = 'Titles Won', 
+           values = ~Titles_Won),
+       list(label = '2024-2025 Rank', 
+           values = ~lastrank, 
+           range = c(max(el_basket_plot$lastrank, na.rm = TRUE),
+                     min(el_basket_plot$lastrank, na.rm = TRUE)))
+    )
+  ) |> 
+  layout(
+    autosize = FALSE, width = 800, height = 400,
+    margin = list(l = 150, r = 50, b = 10, t = 120),
+    title = "EuroLeague Outcomes"
+  )
+
+```
+
+
+
+

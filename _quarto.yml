@@ -4,28 +4,34 @@ project:
 
 website:
   title: "Fede's Hub"
-  favicon: media/favicon.jpg
+  favicon: media/fdl-high-resolution-logo-transparent.png
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-      - golf.qmd
-      - projects
-    title: My things # override printing your website `title` (e.g. "Sam Csik" on line 6) in the top left corner of your navbar
-    logo: media/favicon.jpg
+    right:
+      - href: golf.qmd
+        text: Golf
+      - href: projects.qmd
+        text: Projects
+      - href: smallprojs/index.qmd
+        text: Tiny Data Lab
+    title: Fede on Par
+    logo: media/fdl-high-resolution-logo-transparent.png
     logo-alt: "FDL logo"
   page-footer:
-    background: darkblue # or `dark`
-    left: Copyright 2024, Federica Domecq
+    background: $denim
+    left: Copyright 2025, Federica Domecq
     right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://fedegudom47.github.io/){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
   html:
-    theme: quartz
-    css: styles.css
+    theme: 
+    - flatly
+    - styles.scss
     toc: true
     page-layout: full
+    includes:
+      in-header: |
+          <link rel="preconnect" href="https://rsms.me/">
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
 editor: source
 

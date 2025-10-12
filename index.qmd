@@ -1,21 +1,50 @@
 ---
 title: "Federica Domecq Lacroze"
-image: media/IMG_4956.PNG
-toc: false
-about: 
-  template: jolla
-  image-shape: round
-  image-width: 17em
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/samanthacsik/
-    - icon: github
-      text: GitHub
-      href: https://github.com/samanthacsik
-    - icon: envelope
-      text: Email
-      href: mailto:fgdd2022@mymail.pomona.edu
+image: media/clearMe.PNG
+format:
+  html:
+    html-math-method: katex
+    toc: false
+    toc-location: left
+    about:
+      template: trestles
+      image-shape: rectangle
+      links:
+      - icon: linkedin
+        text: LinkedIn
+        href: https://www.linkedin.com/in/federica-domecq-lacroze-5a9697228/
+      - icon: github
+        text: GitHub
+        href: https://github.com/samanthacsik
+      - icon: envelope
+        text: Email
+        href: mailto:fgdd2022@mymail.pomona.edu
+css:
+  - styles.scss
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+---
+# Hello There! 👋
+
+I’m **Federica Domecq Lacroze**, a senior at **Pomona College**, double majoring in **Mathematics & Computer Science**. Originally from **Madrid, Spain 🇪🇸**, I moved to the U.S. to pursue new opportunities and currently live in **Claremont, California**.
+
+I love using data to turn messy problems into clear decisions. My work sits at the intersection of **statistical modeling, optimisation, machine learning, and data visualization** - I enjoy everything from building predictive models to crafting visual stories that make results accessible.
+
+### A few projects I’ve worked on
+- **Simulating golf strategy using Gaussian Process Regression** - modeling shots and aimpoints across rasterized hole layouts.  
+- **Validating gene expression models** - running large-scale simulations and benchmarking packages on HPC.  
+- **Weekly data visualizations** - I participate in Tidy Tuesday and love turning datasets into bite-sized, insightful visuals.
+
+### A little about me
+When working on a problem set or on my thesis, I’m usually outside - golfing, playing tennis, or - lately - learning pickleball. I like trying new sports and staying active.
+
+I am currently part of the **<span style="color: #275DAD; text-decoration: underline;   text-decoration-style: wavy;">P</span><span style="color: #FE7F2D; text-decoration: underline;   text-decoration-style: wavy;">P</span>** Women's Golf team, hence this colourful theme!
+
+
+
+
+### Tech & tools
+`R`, `Python`, `Java`, `JavaScript`, `Observable`, and comfortable with `HTML` / `CSS`. I use tidyverse-style workflows for data wrangling and visualization, and I’ve worked with HPC for large simulations.
+
 ---
 
-Hi! My name is Fede (pronounced "Feh-deh") and I'm a junior majoring in Maths and Computer Science at \[Pomona College\](<https://www.pomona.edu/>){:target="\_blank"}.
+I’m currently seeking **data science / analytics roles** that combine problem-solving, creativity, and impact - where I can keep learning and contribute to meaningful projects. If that sounds like a fit, let’s connect! ✨
