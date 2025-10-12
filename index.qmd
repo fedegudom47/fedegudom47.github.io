@@ -31,6 +31,6 @@ I’m **Federica Domecq Lacroze**, a senior at **Pomona College**, double majori
 
 :::{.link-buttons}
 On this website you can learn a little bit [about me](about.qmd); about my [research](projects.qmd); [byte-sized work](smallprojs/index.qmd); and about my [passions](passionprojects/index.qmd).
-:::;
+:::
 :::
 
