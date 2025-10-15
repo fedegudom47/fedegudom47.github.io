@@ -153,8 +153,6 @@ p <- p |>
 
 p
 ```
-<details>
-<summary> Reveal Ways to look at Plot </summary>hello
 
 ### Interactive Tools In This Plot
 
@@ -162,9 +160,6 @@ p
 2. You can hover on top of the points to see what area each value pertains to.
 3. You can drag and select to highlight specific points of interest in any of these plots.
 4. You can select and drag the axes labels for each individual plot to "scroll" to different areas of the plot.
-
-</details>
-
 
 
 
