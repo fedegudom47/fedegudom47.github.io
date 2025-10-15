@@ -1,7 +1,7 @@
 ---
 title: "Tidy Tuesday - EuroBasket League"
 author: Federica & TidyTuesday Friends
-image: "media/golfgreen.png"
+image: "media/pexels-pixabay-358042.jpg"
 date: 10/07/2025
 date-format: "D MMM, YYYY"
 execute: 

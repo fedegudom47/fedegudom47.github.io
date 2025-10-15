@@ -15,7 +15,7 @@ format:
         href: https://www.linkedin.com/in/federica-domecq-lacroze-5a9697228/
       - icon: github
         text: GitHub
-        href: https://github.com/samanthacsik
+        href: https://github.com/fedegudom47
       - icon: envelope
         text: Email
         href: mailto:fgdd2022@mymail.pomona.edu

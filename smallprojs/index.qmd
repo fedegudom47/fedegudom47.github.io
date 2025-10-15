@@ -2,7 +2,8 @@
 title: "The Data Lab"
 listing:
   contents: 
-    - proj1.qmd
+    - tt1.qmd
+    - tt2.qmd
           # list all files in this folder
   sort: "date desc"
   type: grid         # or "default" for a list
@@ -10,4 +11,4 @@ listing:
   date-format: "long"
 page-layout: full
 ---
-Welcome to my blog — where I share ideas, projects, and reflections on data science, golf analytics, and more.
+Hi there! This is the place where all my smaller data wrangles, visuals and models go! 
