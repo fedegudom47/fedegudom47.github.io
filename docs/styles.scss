@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 // 🎨 Color variables
-$alabaster:  #ebeddf;// #F0F8FF;    //
+$alabaster:  #F9F6EE;// #ebeddf;// #F0F8FF;    //
 $denim:      #275DAD;
 $persian-green:    #2F9C95;
 $pumpkin:       #FE7F2D;
@@ -48,8 +48,8 @@ h1 {
   
   padding: 0.8rem;
   text-decoration: underline;
-  text-decoration-color: $accent;
-  text-decoration-style: wavy;
+  text-decoration-color: rgba($primary, 0.5);
+  text-decoration-style: solid;
   text-decoration-thickness: 4px;
   font-weight: $headings-font-weight;
   font-size: 2rem;
@@ -157,6 +157,10 @@ li {
       margin: 0;
 }
 
+.thead, .tbody, .code{
+  background: $background;
+}
+
 
 /*ABOUT SECTION*/
 
@@ -177,7 +181,7 @@ li {
 }
 
 .link-buttons a:hover {
-  transform: translateY(-2px);
+  //transform: translateY(-2px);
   box-shadow: rgba(254, 127, 45, 0.4) 0px -3px, rgba(254, 127, 45, 0.3) 0px -6px;
 }
 
@@ -221,14 +225,12 @@ NAVBAR / HEADER
     
     &:hover {
       color: $background;
-      border: 2px solid $background;
-      box-shadow: rgba(235, 237, 223, 0.4) 0px -5px,
-                  rgba(235, 237, 223, 0.3) 0px -10px;
-      transform: translateY(-5px);
+      border: 0.25px solid $background;
+      box-shadow: rgba(235, 237, 223, 0.2) 0px -3px,
+                  rgba(235, 237, 223, 0.1) 0px -6px;
     }
     
     &:active {
-      transform: translateY(0);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
   }
