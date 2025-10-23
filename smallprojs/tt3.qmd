@@ -1,6 +1,6 @@
 ---
 title: "UK Met Weather Data"
-author: "Federica"
+author: "Federica & Prof. Jo Hardin"
 format: 
   html:
      code-fold: true
