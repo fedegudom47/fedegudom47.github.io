@@ -1,0 +1,210 @@
+---
+title: "UK Met Weather Data"
+author: "Federica"
+format: 
+  html:
+     code-fold: true
+execute: 
+  warning: false
+   
+---
+```{r}
+library(tidyverse)
+library(showtext)
+library(patchwork)
+library(cowplot)
+library(magick)
+font_add_google("Playfair Display", "playfair")
+showtext_auto()
+```
+
+
+```{r}
+#| echo: false
+
+historic_station_met <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/historic_station_met.csv')
+station_meta <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/station_meta.csv')
+```
+```{r}
+month_length <- c(31, 28, 31, 30, 31, 30,
+                  31, 31, 30, 31, 30, 31)
+
+month_breaks <- cumsum(month_length) - 30
+```
+
+
+```{r}
+rain <- historic_station_met |> 
+  filter(station == "heathrow") |> 
+  filter(year >= 2000) |> 
+  mutate(date = ymd(paste(year, month, "01", sep = "-")),
+         day_of_year = yday(date),
+         # Handle December specially - extend to end of year instead of next year
+         ymd_month = if_else(month == 12, 
+                             ymd(paste(year, "12", "31", sep = "-")),
+                             date %m+% months(1)),
+         day_month = yday(ymd_month)) |> 
+  ggplot() +
+  geom_segment(aes(x = day_of_year, xend = day_month, 
+                   y = date, yend = ymd_month, color = rain), linewidth = 2) +
+  scale_color_distiller(palette = "BuPu",
+                        direction = 1, 
+                        name = "Rainfall (mm)") + 
+  geom_label(data = . %>% filter(month == 1, year %% 5 == 0) ,
+          aes(x = day_of_year, y = date, label = paste0(as.character(year), "→")),
+          hjust = 1, size = 2.5, fontface = "bold",
+          alpha = 0.5, fill = "#F5F7FA",
+          label.size = NA) + 
+  coord_polar() +
+  theme_void() +
+  scale_x_continuous(minor_breaks = month_breaks, 
+                     breaks = month_breaks[c(3, 6, 9, 12)],
+                     labels = c("Spring", "Summer", "Autumn", "Winter")) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1)))+
+  theme(
+    plot.background = element_rect(color = NA, fill = "#F5F7FA"),
+    axis.text.x = element_text(color = "#2C3E50", size = 9, hjust = 10, 
+                                family = "playfair", face = "bold"),
+    legend.title = element_text(family = "playfair", face = "bold", 
+                                size = 11, color = "#2C3E50"),
+    legend.text = element_text(family = "playfair", size = 10, 
+                               color = "#2C3E50"),
+    plot.margin = margin(20, 30, 20, 90)
+  )
+```
+
+
+
+
+
+```{r}
+sun <- historic_station_met |> 
+  filter(station == "heathrow") |> 
+  filter(year >= 2000) |> 
+  mutate(date = ymd(paste(year, month, "01", sep = "-")),
+         day_of_year = yday(date),
+         # Handle December specially - extend to end of year instead of next year
+         ymd_month = if_else(month == 12, 
+                             ymd(paste(year, "12", "31", sep = "-")),
+                             date %m+% months(1)),
+         day_month = yday(ymd_month)) |> 
+  ggplot() +
+  geom_segment(aes(x = day_of_year, xend = day_month, 
+                   y = date, yend = ymd_month, color = sun), linewidth = 2) +
+  geom_label(data = . %>% filter(month == 1, year %% 5 == 0) ,
+          aes(x = day_of_year, y = date, label = paste0(as.character(year), "→")),
+          hjust = 1, size = 2.5, fontface = "bold",
+          alpha = 0.5, fill = "#F5F7FA",
+          label.size = NA) +
+  scale_color_distiller(palette = "YlOrRd", direction = 1, name = "Hours of Sunlight") + 
+  coord_polar() +
+  theme_void() +
+  scale_x_continuous(minor_breaks = month_breaks, 
+                     breaks = month_breaks[c(3, 6, 9, 12)],
+                     labels = c("March", "June", "Sep.", "Dec.")) +
+  theme(
+    plot.background = element_rect(color = NA, fill = "#F5F7FA"),
+    axis.text.x = element_text(color = "#2C3E50", size = 9, hjust = 10, 
+                                family = "playfair", face = "bold"),
+    legend.title = element_text(family = "playfair", face = "bold", 
+                                size = 11, color = "#2C3E50"),
+    legend.text = element_text(family = "playfair", size = 10, 
+                               color = "#2C3E50"),
+    plot.margin = margin(20, 30, 20, 90))
+```
+
+```{r}
+rain_plot <- rain +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal",
+    plot.margin = margin(20, 20, 20, 20)  
+  )
+
+sun_plot <- sun + 
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal",
+    plot.margin = margin(20, 20, 20, 20) 
+  )
+
+final_plot <- rain_plot + sun_plot + 
+  plot_annotation(
+    title = "London Weather\n Rain and Sunshine Patterns (2000-2024)",
+    subtitle = "Monthly rainfall (left) and hours of sun (right) at Heathrow Weather Station\nRead each plot clockwise from the centre spiralling outward.",
+    theme = theme(
+      plot.background = element_rect(fill = "#F5F7FA", color = NA),
+      plot.title = element_text(family = "playfair", face = "bold", 
+                                size = 19, color = "#2C3E50", 
+                                hjust = 0.5, margin = margin(t = 10, b = 5)),
+      plot.subtitle = element_text(family = "playfair", size = 11, 
+                                   color = "#5D6D7E", hjust = 0.5,
+                                   margin = margin(b = 10)),
+      plot.margin = margin(10, 30, 10, 30)  
+    )
+  )
+```
+
+```{r}
+rain_image <- image_read("raindrops.png") |> 
+  image_fx("A*30") #reduces opacity
+
+ggdraw(final_plot) +
+  draw_image(
+    rain_image,
+    x = 0, y = 0,
+    hjust = , halign = 1,
+    vjust = 0, valign = 0,
+    width = 1,
+    
+  )
+```
+
+
+
+
+
+### About this Data
+
+This data was found on the [TidyTuesday Repository](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-10-21/readme.md?plain=1)
+
+The UK Met Office is the United Kingdom’s national weather and climate service,
+providing forecasts, severe weather warnings, and climate science expertise. It
+helps people, businesses, and governments make informed decisions to stay safe
+and plan for the future. It was first established in 1854, making it one of the
+oldest weather services in the world.
+
+Data has been scraped straight from the Met Office website and cleaned in a
+basic way. The few flags for "estimated" data and changing sunlight monitoring
+techniques have been removed for simplicity, but are available from the raw
+data. Also available is simple site metadata which includes the opening date and
+[latitude and longitude](https://epsg.io/4326) of each station.
+
+> Monthly Historical information for 37 UK Meteorological Stations. Most go back
+to the early 1900s, but some go back as far as 1853. Station data files are
+updated on a rolling monthly basis, around 10 days after the end of the month.
+No allowances have been made for small site changes and developments in
+instrumentation.
+
+### `historic_station_met.csv`
+
+|variable |class     |description                           |
+|:--------|:---------|:-------------------------------------|
+|station  |character |Station ID; for binding with metadata.|
+|year     |integer   |Year. |
+|month    |integer   |Numeric month (1-12). |
+|tmax     |double    |Mean daily maximum temperature (Degrees C). |
+|tmin     |double    |Mean daily minimum temperature (Degrees C). |
+|af       |double    |Days of air frost. |
+|rain     |double    |Total rainfall (mm). |
+|sun      |double    |Total sunshine duration (hours). |
+
+### `station_meta.csv`
+
+|variable     |class     |description                           |
+|:------------|:---------|:-------------------------------------|
+|station      |character |Station ID; for binding with measurement data. |
+|station_name |character |Station name. |
+|opened       |integer   |Year in which station opened. |
+|lng          |double    |Decimal longitude. |
+|lat          |double    |Decimal latitude. |

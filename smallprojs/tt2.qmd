@@ -140,11 +140,11 @@ p <- p |>
     xaxis = list(
       tickangle = 30,
       tickfont = list(size = 9),
-      titlefont = list(size = 11)
+      titlefont = list(size = 9)
     ),
     yaxis = list(
       tickfont = list(size = 9),
-      titlefont = list(size = 11)
+      titlefont = list(size = 9)
     ),
     # Margins and spacing
     margin = list(l = 70, r = 40, b = 70, t = 80),

@@ -1,5 +1,6 @@
 ---
-title: "index"
+title: "Hobbies"
+author: "Federica Domecq" 
 format: html
 ---
 

@@ -4,6 +4,7 @@ listing:
   contents: 
     - tt1.qmd
     - tt2.qmd
+    - tt3.qnd
           # list all files in this folder
   sort: "date desc"
   type: grid         # or "default" for a list
