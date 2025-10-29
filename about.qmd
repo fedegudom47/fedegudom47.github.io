@@ -28,7 +28,7 @@ I am currently part of the **<span style="color: #275DAD; text-decoration: under
 
 
 ### Tech & tools
-Tools I feel comfortable with include `R`, `Python`, `Java`, `JavaScript`, and  `HTML` / `SCSS`. I use tidyverse-style workflows for data wrangling and visualization, and I’ve worked with HPC for large simulations.
+Tools I feel comfortable with include `R`, `Python`, `Java`, `JavaScript`, and  `HTML` / `SCSS`. I use tidyverse-style workflows for data wrangling and visualisation, and I’ve worked with HPC for large simulations.
 
 ---
 I’m currently seeking **data science / analytics roles** that combine problem-solving, creativity, and impact - where I can keep learning and contribute to meaningful projects. If that sounds like a fit, let’s connect! ✨

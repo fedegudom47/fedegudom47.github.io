@@ -29,8 +29,6 @@ Like many things in life, this data vis was not what we originally planned. Our 
 
 Our first idea was to turn to the infamous [NYT Corona Virus Spiral chart](https://www.nytimes.com/2022/01/06/opinion/omicron-covid-us.html), coincidentally, we found someone who had tried to [recreate it in R](https://bydata.github.io/nyt-corona-spiral-chart/). This underlying logic was the backbone for this visualisation, that over iterations turned into a quasi-heatmap spiral!
 
-
-
 ### Data Wrangling
 Loading the data
 ```{r}
@@ -53,7 +51,7 @@ We decided to filter to observations after 2000s in order to enhance interpretab
 
 ### Plotting Logic
 
-Rain plot
+#### Rain plot
 ```{r}
 rain <- historic_station_met |> 
   filter(station == "heathrow") |> 
@@ -97,7 +95,7 @@ rain <- historic_station_met |>
 
 
 
-Sun plot
+#### Sun plot
 ```{r}
 sun <- historic_station_met |> 
   filter(station == "heathrow") |> 
@@ -135,7 +133,7 @@ sun <- historic_station_met |>
 ```
 
 
-Combining plots
+#### Combining plots
 ```{r}
 rain_plot <- rain +
   theme(
@@ -168,7 +166,7 @@ final_plot <- rain_plot + sun_plot +
   )
 ```
 
-Raindrops!
+#### Raindrops!
 ```{r}
 rain_image <- image_read("raindrops.png") |> 
   image_fx("A*30") #reduces opacity

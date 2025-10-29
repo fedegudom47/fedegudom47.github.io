@@ -63,12 +63,28 @@ h2, {
   padding-left: 1rem ;
 }
 
-h3, h4, h5, h6{
+h3 {
   font-family: $font-family-headings;
   color: $background;
   font-weight: $headings-font-weight;
   font-size: 1.5rem;
   background-color: $accent;
+  padding-left: 1rem ;
+}
+
+h4 {
+  font-family: $font-family-headings;
+  color: $primary;
+  font-weight: $headings-font-weight;
+  font-size: 1.3rem;
+  padding-left: 1rem ;
+}
+
+h5, h6 {
+  font-family: $font-family-headings;
+  color: $accent;
+  font-weight: $headings-font-weight;
+  font-size: 1.2rem;
   padding-left: 1rem ;
 }
 
