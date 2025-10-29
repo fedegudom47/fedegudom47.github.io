@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Federica">
+<meta name="author" content="Federica &amp; Prof.&nbsp;Jo Hardin">
 
 <title>UK Met Weather Data – Fede’s Hub</title>
 <style>
@@ -182,9 +182,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-this-data" id="toc-about-this-data" class="nav-link active" data-scroll-target="#about-this-data">About this Data</a></li>
+  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link active" data-scroll-target="#data-wrangling">Data Wrangling</a></li>
+  <li><a href="#about-this-week" id="toc-about-this-week" class="nav-link" data-scroll-target="#about-this-week">About this Week!</a></li>
+  <li><a href="#plotting-logic" id="toc-plotting-logic" class="nav-link" data-scroll-target="#plotting-logic">Plotting Logic</a></li>
+  <li><a href="#what-we-see" id="toc-what-we-see" class="nav-link" data-scroll-target="#what-we-see">What we see ☀️</a></li>
+  <li><a href="#about-this-data" id="toc-about-this-data" class="nav-link" data-scroll-target="#about-this-data">About this Data</a></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a>
+  <ul class="collapse">
   <li><a href="#historic_station_met.csv" id="toc-historic_station_met.csv" class="nav-link" data-scroll-target="#historic_station_met.csv"><code>historic_station_met.csv</code></a></li>
   <li><a href="#station_meta.csv" id="toc-station_meta.csv" class="nav-link" data-scroll-target="#station_meta.csv"><code>station_meta.csv</code></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -203,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Federica </p>
+             <p>Federica &amp; Prof.&nbsp;Jo Hardin </p>
           </div>
   </div>
     
@@ -216,18 +223,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="data-wrangling" class="level3">
+<h3 class="anchored" data-anchor-id="data-wrangling">Data Wrangling</h3>
+<p>Loading the data</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(showtext)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magick)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">font_add_google</span>(<span class="st">"Playfair Display"</span>, <span class="st">"playfair"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">showtext_auto</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>historic_station_met <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/historic_station_met.csv'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>station_meta <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/station_meta.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>This section defines the number of days in each month and creates month_breaks, a vector marking where each month ends. These breaks are later used as x-axis tick marks for labeling the polar plot by seasons or months.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -237,6 +243,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>month_breaks <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(month_length) <span class="sc">-</span> <span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+</section>
+<section id="about-this-week" class="level3">
+<h3 class="anchored" data-anchor-id="about-this-week">About this Week!</h3>
+<p>This week the dataset included data recorded from different UK weather stations starting in 1853 up until 2024. More details about this data set can be found below.</p>
+<p>We decided to filter to observations after 2000s in order to enhance interpretability/visibility of the spirals.</p>
+</section>
+<section id="plotting-logic" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-logic">Plotting Logic</h3>
+<p>Rain plot</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -279,6 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>Sun plot</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -317,6 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">90</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>Combining plots</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -351,6 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>Raindrops!</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -375,8 +393,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="about-this-data" class="level3">
-<h3 class="anchored" data-anchor-id="about-this-data">About this Data</h3>
+<p>This visualization juxtaposes monthly rainfall (left) and hours of sunlight (right) recorded at Heathrow, revealing seasonal and long-term weather patterns near London.</p>
+<p>In this case, each spiral starts at the center in the year 2000 and extends outward to 2024. Moving clockwise, months progress cyclically around the circle. Colour encodes magnitude with darke blues meaning heavier rainfall and warmer reds meaning more sunlight. Labels mark key years every 5 years so that we can better keep track of the temporal progression.</p>
+</section>
+<section id="what-we-see" class="level3">
+<h3 class="anchored" data-anchor-id="what-we-see">What we see ☀️</h3>
+<ul>
+<li>Rainfall peaks consistently during the winter months (November–February), while the sunniest months occur in late spring and summer (May–August).</li>
+<li>The spirals reveal recurring annual rhythms - London’s weather remains relatively stable in its seasonality over the 25-year period.</li>
+<li>Sunlight hours appear somewhat more variable, with several brighter summers after 2010, possibly reflecting warmer and drier seasons in the last decade.</li>
+<li>There is no strong long-term drying or wetting trend in rainfall magnitude, though some recent years (post-2018) show slightly drier winters compared to early 2000s.</li>
+</ul>
+</section>
+<section id="about-this-data" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-data">About this Data</h2>
 <p>This data was found on the <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-10-21/readme.md?plain=1">TidyTuesday Repository</a></p>
 <p>The UK Met Office is the United Kingdom’s national weather and climate service, providing forecasts, severe weather warnings, and climate science expertise. It helps people, businesses, and governments make informed decisions to stay safe and plan for the future. It was first established in 1854, making it one of the oldest weather services in the world.</p>
 <p>Data has been scraped straight from the Met Office website and cleaned in a basic way. The few flags for “estimated” data and changing sunlight monitoring techniques have been removed for simplicity, but are available from the raw data. Also available is simple site metadata which includes the opening date and <a href="https://epsg.io/4326">latitude and longitude</a> of each station.</p>
@@ -384,6 +414,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Monthly Historical information for 37 UK Meteorological Stations. Most go back to the early 1900s, but some go back as far as 1853. Station data files are updated on a rolling monthly basis, around 10 days after the end of the month. No allowances have been made for small site changes and developments in instrumentation.</p>
 </blockquote>
 </section>
+<section id="data-dictionary" class="level2">
+<h2 class="anchored" data-anchor-id="data-dictionary">Data Dictionary</h2>
 <section id="historic_station_met.csv" class="level3">
 <h3 class="anchored" data-anchor-id="historic_station_met.csv"><code>historic_station_met.csv</code></h3>
 <table class="caption-top table">
@@ -483,6 +515,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
