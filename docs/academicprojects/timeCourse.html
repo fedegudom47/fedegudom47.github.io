@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>timeCourse – Fede’s Hub</title>
+<title>Evaluating the Reliability of Sicegar for Timing Analysis of RpoS-Dependent Gene Expression – Fede’s Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,12 +36,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1a6990bc43ec1e9077967a0257133f15.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9ac0fa60fcd2ae55f2ddd9f231fc218f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-01ff1525810a70ad09911eda306d4185.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1a35dc4308b6989a91f7e6bcbcb526d7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -103,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="../academicprojects/gpr4golf.html">
+    <a class="dropdown-item" href="../academicprojects/gpr4golf.qmd">
  <span class="dropdown-text">Gaussian Process Regression For Golf</span></a>
   </li>  
         <li>
@@ -127,6 +156,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../smallprojs/index.html"> 
 <span class="menu-text">Byte-Sized Projects</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resumes/FedericaDomecq2025Sep.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -138,20 +171,36 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-brief-overview" id="toc-a-brief-overview" class="nav-link active" data-scroll-target="#a-brief-overview">A Brief Overview</a>
+  <ul class="collapse">
+  <li><a href="#brief-context" id="toc-brief-context" class="nav-link" data-scroll-target="#brief-context">Brief Context</a></li>
+  <li><a href="#understanding-sicegar" id="toc-understanding-sicegar" class="nav-link" data-scroll-target="#understanding-sicegar">Understanding <code>sicegar</code></a></li>
+  <li><a href="#the-models" id="toc-the-models" class="nav-link" data-scroll-target="#the-models">The models</a></li>
+  <li><a href="#analytical-and-computational-foundations" id="toc-analytical-and-computational-foundations" class="nav-link" data-scroll-target="#analytical-and-computational-foundations">Analytical and Computational Foundations</a></li>
+  <li><a href="#simulation-design" id="toc-simulation-design" class="nav-link" data-scroll-target="#simulation-design">Simulation Design</a></li>
+  <li><a href="#brief-overview-of-findings" id="toc-brief-overview-of-findings" class="nav-link" data-scroll-target="#brief-overview-of-findings">Brief Overview of Findings</a></li>
+  <li><a href="#bootstrapping-bias-correction" id="toc-bootstrapping-bias-correction" class="nav-link" data-scroll-target="#bootstrapping-bias-correction">Bootstrapping Bias Correction</a></li>
+  </ul></li>
+  <li><a href="#curious-about-where-it-went-next" id="toc-curious-about-where-it-went-next" class="nav-link" data-scroll-target="#curious-about-where-it-went-next">Curious About Where It Went Next?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">timeCourse</h1>
+<h1 class="title">Evaluating the Reliability of Sicegar for Timing Analysis of RpoS-Dependent Gene Expression</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -163,8 +212,95 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+<p><a href="TimeCourseResearchPaper.pdf" class="btn btn-primary" target="_blank"> <i class="fa-solid fa-file" aria-label="file"></i> Full Report </a> &nbsp;&nbsp; <a href="Symposium2024ResearchPoster.pdf" class="btn btn-primary" target="_blank"> <i class="fa-solid fa-image" aria-label="image"></i> Research Poster </a></p>
+</div>
+<section id="a-brief-overview" class="level2">
+<h2 class="anchored" data-anchor-id="a-brief-overview">A Brief Overview</h2>
+<section id="brief-context" class="level3">
+<h3 class="anchored" data-anchor-id="brief-context">Brief Context</h3>
+<p>This body of research is grounded in the study of gene expression timing, particularly in E. coli’s RpoS-dependent stress response. Understanding when a gene turns on (its onset time) is critical for interpreting cellular behaviour under stress.</p>
+<p>To study this, Adams et al.&nbsp;(2023) used time-course RNA-seq data to observe gene expression trajectories and analysed them with the R package <code>sicegar</code>, a tool designed to model growth-like curves with sigmoidal or double-sigmoidal shapes. However, while <code>sicegar</code> has been widely used, its reliability in accurately identifying model type and estimating onset times had not been systematically validated. This project addresses that gap by building a simulation-based framework to test how well sicegar performs under controlled, known conditions.</p>
+</section>
+<section id="understanding-sicegar" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-sicegar">Understanding <code>sicegar</code></h3>
+<p><code>sicegar</code> automatically fits data to both sigmoidal and double-sigmoidal models and chooses the better fit based on maximum likelihood estimation and AIC comparison.</p>
+<p>It uses the Levenberg–Marquardt algorithm to minimise squared residuals and normalises data to <span class="math inline">\([0,1]\)</span> internally.</p>
+<p>Its classification is intentionally conservative: when uncertain, it tends to label data as ambiguous rather than forcing a sigmoidal or double-sigmoidal classification.</p>
+</section>
+<section id="the-models" class="level3">
+<h3 class="anchored" data-anchor-id="the-models">The models</h3>
+<section id="sigmoidal-model" class="level4">
+<h4 class="anchored" data-anchor-id="sigmoidal-model">Sigmoidal model</h4>
+<p>Represents a single, monotonic increase in intensity until saturation: <span class="math display">\[f(x) = h_0 + \frac{h_1-h_0}{1+e^{-a(x-t_1)}}\]</span> where <span class="math inline">\(t_1\)</span> corresponds to the inflection point and therefore to the onset time.</p>
+</section>
+<section id="double-sigmoidal-model" class="level4">
+<h4 class="anchored" data-anchor-id="double-sigmoidal-model">Double-sigmoidal model</h4>
+<p>Capture two distinct phases: an initial rise and a subsequent decline: <span class="math display">\[f(x) = \frac{1}{h_1}\left(h_0 + \frac{h_1-h_0}{1+e^{-a_1(x-t_1)}}\right)\left(h_2 + \frac{h_1-h_2}{1+e^{a_2(x-t_2)}}\right)\]</span> Here, the relationship between <span class="math inline">\(t_1\)</span> and the actual onset time is not straightforward - <span class="math inline">\(t_1\)</span> is not necessarily the true inflection point</p>
+</section>
+</section>
+<section id="analytical-and-computational-foundations" class="level3">
+<h3 class="anchored" data-anchor-id="analytical-and-computational-foundations">Analytical and Computational Foundations</h3>
+<p>Before simulations, the project establishes theoretical ground truth for the inflection or onset time:</p>
+<ul>
+<li>For the sigmoidal model, symbolic calculus confirmed that <span class="math inline">\(t_1\)</span> indeed marks the inflection point.</li>
+<li>For the double sigmoidal model, no closed-form solutions exists (trust me, we tried!). Analytical differentiation yields a highly complex expression. Therefore a numerical approach was developed for our research’s goals. We developed a computational pipeline that defined the true onset time for any onset time for any simulated double sigmoidal curve, providing a benchmark against which to test <code>sicegar</code>.</li>
+</ul>
+</section>
+<section id="simulation-design" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-design">Simulation Design</h3>
+<p>Simulations generate synthetic gene expression data mimicking real experimental patterns with known ground truth.</p>
+<p>Steps include:</p>
+<ol type="1">
+<li>Selecting model type (sigmoidal vs double-sigmoidal).</li>
+<li>Choosing biologically realistic parameters.</li>
+<li>Sampling at chosen intervals (we can ask, does sampling more often yield more accurate results?) and adding controlled noise (dispersion) and replicates to resemble experimental uncertainty.</li>
+<li>Feeding the noisy data into <code>sicegar</code>’s <code>fitAndCategorize</code>function.</li>
+</ol>
+<p>This approach mirrorss the logic of an experiment where both the “exam” (data) and “mark scheme” (true params) are known, allowing precise assessment of how close <code>sicegar</code> gets to the correct answers.</p>
+</section>
+<section id="brief-overview-of-findings" class="level3">
+<h3 class="anchored" data-anchor-id="brief-overview-of-findings">Brief Overview of Findings</h3>
+<section id="model-identification" class="level4">
+<h4 class="anchored" data-anchor-id="model-identification">Model identification</h4>
+<p>Simulations confirmed sicegar’s conservative classification behaviour:</p>
+<ul>
+<li>It rarely misidentified models (sigmoid vs.&nbsp;double-sigmoid).</li>
+<li>Instead, it tended to label uncertain cases as ambiguous, particularly at high noise levels.</li>
+<li>Interestingly, some high-variability sigmoidal data were misclassified as double-sigmoidal, but not vice versa.</li>
+</ul>
+</section>
+<section id="onset-time-estimation---sigmoidal-models" class="level4">
+<h4 class="anchored" data-anchor-id="onset-time-estimation---sigmoidal-models">Onset Time Estimation - Sigmoidal Models</h4>
+<p><code>sicegar</code> performed well under ideal (low-noise) conditions:</p>
+<ul>
+<li>With zero dispersion, onset time detection was perfect (100% accuracy), though perhaps this is unsurprising.</li>
+<li>As dispersion increased, the error increased systematically, typically underestimating onset times.</li>
+<li>When recording time was too short (small x_lim), sicegar sometimes overestimated onset time instead.</li>
+<li>Accuracy depended not just on noise but on how far the true onset was from the last observed timepoint - incomplete curves misled the model.</li>
+</ul>
+</section>
+<section id="onset-time-estimation---double-sigmoidal-models" class="level4">
+<h4 class="anchored" data-anchor-id="onset-time-estimation---double-sigmoidal-models">Onset Time Estimation - Double Sigmoidal Models</h4>
+<p>For double-sigmoids, the issue was more structural: - The first inflection point often did not coincide with <code>sicegar</code>’s reported <span class="math inline">\(t_1\)</span>. - Therefore, even with clean data, its interpretation of onset time was sometimes inaccurate by definition. - Nonetheless, <code>sicegar</code>’s model fititng was computationally efficient and stable - suggesting reliability in curve shape recognition, if not always in onset quantification.</p>
+</section>
+</section>
+<section id="bootstrapping-bias-correction" class="level3">
+<h3 class="anchored" data-anchor-id="bootstrapping-bias-correction">Bootstrapping Bias Correction</h3>
+<p>After observing that both sigmoidal and double-sigmoidal models consistently underestimated onset time, we explored ways to quantify and correct this bias. Using the bootstrap method, we estimated the systematic deviation between <code>sicegar</code>’s onset time estimates and the true values. By resampling data and recalculating onset times across many iterations, we obtained an empirical distribution that revealed the average bias in estimation.</p>
+<p>Because the data were sampled at discrete time points with limited replicates, a parametric bootstrap was developed. We first fitted a model using `sicegar, extracted its estimated parameters, and then generated new simulated datasets using those parameters. This allowed us to compute bootstrap-based bias estimates and adjust the original onset time accordingly. Across 500 datasets and 100 bootstraps per dataset, this correction systematically shifted the estimates closer to the true onset values.</p>
+<p>Although we outlined a similar pipeline for the double-sigmoidal model, it remains computationally intensive to implement at scale due to nested simulations and the added complexity of identifying the correct inflection point.</p>
+</section>
+</section>
+<section id="curious-about-where-it-went-next" class="level2">
+<h2 class="anchored" data-anchor-id="curious-about-where-it-went-next">Curious About Where It Went Next?</h2>
+<p>The work presented in this paper is a small part of a larger research trajectory.</p>
+<p>In the summer of 2024, immediately following the termination of our summer research period, <a href="">Professor Jo Hardin presented our results</a> at the Computational Genomics Summer Institute (CGSI) at UCLA, sharing both the methodological framework and the bootstrap correction we developed.</p>
+<p>Throughout the 2024–2025 academic year, Mira Terdiman extended this work for their senior thesis under Hardin’s supervision. Their project focused on diagnosing estimation issues within the sicegar package - particularly those arising from corner cases in the sigmoidal and double-sigmoidal models, biases introduced by the Levenberg–Marquardt algorithm, and the sensitivity of results to hyperparameter choices. Using simulations from known parameter values, they demonstrated that setting data-driven hyperparameters significantly improved the accuracy and reliability of fits, providing practical guidance for future users.</p>
+<p>In the summer of 2025, three undergraduate collaborators continued this line of work with Professor Hardin by refining the underlying code and implementing Mira’s suggested changes directly within the package. Their fixes addressed several sources of bias and were formally submitted to the package authors - who integrated them into a new release. The team also co-authored a short software note in the Journal of Open Source Software (JOSS), documenting these technical improvements and ensuring the methods could be reliably applied across diverse biological datasets.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -594,7 +730,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>This website is built with <i class="fa-solid fa-heart" title="a heart" aria-label="heart"></i>, <a href="https://fedegudom47.github.io/" target="_blank"><i class="fa-brands fa-github" title="GitHub octocat logo" aria-label="github"></i></a>, <a href="https://www.r-project.org/about.html" target="_blank"><i class="fa-brands fa-r-project" title="R Project" aria-label="r-project"></i></a> and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
+<p>This website is built with <i class="fa-solid fa-heart" title="a heart" aria-label="heart"></i>, and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
 </div>
   </div>
 </footer>

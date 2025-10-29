@@ -2,17 +2,17 @@
 title: "On Par: Leveraging GPR for Perfect Golf, on Average"
 format: html
 resources: 
-  - On_Par_GPR_Leveraged_for_Perfect_Golf.pdf
-  - GPRPoster.pdf
+  - GolfGPRDocuments/On_Par_GPR_Leveraged_for_Perfect_Golf.pdf
+  - GolfGPRDocuments/GPRPoster.pdf
 ---
 
 <div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
 
-<a href="On_Par_GPR_Leveraged_for_Perfect_Golf.pdf" class="btn btn-primary" target="_blank">
+<a href="GolfGPRDocuments/On_Par_GPR_Leveraged_for_Perfect_Golf.pdf" class="btn btn-primary" target="_blank">
   {{< fa solid file >}} Full Report
 </a>
 &nbsp;&nbsp;
-<a href="GPRPoster.pdf" class="btn btn-primary" target="_blank">
+<a href="GolfGPRDocuments/GPRPoster.pdf" class="btn btn-primary" target="_blank">
   {{< fa solid image >}} Research Poster
 </a>
 
@@ -28,9 +28,7 @@ To accommodate different strategic objectives, we explored multiple loss functio
 
 This project demonstrates the potential of probabilistic modeling and spatial inference in sports analytics, offering a scalable foundation for real-time decision support in golf strategy - a step toward intelligent, data-driven gameplay.
 
-
-
-### Future Directions
+## Future Directions
 
 I am currently in school and in the full swing of things, but I am working on finalising some drafts to publish our findings. The biggest limitation of our current framework is the lack of real shot-level data - datasets like the PGA Tour's ShotLink system, which record every shot's position and context, are not publicly accessible.
 

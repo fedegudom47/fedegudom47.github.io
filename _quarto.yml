@@ -11,16 +11,16 @@ website:
         text: About Me
       - text: Projects
         menu: 
-          - href: academicprojects/gpr4golf.qmd
-            text: Gaussian Process Regression For Golf
-          - href: academicprojects/timeCourse.qmd
-            text: Validating sicegar
+          - href: academicprojects/GPR4GOLF/gpr4golf.qmd
+            text: 2025 GPR 4 Golf
+          - href: academicprojects/TIMECOURSE/timeCourse.qmd
+            text: 2024 Validating Sicegar
       - text: Off My Laptop
         menu:
           - href: golf/index.qmd
             text: Overview
       - href: smallprojs/index.qmd
-        text: Byte-Sized Projects
+        text: TidyTuesday
       - href: resumes/FedericaDomecq2025Sep.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
         text: CV
         target: _blank # opens link (or page) in a new browser tab

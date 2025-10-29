@@ -92,6 +92,16 @@ h5, h6 {
   margin-bottom: 0.5rem;
 }
 
+h1 code,  h3 code{
+  background: none !important;
+  border: none !important;
+  color: $background !important;
+  padding: 0 !important;
+  font-size: inherit;
+  font-family: inherit;
+  box-shadow: none !important;
+}
+
 p {
   font-family: $font-family-base;
   color: $text-color;
@@ -113,17 +123,22 @@ a {
 }
 
 
-// Apply custom markers only to content lists 
+article ul li,
+.content ul li,
+main ul li {
+  padding-left: 0.5em; 
+}
+
 article ul li::marker,
 .content ul li::marker,
 main ul li::marker {
   color: $denim;
-  content: "\f0da";
-  font-family:"Font Awesome 6 Free";
-  margin: .2rem;
+  content: "\f6e8";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 1rem;
 }
+
 
 // Ensure table of contents has no markers
 .table-of-contents ul, 
@@ -642,5 +657,50 @@ footer,
       margin: 0 0.5rem;
       font-size: 1.5rem;
     }
+    
+    
   }
+}
+
+.quarto-table table,
+.table,
+.cell-output-display table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background-color: $background !important; 
+  color: $text-color;
+  font-family: $font-family-base;
+  font-size: 0.95rem;
+  overflow: hidden;
+}
+
+.quarto-table tbody td,
+.cell-output-display tbody td {
+  padding: 0.75rem 1.25rem;
+  vertical-align: middle;
+}
+
+/* Optional striped effect for readability */
+.quarto-table.table-striped tbody tr:nth-child(even),
+.cell-output-display.table-striped tbody tr:nth-child(even) {
+  background-color: rgba($denim, 0.03);
+}
+
+/* Optional bordered table */
+.quarto-table.table-bordered,
+.cell-output-display.table-bordered {
+  border: 1px solid rgba($denim, 0.2);
+
+  th, td {
+    border: 1px solid rgba($denim, 0.15);
+  }
+}
+
+/* Ensure caption inherits theme */
+.quarto-table caption {
+  caption-side: bottom;
+  color: rgba($text-color, 0.8);
+  font-style: italic;
+  padding-top: 0.5rem;
 }

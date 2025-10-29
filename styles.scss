@@ -92,7 +92,7 @@ h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-h1 code, h2 code, h3 code, h4 code {
+h1 code,  h3 code{
   background: none !important;
   border: none !important;
   color: $background !important;
@@ -123,17 +123,22 @@ a {
 }
 
 
-// Apply custom markers only to content lists 
+article ul li,
+.content ul li,
+main ul li {
+  padding-left: 0.5em; 
+}
+
 article ul li::marker,
 .content ul li::marker,
 main ul li::marker {
   color: $denim;
-  content: "\f0da";
-  font-family:"Font Awesome 6 Free";
-  margin: .2rem;
+  content: "\f6e8";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 1rem;
 }
+
 
 // Ensure table of contents has no markers
 .table-of-contents ul, 
@@ -558,9 +563,10 @@ HERO / LANDING SECTION
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  padding: 0.9rem 2rem;
+  padding: 0.5rem 1rem;
   background-color: $background;
   color: $text-color;
+  border-color: $dark-green;
   border-radius: 0.75rem;
   text-decoration: none;
   font-weight: 600;
@@ -568,7 +574,6 @@ HERO / LANDING SECTION
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
 
   &:hover {
