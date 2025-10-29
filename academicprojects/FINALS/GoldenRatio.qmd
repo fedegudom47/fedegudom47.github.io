@@ -1,6 +1,6 @@
 ---
 title: "Golf’s Golden Ratio – A Statistical Analysis of Tempo & Driving Distance"
-image: "ImagesFinal/tempo.png"
+image: "ImagesFinal/tempo.jpeg"
 title-block-banner: true
 title-block-style: default
 affiliation: Math58
