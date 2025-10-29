@@ -549,8 +549,8 @@ HERO / LANDING SECTION
 .btn-secondary {
   display: inline-block;
   padding: 0.9rem 2rem;
-  background-color: $pumpkin;
-  color: white;
+  background-color: $background;
+  color: $text-color;
   border-radius: 0.75rem;
   text-decoration: none;
   font-weight: 600;
@@ -562,7 +562,8 @@ HERO / LANDING SECTION
 
 
   &:hover {
-    background-color: lighten($pumpkin, 10%);
+    background-color: lighten($background, 10%);
+    color: $text-color;
     transform: translateY(-3px);
     box-shadow: rgba(254, 127, 45, 0.4) 0px -3px, rgba(254, 127, 45, 0.3) 0px -6px;
   }
@@ -578,9 +579,7 @@ HERO / LANDING SECTION
   background-color: darken($pumpkin, 5%);
 }
 
-.btn-primary {
-  background-color: $pumpkin;
-}
+
 
 
 /*-----------------------------------------

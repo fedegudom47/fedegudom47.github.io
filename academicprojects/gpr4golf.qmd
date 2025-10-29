@@ -2,18 +2,18 @@
 title: "On Par: Leveraging GPR for Perfect Golf, on Average"
 format: html
 resources: 
-  - academicprojects/files/On_Par_GPR_Leveraged_for_Perfect_Golf.pdf
-  - academicprojects/files/GPRPoster.pdf
+  - On_Par_GPR_Leveraged_for_Perfect_Golf.pdf
+  - GPRPoster.pdf
 ---
 
 <div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
 
-<a href="academicprojects/files/On_Par_GPR_Leveraged_for_Perfect_Golf.pdf" class="btn btn-primary" target="_blank">
-  {{< fa solid file-pdf >}} Full Report
+<a href="On_Par_GPR_Leveraged_for_Perfect_Golf.pdf" class="btn btn-primary" target="_blank">
+  {{< fa solid file >}} Full Report
 </a>
 &nbsp;&nbsp;
-<a href="academicprojects/files/GPRPoster.pdf" class="btn btn-primary" target="_blank">
-  {{< fa solid chart-line >}} Research Poster
+<a href="GPRPoster.pdf" class="btn btn-primary" target="_blank">
+  {{< fa solid image >}} Research Poster
 </a>
 
 </div>
