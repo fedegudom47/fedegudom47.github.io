@@ -182,7 +182,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link active" data-scroll-target="#data-wrangling">Data Wrangling</a></li>
+  <li><a href="#process" id="toc-process" class="nav-link active" data-scroll-target="#process">Process</a></li>
+  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data Wrangling</a></li>
   <li><a href="#about-this-week" id="toc-about-this-week" class="nav-link" data-scroll-target="#about-this-week">About this Week!</a></li>
   <li><a href="#plotting-logic" id="toc-plotting-logic" class="nav-link" data-scroll-target="#plotting-logic">Plotting Logic</a></li>
   <li><a href="#what-we-see" id="toc-what-we-see" class="nav-link" data-scroll-target="#what-we-see">What we see ☀️</a></li>
@@ -229,6 +230,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="process" class="level3">
+<h3 class="anchored" data-anchor-id="process">Process</h3>
+<p>Like many things in life, this data vis was not what we originally planned. Our original idea, was to create a spiral plot of histograms, or as <a href="https://datavizproject.com/data-type/spiral-histogram/">this site</a> would call it, condegram.</p>
+<p>Our first idea was to turn to the infamous <a href="https://www.nytimes.com/2022/01/06/opinion/omicron-covid-us.html">NYT Corona Virus Spiral chart</a>, coincidentally, we found someone who had tried to <a href="https://bydata.github.io/nyt-corona-spiral-chart/">recreate it in R</a>. This underlying logic was the backbone for this visualisation, that over iterations turned into a quasi-heatmap spiral!</p>
+</section>
 <section id="data-wrangling" class="level3">
 <h3 class="anchored" data-anchor-id="data-wrangling">Data Wrangling</h3>
 <p>Loading the data</p>
@@ -239,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>station_meta <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/station_meta.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>This section defines the number of days in each month and creates month_breaks, a vector marking where each month ends. These breaks are later used as x-axis tick marks for labeling the polar plot by seasons or months.</p>
+<p>The following chunk defines the number of days in each month and creates month_breaks, a vector marking where each month ends. These breaks are later used as x-axis tick marks for labeling the polar plot by seasons or months.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>

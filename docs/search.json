@@ -88,7 +88,7 @@
     "href": "smallprojs/tt3.html",
     "title": "UK Met Weather Data",
     "section": "",
-    "text": "Loading the data\n\n\nCode\nhistoric_station_met &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/historic_station_met.csv')\nstation_meta &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/station_meta.csv')\n\n\nThis section defines the number of days in each month and creates month_breaks, a vector marking where each month ends. These breaks are later used as x-axis tick marks for labeling the polar plot by seasons or months.\n\n\nCode\nmonth_length &lt;- c(31, 28, 31, 30, 31, 30,\n                  31, 31, 30, 31, 30, 31)\n\nmonth_breaks &lt;- cumsum(month_length) - 30"
+    "text": "Like many things in life, this data vis was not what we originally planned. Our original idea, was to create a spiral plot of histograms, or as this site would call it, condegram.\nOur first idea was to turn to the infamous NYT Corona Virus Spiral chart, coincidentally, we found someone who had tried to recreate it in R. This underlying logic was the backbone for this visualisation, that over iterations turned into a quasi-heatmap spiral!"
   },
   {
     "objectID": "smallprojs/tt4.html",
