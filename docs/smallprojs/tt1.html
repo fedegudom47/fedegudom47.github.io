@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -40,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1a6990bc43ec1e9077967a0257133f15.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-62070dd9141dc22868325fada0099333.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-aea13feb64b06510550a384e8f563644.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -137,6 +171,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../smallprojs/index.html"> 
 <span class="menu-text">Byte-Sized Projects</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resumes/FedericaDomecq2025Sep.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -148,11 +186,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#wrangling-data" id="toc-wrangling-data" class="nav-link active" data-scroll-target="#wrangling-data">Wrangling Data</a></li>
+  <li><a href="#ploting-logic" id="toc-ploting-logic" class="nav-link" data-scroll-target="#ploting-logic">Ploting Logic</a>
+  <ul class="collapse">
+  <li><a href="#euroleague-outcomes-interactive-parallel-coordinates-plot" id="toc-euroleague-outcomes-interactive-parallel-coordinates-plot" class="nav-link" data-scroll-target="#euroleague-outcomes-interactive-parallel-coordinates-plot">🏀 EuroLeague Outcomes: Interactive Parallel Coordinates Plot</a></li>
+  </ul></li>
+  <li><a href="#about-this-data" id="toc-about-this-data" class="nav-link" data-scroll-target="#about-this-data">About this Data</a></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a>
+  <ul class="collapse">
+  <li><a href="#euroleague_basketball.csv" id="toc-euroleague_basketball.csv" class="nav-link" data-scroll-target="#euroleague_basketball.csv"><code>euroleague_basketball.csv</code></a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -161,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -198,14 +251,159 @@ Extra Feature!
 <p>On the different coordinate axes, you can use your cursor to select on or more lines you’d like to highlight!</p>
 </div>
 </div>
+<section id="wrangling-data" class="level2">
+<h2 class="anchored" data-anchor-id="wrangling-data">Wrangling Data</h2>
+<p>Here we load the necessary libraries for this visualisation. We use regular expressions to clean some of the issues in the capacity formatting (some teams have multiple different capacity stadiums). We also assign 20 (worst ranking) for teams who had “no last rank” (they ascended from a different league).</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>el_basket <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-07/euroleague_basketball.csv'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">capacity =</span> <span class="fu">str_split</span>(Capacity, <span class="st">", "</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(capacity) <span class="sc">|&gt;</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">capacity =</span> <span class="fu">as.numeric</span>(<span class="fu">str_replace_all</span>(capacity, <span class="st">","</span>, <span class="st">""</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lastrank =</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Last season</span><span class="st">`</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">d+"</span>)),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">lastrank =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(lastrank), <span class="dv">20</span>, lastrank)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Team, Country, capacity, lastrank, FinalFour_Appearances, Titles_Won, <span class="fu">everything</span>()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="ploting-logic" class="level2">
+<h2 class="anchored" data-anchor-id="ploting-logic">Ploting Logic</h2>
+<p>Using plotly…</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>el_basket_plot <span class="ot">&lt;-</span> el_basket <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">team_id =</span> <span class="fu">as.numeric</span>(<span class="fu">factor</span>(Team)),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">country_id =</span> <span class="fu">as.numeric</span>(<span class="fu">factor</span>(Country))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>el_basket_plot <span class="sc">|&gt;</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_ly</span>(</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">'parcoords'</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">line =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="sc">~</span>country_id, <span class="at">colorscale =</span> <span class="st">'Rainbow'</span>),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">dimensions =</span> <span class="fu">list</span>(</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">label =</span> <span class="st">'Team'</span>, <span class="at">values =</span> <span class="sc">~</span>team_id, <span class="at">tickvals =</span> <span class="fu">unique</span>(el_basket_plot<span class="sc">$</span>team_id), </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">ticktext =</span> <span class="fu">unique</span>(el_basket_plot<span class="sc">$</span>Team)),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">label =</span> <span class="st">'Country'</span>, <span class="at">values =</span> <span class="sc">~</span>country_id, <span class="at">tickvals =</span> <span class="fu">unique</span>(el_basket_plot<span class="sc">$</span>country_id), </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">ticktext =</span> <span class="fu">unique</span>(el_basket_plot<span class="sc">$</span>Country)),</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">label =</span> <span class="st">'Capacity'</span>, <span class="at">values =</span> <span class="sc">~</span>capacity),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">label =</span> <span class="st">'Final Four Appearances'</span>, </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>           <span class="at">values =</span> <span class="sc">~</span>FinalFour_Appearances),</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">label =</span> <span class="st">'Titles Won'</span>, </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>           <span class="at">values =</span> <span class="sc">~</span>Titles_Won),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>       <span class="fu">list</span>(<span class="at">label =</span> <span class="st">'2024-2025 Rank'</span>, </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>           <span class="at">values =</span> <span class="sc">~</span>lastrank, </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>           <span class="at">range =</span> <span class="fu">c</span>(<span class="fu">max</span>(el_basket_plot<span class="sc">$</span>lastrank, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">min</span>(el_basket_plot<span class="sc">$</span>lastrank, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)))</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">autosize =</span> <span class="cn">FALSE</span>, <span class="at">width =</span> <span class="dv">800</span>, <span class="at">height =</span> <span class="dv">400</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">margin =</span> <span class="fu">list</span>(<span class="at">l =</span> <span class="dv">150</span>, <span class="at">r =</span> <span class="dv">50</span>, <span class="at">b =</span> <span class="dv">10</span>, <span class="at">t =</span> <span class="dv">120</span>),</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"EuroLeague Outcomes"</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-0b9fe797519672e6afbf" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-0b9fe797519672e6afbf">{"x":{"visdat":{"9651190edba5":["function () ","plotlyVisDat"]},"cur_data":"9651190edba5","attrs":{"9651190edba5":{"line":{"color":{},"colorscale":"Rainbow"},"dimensions":[{"label":"Team","values":{},"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"ticktext":["Anadolu Efes","Barcelona","Baskonia","Bayern Munich","Crvena zvezda Meridianbet","Dubai Basketball","Fenerbahce","Hapoel IBI Tel Aviv","LDLC ASVEL","Maccabi Rapyd Tel Aviv","Monaco","Olimpia Milano","Olympiacos","Panathinaikos","Paris Basketball","Partizan","Real Madrid","Valencia Basket","Virtus Olidata Bologna","Zalgiris"]},{"label":"Country","values":{},"tickvals":[10,9,2,8,11,4,1,7,5,3,6],"ticktext":["Turkey","Spain","Germany","Serbia","United Arab Emirates","Israel","France","Monaco","Italy","Greece","Lithuania"]},{"label":"Capacity","values":{}},{"label":"Final Four Appearances","values":{}},{"label":"Titles Won","values":{}},{"label":"2024-2025 Rank","values":{},"range":[20,1]}],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"parcoords"}},"layout":{"width":800,"height":400,"margin":{"b":10,"l":150,"r":50},"autosize":false,"title":"EuroLeague Outcomes","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"line":{"color":[10,9,9,2,8,11,10,4,1,1,4,7,5,3,3,1,1,8,9,9,5,5,6],"colorscale":"Rainbow"},"dimensions":[{"label":"Team","values":[1,2,3,4,5,6,7,8,9,9,10,11,12,13,14,15,15,16,17,18,19,19,20],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"ticktext":["Anadolu Efes","Barcelona","Baskonia","Bayern Munich","Crvena zvezda Meridianbet","Dubai Basketball","Fenerbahce","Hapoel IBI Tel Aviv","LDLC ASVEL","Maccabi Rapyd Tel Aviv","Monaco","Olimpia Milano","Olympiacos","Panathinaikos","Paris Basketball","Partizan","Real Madrid","Valencia Basket","Virtus Olidata Bologna","Zalgiris"]},{"label":"Country","values":[10,9,9,2,8,11,10,4,1,1,4,7,5,3,3,1,1,8,9,9,5,5,6],"tickvals":[10,9,2,8,11,4,1,7,5,3,6],"ticktext":["Turkey","Spain","Germany","Serbia","United Arab Emirates","Israel","France","Monaco","Italy","Greece","Lithuania"]},{"label":"Capacity","values":[10000,7585,15431,11500,18386,17000,13000,12373,12523,5556,10383,5000,12700,12300,18300,8000,15705,18386,15000,15600,9980,5570,15415]},{"label":"Final Four Appearances","values":[5,0,0,0,0,0,7,0,0,0,0,2,4,14,13,0,0,3,12,0,0,0,2]},{"label":"Titles Won","values":[2,0,0,0,0,0,2,0,0,0,0,0,0,3,7,0,0,1,6,0,0,0,1]},{"label":"2024-2025 Rank","values":[6,5,14,9,10,20,1,20,15,15,16,2,11,3,4,8,8,12,7,20,17,17,13],"range":[20,1]}],"type":"parcoords","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-b16c01206b958d3e03cf" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b16c01206b958d3e03cf">{"x":{"visdat":{"c13662c02953":["function () ","plotlyVisDat"]},"cur_data":"c13662c02953","attrs":{"c13662c02953":{"line":{"color":{},"colorscale":"Rainbow"},"dimensions":[{"label":"Team","values":{},"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"ticktext":["Anadolu Efes","Barcelona","Baskonia","Bayern Munich","Crvena zvezda Meridianbet","Dubai Basketball","Fenerbahce","Hapoel IBI Tel Aviv","LDLC ASVEL","Maccabi Rapyd Tel Aviv","Monaco","Olimpia Milano","Olympiacos","Panathinaikos","Paris Basketball","Partizan","Real Madrid","Valencia Basket","Virtus Olidata Bologna","Zalgiris"]},{"label":"Country","values":{},"tickvals":[10,9,2,8,11,4,1,7,5,3,6],"ticktext":["Turkey","Spain","Germany","Serbia","United Arab Emirates","Israel","France","Monaco","Italy","Greece","Lithuania"]},{"label":"Capacity","values":{}},{"label":"Final Four Appearances","values":{}},{"label":"Titles Won","values":{}},{"label":"2024-2025 Rank","values":{},"range":[20,1]}],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"parcoords"}},"layout":{"width":800,"height":400,"margin":{"b":10,"l":150,"r":50},"autosize":false,"title":"EuroLeague Outcomes","hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"line":{"color":[10,9,9,2,8,11,10,4,1,1,4,7,5,3,3,1,1,8,9,9,5,5,6],"colorscale":"Rainbow"},"dimensions":[{"label":"Team","values":[1,2,3,4,5,6,7,8,9,9,10,11,12,13,14,15,15,16,17,18,19,19,20],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"ticktext":["Anadolu Efes","Barcelona","Baskonia","Bayern Munich","Crvena zvezda Meridianbet","Dubai Basketball","Fenerbahce","Hapoel IBI Tel Aviv","LDLC ASVEL","Maccabi Rapyd Tel Aviv","Monaco","Olimpia Milano","Olympiacos","Panathinaikos","Paris Basketball","Partizan","Real Madrid","Valencia Basket","Virtus Olidata Bologna","Zalgiris"]},{"label":"Country","values":[10,9,9,2,8,11,10,4,1,1,4,7,5,3,3,1,1,8,9,9,5,5,6],"tickvals":[10,9,2,8,11,4,1,7,5,3,6],"ticktext":["Turkey","Spain","Germany","Serbia","United Arab Emirates","Israel","France","Monaco","Italy","Greece","Lithuania"]},{"label":"Capacity","values":[10000,7585,15431,11500,18386,17000,13000,12373,12523,5556,10383,5000,12700,12300,18300,8000,15705,18386,15000,15600,9980,5570,15415]},{"label":"Final Four Appearances","values":[5,0,0,0,0,0,7,0,0,0,0,2,4,14,13,0,0,3,12,0,0,0,2]},{"label":"Titles Won","values":[2,0,0,0,0,0,2,0,0,0,0,0,0,3,7,0,0,1,6,0,0,0,1]},{"label":"2024-2025 Rank","values":[6,5,14,9,10,20,1,20,15,15,16,2,11,3,4,8,8,12,7,20,17,17,13],"range":[20,1]}],"type":"parcoords","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
+<section id="euroleague-outcomes-interactive-parallel-coordinates-plot" class="level3">
+<h3 class="anchored" data-anchor-id="euroleague-outcomes-interactive-parallel-coordinates-plot">🏀 EuroLeague Outcomes: Interactive Parallel Coordinates Plot</h3>
+<p>This visualization explores patterns among EuroLeague basketball teams using an interactive parallel coordinates plot. Each line represents a team, connecting its values across multiple performance and contextual dimensions =- including country, arena capacity, Final Four appearances, titles won, and the 2024–2025 season ranking.</p>
+<p>By dragging along the different coordinate axes, you can highlight or filter specific teams and compare how their attributes align across the variables.</p>
+<p>The plot is built using Plotly, making it fully interactive - hover over lines to reveal team details, or select value ranges to focus on subsets of interest. This allows for a dynamic, exploratory look at how success and resources are distributed across Europe’s top basketball clubs.</p>
+</section>
+</section>
+<section id="about-this-data" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-data">About this Data</h2>
+<p>This data comes from <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-10-07/readme.md?plain=1">Tidy Tuesday</a></p>
+<p>This week we’re exploring <strong>EuroLeague Basketball</strong>, the premier men’s club basketball competition in Europe.</p>
+<p>The dataset contains information on EuroLeague teams, including their country, home city, arena, seating capacity, and historical performance (Final Four appearances and titles won).</p>
+<p>The dataset is curated from publicly available sources such as Wikipedia and official EuroLeague records, and was packaged in the <a href="https://github.com/natanast/EuroleagueBasketball">EuroleagueBasketball R package</a>, with documentation available at <a href="https://natanast.github.io/EuroleagueBasketball/">natanast.github.io/EuroleagueBasketball</a>.</p>
+<blockquote class="blockquote">
+<p>“The EuroLeague is the top-tier European professional basketball club competition, widely regarded as the most prestigious competition in European basketball.” — EuroLeague</p>
+</blockquote>
+</section>
+<section id="data-dictionary" class="level2">
+<h2 class="anchored" data-anchor-id="data-dictionary">Data Dictionary</h2>
+<section id="euroleague_basketball.csv" class="level3">
+<h3 class="anchored" data-anchor-id="euroleague_basketball.csv"><code>euroleague_basketball.csv</code></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 8%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">variable</th>
+<th style="text-align: left;">class</th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Team</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Name of the basketball team.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Home city</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">City where the team is based.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Arena</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Name of the home arena.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Capacity</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Seating capacity of the arena.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Last season</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Ranking of team in the 2024-25 season, including teams elevated to the Euroleague from the Eurocup in that season.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Country</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Country where the team is based.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FinalFour_Appearances</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Number of times the team has reached the EuroLeague Final Four.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Titles_Won</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Number of EuroLeague titles won by the team.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Years_of_FinalFour_Appearances</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Years when the team reached the Final Four.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Years_of_Titles_Won</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Years when the team won the EuroLeague championship.</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -635,7 +833,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>This website is built with <i class="fa-solid fa-heart" title="a heart" aria-label="heart"></i>, <a href="https://fedegudom47.github.io/" target="_blank"><i class="fa-brands fa-github" title="GitHub octocat logo" aria-label="github"></i></a>, <a href="https://www.r-project.org/about.html" target="_blank"><i class="fa-brands fa-r-project" title="R Project" aria-label="r-project"></i></a> and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
+<p>This website is built with <i class="fa-solid fa-heart" title="a heart" aria-label="heart"></i>, and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
 </div>
   </div>
 </footer>

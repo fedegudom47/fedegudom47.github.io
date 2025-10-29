@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 // 🎨 Color variables
-$alabaster:  #F9F6EE;// #ebeddf;// #F0F8FF;    //
+$alabaster:  #FAF9F6;// #ebeddf;// #F0F8FF;    //
 $denim:      #275DAD;
 $persian-green:    #2F9C95;
 $pumpkin:       #FE7F2D;
@@ -192,6 +192,14 @@ NAVBAR / HEADER
 .navbar {
   background-color: $primary;
   color: $alabaster;
+  
+  ul li::marker {
+ /* Using a hex color as an example, since $secondary is likely not defined here */
+  content: none;
+  margin: .2rem;
+  font-weight: 900;
+  font-size: 1rem;
+}
   
   .navbar-brand {
     font-family: $font-family-brand;

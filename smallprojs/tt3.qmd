@@ -1,6 +1,8 @@
 ---
 title: "UK Met Weather Data"
 author: "Federica & Prof. Jo Hardin"
+date: 10/21/2025
+date-format: "D MMM, YYYY"
 format: 
   html:
      code-fold: true
@@ -21,13 +23,21 @@ font_add_google("Playfair Display", "playfair")
 showtext_auto()
 ```
 
+### Process
+
+Like many things in life, this data vis was not what we originally planned. Our original idea, was to create a spiral plot of histograms, or as [this site](https://datavizproject.com/data-type/spiral-histogram/) would call it, condegram. 
+
+Our first idea was to turn to the infamous [NYT Corona Virus Spiral chart](https://www.nytimes.com/2022/01/06/opinion/omicron-covid-us.html), coincidentally, we found someone who had tried to [recreate it in R](https://bydata.github.io/nyt-corona-spiral-chart/). This underlying logic was the backbone for this visualisation, that over iterations turned into a quasi-heatmap spiral!
+
+
+
 ### Data Wrangling
 Loading the data
 ```{r}
 historic_station_met <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/historic_station_met.csv')
 station_meta <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-21/station_meta.csv')
 ```
-This section defines the number of days in each month and creates month_breaks, a vector marking where each month ends. These breaks are later used as x-axis tick marks for labeling the polar plot by seasons or months.
+The following chunk defines the number of days in each month and creates month_breaks, a vector marking where each month ends. These breaks are later used as x-axis tick marks for labeling the polar plot by seasons or months.
 ```{r}
 month_length <- c(31, 28, 31, 30, 31, 30,
                   31, 31, 30, 31, 30, 31)

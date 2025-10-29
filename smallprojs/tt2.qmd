@@ -1,7 +1,11 @@
 ---
 title: "K-Means Clustering Food Security"
 author: "Federica"
-format: html
+date: 10/14/2025
+date-format: "D MMM, YYYY"
+format: 
+  html:
+     code-fold: true
 execute: 
   warning: false
 ---

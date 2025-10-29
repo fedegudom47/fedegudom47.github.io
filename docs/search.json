@@ -32,7 +32,7 @@
     "href": "smallprojs/index.html",
     "title": "The Data Lab",
     "section": "",
-    "text": "Hi there! This is the place where all my smaller data wrangles, visuals and models go!\n\n\n\n\n\n\n\n\n\n\n\n\nK-Means Clustering Food Security\n\n\n\n\n\n\nFederica\n\n\n\n\n\n\n\n\n\n\n\n\nUK Met Weather Data\n\n\n\n\n\n\nFederica & Prof. Jo Hardin\n\n\n\n\n\n\n\n\n\n\n\n\nSelected British Literary Prizes (1990-2022)\n\n\n\n\n\n\nFederica & TidyTuesday Friends\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTidy Tuesday - EuroBasket League\n\n\n\n\n\n\nFederica & TidyTuesday Friends\n\n\nOctober 7, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Hi there! This is the place where all my smaller data wrangles, visuals and models go!\n\n\n\n\n\n\n\n\n\n\n\n\nSelected British Literary Prizes (1990-2022)\n\n\n\n\n\n\nFederica & TidyTuesday Friends\n\n\nOctober 28, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nUK Met Weather Data\n\n\n\n\n\n\nFederica & Prof. Jo Hardin\n\n\nOctober 21, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nK-Means Clustering Food Security\n\n\n\n\n\n\nFederica\n\n\nOctober 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTidy Tuesday - EuroBasket League\n\n\n\n\n\n\nFederica & TidyTuesday Friends\n\n\nOctober 7, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "smallprojs/proj1.html",
@@ -124,5 +124,33 @@
     "title": "UK Met Weather Data",
     "section": "Data Dictionary",
     "text": "Data Dictionary\n\nhistoric_station_met.csv\n\n\n\nvariable\nclass\ndescription\n\n\n\n\nstation\ncharacter\nStation ID; for binding with metadata.\n\n\nyear\ninteger\nYear.\n\n\nmonth\ninteger\nNumeric month (1-12).\n\n\ntmax\ndouble\nMean daily maximum temperature (Degrees C).\n\n\ntmin\ndouble\nMean daily minimum temperature (Degrees C).\n\n\naf\ndouble\nDays of air frost.\n\n\nrain\ndouble\nTotal rainfall (mm).\n\n\nsun\ndouble\nTotal sunshine duration (hours).\n\n\n\n\n\nstation_meta.csv\n\n\n\n\n\n\n\n\nvariable\nclass\ndescription\n\n\n\n\nstation\ncharacter\nStation ID; for binding with measurement data.\n\n\nstation_name\ncharacter\nStation name.\n\n\nopened\ninteger\nYear in which station opened.\n\n\nlng\ndouble\nDecimal longitude.\n\n\nlat\ndouble\nDecimal latitude."
+  },
+  {
+    "objectID": "smallprojs/tt1.html#wrangling-data",
+    "href": "smallprojs/tt1.html#wrangling-data",
+    "title": "Tidy Tuesday - EuroBasket League",
+    "section": "Wrangling Data",
+    "text": "Wrangling Data\nHere we load the necessary libraries for this visualisation. We use regular expressions to clean some of the issues in the capacity formatting (some teams have multiple different capacity stadiums). We also assign 20 (worst ranking) for teams who had “no last rank” (they ascended from a different league).\n\n\nCode\nlibrary(tidyverse)\nlibrary(plotly)\nlibrary(stringr)\nel_basket &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-10-07/euroleague_basketball.csv') |&gt; \n  mutate(capacity = str_split(Capacity, \", \")) |&gt; \n  unnest(capacity) |&gt; \n  mutate(capacity = as.numeric(str_replace_all(capacity, \",\", \"\"))) |&gt; \n  mutate(lastrank = as.numeric(str_extract(`Last season`, \"\\\\d+\")),\n         lastrank = ifelse(is.na(lastrank), 20, lastrank)) |&gt; \n  select(Team, Country, capacity, lastrank, FinalFour_Appearances, Titles_Won, everything())"
+  },
+  {
+    "objectID": "smallprojs/tt1.html#ploting-logic",
+    "href": "smallprojs/tt1.html#ploting-logic",
+    "title": "Tidy Tuesday - EuroBasket League",
+    "section": "Ploting Logic",
+    "text": "Ploting Logic\nUsing plotly…\n\n\nCode\nel_basket_plot &lt;- el_basket |&gt; \n  mutate(\n    team_id = as.numeric(factor(Team)),\n    country_id = as.numeric(factor(Country))\n  )\n\nel_basket_plot |&gt; \n  plot_ly(\n    type = 'parcoords',\n    line = list(color = ~country_id, colorscale = 'Rainbow'),\n    dimensions = list(\n      list(label = 'Team', values = ~team_id, tickvals = unique(el_basket_plot$team_id), \n           ticktext = unique(el_basket_plot$Team)),\n      list(label = 'Country', values = ~country_id, tickvals = unique(el_basket_plot$country_id), \n           ticktext = unique(el_basket_plot$Country)),\n      list(label = 'Capacity', values = ~capacity),\n      list(label = 'Final Four Appearances', \n           values = ~FinalFour_Appearances),\n      list(label = 'Titles Won', \n           values = ~Titles_Won),\n       list(label = '2024-2025 Rank', \n           values = ~lastrank, \n           range = c(max(el_basket_plot$lastrank, na.rm = TRUE),\n                     min(el_basket_plot$lastrank, na.rm = TRUE)))\n    )\n  ) |&gt; \n  layout(\n    autosize = FALSE, width = 800, height = 400,\n    margin = list(l = 150, r = 50, b = 10, t = 120),\n    title = \"EuroLeague Outcomes\"\n  )\n\n\n\n\n\n\n\n🏀 EuroLeague Outcomes: Interactive Parallel Coordinates Plot\nThis visualization explores patterns among EuroLeague basketball teams using an interactive parallel coordinates plot. Each line represents a team, connecting its values across multiple performance and contextual dimensions =- including country, arena capacity, Final Four appearances, titles won, and the 2024–2025 season ranking.\nBy dragging along the different coordinate axes, you can highlight or filter specific teams and compare how their attributes align across the variables.\nThe plot is built using Plotly, making it fully interactive - hover over lines to reveal team details, or select value ranges to focus on subsets of interest. This allows for a dynamic, exploratory look at how success and resources are distributed across Europe’s top basketball clubs."
+  },
+  {
+    "objectID": "smallprojs/tt1.html#about-this-data",
+    "href": "smallprojs/tt1.html#about-this-data",
+    "title": "Tidy Tuesday - EuroBasket League",
+    "section": "About this Data",
+    "text": "About this Data\nThis data comes from Tidy Tuesday\nThis week we’re exploring EuroLeague Basketball, the premier men’s club basketball competition in Europe.\nThe dataset contains information on EuroLeague teams, including their country, home city, arena, seating capacity, and historical performance (Final Four appearances and titles won).\nThe dataset is curated from publicly available sources such as Wikipedia and official EuroLeague records, and was packaged in the EuroleagueBasketball R package, with documentation available at natanast.github.io/EuroleagueBasketball.\n\n“The EuroLeague is the top-tier European professional basketball club competition, widely regarded as the most prestigious competition in European basketball.” — EuroLeague"
+  },
+  {
+    "objectID": "smallprojs/tt1.html#data-dictionary",
+    "href": "smallprojs/tt1.html#data-dictionary",
+    "title": "Tidy Tuesday - EuroBasket League",
+    "section": "Data Dictionary",
+    "text": "Data Dictionary\n\neuroleague_basketball.csv\n\n\n\n\n\n\n\n\nvariable\nclass\ndescription\n\n\n\n\nTeam\ncharacter\nName of the basketball team.\n\n\nHome city\ncharacter\nCity where the team is based.\n\n\nArena\ncharacter\nName of the home arena.\n\n\nCapacity\ncharacter\nSeating capacity of the arena.\n\n\nLast season\ncharacter\nRanking of team in the 2024-25 season, including teams elevated to the Euroleague from the Eurocup in that season.\n\n\nCountry\ncharacter\nCountry where the team is based.\n\n\nFinalFour_Appearances\ninteger\nNumber of times the team has reached the EuroLeague Final Four.\n\n\nTitles_Won\ninteger\nNumber of EuroLeague titles won by the team.\n\n\nYears_of_FinalFour_Appearances\ncharacter\nYears when the team reached the Final Four.\n\n\nYears_of_Titles_Won\ncharacter\nYears when the team won the EuroLeague championship."
   }
 ]
