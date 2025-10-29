@@ -1,0 +1,25 @@
+---
+title: "Course Correction: Strategic Golf Powered by ML"
+image: "ImagesFinal/CourseCorrection.png"
+title-block-banner: true
+title-block-style: default
+affiliation: CS154
+author: Federica & Wonny Kwak
+date: 2025-05-1
+date-format: "MMM YYYY"
+format: html
+---
+<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+
+<a href="FinalFiles/CS158Paper.pdf" class="btn btn-primary" target="_blank">
+  {{< fa solid paperclip >}} Final 1-Page Paper
+</a>
+&nbsp;&nbsp;
+<a href="FinalFiles/CS158Presentation.pdf" class="btn btn-primary" target="_blank">
+  {{< fa regular paper-plane >}} 5-min Presentation
+</a>
+
+</div>
+This 1-2 week project, Course Correction: Strategic Golf Powered by ML presents a personalized machine learning framework for optimizing golf club selection using player-specific TrackMan data and expected strokes to hole out (ESHO) based on lie and distance. By implementing Gaussian Process Regression (GPR) models for different lies (green, fairway, rough, sand), the framework simulates outcomes for various clubs and aimpoints, recommending strategies that minimise expected strokes under both neutral and goal-oriented loss functions. Using data from Pomona-Pitzer tournament rounds and a D3 golfer’s TrackMan shots, the model accounts for dispersion patterns and identifies optimal club-aimpoint combinations for scenarios such as birdie or par targets. 
+
+This was a first attempt or look at what would become my greater summer project [Gaussian Process Regression for Golf](../GPR4GOLF/gpr4golf.qmd).

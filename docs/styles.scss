@@ -563,9 +563,10 @@ HERO / LANDING SECTION
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  padding: 0.9rem 2rem;
+  padding: 0.5rem 1rem;
   background-color: $background;
   color: $text-color;
+  border-color: $dark-green;
   border-radius: 0.75rem;
   text-decoration: none;
   font-weight: 600;
@@ -573,7 +574,6 @@ HERO / LANDING SECTION
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
 
   &:hover {

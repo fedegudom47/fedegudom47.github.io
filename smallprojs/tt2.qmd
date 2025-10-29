@@ -1,6 +1,7 @@
 ---
 title: "K-Means Clustering Food Security"
 author: "Federica"
+image: "media/food.jpeg"
 date: 10/14/2025
 date-format: "D MMM, YYYY"
 format: 

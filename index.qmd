@@ -29,8 +29,7 @@ Hello There! 👋
 
 I’m **Federica Domecq Lacroze**, a senior at **Pomona College**, double majoring in **Mathematics & Computer Science**. Originally from **Madrid, Spain 🇪🇸**, I moved to the U.S. to pursue new opportunities and currently live in **Claremont, California**. 
 
-:::{.link-buttons}
+
 On this website you can learn a little bit [about me](about.qmd); about my [research](projects.qmd); [byte-sized work](smallprojs/index.qmd); and about my [passions](passionprojects/index.qmd).
-:::
 :::
 

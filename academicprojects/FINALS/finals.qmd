@@ -1,0 +1,16 @@
+---
+title: "Small Coursework Projects"
+listing:
+  contents: 
+    - GoldenRatio.qmd
+    - OhMyGas.qmd
+    - StreakyGolf.qmd
+    - FirstGPRGolf.qmd
+          # list all files in this folder
+  sort: "date desc"
+  type: grid         # or "default" for a list
+  categories: false
+  date-format: "long"
+page-layout: full
+---
+Hi there! This is the place for some of the small projects I've done as part of class coursework.

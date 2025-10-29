@@ -7,5 +7,14 @@
       "/smallprojs/tt2.html",
       "/smallprojs/tt1.html"
     ]
+  },
+  {
+    "listing": "/academicprojects/FINALS/finals.html",
+    "items": [
+      "/academicprojects/FINALS/FirstGPRGolf.html",
+      "/academicprojects/FINALS/StreakyGolf.html",
+      "/academicprojects/FINALS/OhMyGas.html",
+      "/academicprojects/FINALS/GoldenRatio.html"
+    ]
   }
 ]

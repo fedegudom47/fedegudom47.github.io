@@ -1,0 +1,20 @@
+---
+title: "Golf’s Golden Ratio – A Statistical Analysis of Tempo & Driving Distance"
+image: "ImagesFinal/tempo.png"
+title-block-banner: true
+title-block-style: default
+affiliation: Math58
+author: Federica 
+date: 2023-01-1
+date-format: "MMM YYYY"
+format: html
+---
+
+<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+  <a href="FinalFiles/Math58Proj1.pdf" class="btn btn-primary" target="_blank">
+    {{< fa solid paperclip >}} Final  Paper
+  </a>
+</div>
+
+This small project, Golf’s Golden Ratio – A Statistical Analysis of Tempo & Driving Distance, investigates the relationship between backswing duration and average driving distance for professional female golfers on the LPGA Tour. Using a sample of 40 players, the study collected average driving distances from official LPGA statistics and measured backswing times from slowed-down video footage, while also accounting for player height. Through multiple linear regression analysis, the results indicate a statistically significant negative correlation between backswing duration and driving distance- faster backswings are associated with longer drives—while height does not have a meaningful effect. The study suggests that backswing tempo is a more predictive factor of driving performance than physical stature and highlights potential implications for coaching and performance optimisation in golf.
+

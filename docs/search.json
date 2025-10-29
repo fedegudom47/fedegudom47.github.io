@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Federica Domecq Lacroze",
     "section": "",
-    "text": "Hello There! 👋\nI’m Federica Domecq Lacroze, a senior at Pomona College, double majoring in Mathematics & Computer Science. Originally from Madrid, Spain 🇪🇸, I moved to the U.S. to pursue new opportunities and currently live in Claremont, California.\n\nOn this website you can learn a little bit about me; about my research; byte-sized work; and about my passions."
+    "text": "Hello There! 👋\nI’m Federica Domecq Lacroze, a senior at Pomona College, double majoring in Mathematics & Computer Science. Originally from Madrid, Spain 🇪🇸, I moved to the U.S. to pursue new opportunities and currently live in Claremont, California.\nOn this website you can learn a little bit about me; about my research; byte-sized work; and about my passions."
   },
   {
     "objectID": "about.html",
@@ -250,5 +250,40 @@
     "title": "On Par: Leveraging GPR for Perfect Golf, on Average",
     "section": "Future Directions",
     "text": "Future Directions\nI am currently in school and in the full swing of things, but I am working on finalising some drafts to publish our findings. The biggest limitation of our current framework is the lack of real shot-level data - datasets like the PGA Tour’s ShotLink system, which record every shot’s position and context, are not publicly accessible.\nTo address this, we designed a comprehensive data simulation pipeline that mirrors tournament-level patterns with surprising realism. We digitised course geometries in QGIS, and generated two-dimensional scoring distributions by interpolating Mark Broadie’s Strokes Gained tables. We introduced heteroscedastic noise to emulate real-world uncertainty and variance in shot outcomes, allowing our Gaussian Process Regression models to behave as if they were trained on noisy, heterogeneous field data. This in itself was a huge part of the project!\nI am also working under the advising of Professor Vin De Silva during this year looking at potential topological interpretations of this research for my senior thesis! We don’t know exactly what we’re doing, but we have some time to figure it out!\nUltimately, this project represents both a proof of concept and a launchpad: a system already capable of personalized, data-driven strategy, and a framework ready to evolve into a publishable model as the data grows."
+  },
+  {
+    "objectID": "academicprojects/FINALS/finals.html",
+    "href": "academicprojects/FINALS/finals.html",
+    "title": "Small Coursework Projects",
+    "section": "",
+    "text": "Hi there! This is the place for some of the small projects I’ve done as part of class coursework.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCourse Correction: Strategic Golf Powered by ML\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2025\n\n\nFederica & Wonny Kwak\n\n\n\n\n\n\n\n\n\n\n\n\nPutting Myths to Rest: Spectral Analysis of PGA Tour Metrics\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2024\n\n\nFederica\n\n\n\n\n\n\n\n\n\n\n\n\nOh My Gas! A Time Series Analysis of California Gas Prices\n\n\n\n\n\n\n\n\n\n\n\nFebruary 1, 2024\n\n\nFederica\n\n\n\n\n\n\n\n\n\n\n\n\nGolf’s Golden Ratio – A Statistical Analysis of Tempo & Driving Distance\n\n\n\n\n\n\n\n\n\n\n\nJanuary 1, 2023\n\n\nFederica\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "academicprojects/FINALS/FirstGPRGolf.html",
+    "href": "academicprojects/FINALS/FirstGPRGolf.html",
+    "title": "Course Correction: Strategic Golf Powered by ML",
+    "section": "",
+    "text": "Final 1-Page Paper       5-min Presentation \n\nThis 1-2 week project, Course Correction: Strategic Golf Powered by ML presents a personalized machine learning framework for optimizing golf club selection using player-specific TrackMan data and expected strokes to hole out (ESHO) based on lie and distance. By implementing Gaussian Process Regression (GPR) models for different lies (green, fairway, rough, sand), the framework simulates outcomes for various clubs and aimpoints, recommending strategies that minimise expected strokes under both neutral and goal-oriented loss functions. Using data from Pomona-Pitzer tournament rounds and a D3 golfer’s TrackMan shots, the model accounts for dispersion patterns and identifies optimal club-aimpoint combinations for scenarios such as birdie or par targets.\nThis was a first attempt or look at what would become my greater summer project Gaussian Process Regression for Golf."
+  },
+  {
+    "objectID": "academicprojects/FINALS/GoldenRatio.html",
+    "href": "academicprojects/FINALS/GoldenRatio.html",
+    "title": "Golf’s Golden Ratio – A Statistical Analysis of Tempo & Driving Distance",
+    "section": "",
+    "text": "Final 1-Page Paper \n\nThis small project, Golf’s Golden Ratio – A Statistical Analysis of Tempo & Driving Distance, investigates the relationship between backswing duration and average driving distance for professional female golfers on the LPGA Tour. Using a sample of 40 players, the study collected average driving distances from official LPGA statistics and measured backswing times from slowed-down video footage, while also accounting for player height. Through multiple linear regression analysis, the results indicate a statistically significant negative correlation between backswing duration and driving distance- faster backswings are associated with longer drives—while height does not have a meaningful effect. The study suggests that backswing tempo is a more predictive factor of driving performance than physical stature and highlights potential implications for coaching and performance optimisation in golf."
+  },
+  {
+    "objectID": "academicprojects/FINALS/OhMyGas.html",
+    "href": "academicprojects/FINALS/OhMyGas.html",
+    "title": "Oh My Gas! A Time Series Analysis of California Gas Prices",
+    "section": "",
+    "text": "Final 1-Page Paper \n\nThis project, Oh My Gas! A Time Series Analysis of California Gas Prices, examines weekly retail prices of California’s regular reformulated gasoline from 1995 to 2024 using SARIMA modeling to understand trends and forecast future prices. After log-transforming and differencing the data to achieve stationarity, autocorrelation and partial autocorrelation analyses suggested both short-term (weekly and monthly) and seasonal (yearly) dependencies. The final \\(SARIMA(4,1,0)×(1,0,1)_{52}\\) model captures these dynamics, showing that the most recent week, the preceding month, and the same week in prior years are the strongest predictors of current prices. While the model demonstrates predictive capability, it also highlights the high volatility of California gas prices, emphasizing the difficulty of precise forecasting and the inherent uncertainty in the market."
+  },
+  {
+    "objectID": "academicprojects/FINALS/StreakyGolf.html",
+    "href": "academicprojects/FINALS/StreakyGolf.html",
+    "title": "Putting Myths to Rest: Spectral Analysis of PGA Tour Metrics",
+    "section": "",
+    "text": "Paper \n\nThis project, Putting Myths to Rest: Spectral Analysis of PGA Tour Metrics, investigates whether elite PGA Tour golfers exhibit “streakiness” in their putting performance using spectral domain analysis. Focusing on Strokes Gained Putting averages from 2015–2022 for top-ranked players, the analysis of autocorrelation functions, periodograms, and cumulative periodograms indicates that variations in putting performance resemble white noise, with little to no serial correlation or cyclical patterns. These results dispel the popular belief in predictable “hot” streaks, suggesting that putting success in professional golf is largely random and independent across tournaments."
   }
 ]

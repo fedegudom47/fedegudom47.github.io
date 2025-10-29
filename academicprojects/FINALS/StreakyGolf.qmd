@@ -1,0 +1,20 @@
+---
+title: "Putting Myths to Rest: Spectral Analysis of PGA Tour Metrics"
+image: "ImagesFinal/putting.jpeg"
+title-block-banner: true
+title-block-style: default
+affiliation: Math155
+author: Federica 
+date: 2024-05-1
+date-format: "MMM YYYY"
+format: html
+---
+
+<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+  <a href="FinalFiles/Math155Proj2.pdf" class="btn btn-primary" target="_blank">
+    {{< fa solid paperclip >}}Paper
+  </a>
+</div>
+
+This project, Putting Myths to Rest: Spectral Analysis of PGA Tour Metrics, investigates whether elite PGA Tour golfers exhibit "streakiness" in their putting performance using spectral domain analysis. Focusing on Strokes Gained Putting averages from 2015–2022 for top-ranked players, the analysis of autocorrelation functions, periodograms, and cumulative periodograms indicates that variations in putting performance resemble white noise, with little to no serial correlation or cyclical patterns. These results dispel the popular belief in predictable "hot" streaks, suggesting that putting success in professional golf is largely random and independent across tournaments.
+

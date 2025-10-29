@@ -1,0 +1,20 @@
+---
+title: "Oh My Gas! A Time Series Analysis of California Gas Prices"
+image: "ImagesFinal/gas.jpeg"
+title-block-banner: true
+title-block-style: default
+affiliation: Math155
+author: Federica 
+date: 2024-02-1
+date-format: "MMM YYYY"
+format: html
+---
+
+<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+  <a href="FinalFiles/Math155Proj1.pdf" class="btn btn-primary" target="_blank">
+    {{< fa solid paperclip >}}Paper
+  </a>
+</div>
+
+This project, Oh My Gas! A Time Series Analysis of California Gas Prices, examines weekly retail prices of California’s regular reformulated gasoline from 1995 to 2024 using SARIMA modeling to understand trends and forecast future prices. After log-transforming and differencing the data to achieve stationarity, autocorrelation and partial autocorrelation analyses suggested both short-term (weekly and monthly) and seasonal (yearly) dependencies. The final $SARIMA(4,1,0)×(1,0,1)_{52}$ model captures these dynamics, showing that the most recent week, the preceding month, and the same week in prior years are the strongest predictors of current prices. While the model demonstrates predictive capability, it also highlights the high volatility of California gas prices, emphasizing the difficulty of precise forecasting and the inherent uncertainty in the market.
+
