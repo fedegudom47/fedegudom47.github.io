@@ -1,5 +1,43 @@
 ---
-title: "gpr4golf"
+title: "On Par: Leveraging GPR for Perfect Golf, on Average"
 format: html
+resources: 
+  - academicprojects/files/On_Par_GPR_Leveraged_for_Perfect_Golf.pdf
+  - academicprojects/files/GPRPoster.pdf
 ---
+
+<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+
+<a href="academicprojects/files/On_Par_GPR_Leveraged_for_Perfect_Golf.pdf" class="btn btn-primary" target="_blank">
+  {{< fa solid file-pdf >}} Full Report
+</a>
+&nbsp;&nbsp;
+<a href="academicprojects/files/GPRPoster.pdf" class="btn btn-primary" target="_blank">
+  {{< fa solid chart-line >}} Research Poster
+</a>
+
+</div>
+
+## A Brief Intro
+
+During the summer of 2025, we developed a simulation-based framework to model optimal golf strategy through a statistical lens, recognising golf as a sequential decision-making problem under uncertainty. Our work combines player-specific shot data, course geometry, and Gaussian Process Regression (GPR) to estimate the expected strokes to hole out (ESHO) and birdie probability surfaces across a golf hole.
+
+By digitising course layouts and overlaying shot dispersion data from LPGA TrackMan records, we constructed spatially continuous GPR models that capture how club and aimpoint choices influence scoring outcomes. The model recursively works from the green backward - first fitting a 2D GPR to expected strokes on the putting surface, then extending the framework to evaluate approaches and tee shots, using simulated distributions to identify the optimal strategy for any point on the hole.
+
+To accommodate different strategic objectives, we explored multiple loss functions: one minimizing expected strokes (for consistent performance) and another maximizing birdie odds (for high-stakes play). Together, these layers form a dynamic, player-adaptive decision system capable of evolving as new data are recorded.
+
+This project demonstrates the potential of probabilistic modeling and spatial inference in sports analytics, offering a scalable foundation for real-time decision support in golf strategy - a step toward intelligent, data-driven gameplay.
+
+
+
+### Future Directions
+
+I am currently in school and in the full swing of things, but I am working on finalising some drafts to publish our findings. The biggest limitation of our current framework is the lack of real shot-level data - datasets like the PGA Tour's ShotLink system, which record every shot's position and context, are not publicly accessible.
+
+To address this, we designed a comprehensive data simulation pipeline that mirrors tournament-level patterns with surprising realism. We digitised course geometries in QGIS, and generated two-dimensional scoring distributions by interpolating Mark Broadie’s Strokes Gained tables. We introduced heteroscedastic noise to emulate real-world uncertainty and variance in shot outcomes, allowing our Gaussian Process Regression models to behave as if they were trained on noisy, heterogeneous field data. This in itself was a huge part of the project!
+
+ I am also working under the advising of [Professor Vin De Silva](https://www.pomona.edu/directory/people/vin-de-silva) during this year looking at potential topological interpretations of this research for my senior thesis! We don't know exactly what we're doing, but we have some time to figure it out!
+ 
+Ultimately, this project represents both a proof of concept and a launchpad: a system already capable of personalized, data-driven strategy, and a framework ready to evolve into a publishable model as the data grows.
+
 

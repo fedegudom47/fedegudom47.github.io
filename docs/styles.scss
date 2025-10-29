@@ -62,7 +62,6 @@ h2 {
   font-size: 2rem; 
   padding: 0.5rem 0 0.5rem 1rem;
   margin-bottom: 0.75rem;
-  border-left: 4px solid $pumpkin; 
 }
 
 h3 {
@@ -71,7 +70,7 @@ h3 {
   font-weight: $headings-font-weight;
   font-size: 1.5rem;
   background-color: $accent;
-  padding: 0.75rem 1rem; 
+  padding: 0.2rem 1rem; 
   margin-bottom: 0.5rem;
 }
 
@@ -114,9 +113,7 @@ a {
 }
 
 
-// Remove the global ul li::marker rule and replace with:
-
-// Apply custom markers only to content lists (adjust selector as needed)
+// Apply custom markers only to content lists 
 article ul li::marker,
 .content ul li::marker,
 main ul li::marker {
@@ -313,9 +310,9 @@ NAVBAR / HEADER - ENHANCED DROPDOWN
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      bottom: 8px;
+      bottom: -15px;
       left: calc(50% - 3px);
-      background: $pumpkin;
+      background: $background;
       will-change: transform;
       transform: scale(0);
       transition: transform 0.2s ease;
@@ -323,7 +320,7 @@ NAVBAR / HEADER - ENHANCED DROPDOWN
     
     &:hover {
       color: $background;
-      background-color: rgba($pumpkin, 0.1); 
+      background-color: rgba($background, 0.1); 
       
       &:not(.dropdown-toggle)::after {
         transform: scale(1);
@@ -334,8 +331,7 @@ NAVBAR / HEADER - ENHANCED DROPDOWN
       transform: translateY(2px);
     }
   }
-  
-  /* ---- DROPDOWN CONTAINER ---- */
+
   .dropdown {
     position: relative;
     
@@ -344,7 +340,6 @@ NAVBAR / HEADER - ENHANCED DROPDOWN
       position: relative;
       padding-right: 2rem !important; // Extra space for arrow
       
-      // Style the dropdown arrow
       &::after {
         position: absolute;
         right: 0.75rem;
@@ -390,8 +385,8 @@ NAVBAR / HEADER - ENHANCED DROPDOWN
     left: 0;
     background-color: $primary;
     border: none;
-    border-radius: 0.75rem;
-    padding: 0.5rem 0;
+    //border-radius: 0.75rem;
+    padding: 0.1rem 0;
     margin: 0 !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -417,7 +412,7 @@ NAVBAR / HEADER - ENHANCED DROPDOWN
   .dropdown-item {
     color: $background;
     background-color: transparent;
-    padding: 0.75rem 1rem;
+    padding: 1rem 1rem;
     text-decoration: none;
     display: block;
     border-radius: 0;
@@ -429,43 +424,17 @@ NAVBAR / HEADER - ENHANCED DROPDOWN
     text-overflow: ellipsis;
     transition: 
       background-color 0.2s ease,
-      color 0.2s ease,
-      padding-left 0.2s ease;
+      color 0.2s ease;
     
     // Accent bar on left side
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 0;
-      background: $pumpkin;
-      transition: width 0.2s ease;
-    }
     
     &:hover {
-      background-color: rgba($pumpkin, 0.15);
+      background-color: rgba($background, 0.15);
       color: $background;
-      padding-left: 1.5rem;
       
       &::before {
         width: 4px;
       }
-    }
-    
-    &:active {
-      background-color: rgba($pumpkin, 0.25);
-    }
-    
-    &:first-child {
-      border-top-left-radius: 0.75rem;
-      border-top-right-radius: 0.75rem;
-    }
-    
-    &:last-child {
-      border-bottom-left-radius: 0.75rem;
-      border-bottom-right-radius: 0.75rem;
     }
   }
   
@@ -548,6 +517,7 @@ HERO / LANDING SECTION
   .hero-btn {
     display: inline-block;
     padding: 0.9rem 2rem;
+    text-align: center;
     background-color: $pumpkin;
     color: white;
     border-radius: 0.75rem;
@@ -573,28 +543,43 @@ HERO / LANDING SECTION
 /*-----------------------------------------
  BUTTONS
 ------------------------------------------*/
-.btn {
+
+.btn,
+.btn-primary,
+.btn-secondary {
   display: inline-block;
+  padding: 0.9rem 2rem;
+  background-color: $pumpkin;
+  color: white;
   border-radius: 0.75rem;
-  padding: 0.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: rgba(47, 156, 149, 0.4) 0px 5px, rgba(47, 156, 149, 0.3) 0px 10px, rgba(47, 156, 149, 0.2) 0px 15px, rgba(47, 156, 149, 0.1) 0px 20px, rgba(47, 156, 149, 0.05) 0px 25px;
+    background-color: lighten($pumpkin, 10%);
+    transform: translateY(-3px);
+    box-shadow: rgba(254, 127, 45, 0.4) 0px -3px, rgba(254, 127, 45, 0.3) 0px -6px;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   }
 }
 
-.btn-primary {
-  background-color: $alabaster;
-  color: $dark-green;
-}
 
 .btn-secondary {
+  background-color: darken($pumpkin, 5%);
+}
+
+.btn-primary {
   background-color: $pumpkin;
-  color: $alabaster;
 }
 
 
