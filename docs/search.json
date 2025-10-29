@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Federica Domecq Lacroze",
     "section": "",
-    "text": "Hello There! 👋\nI’m Federica Domecq Lacroze, a senior at Pomona College, double majoring in Mathematics & Computer Science. Originally from Madrid, Spain 🇪🇸, I moved to the U.S. to pursue new opportunities and currently live in Claremont, California.\nOn this website you can learn a little bit about me; about my research; byte-sized work; and about my passions."
+    "text": "Hello There! 👋\nI’m Federica Domecq Lacroze, a senior at Pomona College, double majoring in Mathematics & Computer Science. Originally from Madrid, Spain 🇪🇸, I moved to the U.S. to pursue new opportunities and currently live in Claremont, California.\nOn this website you can learn a little bit about me, my research and some of my data wrangling efforts!"
   },
   {
     "objectID": "about.html",
@@ -285,5 +285,12 @@
     "title": "Putting Myths to Rest: Spectral Analysis of PGA Tour Metrics",
     "section": "",
     "text": "Paper \n\nThis project, Putting Myths to Rest: Spectral Analysis of PGA Tour Metrics, investigates whether elite PGA Tour golfers exhibit “streakiness” in their putting performance using spectral domain analysis. Focusing on Strokes Gained Putting averages from 2015–2022 for top-ranked players, the analysis of autocorrelation functions, periodograms, and cumulative periodograms indicates that variations in putting performance resemble white noise, with little to no serial correlation or cyclical patterns. These results dispel the popular belief in predictable “hot” streaks, suggesting that putting success in professional golf is largely random and independent across tournaments."
+  },
+  {
+    "objectID": "academicprojects/projects.html",
+    "href": "academicprojects/projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Summer 2025  GPR  for Golf       Summer 2024  Evaluating R’s sicegar       Small Coursework  Projects"
   }
 ]
