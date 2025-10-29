@@ -14,7 +14,7 @@ $alabaster-combine: #D7DBBE;
 // Headings and Display font
 $font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $headings-font-family: "Lora", serif;
-$font-family-monospace: "Courier New", monospace;
+$font-family-monospace: "Fira Code", monospace;
 $font-family-brand: "BBH Sans Bogle", serif;
 
 // Body text
@@ -36,7 +36,7 @@ $info:  $denim;
 /* Text */
 $font-family-base:      'Inter', sans-serif;
 $font-family-headings:  'Merriweather', serif;
-$font-size-base:        0.8rem;     // ~16px
+$font-size-base:        1rem; 
 $headings-font-weight:  700;
 $line-height-base:      1.6;
 
@@ -45,22 +45,24 @@ $line-height-base:      1.6;
 h1 { 
   font-family: $font-family-headings;
   color: $primary;
-  
-  padding: 0.8rem;
+  padding: 0.8rem 0;
   text-decoration: underline;
   text-decoration-color: rgba($primary, 0.5);
   text-decoration-style: solid;
   text-decoration-thickness: 4px;
   font-weight: $headings-font-weight;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 
-h2, {
+h2 {
   font-family: $font-family-headings;
   color: $primary;
   font-weight: $headings-font-weight;
-  font-size: 1.5rem;
-  padding-left: 1rem ;
+  font-size: 2rem; 
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid $pumpkin; 
 }
 
 h3 {
@@ -69,48 +71,73 @@ h3 {
   font-weight: $headings-font-weight;
   font-size: 1.5rem;
   background-color: $accent;
-  padding-left: 1rem ;
+  padding: 0.75rem 1rem; 
+  margin-bottom: 0.5rem;
 }
 
 h4 {
   font-family: $font-family-headings;
   color: $primary;
   font-weight: $headings-font-weight;
-  font-size: 1 rem;
-  padding-left: 1rem ;
+  font-size: 1.25rem; 
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 h5, h6 {
   font-family: $font-family-headings;
   color: $accent;
   font-weight: $headings-font-weight;
-  font-size: .8 rem;
-  padding-left: 1rem ;
+  font-size: 1rem; 
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
   font-family: $font-family-base;
   color: $text-color;
   font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: $line-height-base;
 }
 
 a {
   font-family: $font-family-base;
   color: $pumpkin;
-}
-
-a:hover {
-  color: $link-hover-color;
+  text-decoration: none;
   transition: color 0.3s ease;
-  transform: translateY(-3px);
+  
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline; 
+  }
 }
 
-ul li::marker {
-  color: $denim; /* Using a hex color as an example, since $secondary is likely not defined here */
-  content: ">";
+
+// Remove the global ul li::marker rule and replace with:
+
+// Apply custom markers only to content lists (adjust selector as needed)
+article ul li::marker,
+.content ul li::marker,
+main ul li::marker {
+  color: $denim;
+  content: "\f0da";
+  font-family:"Font Awesome 6 Free";
   margin: .2rem;
   font-weight: 900;
   font-size: 1rem;
+}
+
+// Ensure table of contents has no markers
+.table-of-contents ul, 
+.table-of-contents ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li::marker {
+    content: none;
+  }
 }
 
 /*-----------------------------------------
@@ -136,42 +163,51 @@ body {
   padding: 0 1.5rem;
 }
 
+
 .about-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem; 
   background-color: $alabaster; 
   border: 2px solid $text-color;
   color: $text-color !important;
-  padding: 0.5rem 1rem;
-  margin: 0.2rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem; 
+  margin: 0.3rem;
+  border-radius: 0.75rem;
   text-decoration: none;
   text-align: center;
   font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease; 
+  
+  &:hover {
+    box-shadow: rgba(254, 127, 45, 0.4) 0px 8px, rgba(254, 127, 45, 0.3) 0px 14px;
+    transform: translateY(-2px); 
+    border-color: $pumpkin; 
+  }
+  
+  .bi {
+    font-size: 1.2em; // Relative sizing
+  }
 }
 
 :not(pre) > code {
-  font-family: "Fira Code", monospace;
-  font-size: font-size-base;
-  background: $background;
-  color: $text-color;
-  border: 1px solid $text-color;
+  font-family: $font-family-monospace;
+  font-size: 0.9em;
+  background: rgba($denim, 0.05);
+  color: $primary;
+  border: 1px solid rgba($denim, 0.2);
+  padding: 0.2em 0.4em; 
+  border-radius: 0.25rem;
+  
 }
 
 li {
   color: $text-color;
-  padding: .2rem;
-  margin-bottom: .2px;
+  padding: 0.3rem 0;
+  margin-bottom: 0.5rem; 
   font-size: $font-size-base;
 }
 
-.table-of-contents ul, .table-of-contents ol {
-      list-style: none; /* Removes bullets or numbers */
-      padding: 0;
-      margin: 0;
-}
 
 .thead, .tbody, .code{
   background: $background;
@@ -192,6 +228,7 @@ li {
   display: inline-block;
   color: $text-color;
   text-decoration: underline solid $secondary 2px;
+  text-underline-offset: 3px;
   margin: 0.05rem;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
@@ -201,21 +238,43 @@ li {
   box-shadow: rgba(254, 127, 45, 0.4) 0px -3px, rgba(254, 127, 45, 0.3) 0px -6px;
 }
 
-
 /*-----------------------------------------
-NAVBAR / HEADER
+NAVBAR / HEADER - ENHANCED DROPDOWN
 ------------------------------------------*/
+
+// Animation keyframes
+@keyframes dropdownEnter {
+  from {
+    opacity: 0;
+    transform: scaleY(0.98) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .navbar {
   background-color: $primary;
   color: $alabaster;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   
   ul li::marker {
- /* Using a hex color as an example, since $secondary is likely not defined here */
-  content: none;
-  margin: .2rem;
-  font-weight: 900;
-  font-size: 1rem;
-}
+    content: none;
+    margin: .2rem;
+    font-weight: 900;
+    font-size: 1rem;
+  }
   
   .navbar-brand {
     font-family: $font-family-brand;
@@ -247,81 +306,207 @@ NAVBAR / HEADER
       box-shadow 0.3s ease,
       transform 0.2s ease;
     
+    // Animated dot indicator (only for non-dropdown links)
+    &:not(.dropdown-toggle)::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      bottom: 8px;
+      left: calc(50% - 3px);
+      background: $pumpkin;
+      will-change: transform;
+      transform: scale(0);
+      transition: transform 0.2s ease;
+    }
+    
     &:hover {
       color: $background;
-      border: 0.25px solid $background;
-      box-shadow: rgba(235, 237, 223, 0.2) 0px -3px,
-                  rgba(235, 237, 223, 0.1) 0px -6px;
+      background-color: rgba($pumpkin, 0.1); 
+      
+      &:not(.dropdown-toggle)::after {
+        transform: scale(1);
+      }
     }
     
     &:active {
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transform: translateY(2px);
+    }
+  }
+  
+  /* ---- DROPDOWN CONTAINER ---- */
+  .dropdown {
+    position: relative;
+    
+    // Make dropdown toggle have smooth transitions
+    .dropdown-toggle {
+      position: relative;
+      padding-right: 2rem !important; // Extra space for arrow
+      
+      // Style the dropdown arrow
+      &::after {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        vertical-align: 0;
+        margin-left: 0;
+        border-top: 0.4em solid;
+        border-right: 0.4em solid transparent;
+        border-left: 0.4em solid transparent;
+        border-top-color: $background;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover::after {
+        border-top-color: $background;
+      }
+    }
+    
+    // Rotate arrow when dropdown is open
+    &:hover > .dropdown-toggle::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+    
+    // Add a small invisible bridge between toggle and menu to prevent flicker
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 0.5rem;
+      background: transparent;
     }
   }
   
   /* ---- DROPDOWN MENU ---- */
   .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    min-width: 200px;
+    top: calc(100% + 0.5rem);
+    left: 0;
     background-color: $primary;
     border: none;
+    border-radius: 0.75rem;
     padding: 0.5rem 0;
-    margin-top: 0.4rem !important;
-    //box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    //opacity: 0;
+    margin: 0 !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    transform: scaleY(0.98) translateY(-10px);
+    transform-origin: top;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
+    overflow: hidden;
   }
   
+  /* Show dropdown on hover - removed click behavior conflicts */
+  .dropdown:hover > .dropdown-menu,
+  .dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+  
+  /* ---- DROPDOWN ITEMS ---- */
   .dropdown-item {
-    color: $primary;
-    background-color: $background;
-    padding: 0.3rem 0.75rem;
+    color: $background;
+    background-color: transparent;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     display: block;
-    border-radius: 0.75rem;
-    margin: 0.25rem 0.5rem;
-    font-size: $font-size-base ;
+    border-radius: 0;
+    margin: 0;
+    font-size: $font-size-base;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     transition: 
-      background-color 0.3s ease,
-      color 0.3s ease,
-      transform 0.2s ease,
-      box-shadow 0.3s ease;
+      background-color 0.2s ease,
+      color 0.2s ease,
+      padding-left 0.2s ease;
+    
+    // Accent bar on left side
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      background: $pumpkin;
+      transition: width 0.2s ease;
+    }
     
     &:hover {
-      color: $primary;
-      box-shadow: rgba(235, 237, 223, 0.2) 0px -5px;
-      border: 2px solid $background;
-      transform: translateY(5px);
-      margin: 3px;
+      background-color: rgba($pumpkin, 0.15);
+      color: $background;
+      padding-left: 1.5rem;
+      
+      &::before {
+        width: 4px;
+      }
     }
     
     &:active {
-      transform: translateY(5px);
+      background-color: rgba($pumpkin, 0.25);
+    }
+    
+    &:first-child {
+      border-top-left-radius: 0.75rem;
+      border-top-right-radius: 0.75rem;
+    }
+    
+    &:last-child {
+      border-bottom-left-radius: 0.75rem;
+      border-bottom-right-radius: 0.75rem;
     }
   }
   
-  /* Make dropdown open on hover */
-  .dropdown:hover > .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
-  /* Arrow styling */
-  .dropdown-toggle::after {
-    vertical-align: 0.1em;
-    margin-left: 0.3rem;
-    border-top-color: $background;
-    transition: transform 0.3s ease;
-  }
-  
-  .dropdown:hover > .dropdown-toggle::after {
-    transform: rotate(180deg);
+  // Animate items when menu becomes visible
+  .dropdown:hover > .dropdown-menu .dropdown-item {
+    animation: dropdownEnter 0.2s ease forwards;
+    opacity: 0;
+    
+    // Stagger animation for each item
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: 0.03s * ($i - 1);
+      }
+    }
   }
 }
-  
 
-
+/* ---- RESPONSIVE / MOBILE ---- */
+@media screen and (max-width: 768px) {
+  .navbar {
+    .dropdown-toggle {
+      padding-right: 2.5rem !important;
+      
+      &::after {
+        right: 1rem;
+      }
+    }
+    
+    .dropdown-menu {
+      position: static;
+      width: 100%;
+      margin-top: 0 !important;
+      border-radius: 0;
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .dropdown-item {
+      padding: 1rem 1.5rem;
+    }
+  }
+}
 
 
 
@@ -414,15 +599,27 @@ HERO / LANDING SECTION
 
 
 /*-----------------------------------------
-📸 11. IMAGES / MEDIA
+ IMAGES / MEDIA
 ------------------------------------------*/
 img {
   max-width: 100%;
+  height: auto; 
   border-radius: 0.75rem;
   object-fit: cover;
 }
 
 
+figure {
+  margin: 2rem 0;
+  
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    color: rgba($text-color, 0.8);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
 /*-----------------------------------------
 📍 13. FOOTER
 ------------------------------------------*/
@@ -430,17 +627,36 @@ footer,
 .quarto-footer,
 .footer,
 .page-footer {
-  background: $denim;
-  background-color: $denim;
-  color: $alabaster;
+  background: $denim !important;
+  background-color: $denim !important;
+  color: $alabaster !important;
   text-align: center;
-  padding: 0.8rem;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+
+  // Force all text to be alabaster
+  p, span, div {
+    color: $alabaster !important;
+  }
 
   a {
-    color: $alabaster;
+    color: $alabaster !important;
+    transition: opacity 0.3s ease;
 
     &:hover { 
-      text-decoration: underline; 
+      text-decoration: underline;
+      opacity: 0.8;
+      color: $alabaster !important;
+    }
+  }
+  
+  // Social links styling
+  .social-links {
+    margin-top: 1rem;
+    
+    a {
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
     }
   }
 }
