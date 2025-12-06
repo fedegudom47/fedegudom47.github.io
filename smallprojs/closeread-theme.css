@@ -1,0 +1,7 @@
+/*-- scss:defaults --*/
+
+// Define denim FIRST before anything else
+$denim: #275DAD;
+
+// Now define footer
+$footer-bg: $denim !default;

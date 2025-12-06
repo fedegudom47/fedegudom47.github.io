@@ -1,0 +1,17 @@
+clean_name,col_name,format_type
+Is Religious,is_religious,text
+Offers PhD,offers_phd,text
+Average Grant,average_grant,money
+Has Study Abroad,has_study_abroad,text
+Full Time Tuition,tuition_ft,money
+Tuition Revenue/Student,tuition_revenue_per_student,money
+Student Association Budget/Student,student_services_spend_per_student,money
+Room & Board Cost,room_board,money
+1st Yr Retention Rate,retention_rate,percent
+% Receiving Aid,percent_receiving_grant_aid,percent
+Instruction Spend/Student,instruction_spend_per_student,money
+Endowment/Student,endowment_per_student,money
+Calendar System,calendar_system,text
+Yield Rate,yield_rate,percent
+On Campus Required,oncampus_required,text
+Admissions Rate,admit_rate,percent

@@ -1,0 +1,290 @@
+---
+title: "Lead concentration in Flint water samples in 2015"
+author: "Federica & Prof. Hardin"
+date: 11/04/2025
+date-format: "D MMM, YYYY"
+format: 
+  closeread-html:
+      theme: 
+      - default
+      - closeread-styles.scss
+execute: 
+  warning: false
+---
+
+
+```{r}
+library(tidyverse)
+library(gganimate)
+library(emojifont)
+load.fontawesome()
+flint_mdeq <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-11-04/flint_mdeq.csv')
+```
+
+```{r}
+#| echo: false
+
+# Calculate quantiles
+lead_90_all <- quantile(flint_mdeq$lead, 0.9, na.rm = TRUE)
+lead_90_filtered <- quantile(flint_mdeq$lead2, 0.9, na.rm = TRUE)
+
+# Create base data for plots
+plot_data <- flint_mdeq |>
+  arrange(sample) |>
+  mutate(lead_bin = floor(lead / 5) * 5) |>
+  group_by(lead_bin) |>
+  mutate(cumulative_count = row_number()) |>
+  ungroup() |>
+  mutate(
+    removed = is.na(lead2),  
+    lead_level = lead
+  )
+```
+
+In 2015, water samples were collected from homes across Flint, Michigan to test for lead contamination.
+
+:::{.cr-section}
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+# Create animation data
+animation_data <- plot_data |>
+  mutate(
+    start_x = 0,  
+    start_y = 50,   
+    end_x = lead_bin,
+    end_y = cumulative_count
+  ) |>
+  rowwise() |>
+  reframe(
+    sample = sample,
+    time = c(sample - 1, sample),  
+    x = c(start_x, end_x),
+    y = c(start_y, end_y),
+    lead_level = lead_level
+  ) |>
+  ungroup()
+
+p1 <- animation_data |>
+  ggplot(aes(x = x, y = y, group = sample, color = lead_level)) +
+  geom_text(aes(label = fontawesome('fa-tint')),  
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.8) +
+  scale_color_gradient2(
+    low = "steelblue",      
+    mid = "orange",         
+    high = "darkorange",    
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  ) +
+  transition_time(time) +  
+  shadow_wake(wake_length = 2, alpha = 0.4) +  
+  shadow_mark(past = TRUE, alpha = 0.8, size = 8) +  
+  ease_aes('cubic-out') +  
+  labs(x = "Lead (ppb)", 
+       y = "Count",
+       title = "Water Samples Collected Across Flint") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"))
+
+animate(p1, duration = 15, fps = 25, loop = FALSE)
+```
+:::
+
+
+
+[The EPA action level for lead in drinking water is 15 parts per billion (ppb).]{.cr-focus}
+:::{.cr-section}
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+plot_data |>
+  ggplot(aes(x = lead_bin, y = cumulative_count, color = lead_level)) +
+  geom_vline(xintercept = 15, linetype = "dashed", color = "red", linewidth = 1.5) +
+  annotate("text", x = 15, y = Inf, label = "EPA Action Level (15 ppb)", 
+           vjust = 1.5, hjust = -0.1, color = "red", size = 5, fontface = "bold") +
+  geom_text(aes(label = fontawesome('fa-tint')),  
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.8) +  
+  scale_color_gradient2(
+    low = "steelblue",
+    mid = "lightblue",
+    high = "chocolate2",   
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  ) + 
+  labs(x = "Lead (ppb)", 
+       y = "Count",
+       title = "Many Samples Exceeded Safe Levels") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"))
+```
+When more than 10% of samples exceed this level, action is required.
+
+:::
+
+[The key metric is the 90th percentile of lead levels.]{.cr-focus}
+For all samples, this was well above the action level.
+
+:::{.cr-section}
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+plot_data |>
+  ggplot(aes(x = lead_bin, y = cumulative_count, color = lead_level)) +
+  geom_vline(xintercept = 15, linetype = "dashed", color = "red", linewidth = 1) +
+  geom_vline(xintercept = lead_90_all, linetype = "solid", color = "darkred", linewidth = 1.5) +
+  annotate("text", x = lead_90_all, y = Inf, label = paste0("90th Percentile\n(", round(lead_90_all, 1), " ppb)"), 
+           vjust = 1.5, hjust = -0.1, color = "darkred", size = 5, fontface = "bold") +
+  geom_text(aes(label = fontawesome('fa-tint')),  
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.8) +  # Remove color from here
+  scale_color_gradient2(
+    low = "steelblue",
+    mid = "lightblue",
+    high = "chocolate2",   
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  )  +
+  labs(x = "Lead (ppb)", 
+       y = "Count",
+       title = "90th Percentile Shows Severe Contamination") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"))
+```
+:::
+
+
+[But some samples were excluded from the official analysis.]{.cr-focus} These high-lead samples were removed from the dataset.
+
+:::{.cr-section}
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+plot_data |>
+  ggplot(aes(x = lead_bin, y = cumulative_count)) +
+  geom_vline(xintercept = 15, linetype = "dashed", color = "red", linewidth = 1) +
+  geom_vline(xintercept = lead_90_all, linetype = "solid", color = "darkred", linewidth = 1.5) +
+  annotate("text", x = lead_90_all, y = Inf, label = paste0("90th Percentile\n(", round(lead_90_all, 1), " ppb)"), 
+           vjust = 1.5, hjust = -0.1, color = "darkred", size = 5, fontface = "bold") +
+  geom_text(data = filter(plot_data, removed), 
+            aes(label = fontawesome('fa-tint')),
+            color = "salmon",
+            family = 'fontawesome-webfont',
+            size = 10, 
+            alpha = 1) +
+  # Show kept samples faded
+  geom_text(data = filter(plot_data, !removed), 
+            aes(label = fontawesome('fa-tint'), color = lead_level),
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.3) + scale_color_gradient2(
+    low = "steelblue",
+    mid = "lightblue",
+    high = "chocolate2",   
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  )  +
+  labs(x = "Lead (ppb)", 
+       y = "Count",
+       title = "Highlighted: Samples Excluded from Official Analysis",
+       subtitle = "These high-contamination samples were removed") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"))
+```
+
+
+:::
+
+[With those samples removed, the 90th percentile dropped to 11.4 ppb]{.cr-focus} - conveniently just below the EPA action level.
+::: {.cr-section}
+
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+plot_data |>
+  filter(!removed) |>  # Only show kept samples
+  ggplot(aes(x = lead_bin, y = cumulative_count, color = lead_level)) +
+  geom_vline(xintercept = 15, linetype = "dashed", color = "red", linewidth = 1) +
+  geom_vline(xintercept = lead_90_filtered, linetype = "solid", color = "darkgreen", linewidth = 1.5) +
+  annotate("text", x = 15, y = Inf, label = "EPA Action Level", 
+           vjust = 1.5, hjust = -0.1, color = "red", size = 4) +
+  annotate("text", x = lead_90_filtered, y = Inf, label = paste0("New 90th Percentile\n(", round(lead_90_filtered, 1), " ppb)"), 
+           vjust = 1.5, hjust = 1.1, color = "darkgreen", size = 5, fontface = "bold") +
+  geom_text(aes(label = fontawesome('fa-tint')),  
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.8) +
+  scale_color_gradient2(
+    low = "steelblue",      
+    mid = "orange",         
+    high = "darkorange",    
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  ) +
+  labs(x = "Lead (ppb)", 
+       y = "Count",
+       title = "After Exclusions: Below Action Level",
+       subtitle = "The 90th percentile now appears acceptable") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"))
+```
+:::
+
+
+
+## The data
+
+```{r}
+#|echo: FALSE
+flint_mdeq <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-11-04/flint_mdeq.csv')
+flint_vt <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-11-04/flint_vt.csv')
+```
+
+
+
+## TidyTuesday Data
+
+This dataset can be found on the [tidytuesday repo](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-11-04/readme.md).
+
+This week we are exploring lead levels in water samples collected in Flint, Michigan in 2015. 
+The data comes from a paper by [Loux and Gibson (2018)](https://onlinelibrary.wiley.com/doi/pdf/10.1111/test.12187?casa_token=av3lP7OmqS0AAAAA:QAF3yU5kGzsUkqi1VlXkMlIN8ExolHZBSkdJ3hIHnlptUES57dGVoXjE3qdwPPHtLHNRd9VvX1x8f6VN).
+
+The data this week includes samples collected by the Michigan Department of Environment (MDEQ) and data from a citizen science project coordinated by Prof Marc Edwards and colleagues at Virginia Tech. 
+Community-sourced samples were collected after concerns were raised about the MDEQ excluding samples from their data. You can read about the ["murky" story behind this data here](https://academic.oup.com/jrssig/article/14/2/16/7029247). 
+
+## Data Dictionary
+
+### `flint_mdeq.csv`
+
+|variable |class     |description                           |
+|:--------|:---------|:-------------------------------------|
+|sample   |double |sample number |
+|lead     |double |lead level in parts per billion (all samples) |
+|lead2    |double |lead level in parts per billion (2 samples removed) |
+|notes    |character |comment about data removal |
+
+### `flint_vt.csv`
+
+|variable |class   |description                           |
+|:--------|:-------|:-------------------------------------|
+|sample   |integer |sample number |
+|lead     |double  |lead levels in parts per billion (ppb)|

@@ -1,0 +1,13 @@
+name: UniversityAnalytics
+title: UniversityAnalytics
+username: 4cvb4w-federica-d
+account: 4cvb4w-federica-d
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16257118
+bundleId: 11285205
+url: https://4cvb4w-federica-d.shinyapps.io/UniversityAnalytics/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: admin_enrollment_trimmed.csv|final_model.rds|gradient_boost.qmd|gradient_boost.rmarkdown|grants_trimmed.csv|inst_info_trimmed.csv|process_data_xboost.R|train_boost_model.r

@@ -1,0 +1,75 @@
+---
+title: "tt7"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(tidytext)
+library(textdata)
+library(rvest)
+```
+
+
+```{r}
+holmes <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-11-18/holmes.csv') |> 
+  mutate(book = tolower(book)) |> 
+  mutate(book = str_squish(book))
+```
+Getting the sentiment analysis of 
+
+```{r}
+holmes_wiki <- read_html("https://en.wikipedia.org/wiki/Canon_of_Sherlock_Holmes") |> 
+  html_elements("p+ ol li , p+ ol a") |> 
+  html_text() |> 
+  as_tibble() |> 
+  filter(!is.na(str_extract(value, "\\d{4}"))) |> 
+  mutate(date = str_extract(value, "\\d{4}")) |> 
+  mutate(title = str_extract(value, '^"?([^"(]+)"?')) |> 
+  mutate(title = str_replace_all(title, '"', '')) |> 
+  mutate(title = tolower(title)) |> 
+  mutate(title = str_squish(title))
+
+
+holmes <- holmes |> 
+  left_join(holmes_wiki, by = c("book" = "title"))
+```
+
+```{r}
+nrc_sentiments <- tidytext::get_sentiments("nrc") |> 
+  filter(sentiment != "positive", sentiment != "negative")
+
+sent_data <- holmes |> 
+  tidytext::unnest_tokens(words, text) |> 
+  anti_join(stop_words, by = c("words" = "word")) |> 
+  left_join(nrc_sentiments, by = c("words" = "word"), relationship = "many-to-many") |> 
+  group_by(date, sentiment) |> 
+  summarize(n = n()) |> 
+  filter(!is.na(sentiment)) |> 
+  mutate(prop = n / sum(n))|> 
+  mutate(date = as.numeric(date))
+```
+
+
+```{r}
+sent_data |> 
+  ggplot(aes(x = date, y = prop, color = sentiment)) + 
+  geom_line() + 
+  geom_point() + 
+  scale_color_brewer(palette = "Dark2") + 
+  geom_vline(xintercept = 1914) +
+  labs(title = "Prop of each sentiment")
+
+```
+
+
+
+## Data Dictionary
+
+### `holmes.csv`
+
+| variable | class     | description                                  |
+|:---------|:----------|:---------------------------------------------|
+| book     | character | Title of the Sherlock Holmes story or novel. |
+| text     | character | Line of text extracted from the book.        |
+| line_num | integer   | Narrative-preserving line index. When you load the data, blank lines (`""`) may appear as `NA`.|

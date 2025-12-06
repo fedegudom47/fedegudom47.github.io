@@ -1,0 +1,1493 @@
+inst_name,cluster,closest_peer,furthest_peer,closest_outsider
+University of Alabama at Birmingham,Cluster_1,University of Utah,SUNY Polytechnic Institute,University of Vermont
+University of Alabama in Huntsville,Cluster_1,University of Nebraska-Lincoln,SUNY Polytechnic Institute,Lee University
+Alabama State University,Cluster_1,Auburn University at Montgomery,SUNY Polytechnic Institute,Spalding University
+The University of Alabama,Cluster_1,University of Rhode Island,SUNY Polytechnic Institute,Endicott College
+Auburn University at Montgomery,Cluster_1,Texas A & M University-Kingsville,SUNY Polytechnic Institute,Spalding University
+Auburn University,Cluster_1,The University of Alabama,SUNY Polytechnic Institute,Colorado School of Mines
+Birmingham-Southern College,Cluster_2,Carthage College,Randolph College,Randolph-Macon College
+Faulkner University,Cluster_2,Belhaven University,Bethany College,University of the Cumberlands
+Huntingdon College,Cluster_2,Kentucky Wesleyan College,Bethany College,University of Charleston
+Jacksonville State University,Cluster_1,Minnesota State University-Mankato,SUNY Polytechnic Institute,Lee University
+University of West Alabama,Cluster_1,Valdosta State University,SUNY Polytechnic Institute,Faulkner University
+Marion Military Institute,Cluster_3,Williamson College of the Trades,Saint Charles Borromeo Seminary-Overbrook,Andrew College
+University of Mobile,Cluster_3,Oakland City University,Saint Charles Borromeo Seminary-Overbrook,Ashland University
+University of Montevallo,Cluster_1,University of Maine at Farmington,SUNY Polytechnic Institute,Hiram College
+University of North Alabama,Cluster_1,University of Central Arkansas,SUNY Polytechnic Institute,Lee University
+Oakwood University,Cluster_2,Southern Adventist University,Bethany College,Universidad del Sagrado Corazon
+Samford University,Cluster_2,University of Indianapolis,Andrew College,University of St Thomas
+University of South Alabama,Cluster_1,Minnesota State University-Mankato,SUNY Polytechnic Institute,Union College
+Spring Hill College,Cluster_2,Geneva College,Bethany College,York College of Pennsylvania
+Stillman College,Cluster_2,Paul Quinn College,Bethany College,Central State University
+Troy University,Cluster_1,Stephen F Austin State University,SUNY Polytechnic Institute,Lee University
+Tuskegee University,Cluster_1,CUNY Hunter College,SUNY Polytechnic Institute,College of Saint Mary
+University of Alaska Anchorage,Cluster_1,Delaware State University,SUNY Polytechnic Institute,Russell Sage College
+University of Alaska Fairbanks,Cluster_1,University of Florida,Howard University,Harding University
+University of Alaska Southeast,Cluster_1,The University of Texas Permian Basin,SUNY Polytechnic Institute,Bethel University
+Alaska Pacific University,Cluster_3,Presentation College,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+Arizona State University Campus Immersion,Cluster_1,Temple University,SUNY Polytechnic Institute,Embry-Riddle Aeronautical University-Daytona Beach
+University of Arizona,Cluster_1,University of Kentucky,SUNY Polytechnic Institute,Colorado School of Mines
+Embry-Riddle Aeronautical University-Prescott,Cluster_4,Elizabethtown College,University of Health Sciences and Pharmacy in St. Louis,St. Joseph's University-New York
+Northern Arizona University,Cluster_1,Central Michigan University,SUNY Polytechnic Institute,Russell Sage College
+Prescott College,Cluster_1,South Carolina State University,SUNY Polytechnic Institute,Wingate University
+Arizona Christian University,Cluster_2,Missouri Valley College,Bethany College,Metropolitan College of New York
+University of Arkansas at Little Rock,Cluster_1,North Carolina A & T State University,SUNY Polytechnic Institute,William Woods University
+Lyon College,Cluster_2,Brevard College,Bethany College,Southwestern University
+University of Arkansas,Cluster_1,University of Nebraska-Lincoln,SUNY Polytechnic Institute,Endicott College
+University of Arkansas at Pine Bluff,Cluster_1,Winona State University,SUNY Polytechnic Institute,Lee University
+Arkansas State University,Cluster_1,Texas A & M International University,SUNY Polytechnic Institute,Lee University
+Arkansas Tech University,Cluster_1,Lamar University,SUNY Polytechnic Institute,Lee University
+Baptist Health College Little Rock,Cluster_3,Mercy College of Ohio,Saint Charles Borromeo Seminary-Overbrook,Appalachian Bible College
+University of Central Arkansas,Cluster_1,University of North Alabama,SUNY Polytechnic Institute,Lee University
+Central Baptist College,Cluster_3,Ecclesia College,Saint Charles Borromeo Seminary-Overbrook,Bethel University
+Harding University,Cluster_2,Faith Baptist Bible College and Theological Seminary,Bethany College,Pontifical Catholic University of Puerto Rico-Ponce
+Henderson State University,Cluster_3,Louisiana State University-Alexandria,Saint Charles Borromeo Seminary-Overbrook,CUNY New York City College of Technology
+Hendrix College,Cluster_2,Westminster College,Bethany College,Agnes Scott College
+John Brown University,Cluster_1,William Jewell College,SUNY Polytechnic Institute,Asbury University
+Ouachita Baptist University,Cluster_2,Drury University,Bethany College,Stephens College
+University of the Ozarks,Cluster_2,Brescia University,Bethany College,University of Charleston
+University of Arkansas Community College-Morrilton,Cluster_3,University of South Carolina-Union,Saint Charles Borromeo Seminary-Overbrook,Gordon State College
+Williams Baptist University,Cluster_2,Missouri Valley College,Bethany College,University of Charleston
+Southern Arkansas University Main Campus,Cluster_3,Metropolitan State University,Saint Charles Borromeo Seminary-Overbrook,Texas A & M International University
+American Academy of Dramatic Arts-Los Angeles,Cluster_3,University of Pittsburgh-Titusville,Saint Charles Borromeo Seminary-Overbrook,Metropolitan College of New York
+Art Center College of Design,Cluster_4,Ringling College of Art and Design,University of Health Sciences and Pharmacy in St. Louis,Maine College of Art & Design
+Azusa Pacific University,Cluster_2,Bellarmine University,Bethany College,Saint Edward's University
+Biola University,Cluster_2,California Baptist University,Bethany College,University of Dallas
+California Baptist University,Cluster_2,Mount Saint Joseph University,Bethany College,University of Dallas
+California College of the Arts,Cluster_4,School of the Art Institute of Chicago,Principia College,California Lutheran University
+California Institute of Technology,Cluster_5,Massachusetts Institute of Technology,Cleveland University-Kansas City,Case Western Reserve University
+California Lutheran University,Cluster_2,Assumption University,Bethany College,Roanoke College
+California Polytechnic State University-San Luis Obispo,Cluster_1,State University of New York at New Paltz,SUNY Polytechnic Institute,Spelman College
+California State University-Bakersfield,Cluster_1,California State University-San Bernardino,SUNY Polytechnic Institute,University of Mount Union
+California State University-Stanislaus,Cluster_1,California State University-Fresno,SUNY Polytechnic Institute,University of Mount Union
+California State University-San Bernardino,Cluster_1,California State University-Stanislaus,SUNY Polytechnic Institute,University of Mount Union
+California State Polytechnic University-Pomona,Cluster_1,California State University-Fullerton,SUNY Polytechnic Institute,Spelman College
+California State University-Chico,Cluster_1,SUNY College at Geneseo,SUNY Polytechnic Institute,Wentworth Institute of Technology
+California State University-Dominguez Hills,Cluster_1,Longwood University,SUNY Polytechnic Institute,Wentworth Institute of Technology
+California State University-Fresno,Cluster_1,California State University-Stanislaus,SUNY Polytechnic Institute,University of Mount Union
+California State University-Fullerton,Cluster_1,California State Polytechnic University-Pomona,SUNY Polytechnic Institute,Spelman College
+California State University-East Bay,Cluster_1,Sonoma State University,SUNY Polytechnic Institute,Dominican College of Blauvelt
+California State University-Long Beach,Cluster_1,University of South Florida,SUNY Polytechnic Institute,Endicott College
+California State University-Los Angeles,Cluster_1,California State University-Sacramento,SUNY Polytechnic Institute,Endicott College
+California State University-Northridge,Cluster_1,California State University-Fresno,SUNY Polytechnic Institute,University of Mount Union
+California State University-Sacramento,Cluster_1,San Francisco State University,SUNY Polytechnic Institute,Endicott College
+University of California-Berkeley,Cluster_4,Tulane University of Louisiana,University of Health Sciences and Pharmacy in St. Louis,The University of Texas at Austin
+University of California-Davis,Cluster_4,University of California-San Diego,University of Health Sciences and Pharmacy in St. Louis,University of Hawaii at Manoa
+University of California-Irvine,Cluster_4,University of California-Santa Barbara,University of Health Sciences and Pharmacy in St. Louis,Stony Brook University
+University of California-Los Angeles,Cluster_4,University of California-Davis,Ottawa University-Ottawa,University of North Carolina at Chapel Hill
+University of California-Riverside,Cluster_4,University of California-Santa Cruz,University of Health Sciences and Pharmacy in St. Louis,New Jersey Institute of Technology
+University of California-San Diego,Cluster_4,University of California-Davis,University of Health Sciences and Pharmacy in St. Louis,University of Hawaii at Manoa
+University of California-Santa Barbara,Cluster_4,University of California-Irvine,University of Health Sciences and Pharmacy in St. Louis,Stony Brook University
+University of California-Santa Cruz,Cluster_4,University of California-Riverside,University of Health Sciences and Pharmacy in St. Louis,New Jersey Institute of Technology
+California Christian College,Cluster_3,Paine College,Saint Charles Borromeo Seminary-Overbrook,Finlandia University
+California Institute of the Arts,Cluster_4,Embry-Riddle Aeronautical University-Daytona Beach,University of Health Sciences and Pharmacy in St. Louis,Indiana Institute of Technology
+California State University Maritime Academy,Cluster_1,SUNY Maritime College,SUNY Polytechnic Institute,Holy Cross College
+Chapman University,Cluster_4,University of San Diego,Principia College,Hamline University
+Charles R Drew University of Medicine and Science,Cluster_1,Fisk University,SUNY Polytechnic Institute,Dominican College of Blauvelt
+Concordia University-Irvine,Cluster_2,Gardner-Webb University,Bethany College,Saint Edward's University
+San Diego Christian College,Cluster_2,Brevard College,Bethany College,Flagler College
+Claremont McKenna College,Cluster_5,Wellesley College,Cleveland University-Kansas City,Haverford College
+Dominican University of California,Cluster_4,Western New England University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Fresno Pacific University,Cluster_2,McMurry University,Bethany College,Upper Iowa University
+Harvey Mudd College,Cluster_5,Hamilton College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Holy Names University,Cluster_2,Mount Saint Mary College,Bethany College,Ursuline College
+California State Polytechnic University-Humboldt,Cluster_1,SUNY College at Old Westbury,SUNY Polytechnic Institute,Hiram College
+Life Pacific University,Cluster_2,The King's University,Bethany College,Moody Bible Institute
+University of La Verne,Cluster_4,Hood College,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Laguna College of Art and Design,Cluster_4,Wentworth Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,Columbia College Chicago
+La Sierra University,Cluster_2,Shenandoah University,Bethany College,DePaul University
+The Master's University and Seminary,Cluster_2,Madonna University,Bethany College,University of Nevada-Las Vegas
+Loyola Marymount University,Cluster_4,Pepperdine University,University of Health Sciences and Pharmacy in St. Louis,Marian University
+Menlo College,Cluster_4,Curry College,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Mills College,Cluster_4,Lesley University,University of Health Sciences and Pharmacy in St. Louis,Tiffin University
+Mount Saint Mary's University,Cluster_2,Saint Norbert College,Bethany College,Moravian University
+National University,Cluster_1,Converse University,SUNY Polytechnic Institute,Toccoa Falls College
+Occidental College,Cluster_5,Kenyon College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Otis College of Art and Design,Cluster_4,School of the Art Institute of Chicago,Principia College,Maine College of Art & Design
+Hope International University,Cluster_2,Charleston Southern University,Randolph College,Austin College
+Pacific Union College,Cluster_2,Brescia University,Bethany College,Upper Iowa University
+University of the Pacific,Cluster_4,New York Institute of Technology,Principia College,University of Detroit Mercy
+Pepperdine University,Cluster_4,Loyola Marymount University,University of Health Sciences and Pharmacy in St. Louis,Saint Martin's University
+Pitzer College,Cluster_4,Bucknell University,New England College,Claremont McKenna College
+Point Loma Nazarene University,Cluster_2,Messiah University,Bethany College,Moravian University
+Pomona College,Cluster_5,Amherst College,Cleveland University-Kansas City,Cooper Union for the Advancement of Science and Art
+University of Redlands,Cluster_4,Saint Mary's College of California,University of Health Sciences and Pharmacy in St. Louis,Hamline University
+San Diego State University,Cluster_1,CUNY Bernard M Baruch College,SUNY Polytechnic Institute,University of California-Santa Cruz
+University of San Diego,Cluster_4,Chapman University,University of Health Sciences and Pharmacy in St. Louis,Hamline University
+San Francisco Conservatory of Music,Cluster_4,The New England Conservatory of Music,Principia College,St. John's College
+San Francisco State University,Cluster_1,California State University-Sacramento,SUNY Polytechnic Institute,Endicott College
+University of San Francisco,Cluster_4,Seton Hall University,University of Health Sciences and Pharmacy in St. Louis,Arcadia University
+William Jessup University,Cluster_2,Walsh University,Bethany College,Moravian University
+San Jose State University,Cluster_1,California State University-Channel Islands,SUNY Polytechnic Institute,Laguna College of Art and Design
+Santa Clara University,Cluster_4,Southern Methodist University,University of Health Sciences and Pharmacy in St. Louis,Saint John Fisher College
+Scripps College,Cluster_5,Colgate University,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Simpson University,Cluster_2,Concordia University Ann Arbor,Bethany College,Moravian University
+Saint Mary's College of California,Cluster_4,University of San Diego,University of Health Sciences and Pharmacy in St. Louis,Hamline University
+Sonoma State University,Cluster_1,California State University-East Bay,SUNY Polytechnic Institute,Wentworth Institute of Technology
+Vanguard University of Southern California,Cluster_2,Trinity Christian College,Bethany College,Moravian University
+Southern California Institute of Architecture,Cluster_4,Lawrence University,University of Health Sciences and Pharmacy in St. Louis,Pacific Lutheran University
+University of Southern California,Cluster_5,University of Pennsylvania,Cleveland University-Kansas City,Boston University
+Thomas Aquinas College,Cluster_3,Nebraska Methodist College of Nursing & Allied Health,Saint Charles Borromeo Seminary-Overbrook,Franciscan University of Steubenville
+Westmont College,Cluster_4,Wagner College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Whittier College,Cluster_4,Hartwick College,University of Health Sciences and Pharmacy in St. Louis,Keuka College
+Woodbury University,Cluster_4,Cleveland Institute of Art,University of Health Sciences and Pharmacy in St. Louis,Maine College of Art & Design
+Adams State University,Cluster_3,Delta State University,Saint Charles Borromeo Seminary-Overbrook,Texas A&M University-Texarkana
+Colorado College,Cluster_4,Haverford College,New England College,Claremont McKenna College
+Colorado School of Mines,Cluster_4,University of Vermont,University of Health Sciences and Pharmacy in St. Louis,Clemson University
+Colorado State University-Fort Collins,Cluster_1,University of Cincinnati-Main Campus,SUNY Polytechnic Institute,William & Mary
+University of Denver,Cluster_4,Hofstra University,University of Health Sciences and Pharmacy in St. Louis,Marian University
+Fort Lewis College,Cluster_1,SUNY College of Technology at Canton,SUNY Polytechnic Institute,Hiram College
+Colorado Mesa University,Cluster_1,Bloomsburg University of Pennsylvania,SUNY Polytechnic Institute,University of Mount Union
+Metropolitan State University of Denver,Cluster_1,Indiana University-Southeast,SUNY Polytechnic Institute,Virginia Union University
+Naropa University,Cluster_2,Art Academy of Cincinnati,Bethany College,Western Colorado University
+University of Northern Colorado,Cluster_1,Plymouth State University,SUNY Polytechnic Institute,Roosevelt University
+Regis University,Cluster_2,Lenoir-Rhyne University,Bethany College,Roanoke College
+Colorado State University Pueblo,Cluster_1,Fairmont State University,SUNY Polytechnic Institute,Bethune-Cookman University
+Western Colorado University,Cluster_1,University of North Texas at Dallas,SUNY Polytechnic Institute,Hiram College
+Albertus Magnus College,Cluster_2,Saint Joseph's College of Maine,Bethany College,Regis College
+University of Bridgeport,Cluster_4,Jacksonville University,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Central Connecticut State University,Cluster_1,Northern Kentucky University,SUNY Polytechnic Institute,Russell Sage College
+Connecticut College,Cluster_4,Franklin and Marshall College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+University of Connecticut,Cluster_1,University of Massachusetts-Amherst,SUNY Polytechnic Institute,William & Mary
+Eastern Connecticut State University,Cluster_1,SUNY College at Oswego,SUNY Polytechnic Institute,Paul Smiths College of Arts and Science
+Fairfield University,Cluster_4,Providence College,University of Health Sciences and Pharmacy in St. Louis,Ohio Northern University
+University of Hartford,Cluster_4,Manhattanville College,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Mitchell College,Cluster_4,Chatham University,Case Western Reserve University,St. John's College
+University of New Haven,Cluster_4,Wilkes University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Quinnipiac University,Cluster_4,Willamette University,University of Health Sciences and Pharmacy in St. Louis,St. Joseph's University-New York
+Sacred Heart University,Cluster_4,Fairfield University,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+University of Saint Joseph,Cluster_2,Belmont University,Bethany College,Loyola University New Orleans
+Southern Connecticut State University,Cluster_1,Bowie State University,SUNY Polytechnic Institute,Endicott College
+Trinity College,Cluster_4,Bucknell University,New England College,Claremont McKenna College
+Wesleyan University,Cluster_5,Bryn Mawr College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Western Connecticut State University,Cluster_1,SUNY at Purchase College,SUNY Polytechnic Institute,Dominican College of Blauvelt
+Yale University,Cluster_5,Harvard University,Cleveland University-Kansas City,Principia College
+Delaware State University,Cluster_1,University of Alaska Anchorage,SUNY Polytechnic Institute,Russell Sage College
+University of Delaware,Cluster_4,Elon University,University of Health Sciences and Pharmacy in St. Louis,Salisbury University
+Goldey-Beacom College,Cluster_3,Southern Arkansas University Main Campus,Saint Charles Borromeo Seminary-Overbrook,University of Louisiana at Monroe
+American University,Cluster_4,Texas Christian University,Principia College,Saint John Fisher College
+The Catholic University of America,Cluster_4,Loyola University Maryland,University of Health Sciences and Pharmacy in St. Louis,Gannon University
+Gallaudet University,Cluster_4,Sweet Briar College,University of Health Sciences and Pharmacy in St. Louis,Delaware State University
+George Washington University,Cluster_4,Lehigh University,Principia College,Marian University
+Georgetown University,Cluster_5,Brown University,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Howard University,Cluster_1,University of Illinois Urbana-Champaign,SUNY Polytechnic Institute,Bryn Mawr College
+Trinity Washington University,Cluster_3,University of Saint Francis-Fort Wayne,Saint Charles Borromeo Seminary-Overbrook,Mount Saint Mary College
+The Baptist College of Florida,Cluster_3,Universidad Central de Bayamon,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Barry University,Cluster_2,Mount Saint Joseph University,Bethany College,University of Dallas
+Bethune-Cookman University,Cluster_2,Hilbert College,Bethany College,University of North Texas at Dallas
+Lynn University,Cluster_4,Lawrence Technological University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Johnson University Florida,Cluster_2,Bethel University,Bethany College,Thomas University
+University of Central Florida,Cluster_1,Florida Agricultural and Mechanical University,SUNY Polytechnic Institute,Mississippi College
+Eckerd College,Cluster_4,Randolph-Macon College,University of Health Sciences and Pharmacy in St. Louis,Alma College
+Edward Waters University,Cluster_3,Allen University,Saint Charles Borromeo Seminary-Overbrook,Bennett College
+Embry-Riddle Aeronautical University-Daytona Beach,Cluster_4,Lawrence Technological University,University of Health Sciences and Pharmacy in St. Louis,Arizona State University Campus Immersion
+Florida Agricultural and Mechanical University,Cluster_1,University of Central Florida,SUNY Polytechnic Institute,Mississippi College
+Florida Atlantic University,Cluster_1,Bowling Green State University-Main Campus,SUNY Polytechnic Institute,Russell Sage College
+Flagler College,Cluster_1,Keystone College,SUNY Polytechnic Institute,Dominican College of Blauvelt
+Florida College,Cluster_3,Johnson College,Saint Charles Borromeo Seminary-Overbrook,Minot State University
+AdventHealth University,Cluster_3,Trinity Washington University,Saint Charles Borromeo Seminary-Overbrook,John Paul the Great Catholic University
+Florida Institute of Technology,Cluster_4,University of Hartford,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Florida International University,Cluster_1,Oklahoma State University-Main Campus,SUNY Polytechnic Institute,Mississippi College
+Florida Memorial University,Cluster_2,Huston-Tillotson University,Bethany College,Johnson C Smith University
+Florida Southern College,Cluster_2,Abilene Christian University,Bethany College,University of Dallas
+Florida State University,Cluster_1,University of Central Florida,SUNY Polytechnic Institute,Mississippi College
+University of Florida,Cluster_1,University of Georgia,SUNY Polytechnic Institute,Colorado School of Mines
+Jacksonville University,Cluster_4,American International College,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Keiser University-Ft Lauderdale,Cluster_1,University of Alaska Anchorage,SUNY Polytechnic Institute,Roosevelt University
+University of Miami,Cluster_4,Carnegie Mellon University,Principia College,University of Southern California
+University of North Florida,Cluster_1,University of North Texas,SUNY Polytechnic Institute,Lee University
+Nova Southeastern University,Cluster_4,University of Denver,Principia College,University of Oregon
+Palm Beach Atlantic University,Cluster_2,Otterbein University,Bethany College,Moravian University
+Ringling College of Art and Design,Cluster_4,Art Center College of Design,Principia College,Maine College of Art & Design
+Rollins College,Cluster_4,Syracuse University,University of Health Sciences and Pharmacy in St. Louis,Florida Southern College
+Saint Leo University,Cluster_2,Rivier University,Bethany College,Tiffin University
+St. John Vianney College Seminary,Cluster_3,Pontifical College Josephinum,California Christian College,Virginia Military Institute
+University of South Florida,Cluster_1,Florida State University,SUNY Polytechnic Institute,Colorado School of Mines
+St. Thomas University,Cluster_2,Southwestern College,Bethany College,Tiffin University
+Stetson University,Cluster_4,Hampshire College,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Southeastern University,Cluster_2,Missouri Baptist University,Bethany College,Columbia International University
+The University of Tampa,Cluster_1,Stephens College,SUNY Polytechnic Institute,Catawba College
+Trinity Baptist College,Cluster_3,Rust College,Universidad Central Del Caribe,Union College
+Trinity College of Florida,Cluster_3,Point University,Saint Charles Borromeo Seminary-Overbrook,Appalachian Bible College
+Warner University,Cluster_2,Missouri Valley College,Bethany College,Multnomah University
+Webber International University,Cluster_2,Lake Erie College,Bethany College,Multnomah University
+The University of West Florida,Cluster_1,University of Houston,SUNY Polytechnic Institute,Mississippi College
+Abraham Baldwin Agricultural College,Cluster_1,McNeese State University,SUNY Polytechnic Institute,Maranatha Baptist University
+Agnes Scott College,Cluster_4,Ohio Wesleyan University,University of Health Sciences and Pharmacy in St. Louis,Centenary College of Louisiana
+Andrew College,Cluster_2,Randolph College,Pacific Lutheran University,Massachusetts Maritime Academy
+Point University,Cluster_3,Oklahoma Wesleyan University,Saint Charles Borromeo Seminary-Overbrook,York College
+Clark Atlanta University,Cluster_1,University of Arkansas at Little Rock,SUNY Polytechnic Institute,Faulkner University
+Berry College,Cluster_4,Wabash College,University of Health Sciences and Pharmacy in St. Louis,Centenary College of Louisiana
+Brenau University,Cluster_2,Art Academy of Cincinnati,Bethany College,Metropolitan College of New York
+Brewton-Parker College,Cluster_3,Simmons College of Kentucky,Saint Charles Borromeo Seminary-Overbrook,Missouri Valley College
+College of Coastal Georgia,Cluster_1,Georgia State University-Perimeter College,SUNY Polytechnic Institute,Virginia Union University
+Clayton  State University,Cluster_1,Angelo State University,SUNY Polytechnic Institute,Bethel University
+Columbus State University,Cluster_1,University of West Georgia,SUNY Polytechnic Institute,Russell Sage College
+Covenant College,Cluster_2,Messiah University,Bethany College,Moravian University
+Emmanuel College,Cluster_3,University of Mount Olive,St. John Vianney College Seminary,East Texas Baptist University
+Emmanuel College,Cluster_2,University of Mount Olive,St. John Vianney College Seminary,East Texas Baptist University
+Emory University,Cluster_5,University of Pennsylvania,Cleveland University-Kansas City,Case Western Reserve University
+Fort Valley State University,Cluster_1,University of Central Oklahoma,SUNY Polytechnic Institute,Friends University
+Georgia Institute of Technology-Main Campus,Cluster_1,University of Florida,Unity College,University of California-San Diego
+Georgia Southwestern State University,Cluster_1,University of Houston-Downtown,SUNY Polytechnic Institute,Mars Hill University
+Georgia College & State University,Cluster_1,The University of Texas at Arlington,SUNY Polytechnic Institute,Lee University
+Georgia Southern University,Cluster_1,Emporia State University,SUNY Polytechnic Institute,Lee University
+Georgia State University,Cluster_1,SUNY at Albany,SUNY Polytechnic Institute,Endicott College
+University of Georgia,Cluster_1,University of Florida,SUNY Polytechnic Institute,Colorado School of Mines
+Gordon State College,Cluster_1,Sul Ross State University,SUNY Polytechnic Institute,The University of Tennessee Southern
+LaGrange College,Cluster_2,Virginia Wesleyan University,Randolph College,Eckerd College
+Mercer University,Cluster_4,Springfield College,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Morehouse College,Cluster_1,SUNY at Purchase College,SUNY Polytechnic Institute,Spelman College
+Oglethorpe University,Cluster_4,Norwich University,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Paine College,Cluster_3,Livingstone College,Saint Charles Borromeo Seminary-Overbrook,Wilberforce University
+Piedmont University,Cluster_2,Concordia University-Wisconsin,Bethany College,University of Dallas
+Reinhardt University,Cluster_2,Bluefield University,Bethany College,Multnomah University
+Savannah College of Art and Design,Cluster_4,Laguna College of Art and Design,University of Health Sciences and Pharmacy in St. Louis,Columbia College Chicago
+Shorter University,Cluster_2,Midway University,Bethany College,University of South Carolina Aiken
+Spelman College,Cluster_4,Marist College,University of Health Sciences and Pharmacy in St. Louis,St. Mary's College of Maryland
+Thomas University,Cluster_1,Alice Lloyd College,SUNY Polytechnic Institute,Johnson University Florida
+Toccoa Falls College,Cluster_2,Charleston Southern University,Randolph College,University of Science and Arts of Oklahoma
+Truett McConnell University,Cluster_3,Mount Marty University,Saint Charles Borromeo Seminary-Overbrook,Tennessee Wesleyan University
+Valdosta State University,Cluster_1,Winona State University,SUNY Polytechnic Institute,Lee University
+Wesleyan College,Cluster_2,Texas Lutheran University,Bethany College,Stephens College
+University of West Georgia,Cluster_1,Columbus State University,SUNY Polytechnic Institute,Lee University
+Young Harris College,Cluster_2,Pfeiffer University,Bethany College,Millikin University
+Chaminade University of Honolulu,Cluster_2,Benedictine College,Bethany College,Mercy College
+University of Hawaii at Hilo,Cluster_1,South Carolina State University,SUNY Polytechnic Institute,Lawrence Technological University
+University of Hawaii at Manoa,Cluster_1,University of Illinois Chicago,SUNY Polytechnic Institute,Colorado School of Mines
+Hawaii Pacific University,Cluster_4,Marymount Manhattan College,University of Health Sciences and Pharmacy in St. Louis,St. Francis College
+University of Hawaii-West Oahu,Cluster_3,SUNY Morrisville,Saint Charles Borromeo Seminary-Overbrook,Lock Haven University
+Boise Bible College,Cluster_3,Blue Mountain College,Saint Charles Borromeo Seminary-Overbrook,Life Pacific University
+Boise State University,Cluster_1,Bowling Green State University-Main Campus,SUNY Polytechnic Institute,Endicott College
+University of Idaho,Cluster_1,The University of Montana,SUNY Polytechnic Institute,Lawrence Technological University
+The College of Idaho,Cluster_4,Westminster College,University of Health Sciences and Pharmacy in St. Louis,New College of Florida
+Lewis-Clark State College,Cluster_1,Missouri Southern State University,SUNY Polytechnic Institute,Virginia Union University
+Northwest Nazarene University,Cluster_2,Oral Roberts University,Bethany College,Point Park University
+Brigham Young University-Idaho,Cluster_3,Brigham Young University-Hawaii,Saint Charles Borromeo Seminary-Overbrook,Black Hills State University
+School of the Art Institute of Chicago,Cluster_4,Otis College of Art and Design,Principia College,Maine College of Art & Design
+Augustana College,Cluster_2,Lebanon Valley College,Bethany College,Loyola University New Orleans
+Aurora University,Cluster_1,Maryville University of Saint Louis,SUNY Polytechnic Institute,Russell Sage College
+Blackburn College,Cluster_2,Crown College,Bethany College,Winthrop University
+Bradley University,Cluster_4,Baldwin Wallace University,University of Health Sciences and Pharmacy in St. Louis,Trine University
+Chicago State University,Cluster_1,Texas Southern University,SUNY Polytechnic Institute,Faulkner University
+University of Chicago,Cluster_5,Duke University,Cleveland University-Kansas City,University of California-Los Angeles
+Columbia College Chicago,Cluster_1,Mercy College,SUNY Polytechnic Institute,Laguna College of Art and Design
+Concordia University-Chicago,Cluster_2,Gardner-Webb University,Bethany College,Saint Edward's University
+DePaul University,Cluster_4,Loyola University Chicago,University of Health Sciences and Pharmacy in St. Louis,Seattle Pacific University
+Eastern Illinois University,Cluster_1,University of Minnesota-Morris,SUNY Polytechnic Institute,Hiram College
+Elmhurst University,Cluster_2,Mount Mercy University,Randolph College,Eckerd College
+Eureka College,Cluster_2,Chowan University,Bethany College,University of Charleston
+Governors State University,Cluster_1,Texas Southern University,SUNY Polytechnic Institute,Carolina University
+Greenville University,Cluster_2,McPherson College,Randolph College,Westminster College
+Hebrew Theological College,Cluster_3,Martin Luther College,Saint Charles Borromeo Seminary-Overbrook,Moody Bible Institute
+University of Illinois Chicago,Cluster_1,University of Hawaii at Manoa,SUNY Polytechnic Institute,University of Vermont
+Benedictine University,Cluster_2,University of Saint Mary,Bethany College,Coastal Carolina University
+University of Illinois Urbana-Champaign,Cluster_1,Virginia Military Institute,SUNY Polytechnic Institute,Doane University
+Illinois Wesleyan University,Cluster_4,DePauw University,University of Health Sciences and Pharmacy in St. Louis,Luther College
+Illinois College,Cluster_2,Bethany College,Bethany College,Ohio Wesleyan University
+Illinois Institute of Technology,Cluster_4,Rochester Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,University of Arizona
+Illinois State University,Cluster_1,Missouri University of Science and Technology,SUNY Polytechnic Institute,Lawrence Technological University
+Judson University,Cluster_2,Southwestern College,Bethany College,University of the Cumberlands
+Knox College,Cluster_4,Kalamazoo College,University of Health Sciences and Pharmacy in St. Louis,University of Mount Union
+Lake Forest College,Cluster_4,Juniata College,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Lewis University,Cluster_2,Concordia University-Wisconsin,Bethany College,University of Dallas
+Lincoln College,Cluster_3,Henderson State University,Saint Charles Borromeo Seminary-Overbrook,University of South Carolina Beaufort
+Loyola University Chicago,Cluster_4,University of Scranton,University of Health Sciences and Pharmacy in St. Louis,Gannon University
+McKendree University,Cluster_2,Fontbonne University,Bethany College,Salve Regina University
+Methodist College,Cluster_3,Goddard College,California Christian College,Dunwoody College of Technology
+Millikin University,Cluster_4,Marietta College,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Monmouth College,Cluster_2,Illinois College,Bethany College,Ohio Wesleyan University
+Moody Bible Institute,Cluster_1,Universidad del Sagrado Corazon,SUNY Polytechnic Institute,Maranatha Baptist University
+National Louis University,Cluster_3,Delta State University,Saint Charles Borromeo Seminary-Overbrook,University of the Virgin Islands
+North Central College,Cluster_2,Capital University,Bethany College,Loyola University New Orleans
+North Park University,Cluster_2,Vanguard University of Southern California,Bethany College,Moravian University
+Northern Illinois University,Cluster_1,Western Illinois University,SUNY Polytechnic Institute,Russell Sage College
+Northwestern University,Cluster_5,Rice University,Cleveland University-Kansas City,Cornell University
+Northeastern Illinois University,Cluster_1,Eastern Illinois University,SUNY Polytechnic Institute,Rockford University
+Olivet Nazarene University,Cluster_2,Mount Mary University,Bethany College,University of Dallas
+Principia College,Cluster_4,Sweet Briar College,Rensselaer Polytechnic Institute,Cottey College
+Quincy University,Cluster_2,Spring Arbor University,Bethany College,Upper Iowa University
+Rockford University,Cluster_2,Friends University,Bethany College,University of Charleston
+Roosevelt University,Cluster_4,Delaware Valley University,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Dominican University,Cluster_2,The University of Findlay,Bethany College,Duquesne University
+University of St Francis,Cluster_2,Lewis University,Bethany College,University of Dallas
+Saint Xavier University,Cluster_2,College of Mount Saint Vincent,Bethany College,Loyola University New Orleans
+University of Illinois Springfield,Cluster_1,University of Maryland Eastern Shore,SUNY Polytechnic Institute,Russell Sage College
+Saint Anthony College of Nursing,Cluster_3,Elim Bible Institute and College,Saint Charles Borromeo Seminary-Overbrook,Grove City College
+Southern Illinois University-Carbondale,Cluster_1,Southern Illinois University-Edwardsville,SUNY Polytechnic Institute,Lawrence Technological University
+Southern Illinois University-Edwardsville,Cluster_1,East Tennessee State University,SUNY Polytechnic Institute,Liberty University
+Trinity Christian College,Cluster_2,Northwestern College,Bethany College,Loyola University New Orleans
+Trinity International University-Illinois,Cluster_2,Hardin-Simmons University,Bethany College,Saint Edward's University
+VanderCook College of Music,Cluster_3,Johnson College,Saint Charles Borromeo Seminary-Overbrook,University of Pittsburgh-Greensburg
+Western Illinois University,Cluster_1,Northern Illinois University,SUNY Polytechnic Institute,Russell Sage College
+Wheaton College,Cluster_2,Marian University,Bethany College,Gonzaga University
+Anderson University,Cluster_2,Saint Elizabeth University,Bethany College,University of Dallas
+Anderson University,Cluster_2,Saint Elizabeth University,Bethany College,University of Dallas
+Ball State University,Cluster_1,University of North Carolina Wilmington,SUNY Polytechnic Institute,William & Mary
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Butler University,Cluster_4,Willamette University,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+DePauw University,Cluster_4,Washington & Jefferson College,University of Health Sciences and Pharmacy in St. Louis,Alma College
+Earlham College,Cluster_4,Agnes Scott College,University of Health Sciences and Pharmacy in St. Louis,Monmouth College
+University of Evansville,Cluster_2,Assumption University,Bethany College,Loyola University New Orleans
+Franklin College,Cluster_2,Transylvania University,Andrew College,Randolph-Macon College
+Goshen College,Cluster_2,Bluffton University,Bethany College,Loyola University New Orleans
+Grace College and Theological Seminary,Cluster_2,Geneva College,Bethany College,University of Minnesota-Morris
+Hanover College,Cluster_2,Alma College,Randolph College,Randolph-Macon College
+Holy Cross College,Cluster_2,Queens University of Charlotte,Bethany College,Indiana University-Kokomo
+Huntington University,Cluster_2,Mount Mercy University,Randolph College,Gustavus Adolphus College
+Purdue University Fort Wayne,Cluster_1,Indiana University-East,SUNY Polytechnic Institute,Mars Hill University
+Indiana University-Purdue University-Indianapolis,Cluster_1,University of Kansas,SUNY Polytechnic Institute,University of Vermont
+University of Indianapolis,Cluster_2,Hamline University,Randolph College,University of St Thomas
+Indiana Institute of Technology,Cluster_1,Webster University,SUNY Polytechnic Institute,Lawrence Technological University
+University of Southern Indiana,Cluster_1,University of North Alabama,SUNY Polytechnic Institute,Lee University
+Indiana State University,Cluster_1,Norfolk State University,SUNY Polytechnic Institute,William Woods University
+Indiana University-Kokomo,Cluster_1,Indiana University-Southeast,SUNY Polytechnic Institute,Virginia Union University
+Indiana University-South Bend,Cluster_1,Indiana University-Northwest,SUNY Polytechnic Institute,Mars Hill University
+Indiana University-Bloomington,Cluster_1,The University of Texas at Dallas,SUNY Polytechnic Institute,University of Vermont
+Indiana University-Northwest,Cluster_1,Indiana University-South Bend,SUNY Polytechnic Institute,Asbury University
+Indiana University-Southeast,Cluster_1,Indiana University-Kokomo,SUNY Polytechnic Institute,Virginia Union University
+Indiana University-East,Cluster_1,Purdue University Fort Wayne,SUNY Polytechnic Institute,Rockford University
+Manchester University,Cluster_2,Virginia Wesleyan University,Randolph College,Eckerd College
+Marian University,Cluster_2,Shenandoah University,Bethany College,Gonzaga University
+Marian University,Cluster_2,Shenandoah University,Bethany College,Gonzaga University
+Indiana Wesleyan University-Marion,Cluster_2,Heidelberg University,Bethany College,Saint Anselm College
+University of Notre Dame,Cluster_5,Rice University,Cleveland University-Kansas City,Cornell University
+Oakland City University,Cluster_3,University of Mobile,Saint Charles Borromeo Seminary-Overbrook,Concordia University-Wisconsin
+Rose-Hulman Institute of Technology,Cluster_4,Quinnipiac University,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+University of Saint Francis-Fort Wayne,Cluster_3,Trinity Washington University,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+Saint Mary-of-the-Woods College,Cluster_2,Newman University,Bethany College,University of the Cumberlands
+Saint Mary's College,Cluster_4,Loyola University New Orleans,University of Health Sciences and Pharmacy in St. Louis,Lebanon Valley College
+Taylor University,Cluster_2,Calvin University,Randolph College,Randolph-Macon College
+Trine University,Cluster_1,St. Joseph's University-New York,SUNY Polytechnic Institute,Baldwin Wallace University
+Valparaiso University,Cluster_2,Assumption University,Bethany College,Merrimack College
+Wabash College,Cluster_4,Berry College,University of Health Sciences and Pharmacy in St. Louis,Centenary College of Louisiana
+Buena Vista University,Cluster_2,Elmhurst University,Randolph College,Austin College
+Central College,Cluster_2,Huntingdon College,Bethany College,University of Montevallo
+Clarke University,Cluster_2,Alverno College,Bethany College,Loyola University New Orleans
+Coe College,Cluster_2,Monmouth College,Bethany College,Ohio Wesleyan University
+Cornell College,Cluster_2,Monmouth College,Bethany College,Ohio Wesleyan University
+Dordt University,Cluster_2,University of Northwestern-St Paul,Bethany College,Moravian University
+Drake University,Cluster_4,Florida Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+University of Dubuque,Cluster_2,Schreiner University,Bethany College,Moravian University
+Emmaus Bible College,Cluster_3,University of Providence,Saint Charles Borromeo Seminary-Overbrook,Lubbock Christian University
+Faith Baptist Bible College and Theological Seminary,Cluster_2,Harding University,Bethany College,Pontifical Catholic University of Puerto Rico-Ponce
+Graceland University-Lamoni,Cluster_2,Mount Mercy University,Randolph College,Austin College
+Grand View University,Cluster_2,Thomas More University,Bethany College,Davenport University
+Grinnell College,Cluster_5,Swarthmore College,Cleveland University-Kansas City,University of Richmond
+Iowa State University,Cluster_1,Texas Tech University,SUNY Polytechnic Institute,Lee University
+Iowa Wesleyan University,Cluster_2,Notre Dame College,Bethany College,Wagner College
+University of Iowa,Cluster_1,University of Minnesota-Twin Cities,SUNY Polytechnic Institute,University of Vermont
+Loras College,Cluster_2,Drury University,Bethany College,Southwestern University
+Luther College,Cluster_2,Simpson College,Randolph College,Gustavus Adolphus College
+Maharishi International University,Cluster_1,Middle Georgia State University,SUNY Polytechnic Institute,Trinity Bible College and Graduate School
+Mercy College of Health Sciences,Cluster_3,Emmaus Bible College,Saint Charles Borromeo Seminary-Overbrook,Lubbock Christian University
+Morningside University,Cluster_2,Nebraska Wesleyan University,Bethany College,Upper Iowa University
+Mount Mercy University,Cluster_2,Elmhurst University,Randolph College,Randolph-Macon College
+University of Northern Iowa,Cluster_1,University of Wisconsin-Platteville,SUNY Polytechnic Institute,Asbury University
+Northwestern College,Cluster_2,Trinity Christian College,Bethany College,Moravian University
+Saint Ambrose University,Cluster_2,Dominican University,Bethany College,Duquesne University
+Simpson College,Cluster_2,Luther College,Andrew College,Gustavus Adolphus College
+Upper Iowa University,Cluster_1,Winthrop University,SUNY Polytechnic Institute,Mars Hill University
+Wartburg College,Cluster_2,Simpson College,Andrew College,Gustavus Adolphus College
+William Penn University,Cluster_3,Oklahoma Wesleyan University,Saint Charles Borromeo Seminary-Overbrook,York College
+Baker University,Cluster_2,Northwest University,Bethany College,Aurora University
+Benedictine College,Cluster_2,Carlow University,Bethany College,Moravian University
+Bethany College,Cluster_2,Andrew College,Harding University,Doane University
+Bethany College,Cluster_2,Andrew College,Harding University,Doane University
+Bethel College-North Newton,Cluster_2,Kentucky Wesleyan College,Bethany College,Chatham University
+Emporia State University,Cluster_1,Georgia Southern University,SUNY Polytechnic Institute,Lee University
+Fort Hays State University,Cluster_1,Abraham Baldwin Agricultural College,SUNY Polytechnic Institute,Maranatha Baptist University
+Barclay College,Cluster_2,Claflin University,Bethany College,Universidad del Sagrado Corazon
+Friends University,Cluster_2,Rockford University,Bethany College,Multnomah University
+University of Kansas,Cluster_1,Kansas State University,SUNY Polytechnic Institute,University of Vermont
+Newman University,Cluster_2,Mount Mary University,Bethany College,University of the Cumberlands
+Kansas State University,Cluster_1,University of Kansas,SUNY Polytechnic Institute,Lee University
+Kansas Wesleyan University,Cluster_3,East Texas Baptist University,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+Manhattan Christian College,Cluster_3,Bacone College,Saint Charles Borromeo Seminary-Overbrook,Johnson University Florida
+McPherson College,Cluster_2,Greenville University,Randolph College,Randolph-Macon College
+MidAmerica Nazarene University,Cluster_2,King University,Bethany College,Multnomah University
+Ottawa University-Ottawa,Cluster_4,Fairleigh Dickinson University-Metropolitan Campus,Case Western Reserve University,Presbyterian College
+Pittsburg State University,Cluster_1,Fairmont State University,SUNY Polytechnic Institute,Asbury University
+University of Saint Mary,Cluster_2,Benedictine University,Bethany College,Coastal Carolina University
+Southwestern College,Cluster_2,Judson University,Bethany College,Tiffin University
+Sterling College,Cluster_2,Tabor College,Andrew College,Westminster College
+Sterling College,Cluster_2,Tabor College,Andrew College,Westminster College
+Tabor College,Cluster_2,Northland College,Randolph College,Westminster College
+Wichita State University,Cluster_1,University of Wisconsin-Milwaukee,SUNY Polytechnic Institute,Russell Sage College
+Alice Lloyd College,Cluster_1,Johnson C Smith University,SUNY Polytechnic Institute,Friends University
+Asbury University,Cluster_2,University of Mount Union,Bethany College,Upper Iowa University
+Bellarmine University,Cluster_2,Azusa Pacific University,Bethany College,Gonzaga University
+Berea College,Cluster_4,Cooper Union for the Advancement of Science and Art,University of Health Sciences and Pharmacy in St. Louis,Cottey College
+Brescia University,Cluster_2,Eastern Nazarene College,Bethany College,University of Charleston
+Centre College,Cluster_4,Gustavus Adolphus College,University of Health Sciences and Pharmacy in St. Louis,Alma College
+University of the Cumberlands,Cluster_1,Pontifical Catholic University of Puerto Rico-Ponce,SUNY Polytechnic Institute,Lee University
+Eastern Kentucky University,Cluster_1,Western Kentucky University,SUNY Polytechnic Institute,Asbury University
+Georgetown College,Cluster_2,Maryville College,Bethany College,Roanoke College
+Kentucky Mountain Bible College,Cluster_3,Visible Music College,Saint Charles Borromeo Seminary-Overbrook,Appalachian Bible College
+Kentucky State University,Cluster_1,University of Maine at Presque Isle,SUNY Polytechnic Institute,Hiram College
+Kentucky Wesleyan College,Cluster_2,Huntingdon College,Bethany College,University of Charleston
+University of Kentucky,Cluster_1,University of Arizona,SUNY Polytechnic Institute,Endicott College
+Kentucky Christian University,Cluster_3,Oklahoma Wesleyan University,Saint Charles Borromeo Seminary-Overbrook,Hannibal-LaGrange University
+University of Louisville,Cluster_1,Wayne State University,SUNY Polytechnic Institute,University of Vermont
+Midway University,Cluster_2,Shorter University,Bethany College,University of Charleston
+Morehead State University,Cluster_1,Northwest Missouri State University,SUNY Polytechnic Institute,Hiram College
+Murray State University,Cluster_1,Morehead State University,SUNY Polytechnic Institute,University of Mount Union
+Northern Kentucky University,Cluster_1,The University of Tennessee-Chattanooga,SUNY Polytechnic Institute,Russell Sage College
+The Southern Baptist Theological Seminary,Cluster_3,Southeastern Baptist Theological Seminary,Saint Charles Borromeo Seminary-Overbrook,Johnson University
+Spalding University,Cluster_2,University of Saint Mary,Bethany College,University of the Cumberlands
+Thomas More University,Cluster_2,Grand View University,Bethany College,Roanoke College
+Transylvania University,Cluster_2,Franklin College,Andrew College,Randolph-Macon College
+Union College,Cluster_2,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+Union College,Cluster_2,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+Union College,Cluster_4,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+Western Kentucky University,Cluster_1,Eastern Kentucky University,SUNY Polytechnic Institute,Columbus College of Art and Design
+Centenary College of Louisiana,Cluster_2,Millsaps College,Bethany College,Agnes Scott College
+Dillard University,Cluster_2,Washington Adventist University,Bethany College,University of Houston-Victoria
+Grambling State University,Cluster_1,Florida Agricultural and Mechanical University,SUNY Polytechnic Institute,Mississippi College
+Louisiana State University-Alexandria,Cluster_3,Henderson State University,Saint Charles Borromeo Seminary-Overbrook,University of Minnesota-Crookston
+Louisiana State University and Agricultural & Mechanical College,Cluster_1,University of Oklahoma-Norman Campus,SUNY Polytechnic Institute,Mercer University
+Louisiana State University-Shreveport,Cluster_1,Middle Georgia State University,SUNY Polytechnic Institute,Southwest Baptist University
+Louisiana College,Cluster_2,York College,Bethany College,University of South Carolina Aiken
+Louisiana Tech University,Cluster_1,Oklahoma State University-Main Campus,SUNY Polytechnic Institute,Lee University
+Loyola University New Orleans,Cluster_4,Saint Mary's College,University of Health Sciences and Pharmacy in St. Louis,Lebanon Valley College
+McNeese State University,Cluster_1,Angelo State University,SUNY Polytechnic Institute,Maranatha Baptist University
+University of New Orleans,Cluster_1,Eastern Michigan University,SUNY Polytechnic Institute,Russell Sage College
+Nicholls State University,Cluster_1,Georgia State University-Perimeter College,SUNY Polytechnic Institute,University of Valley Forge
+University of Louisiana at Monroe,Cluster_1,Valdosta State University,SUNY Polytechnic Institute,Lee University
+Northwestern State University of Louisiana,Cluster_1,Georgia Southern University,SUNY Polytechnic Institute,Lee University
+University of Holy Cross,Cluster_3,University of Mobile,Saint Charles Borromeo Seminary-Overbrook,Spalding University
+Franciscan Missionaries of Our Lady University,Cluster_3,Mercy College of Ohio,Saint Charles Borromeo Seminary-Overbrook,Southern Adventist University
+Southeastern Louisiana University,Cluster_1,Northwestern State University of Louisiana,SUNY Polytechnic Institute,Lee University
+Southern University and A & M College,Cluster_1,University of West Alabama,SUNY Polytechnic Institute,Carolina University
+Southern University at New Orleans,Cluster_3,Lincoln College,Saint Charles Borromeo Seminary-Overbrook,CUNY Medgar Evers College
+University of Louisiana at Lafayette,Cluster_1,Texas State University,SUNY Polytechnic Institute,Russell Sage College
+Tulane University of Louisiana,Cluster_4,Carnegie Mellon University,New England College,University of Southern California
+Xavier University of Louisiana,Cluster_2,St. Mary's University,Bethany College,D'Youville College
+College of the Atlantic,Cluster_4,Linfield University-McMinnville Campus,University of Health Sciences and Pharmacy in St. Louis,Calvin University
+Bates College,Cluster_5,Middlebury College,Johns Hopkins University,University of Health Sciences and Pharmacy in St. Louis
+Bowdoin College,Cluster_5,Grinnell College,Cleveland University-Kansas City,University of Richmond
+Colby College,Cluster_4,Union College,Doane University,Claremont McKenna College
+University of Maine at Farmington,Cluster_1,Morehead State University,SUNY Polytechnic Institute,Hiram College
+University of Maine at Fort Kent,Cluster_1,University of Maine at Presque Isle,SUNY Polytechnic Institute,Hiram College
+University of Maine,Cluster_1,University of New Hampshire-Main Campus,SUNY Polytechnic Institute,Lawrence Technological University
+Maine Maritime Academy,Cluster_1,University of Pittsburgh-Bradford,SUNY Polytechnic Institute,Embry-Riddle Aeronautical University-Prescott
+University of Maine at Presque Isle,Cluster_1,University of Maine at Fort Kent,SUNY Polytechnic Institute,Hiram College
+University of New England,Cluster_4,Long Island University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Maine College of Art & Design,Cluster_2,Sierra Nevada University,Bethany College,Dominican College of Blauvelt
+Saint Joseph's College of Maine,Cluster_2,Albertus Magnus College,Bethany College,Roanoke College
+University of Southern Maine,Cluster_1,Plymouth State University,SUNY Polytechnic Institute,Lawrence Technological University
+Unity College,Cluster_1,University of Wisconsin-Stout,SUNY Polytechnic Institute,Keuka College
+University of Baltimore,Cluster_1,West Virginia University,SUNY Polytechnic Institute,Lawrence Technological University
+Bowie State University,Cluster_1,Boise State University,SUNY Polytechnic Institute,Russell Sage College
+Capitol Technology University,Cluster_3,Goldey-Beacom College,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+Washington Adventist University,Cluster_2,Dillard University,Bethany College,University of Charleston
+Coppin State University,Cluster_1,University of Houston-Victoria,SUNY Polytechnic Institute,Dillard University
+Frostburg State University,Cluster_1,Radford University,SUNY Polytechnic Institute,Russell Sage College
+Goucher College,Cluster_4,Ithaca College,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Hood College,Cluster_4,University of La Verne,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Johns Hopkins University,Cluster_5,California Institute of Technology,Cleveland University-Kansas City,SUNY Polytechnic Institute
+Loyola University Maryland,Cluster_4,The Catholic University of America,University of Health Sciences and Pharmacy in St. Louis,Gannon University
+University of Maryland-Baltimore County,Cluster_1,University of Wisconsin-Stout,SUNY Polytechnic Institute,University of Delaware
+University of Maryland-College Park,Cluster_1,North Carolina State University at Raleigh,SUNY Polytechnic Institute,William & Mary
+Maryland Institute College of Art,Cluster_4,School of the Art Institute of Chicago,University of Health Sciences and Pharmacy in St. Louis,Maine College of Art & Design
+University of Maryland Eastern Shore,Cluster_1,University of Illinois Springfield,SUNY Polytechnic Institute,Alfred University
+Morgan State University,Cluster_1,Eastern Michigan University,SUNY Polytechnic Institute,Russell Sage College
+Mount St. Mary's University,Cluster_2,Lenoir-Rhyne University,Bethany College,Roanoke College
+Notre Dame of Maryland University,Cluster_2,Barry University,Bethany College,University of Dallas
+Salisbury University,Cluster_1,Converse University,SUNY Polytechnic Institute,University of Delaware
+St. Mary's College of Maryland,Cluster_1,Massachusetts College of Art and Design,SUNY Polytechnic Institute,Baldwin Wallace University
+St. John's College,Cluster_3,Pennsylvania College of Art and Design,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+St. John's College,Cluster_3,Pennsylvania College of Art and Design,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+Towson University,Cluster_1,Boise State University,SUNY Polytechnic Institute,Endicott College
+Stevenson University,Cluster_4,Franklin Pierce University,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+Washington College,Cluster_4,Hampshire College,University of Health Sciences and Pharmacy in St. Louis,Lycoming College
+McDaniel College,Cluster_4,Washington & Jefferson College,University of Health Sciences and Pharmacy in St. Louis,Keuka College
+American International College,Cluster_4,Delaware Valley University,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Amherst College,Cluster_5,Pomona College,Cleveland University-Kansas City,University of Richmond
+Anna Maria College,Cluster_2,Emmanuel College,Bethany College,Roanoke College
+Assumption University,Cluster_2,California Lutheran University,Bethany College,Roanoke College
+Babson College,Cluster_4,Skidmore College,University of Health Sciences and Pharmacy in St. Louis,Claremont McKenna College
+Bay Path University,Cluster_2,University of Mount Union,Bethany College,Millikin University
+Bentley University,Cluster_4,Syracuse University,University of Health Sciences and Pharmacy in St. Louis,Saint John Fisher College
+Berklee College of Music,Cluster_4,Emerson College,University of Health Sciences and Pharmacy in St. Louis,Morehouse College
+Boston College,Cluster_4,Villanova University,University of Health Sciences and Pharmacy in St. Louis,University of Notre Dame
+Boston University,Cluster_4,Carnegie Mellon University,Principia College,University of Southern California
+Brandeis University,Cluster_4,Lehigh University,University of Health Sciences and Pharmacy in St. Louis,Clemson University
+Bridgewater State University,Cluster_1,Worcester State University,SUNY Polytechnic Institute,Virginia Union University
+Clark University,Cluster_4,Florida Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,Clemson University
+Curry College,Cluster_4,Dean College,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Dean College,Cluster_4,Curry College,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Eastern Nazarene College,Cluster_2,Bluefield University,Bethany College,University of Charleston
+Emerson College,Cluster_4,Marist College,University of Health Sciences and Pharmacy in St. Louis,Maine College of Art & Design
+Emmanuel College,Cluster_3,University of Mount Olive,St. John Vianney College Seminary,East Texas Baptist University
+Emmanuel College,Cluster_2,University of Mount Olive,St. John Vianney College Seminary,East Texas Baptist University
+Endicott College,Cluster_4,Russell Sage College,University of Health Sciences and Pharmacy in St. Louis,University of Rhode Island
+Fitchburg State University,Cluster_1,Worcester State University,SUNY Polytechnic Institute,Virginia Union University
+Framingham State University,Cluster_1,SUNY College of Technology at Delhi,SUNY Polytechnic Institute,Rosemont College
+Gordon College,Cluster_2,Canisius College,Bethany College,Saint Anselm College
+Hampshire College,Cluster_4,Stetson University,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Harvard University,Cluster_5,Dartmouth College,Cleveland University-Kansas City,Cornell University
+Hellenic College-Holy Cross Greek Orthodox School of Theology,Cluster_2,Ave Maria University,Bethany College,St. Francis College
+College of the Holy Cross,Cluster_4,Bucknell University,New England College,Centenary College of Louisiana
+Lasell University,Cluster_4,Franklin Pierce University,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Lesley University,Cluster_4,Roosevelt University,University of Health Sciences and Pharmacy in St. Louis,University of Massachusetts-Dartmouth
+Longy School of Music of Bard College,Cluster_4,American Academy of Dramatic Arts-New York,Principia College,Mount Saint Mary College
+University of Massachusetts-Lowell,Cluster_1,Rutgers University-Newark,SUNY Polytechnic Institute,Endicott College
+University of Massachusetts-Amherst,Cluster_1,University of Connecticut,SUNY Polytechnic Institute,University of Vermont
+University of Massachusetts-Boston,Cluster_1,University of Massachusetts-Dartmouth,SUNY Polytechnic Institute,Endicott College
+MCPHS University,Cluster_4,University of New England,Colby College,Arizona State University Campus Immersion
+Massachusetts College of Art and Design,Cluster_1,Keene State College,SUNY Polytechnic Institute,Laguna College of Art and Design
+Massachusetts Institute of Technology,Cluster_5,California Institute of Technology,Cleveland University-Kansas City,Case Western Reserve University
+Massachusetts Maritime Academy,Cluster_1,University of Illinois Urbana-Champaign,SUNY Polytechnic Institute,Randolph College
+Merrimack College,Cluster_4,Siena College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Mount Holyoke College,Cluster_4,Dickinson College,University of Health Sciences and Pharmacy in St. Louis,Centenary College of Louisiana
+The New England Conservatory of Music,Cluster_4,San Francisco Conservatory of Music,Principia College,St. John's College
+Nichols College,Cluster_2,Bay Path University,Bethany College,Franklin Pierce University
+Massachusetts College of Liberal Arts,Cluster_1,SUNY College of Technology at Canton,SUNY Polytechnic Institute,Hiram College
+Northeastern University,Cluster_4,Carnegie Mellon University,Principia College,University of Southern California
+College of Our Lady of the Elms,Cluster_2,Seton Hill University,Bethany College,Loyola University New Orleans
+Regis College,Cluster_4,Merrimack College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Salem State University,Cluster_1,Westfield State University,SUNY Polytechnic Institute,Hawaii Pacific University
+Simmons University,Cluster_4,Widener University,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+Bard College at Simon's Rock,Cluster_4,Bennington College,University of Health Sciences and Pharmacy in St. Louis,Sterling College
+Smith College,Cluster_4,Mount Holyoke College,University of Health Sciences and Pharmacy in St. Louis,Wellesley College
+Springfield College,Cluster_4,Russell Sage College,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+University of Massachusetts-Dartmouth,Cluster_1,New Jersey City University,SUNY Polytechnic Institute,Lesley University
+Stonehill College,Cluster_4,Manhattan College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Suffolk University,Cluster_4,Pace University,University of Health Sciences and Pharmacy in St. Louis,University of Massachusetts-Boston
+Tufts University,Cluster_4,Carnegie Mellon University,University of Health Sciences and Pharmacy in St. Louis,University of Southern California
+Wellesley College,Cluster_5,Claremont McKenna College,Cleveland University-Kansas City,Haverford College
+Wentworth Institute of Technology,Cluster_4,Roger Williams University,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+Western New England University,Cluster_4,Long Island University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Westfield State University,Cluster_1,Shippensburg University of Pennsylvania,SUNY Polytechnic Institute,Hiram College
+Wheaton College (Massachusetts),Cluster_4,Ursinus College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Williams College,Cluster_5,Washington and Lee University,Cleveland University-Kansas City,Colby College
+Worcester Polytechnic Institute,Cluster_4,Stevens Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,Clemson University
+Worcester State University,Cluster_1,Fitchburg State University,SUNY Polytechnic Institute,Rosemont College
+Adrian College,Cluster_2,Simpson University,Bethany College,Westmont College
+Albion College,Cluster_4,Washington College,University of Health Sciences and Pharmacy in St. Louis,Coe College
+Alma College,Cluster_2,Hanover College,Randolph College,Randolph-Macon College
+Andrews University,Cluster_2,Oral Roberts University,Bethany College,Illinois State University
+Aquinas College,Cluster_2,West Virginia Wesleyan College,Bethany College,Roanoke College
+Baker College,Cluster_3,John A Gupton College,Saint Charles Borromeo Seminary-Overbrook,Columbia International University
+Calvin University,Cluster_2,Taylor University,Randolph College,Gustavus Adolphus College
+Central Michigan University,Cluster_1,Ferris State University,SUNY Polytechnic Institute,Russell Sage College
+Cleary University,Cluster_3,The Christ College of Nursing and Health Sciences,Saint Charles Borromeo Seminary-Overbrook,Saginaw Valley State University
+Concordia University Ann Arbor,Cluster_2,Texas Lutheran University,Bethany College,Moravian University
+College for Creative Studies,Cluster_4,Kansas City Art Institute,University of Health Sciences and Pharmacy in St. Louis,Minneapolis College of Art and Design
+Davenport University,Cluster_1,Husson University,SUNY Polytechnic Institute,Hiram College
+University of Detroit Mercy,Cluster_2,Shenandoah University,Bethany College,Creighton University
+Eastern Michigan University,Cluster_1,Morgan State University,SUNY Polytechnic Institute,Russell Sage College
+Ferris State University,Cluster_1,Central Michigan University,SUNY Polytechnic Institute,Russell Sage College
+Kettering University,Cluster_2,Asbury University,Bethany College,Trine University
+Cornerstone University,Cluster_2,Oral Roberts University,Bethany College,Aurora University
+Grand Valley State University,Cluster_1,Murray State University,SUNY Polytechnic Institute,Asbury University
+Hillsdale College,Cluster_4,Trinity University,University of Health Sciences and Pharmacy in St. Louis,University of Florida
+Hope College,Cluster_2,Roberts Wesleyan College,Bethany College,Moravian University
+Kalamazoo College,Cluster_4,Knox College,University of Health Sciences and Pharmacy in St. Louis,Coe College
+Lake Superior State University,Cluster_1,Winston-Salem State University,SUNY Polytechnic Institute,University of Mount Union
+Lawrence Technological University,Cluster_4,Lynn University,University of Health Sciences and Pharmacy in St. Louis,Northwood University
+Madonna University,Cluster_2,Mississippi College,Bethany College,Webster University
+Rochester University,Cluster_2,Columbia College,Bethany College,University of South Carolina Beaufort
+University of Michigan-Ann Arbor,Cluster_4,University of Washington-Seattle Campus,University of Health Sciences and Pharmacy in St. Louis,University of North Carolina at Chapel Hill
+Michigan State University,Cluster_1,Michigan Technological University,SUNY Polytechnic Institute,University of Vermont
+Michigan Technological University,Cluster_1,University of Arizona,SUNY Polytechnic Institute,University of Vermont
+University of Michigan-Dearborn,Cluster_1,The University of Alabama,SUNY Polytechnic Institute,Russell Sage College
+University of Michigan-Flint,Cluster_1,Northern Arizona University,SUNY Polytechnic Institute,Russell Sage College
+Northern Michigan University,Cluster_1,Lander University,SUNY Polytechnic Institute,University of Mount Union
+Northwood University,Cluster_1,Aurora University,SUNY Polytechnic Institute,Lawrence Technological University
+Oakland University,Cluster_1,Ohio University-Main Campus,SUNY Polytechnic Institute,Lawrence Technological University
+Olivet College,Cluster_2,Eureka College,Bethany College,University of Charleston
+Kuyper College,Cluster_2,Southern Adventist University,Bethany College,Universidad del Sagrado Corazon
+Sacred Heart Major Seminary,Cluster_3,Thomas Aquinas College,California Christian College,Brigham Young University
+Saginaw Valley State University,Cluster_1,Lander University,SUNY Polytechnic Institute,University of Mount Union
+Siena Heights University,Cluster_2,Geneva College,Bethany College,Stephens College
+Spring Arbor University,Cluster_2,LeTourneau University,Bethany College,Stephens College
+Finlandia University,Cluster_2,Saint Augustine's University,Bethany College,Metropolitan College of New York
+Wayne State University,Cluster_1,University of Louisville,SUNY Polytechnic Institute,University of Vermont
+Western Michigan University,Cluster_1,Bowling Green State University-Main Campus,SUNY Polytechnic Institute,Russell Sage College
+Augsburg University,Cluster_2,Capital University,Bethany College,Loyola University New Orleans
+Bemidji State University,Cluster_1,Northern State University,SUNY Polytechnic Institute,Virginia Union University
+Bethany Lutheran College,Cluster_2,Franciscan University of Steubenville,Bethany College,John Brown University
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Carleton College,Cluster_5,Hamilton College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Concordia College at Moorhead,Cluster_2,Ouachita Baptist University,Bethany College,Stephens College
+Concordia University-Saint Paul,Cluster_2,Belhaven University,Bethany College,University of the Cumberlands
+Martin Luther College,Cluster_3,The Baptist College of Florida,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Gustavus Adolphus College,Cluster_4,Centre College,University of Health Sciences and Pharmacy in St. Louis,Luther College
+Hamline University,Cluster_2,University of Indianapolis,Randolph College,University of St Thomas
+Macalester College,Cluster_5,Lafayette College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Minnesota State University-Mankato,Cluster_1,Slippery Rock University of Pennsylvania,SUNY Polytechnic Institute,Lee University
+Metropolitan State University,Cluster_3,Southern Arkansas University Main Campus,Saint Charles Borromeo Seminary-Overbrook,Southern University and A & M College
+University of Minnesota-Twin Cities,Cluster_1,University of Iowa,SUNY Polytechnic Institute,William & Mary
+University of Minnesota-Crookston,Cluster_1,University of Houston-Victoria,SUNY Polytechnic Institute,Friends University
+Minneapolis College of Art and Design,Cluster_2,Milwaukee Institute of Art & Design,Bethany College,College for Creative Studies
+University of Minnesota-Duluth,Cluster_1,University of North Texas,SUNY Polytechnic Institute,Lee University
+University of Minnesota-Morris,Cluster_1,Lincoln University,SUNY Polytechnic Institute,University of Mount Union
+Minnesota State University Moorhead,Cluster_1,Valdosta State University,SUNY Polytechnic Institute,Ashland University
+North Central University,Cluster_2,Oklahoma Christian University,Bethany College,Moody Bible Institute
+University of Northwestern-St Paul,Cluster_2,Dordt University,Bethany College,Moravian University
+College of Saint Benedict,Cluster_2,Saint Johns University,Bethany College,Saint Mary's College
+Saint Cloud State University,Cluster_1,Stephen F Austin State University,SUNY Polytechnic Institute,Lee University
+Saint Johns University,Cluster_2,College of Saint Benedict,Bethany College,Saint Mary's College
+Saint Mary's University of Minnesota,Cluster_2,Niagara University,Bethany College,Saint Edward's University
+St Olaf College,Cluster_4,Centre College,University of Health Sciences and Pharmacy in St. Louis,Alma College
+Crown College,Cluster_2,Bushnell University,Bethany College,Multnomah University
+The College of Saint Scholastica,Cluster_2,Trinity Christian College,Bethany College,Loyola University New Orleans
+University of St Thomas,Cluster_4,Hamline University,University of Health Sciences and Pharmacy in St. Louis,Samford University
+University of St Thomas,Cluster_2,Hamline University,University of Health Sciences and Pharmacy in St. Louis,Samford University
+St Catherine University,Cluster_2,Augustana University,Randolph College,Gustavus Adolphus College
+Southwest Minnesota State University,Cluster_1,University of Maine at Presque Isle,SUNY Polytechnic Institute,Bethune-Cookman University
+Dunwoody College of Technology,Cluster_1,University of Pittsburgh-Greensburg,SUNY Polytechnic Institute,Holy Cross College
+Winona State University,Cluster_1,Valdosta State University,SUNY Polytechnic Institute,Lee University
+Alcorn State University,Cluster_1,Coppin State University,SUNY Polytechnic Institute,Barclay College
+Belhaven University,Cluster_2,Concordia University-Saint Paul,Bethany College,University of the Cumberlands
+Blue Mountain College,Cluster_3,Emmaus Bible College,Saint Charles Borromeo Seminary-Overbrook,Life Pacific University
+Delta State University,Cluster_3,Adams State University,Saint Charles Borromeo Seminary-Overbrook,Arkansas Tech University
+Jackson State University,Cluster_1,University of Arkansas at Pine Bluff,SUNY Polytechnic Institute,William Woods University
+Millsaps College,Cluster_2,Centenary College of Louisiana,Bethany College,Wagner College
+University of Mississippi,Cluster_1,West Virginia University,SUNY Polytechnic Institute,Russell Sage College
+Mississippi University for Women,Cluster_1,Southwestern Oklahoma State University,SUNY Polytechnic Institute,Asbury University
+Mississippi Valley State University,Cluster_3,Henderson State University,Saint Charles Borromeo Seminary-Overbrook,Lincoln University
+Mississippi College,Cluster_2,Madonna University,Bethany College,Delaware State University
+Mississippi State University,Cluster_1,University of Arkansas,SUNY Polytechnic Institute,Russell Sage College
+Rust College,Cluster_3,Trinity Baptist College,Saint Charles Borromeo Seminary-Overbrook,Union College
+University of Southern Mississippi,Cluster_1,Morgan State University,SUNY Polytechnic Institute,Liberty University
+Tougaloo College,Cluster_2,Shaw University,Bethany College,The University of Tennessee-Martin
+William Carey University,Cluster_2,Union University,Randolph College,Louisiana Tech University
+Avila University,Cluster_2,Shaw University,Bethany College,University of Charleston
+Calvary University,Cluster_3,The Southern Baptist Theological Seminary,Saint Charles Borromeo Seminary-Overbrook,Faith Baptist Bible College and Theological Seminary
+Central Methodist University-College of Liberal Arts and Sciences,Cluster_2,Alverno College,Bethany College,Culinary Institute of America
+University of Central Missouri,Cluster_1,Southeast Missouri State University,SUNY Polytechnic Institute,Asbury University
+Cleveland University-Kansas City,Cluster_5,Bates College,Princeton University,University of Health Sciences and Pharmacy in St. Louis
+Conception Seminary College,Cluster_3,Pontifical College Josephinum,Saint Charles Borromeo Seminary-Overbrook,Virginia Military Institute
+Cottey College,Cluster_1,William Jewell College,SUNY Polytechnic Institute,Sweet Briar College
+Culver-Stockton College,Cluster_2,Montreat College,Bethany College,University of North Texas at Dallas
+Drury University,Cluster_2,Loras College,Bethany College,Southwestern University
+Evangel University,Cluster_2,Southern Wesleyan University,Bethany College,University of the Cumberlands
+Fontbonne University,Cluster_2,Waynesburg University,Bethany College,High Point University
+Hannibal-LaGrange University,Cluster_2,King University,Bethany College,Multnomah University
+Kansas City Art Institute,Cluster_4,Cleveland Institute of Art,University of Health Sciences and Pharmacy in St. Louis,Milwaukee Institute of Art & Design
+Lindenwood University,Cluster_1,Converse University,SUNY Polytechnic Institute,University of Sioux Falls
+Logan University,Cluster_3,Universidad Central Del Caribe,Saint Charles Borromeo Seminary-Overbrook,Bellin College
+Maryville University of Saint Louis,Cluster_1,Aurora University,SUNY Polytechnic Institute,Russell Sage College
+Midwestern Baptist Theological Seminary,Cluster_3,Clarkson College,Saint Charles Borromeo Seminary-Overbrook,Maharishi International University
+Missouri Baptist University,Cluster_2,Southeastern University,Bethany College,University of the Cumberlands
+Missouri Southern State University,Cluster_1,Georgia Southwestern State University,SUNY Polytechnic Institute,Lubbock Christian University
+Missouri Valley College,Cluster_2,Williams Baptist University,Bethany College,Multnomah University
+University of Missouri-Columbia,Cluster_1,University of Nebraska-Lincoln,SUNY Polytechnic Institute,University of Vermont
+University of Missouri-Kansas City,Cluster_1,Indiana University-Purdue University-Indianapolis,SUNY Polytechnic Institute,Russell Sage College
+Missouri University of Science and Technology,Cluster_1,West Virginia University,SUNY Polytechnic Institute,Lawrence Technological University
+University of Missouri-St Louis,Cluster_1,University of Michigan-Dearborn,SUNY Polytechnic Institute,Russell Sage College
+Truman State University,Cluster_1,Southeast Missouri State University,SUNY Polytechnic Institute,Asbury University
+Northwest Missouri State University,Cluster_1,Morehead State University,SUNY Polytechnic Institute,Hiram College
+Ozark Christian College,Cluster_3,Emmaus Bible College,Saint Charles Borromeo Seminary-Overbrook,Lubbock Christian University
+College of the Ozarks,Cluster_3,Baptist Health College Little Rock,Saint Charles Borromeo Seminary-Overbrook,Appalachian Bible College
+Rockhurst University,Cluster_2,Lewis University,Bethany College,University of Dallas
+Saint Louis University,Cluster_4,University of Tulsa,University of Health Sciences and Pharmacy in St. Louis,Marian University
+Saint Louis Christian College,Cluster_3,Mercy College of Ohio,Saint Charles Borromeo Seminary-Overbrook,Southwestern Adventist University
+University of Health Sciences and Pharmacy in St. Louis,Cluster_4,Ottawa University-Ottawa,New England College,Warner Pacific University
+Southwest Baptist University,Cluster_2,Spalding University,Bethany College,University of the Cumberlands
+Stephens College,Cluster_1,York College of Pennsylvania,SUNY Polytechnic Institute,University of Mount Union
+Southeast Missouri State University,Cluster_1,University of Central Missouri,SUNY Polytechnic Institute,Asbury University
+Washington University in St Louis,Cluster_5,Columbia University in the City of New York,Cleveland University-Kansas City,University of California-Los Angeles
+Webster University,Cluster_1,Indiana Institute of Technology,SUNY Polytechnic Institute,Russell Sage College
+Westminster College,Cluster_2,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+Westminster College,Cluster_2,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+Westminster College,Cluster_4,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+William Jewell College,Cluster_1,John Brown University,SUNY Polytechnic Institute,Friends University
+William Woods University,Cluster_2,Belhaven University,Bethany College,University of the Cumberlands
+Carroll College,Cluster_2,Messiah University,Bethany College,Moravian University
+University of Providence,Cluster_3,Emmaus Bible College,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+Montana Technological University,Cluster_3,Delta State University,Saint Charles Borromeo Seminary-Overbrook,University of North Carolina at Greensboro
+Montana State University,Cluster_1,University of Cincinnati-Main Campus,SUNY Polytechnic Institute,Yeshiva University
+The University of Montana,Cluster_1,University of Idaho,SUNY Polytechnic Institute,Lawrence Technological University
+Rocky Mountain College,Cluster_2,Schreiner University,Bethany College,University of Charleston
+The University of Montana-Western,Cluster_3,Aultman College of Nursing and Health Sciences,Saint Charles Borromeo Seminary-Overbrook,Eastern New Mexico University-Main Campus
+Clarkson College,Cluster_3,Midwestern Baptist Theological Seminary,Saint Charles Borromeo Seminary-Overbrook,Trinity Bible College and Graduate School
+Bryan College of Health Sciences,Cluster_1,Slippery Rock University of Pennsylvania,SUNY Polytechnic Institute,Yeshiva University
+Concordia University-Nebraska,Cluster_2,Northwestern College,Bethany College,Moravian University
+Creighton University,Cluster_4,Saint Louis University,Principia College,University of Detroit Mercy
+Doane University,Cluster_4,Rensselaer Polytechnic Institute,University of Health Sciences and Pharmacy in St. Louis,Randolph College
+Hastings College,Cluster_2,Texas Lutheran University,Bethany College,Ohio Wesleyan University
+University of Nebraska at Kearney,Cluster_1,Bloomsburg University of Pennsylvania,SUNY Polytechnic Institute,Virginia Union University
+Nebraska Methodist College of Nursing & Allied Health,Cluster_3,Blue Mountain College,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Midland University,Cluster_2,Bushnell University,Bethany College,Multnomah University
+University of Nebraska at Omaha,Cluster_1,University of North Carolina at Greensboro,SUNY Polytechnic Institute,Lee University
+Nebraska Wesleyan University,Cluster_2,Malone University,Bethany College,Loyola University New Orleans
+University of Nebraska-Lincoln,Cluster_1,University of Arkansas,SUNY Polytechnic Institute,Colorado School of Mines
+College of Saint Mary,Cluster_2,Southern Wesleyan University,Bethany College,CUNY Hunter College
+Union College,Cluster_2,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+Union College,Cluster_2,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+Union College,Cluster_4,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+York College,Cluster_2,Hannibal-LaGrange University,Bethany College,Universidad del Sagrado Corazon
+University of Nevada-Las Vegas,Cluster_1,University of Nevada-Reno,SUNY Polytechnic Institute,Lawrence Technological University
+University of Nevada-Reno,Cluster_1,University of Nevada-Las Vegas,SUNY Polytechnic Institute,Russell Sage College
+Sierra Nevada University,Cluster_2,Maine College of Art & Design,Bethany College,The College of Saint Rose
+Colby-Sawyer College,Cluster_4,Norwich University,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Dartmouth College,Cluster_5,Vanderbilt University,Cleveland University-Kansas City,Cornell University
+Franklin Pierce University,Cluster_4,Stevenson University,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+New England College,Cluster_4,University of Redlands,University of Health Sciences and Pharmacy in St. Louis,Keuka College
+Southern New Hampshire University,Cluster_1,Wichita State University,SUNY Polytechnic Institute,Lee University
+University of New Hampshire-Main Campus,Cluster_1,University of Rhode Island,SUNY Polytechnic Institute,Endicott College
+Keene State College,Cluster_1,Utica University,SUNY Polytechnic Institute,Dominican College of Blauvelt
+University of New Hampshire at Manchester,Cluster_1,College of Charleston,SUNY Polytechnic Institute,University of Mount Union
+Plymouth State University,Cluster_1,University of Northern Colorado,SUNY Polytechnic Institute,Roosevelt University
+Rivier University,Cluster_2,Concordia University-Irvine,Bethany College,Saint Peter's University
+Saint Anselm College,Cluster_4,Merrimack College,University of Health Sciences and Pharmacy in St. Louis,St Bonaventure University
+Bloomfield College,Cluster_2,La Roche University,Bethany College,Regis College
+Caldwell University,Cluster_2,Felician University,Bethany College,Marquette University
+Centenary University,Cluster_2,Niagara University,Bethany College,Saint Edward's University
+Drew University,Cluster_4,Marquette University,University of Health Sciences and Pharmacy in St. Louis,Gannon University
+Fairleigh Dickinson University-Metropolitan Campus,Cluster_4,St. Thomas Aquinas College,Case Western Reserve University,Nichols College
+Felician University,Cluster_2,Caldwell University,Bethany College,Saint Peter's University
+Georgian Court University,Cluster_2,Canisius College,Bethany College,Moravian University
+Rowan University,Cluster_1,Montclair State University,SUNY Polytechnic Institute,Endicott College
+New Jersey City University,Cluster_1,Kean University,SUNY Polytechnic Institute,Endicott College
+Kean University,Cluster_1,New Jersey City University,SUNY Polytechnic Institute,Russell Sage College
+Monmouth University,Cluster_4,Ithaca College,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+Montclair State University,Cluster_1,Rowan University,SUNY Polytechnic Institute,Endicott College
+New Jersey Institute of Technology,Cluster_1,The University of Tennessee-Knoxville,SUNY Polytechnic Institute,University of Vermont
+Princeton University,Cluster_5,Yale University,Cleveland University-Kansas City,Cooper Union for the Advancement of Science and Art
+Rider University,Cluster_4,Adelphi University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Rutgers University-Camden,Cluster_1,Rutgers University-Newark,SUNY Polytechnic Institute,Russell Sage College
+Rutgers University-New Brunswick,Cluster_1,University of Cincinnati-Main Campus,SUNY Polytechnic Institute,William & Mary
+Rutgers University-Newark,Cluster_1,Rutgers University-Camden,SUNY Polytechnic Institute,University of Vermont
+Saint Peter's University,Cluster_4,St. John's University-New York,University of Health Sciences and Pharmacy in St. Louis,Neumann University
+Seton Hall University,Cluster_4,Loyola University Chicago,University of Health Sciences and Pharmacy in St. Louis,Gannon University
+Saint Elizabeth University,Cluster_2,Cabrini University,Bethany College,Salve Regina University
+Stevens Institute of Technology,Cluster_4,Syracuse University,University of Health Sciences and Pharmacy in St. Louis,Clemson University
+Stockton University,Cluster_1,Kent State University at Kent,SUNY Polytechnic Institute,Russell Sage College
+The College of New Jersey,Cluster_1,State University of New York at New Paltz,SUNY Polytechnic Institute,Queens University of Charlotte
+William Paterson University of New Jersey,Cluster_1,California State University-Stanislaus,SUNY Polytechnic Institute,Wentworth Institute of Technology
+Eastern New Mexico University-Main Campus,Cluster_1,East Central University,SUNY Polytechnic Institute,Bethel University
+Institute of American Indian and Alaska Native Culture and Arts Development,Cluster_1,Dickinson State University,SUNY Polytechnic Institute,The University of Tennessee Southern
+New Mexico Military Institute,Cluster_5,Webb Institute,Cleveland University-Kansas City,Williamson College of the Trades
+New Mexico Institute of Mining and Technology,Cluster_1,University of Alabama at Birmingham,Howard University,Thomas Jefferson University
+University of New Mexico-Main Campus,Cluster_1,University of Wyoming,SUNY Polytechnic Institute,Lawrence Technological University
+New Mexico State University-Main Campus,Cluster_1,Delaware State University,SUNY Polytechnic Institute,Russell Sage College
+Adelphi University,Cluster_4,Rider University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Albany College of Pharmacy and Health Sciences,Cluster_4,Willamette University,Principia College,St. Joseph's University-New York
+Alfred University,Cluster_4,Jacksonville University,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+American Academy of Dramatic Arts-New York,Cluster_4,Longy School of Music of Bard College,Ottawa University-Ottawa,Cleary University
+Bard College,Cluster_4,Syracuse University,University of Health Sciences and Pharmacy in St. Louis,Arcadia University
+Barnard College,Cluster_4,Babson College,University of Health Sciences and Pharmacy in St. Louis,Claremont McKenna College
+Canisius College,Cluster_2,Georgian Court University,Bethany College,Merrimack College
+Cazenovia College,Cluster_4,Millikin University,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Clarkson University,Cluster_4,Rochester Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,Mercyhurst University
+Colgate University,Cluster_5,Kenyon College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Metropolitan College of New York,Cluster_1,Keystone College,SUNY Polytechnic Institute,Brenau University
+Columbia University in the City of New York,Cluster_5,University of Southern California,Cleveland University-Kansas City,University of California-Los Angeles
+Cooper Union for the Advancement of Science and Art,Cluster_4,Smith College,University of Health Sciences and Pharmacy in St. Louis,Wellesley College
+Cornell University,Cluster_4,Tulane University of Louisiana,New England College,Northwestern University
+Culinary Institute of America,Cluster_4,Embry-Riddle Aeronautical University-Prescott,University of Health Sciences and Pharmacy in St. Louis,Columbus College of Art and Design
+CUNY Bernard M Baruch College,Cluster_1,San Diego State University,SUNY Polytechnic Institute,Endicott College
+CUNY Brooklyn College,Cluster_1,CUNY John Jay College of Criminal Justice,SUNY Polytechnic Institute,Spelman College
+CUNY City College,Cluster_1,SUNY at Albany,SUNY Polytechnic Institute,Endicott College
+CUNY Hunter College,Cluster_1,Florida Agricultural and Mechanical University,SUNY Polytechnic Institute,Mississippi College
+CUNY John Jay College of Criminal Justice,Cluster_1,CUNY Brooklyn College,SUNY Polytechnic Institute,Spelman College
+CUNY Lehman College,Cluster_1,CUNY Queens College,SUNY Polytechnic Institute,Spelman College
+CUNY Medgar Evers College,Cluster_1,CUNY New York City College of Technology,SUNY Polytechnic Institute,Bennett College
+CUNY New York City College of Technology,Cluster_1,CUNY York College,SUNY Polytechnic Institute,Sierra Nevada University
+CUNY Queens College,Cluster_1,CUNY Lehman College,SUNY Polytechnic Institute,Spelman College
+CUNY York College,Cluster_1,CUNY New York City College of Technology,SUNY Polytechnic Institute,Sierra Nevada University
+D'Youville College,Cluster_1,Robert Morris University,SUNY Polytechnic Institute,Lawrence Technological University
+Daemen University,Cluster_1,St. Joseph's University-New York,SUNY Polytechnic Institute,Dominican College of Blauvelt
+Dominican College of Blauvelt,Cluster_4,The College of Saint Rose,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+Elmira College,Cluster_4,Westminster College,University of Health Sciences and Pharmacy in St. Louis,Keuka College
+Fashion Institute of Technology,Cluster_1,San Diego State University,SUNY Polytechnic Institute,Berklee College of Music
+Fordham University,Cluster_4,Southern Methodist University,University of Health Sciences and Pharmacy in St. Louis,Le Moyne College
+Hamilton College,Cluster_5,Harvey Mudd College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Hartwick College,Cluster_4,Whittier College,University of Health Sciences and Pharmacy in St. Louis,Keuka College
+Hilbert College,Cluster_2,Mount Aloysius College,Bethany College,Utica University
+Hobart William Smith Colleges,Cluster_4,St Lawrence University,University of Health Sciences and Pharmacy in St. Louis,Millsaps College
+Hofstra University,Cluster_4,Adelphi University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Houghton College,Cluster_2,Gordon College,Bethany College,University of Montevallo
+Iona College,Cluster_2,California Lutheran University,Bethany College,Regis College
+Ithaca College,Cluster_4,Monmouth University,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Jewish Theological Seminary of America,Cluster_4,Texas Christian University,University of Health Sciences and Pharmacy in St. Louis,Erskine College
+The Juilliard School,Cluster_5,Rice University,Cleveland University-Kansas City,Cooper Union for the Advancement of Science and Art
+Keuka College,Cluster_2,Virginia Wesleyan University,Andrew College,Elmira College
+Le Moyne College,Cluster_2,Marywood University,Bethany College,Salve Regina University
+Long Island University,Cluster_4,Western New England University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Manhattan College,Cluster_4,Stonehill College,University of Health Sciences and Pharmacy in St. Louis,Iona College
+Manhattan School of Music,Cluster_4,Marist College,University of Health Sciences and Pharmacy in St. Louis,Morehouse College
+Manhattanville College,Cluster_4,Rider University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Maria College of Albany,Cluster_3,Trocaire College,California Christian College,University of Wisconsin-Eau Claire
+Marist College,Cluster_4,Bryant University,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+Marymount Manhattan College,Cluster_4,Dean College,University of Health Sciences and Pharmacy in St. Louis,St. Francis College
+Medaille College,Cluster_1,Metropolitan College of New York,SUNY Polytechnic Institute,Sierra Nevada University
+Mercy College,Cluster_1,Utica University,SUNY Polytechnic Institute,Dominican College of Blauvelt
+Mesivta Torah Vodaath Rabbinical Seminary,Cluster_3,Universidad Central de Bayamon,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Molloy College,Cluster_4,University of St Thomas,University of Health Sciences and Pharmacy in St. Louis,Samford University
+Mount Saint Mary College,Cluster_2,Holy Names University,Bethany College,Ursuline College
+College of Mount Saint Vincent,Cluster_2,Nebraska Wesleyan University,Bethany College,Loyola University New Orleans
+Nazareth College,Cluster_4,Wentworth Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+The New School,Cluster_4,The University of the Arts,University of Health Sciences and Pharmacy in St. Louis,University of Massachusetts-Boston
+New York University,Cluster_4,Wake Forest University,Principia College,University of Pennsylvania
+Niagara University,Cluster_2,Centenary University,Bethany College,Salve Regina University
+New York Institute of Technology,Cluster_4,University of the Pacific,Principia College,Arizona State University Campus Immersion
+New York School of Interior Design,Cluster_1,Pennsylvania Academy of the Fine Arts,SUNY Polytechnic Institute,Berklee College of Music
+Nyack College,Cluster_2,Wilson College,Bethany College,Columbia College Chicago
+Pace University,Cluster_4,Suffolk University,University of Health Sciences and Pharmacy in St. Louis,University of Massachusetts-Boston
+Paul Smiths College of Arts and Science,Cluster_4,Dominican College of Blauvelt,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Pratt Institute-Main,Cluster_4,Art Center College of Design,University of Health Sciences and Pharmacy in St. Louis,Maine College of Art & Design
+Rabbinical Seminary of America,Cluster_3,Ecclesia College,Saint Charles Borromeo Seminary-Overbrook,Institute of American Indian and Alaska Native Culture and Arts Development
+Rensselaer Polytechnic Institute,Cluster_4,Doane University,University of Health Sciences and Pharmacy in St. Louis,University of Rochester
+Roberts Wesleyan College,Cluster_2,Otterbein University,Bethany College,Moravian University
+Rochester Institute of Technology,Cluster_4,Clarkson University,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+University of Rochester,Cluster_5,Vanderbilt University,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Russell Sage College,Cluster_4,Springfield College,University of Health Sciences and Pharmacy in St. Louis,Point Park University
+St Bonaventure University,Cluster_2,University of Evansville,Bethany College,Siena College
+St. Francis College,Cluster_1,Massachusetts College of Art and Design,SUNY Polytechnic Institute,Hawaii Pacific University
+St. Joseph's College of Nursing,Cluster_3,Maria College of Albany,California Christian College,University of Wisconsin-La Crosse
+St Lawrence University,Cluster_4,Gettysburg College,University of Health Sciences and Pharmacy in St. Louis,Lebanon Valley College
+The College of Saint Rose,Cluster_4,Dominican College of Blauvelt,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+St. Thomas Aquinas College,Cluster_4,Franklin Pierce University,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Sarah Lawrence College,Cluster_4,Bennington College,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Siena College,Cluster_4,Merrimack College,University of Health Sciences and Pharmacy in St. Louis,St Bonaventure University
+Skidmore College,Cluster_4,Connecticut College,New England College,Catawba College
+St. Joseph's University-New York,Cluster_1,Daemen University,SUNY Polytechnic Institute,Baldwin Wallace University
+Saint John Fisher College,Cluster_2,Lipscomb University,Bethany College,High Point University
+St. John's University-New York,Cluster_4,University of Scranton,University of Health Sciences and Pharmacy in St. Louis,Le Moyne College
+SUNY College of Technology at Alfred,Cluster_1,SUNY College of Agriculture and Technology at Cobleskill,SUNY Polytechnic Institute,University of Mount Union
+SUNY College of Technology at Canton,Cluster_1,Massachusetts College of Liberal Arts,SUNY Polytechnic Institute,Hiram College
+SUNY College of Technology at Delhi,Cluster_1,Edinboro University of Pennsylvania,SUNY Polytechnic Institute,Rosemont College
+SUNY College of Agriculture and Technology at Cobleskill,Cluster_1,SUNY College of Technology at Alfred,SUNY Polytechnic Institute,Paul Smiths College of Arts and Science
+Farmingdale State College,Cluster_1,SUNY Cortland,SUNY Polytechnic Institute,Rosemont College
+SUNY Morrisville,Cluster_3,University of Hawaii-West Oahu,Saint Charles Borromeo Seminary-Overbrook,SUNY Brockport
+SUNY at Albany,Cluster_1,University of Michigan-Dearborn,SUNY Polytechnic Institute,Endicott College
+Binghamton University,Cluster_1,University at Buffalo,SUNY Polytechnic Institute,William & Mary
+University at Buffalo,Cluster_1,University of Massachusetts-Amherst,SUNY Polytechnic Institute,Colorado School of Mines
+Stony Brook University,Cluster_1,University at Buffalo,SUNY Polytechnic Institute,Colorado School of Mines
+SUNY College of Environmental Science and Forestry,Cluster_1,CUNY City College,SUNY Polytechnic Institute,Endicott College
+SUNY Polytechnic Institute,Cluster_1,New Mexico Institute of Mining and Technology,Virginia Military Institute,Case Western Reserve University
+SUNY Brockport,Cluster_1,SUNY at Purchase College,SUNY Polytechnic Institute,Rosemont College
+SUNY Buffalo State,Cluster_1,West Virginia State University,SUNY Polytechnic Institute,Hawaii Pacific University
+SUNY Cortland,Cluster_1,SUNY Oneonta,SUNY Polytechnic Institute,Spelman College
+SUNY at Fredonia,Cluster_1,SUNY College at Potsdam,SUNY Polytechnic Institute,University of Mount Union
+SUNY College at Geneseo,Cluster_1,SUNY College at Plattsburgh,SUNY Polytechnic Institute,Spelman College
+State University of New York at New Paltz,Cluster_1,SUNY Cortland,SUNY Polytechnic Institute,Spelman College
+SUNY Oneonta,Cluster_1,SUNY Cortland,SUNY Polytechnic Institute,Spelman College
+SUNY College at Oswego,Cluster_1,SUNY College at Potsdam,SUNY Polytechnic Institute,Laguna College of Art and Design
+SUNY College at Potsdam,Cluster_1,SUNY at Fredonia,SUNY Polytechnic Institute,University of Mount Union
+SUNY at Purchase College,Cluster_1,SUNY Brockport,SUNY Polytechnic Institute,Laguna College of Art and Design
+SUNY College at Old Westbury,Cluster_1,Winston-Salem State University,SUNY Polytechnic Institute,University of Mount Union
+SUNY College at Plattsburgh,Cluster_1,SUNY College at Geneseo,SUNY Polytechnic Institute,Laguna College of Art and Design
+SUNY Maritime College,Cluster_1,Farmingdale State College,SUNY Polytechnic Institute,Holy Cross College
+Syracuse University,Cluster_4,Stevens Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,Saint Martin's University
+Touro College,Cluster_1,Arizona State University Campus Immersion,SUNY Polytechnic Institute,Embry-Riddle Aeronautical University-Daytona Beach
+Trocaire College,Cluster_3,Franciscan Missionaries of Our Lady University,Saint Charles Borromeo Seminary-Overbrook,Southwestern Adventist University
+Union College,Cluster_2,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+Union College,Cluster_2,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+Union College,Cluster_4,Southwestern Adventist University,Rensselaer Polytechnic Institute,Holy Cross College
+Utica University,Cluster_1,York College of Pennsylvania,SUNY Polytechnic Institute,University of Mount Union
+Vassar College,Cluster_4,Trinity College,New England College,Wellesley College
+Villa Maria College,Cluster_3,Oklahoma Wesleyan University,Saint Charles Borromeo Seminary-Overbrook,Hannibal-LaGrange University
+Wagner College,Cluster_4,Westmont College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Webb Institute,Cluster_5,Hamilton College,Cleveland University-Kansas City,Williamson College of the Trades
+Wells College,Cluster_2,Brenau University,Bethany College,Curry College
+Yeshiva Shaar Hatorah,Cluster_3,Williamson College of the Trades,Saint Charles Borromeo Seminary-Overbrook,Massachusetts Maritime Academy
+Yeshiva University,Cluster_4,William & Mary,University of Health Sciences and Pharmacy in St. Louis,Rutgers University-New Brunswick
+Yeshivath Viznitz,Cluster_3,Mesivta Torah Vodaath Rabbinical Seminary,Saint Charles Borromeo Seminary-Overbrook,Minot State University
+Appalachian State University,Cluster_1,East Carolina University,SUNY Polytechnic Institute,Holy Cross College
+Barton College,Cluster_2,Westminster College,Bethany College,Wagner College
+Belmont Abbey College,Cluster_2,Wilson College,Bethany College,Southern Virginia University
+Bennett College,Cluster_2,Stillman College,Bethany College,CUNY Medgar Evers College
+Brevard College,Cluster_2,Averett University,Bethany College,Multnomah University
+Campbell University,Cluster_2,King's College,Bethany College,Loyola University New Orleans
+Catawba College,Cluster_2,Lake Erie College,Bethany College,Cleveland Institute of Art
+Chowan University,Cluster_2,Eureka College,Bethany College,University of Charleston
+Davidson College,Cluster_5,Macalester College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Duke University,Cluster_5,University of Chicago,Cleveland University-Kansas City,Case Western Reserve University
+East Carolina University,Cluster_1,Appalachian State University,SUNY Polytechnic Institute,Lee University
+Elizabeth City State University,Cluster_1,University of Minnesota-Morris,SUNY Polytechnic Institute,Hiram College
+Elon University,Cluster_4,Linfield University-McMinnville Campus,University of Health Sciences and Pharmacy in St. Louis,Carthage College
+Fayetteville State University,Cluster_1,Texas A & M University-Commerce,SUNY Polytechnic Institute,William Woods University
+Gardner-Webb University,Cluster_2,Carson-Newman University,Bethany College,Point Park University
+Greensboro College,Cluster_2,Wilson College,Bethany College,Keystone College
+Guilford College,Cluster_2,Lenoir-Rhyne University,Bethany College,Roanoke College
+High Point University,Cluster_4,Salve Regina University,University of Health Sciences and Pharmacy in St. Louis,Neumann University
+Johnson C Smith University,Cluster_1,Alice Lloyd College,SUNY Polytechnic Institute,Friends University
+Lees-McRae College,Cluster_2,Newberry College,Bethany College,Winthrop University
+Lenoir-Rhyne University,Cluster_2,Guilford College,Bethany College,Roanoke College
+Livingstone College,Cluster_3,Allen University,Saint Charles Borromeo Seminary-Overbrook,Florida Memorial University
+Louisburg College,Cluster_3,Manhattan Christian College,Saint Charles Borromeo Seminary-Overbrook,Life Pacific University
+Mars Hill University,Cluster_2,University of Mount Union,Bethany College,Upper Iowa University
+Meredith College,Cluster_4,Cedar Crest College,University of Health Sciences and Pharmacy in St. Louis,Trine University
+Methodist University,Cluster_2,Bloomfield College,Bethany College,Westmont College
+Montreat College,Cluster_2,Wilmington College,Bethany College,University of Charleston
+University of Mount Olive,Cluster_3,Emmanuel College,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+North Carolina A & T State University,Cluster_1,University of Arkansas at Little Rock,SUNY Polytechnic Institute,Lee University
+University of North Carolina at Asheville,Cluster_1,Winston-Salem State University,SUNY Polytechnic Institute,University of Mount Union
+University of North Carolina at Chapel Hill,Cluster_1,The University of Texas at Austin,Unity College,University of Virginia-Main Campus
+University of North Carolina at Charlotte,Cluster_1,University of North Carolina Wilmington,SUNY Polytechnic Institute,Endicott College
+University of North Carolina at Greensboro,Cluster_1,Florida Gulf Coast University,SUNY Polytechnic Institute,Lee University
+North Carolina Central University,Cluster_1,Northern Arizona University,SUNY Polytechnic Institute,Russell Sage College
+University of North Carolina School of the Arts,Cluster_3,Pennsylvania College of Health Sciences,Saint Charles Borromeo Seminary-Overbrook,Maine Maritime Academy
+North Carolina State University at Raleigh,Cluster_1,Virginia Polytechnic Institute and State University,SUNY Polytechnic Institute,William & Mary
+North Carolina Wesleyan College,Cluster_2,Ohio Dominican University,Bethany College,Upper Iowa University
+University of North Carolina Wilmington,Cluster_1,Ball State University,SUNY Polytechnic Institute,William & Mary
+William Peace University,Cluster_2,Quincy University,Bethany College,Southwestern University
+University of North Carolina at Pembroke,Cluster_1,California University of Pennsylvania,SUNY Polytechnic Institute,Virginia Union University
+Pfeiffer University,Cluster_2,Texas Lutheran University,Bethany College,Roanoke College
+Queens University of Charlotte,Cluster_2,Holy Cross College,Bethany College,University of Portland
+Mid-Atlantic Christian University,Cluster_3,Simmons College of Kentucky,Saint Charles Borromeo Seminary-Overbrook,Johnson University Florida
+Saint Augustine's University,Cluster_2,Williams Baptist University,Bethany College,Metropolitan College of New York
+Salem College,Cluster_2,Methodist University,Bethany College,Medaille College
+Shaw University,Cluster_2,Claflin University,Bethany College,Universidad del Sagrado Corazon
+St. Andrews University,Cluster_3,Manhattan Christian College,Saint Charles Borromeo Seminary-Overbrook,Johnson University Florida
+Southeastern Baptist Theological Seminary,Cluster_3,The Southern Baptist Theological Seminary,Saint Charles Borromeo Seminary-Overbrook,Johnson University
+Wake Forest University,Cluster_4,New York University,New England College,University of North Carolina at Chapel Hill
+Warren Wilson College,Cluster_2,Brenau University,Bethany College,Millikin University
+Wingate University,Cluster_2,Gardner-Webb University,Bethany College,Point Park University
+Winston-Salem State University,Cluster_1,SUNY College at Old Westbury,SUNY Polytechnic Institute,University of Mount Union
+Western Carolina University,Cluster_1,Bowie State University,SUNY Polytechnic Institute,Lee University
+Dickinson State University,Cluster_1,Northeastern State University,SUNY Polytechnic Institute,The University of Tennessee Southern
+University of Jamestown,Cluster_2,Midway University,Bethany College,Universidad del Sagrado Corazon
+University of Mary,Cluster_2,Lee University,Bethany College,University of the Cumberlands
+Mayville State University,Cluster_1,Clayton  State University,SUNY Polytechnic Institute,Bethel University
+Minot State University,Cluster_1,Dickinson State University,SUNY Polytechnic Institute,Life Pacific University
+University of North Dakota,Cluster_1,North Dakota State University-Main Campus,SUNY Polytechnic Institute,Lee University
+North Dakota State University-Main Campus,Cluster_1,University of North Dakota,SUNY Polytechnic Institute,Lee University
+Trinity Bible College and Graduate School,Cluster_2,The University of Tennessee Southern,Bethany College,Maharishi International University
+Valley City State University,Cluster_1,Abraham Baldwin Agricultural College,SUNY Polytechnic Institute,Maranatha Baptist University
+University of Akron Main Campus,Cluster_1,East Tennessee State University,SUNY Polytechnic Institute,Lee University
+Art Academy of Cincinnati,Cluster_2,Brenau University,Bethany College,Metropolitan College of New York
+Ashland University,Cluster_2,Waynesburg University,Bethany College,University of the Cumberlands
+Aultman College of Nursing and Health Sciences,Cluster_3,Pennsylvania College of Art and Design,Saint Charles Borromeo Seminary-Overbrook,Thomas University
+Baldwin Wallace University,Cluster_4,Elizabethtown College,University of Health Sciences and Pharmacy in St. Louis,St. Joseph's University-New York
+Bluffton University,Cluster_2,Wisconsin Lutheran College,Bethany College,Roanoke College
+Bowling Green State University-Main Campus,Cluster_1,Florida Atlantic University,SUNY Polytechnic Institute,Russell Sage College
+Capital University,Cluster_2,Augsburg University,Bethany College,Loyola University New Orleans
+Case Western Reserve University,Cluster_4,University of Miami,Principia College,Emory University
+Cedarville University,Cluster_2,Franciscan University of Steubenville,Bethany College,John Brown University
+Central State University,Cluster_1,Coppin State University,SUNY Polytechnic Institute,Stillman College
+The Christ College of Nursing and Health Sciences,Cluster_3,Cleary University,Saint Charles Borromeo Seminary-Overbrook,Northern Michigan University
+University of Cincinnati-Main Campus,Cluster_1,Colorado State University-Fort Collins,SUNY Polytechnic Institute,William & Mary
+Cleveland Institute of Art,Cluster_4,Cedar Crest College,University of Health Sciences and Pharmacy in St. Louis,Catawba College
+Cleveland Institute of Music,Cluster_4,Manhattan School of Music,University of Health Sciences and Pharmacy in St. Louis,Catawba College
+Cleveland State University,Cluster_1,Indiana University of Pennsylvania-Main Campus,SUNY Polytechnic Institute,Endicott College
+Columbus College of Art and Design,Cluster_2,University of Mount Union,Bethany College,Culinary Institute of America
+University of Dayton,Cluster_4,Duquesne University,University of Health Sciences and Pharmacy in St. Louis,Marywood University
+Defiance College,Cluster_2,Averett University,Bethany College,Wagner College
+Denison University,Cluster_4,Hampden-Sydney College,University of Health Sciences and Pharmacy in St. Louis,Centenary College of Louisiana
+The University of Findlay,Cluster_2,Dominican University,Bethany College,Duquesne University
+Heidelberg University,Cluster_2,Westminster College,Bethany College,Merrimack College
+Hiram College,Cluster_2,University of Mount Union,Bethany College,University of Montevallo
+John Carroll University,Cluster_2,Assumption University,Bethany College,Loyola University New Orleans
+Kent State University at Kent,Cluster_1,Ohio University-Main Campus,SUNY Polytechnic Institute,Endicott College
+Kenyon College,Cluster_5,Colgate University,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Lake Erie College,Cluster_2,Rockford University,Bethany College,Multnomah University
+Lourdes University,Cluster_2,Bluefield University,Bethany College,Flagler College
+Malone University,Cluster_2,Nebraska Wesleyan University,Bethany College,Loyola University New Orleans
+Marietta College,Cluster_4,Millikin University,University of Health Sciences and Pharmacy in St. Louis,University of Mount Union
+Mercy College of Ohio,Cluster_3,Randall University,Saint Charles Borromeo Seminary-Overbrook,Bethel University
+Miami University-Oxford,Cluster_1,The University of Alabama,SUNY Polytechnic Institute,Endicott College
+University of Mount Union,Cluster_2,Bay Path University,Bethany College,Daemen University
+Mount Vernon Nazarene University,Cluster_2,Oklahoma Christian University,Bethany College,Husson University
+Mount Saint Joseph University,Cluster_2,Mount Mary University,Bethany College,University of Dallas
+Muskingum University,Cluster_2,Walsh University,Bethany College,Loyola University New Orleans
+Notre Dame College,Cluster_2,Iowa Wesleyan University,Bethany College,Roanoke College
+Oberlin College,Cluster_4,Union College,University of Health Sciences and Pharmacy in St. Louis,Alma College
+Ohio Dominican University,Cluster_2,North Carolina Wesleyan College,Bethany College,University of Charleston
+Ohio Northern University,Cluster_2,Messiah University,Bethany College,Moravian University
+Ohio State University-Main Campus,Cluster_1,University of Massachusetts-Amherst,SUNY Polytechnic Institute,William & Mary
+Ohio University-Main Campus,Cluster_1,Oakland University,SUNY Polytechnic Institute,Russell Sage College
+Ohio Wesleyan University,Cluster_4,Allegheny College,University of Health Sciences and Pharmacy in St. Louis,Lycoming College
+Otterbein University,Cluster_2,Roberts Wesleyan College,Bethany College,Loyola University New Orleans
+Pontifical College Josephinum,Cluster_3,St. John Vianney College Seminary,California Christian College,Virginia Military Institute
+Rabbinical College Telshe,Cluster_3,The Baptist College of Florida,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Franciscan University of Steubenville,Cluster_2,Dordt University,Bethany College,John Brown University
+Tiffin University,Cluster_1,Coastal Carolina University,SUNY Polytechnic Institute,Alfred University
+University of Toledo,Cluster_1,Marshall University,SUNY Polytechnic Institute,Russell Sage College
+Ursuline College,Cluster_3,University of Saint Francis-Fort Wayne,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+Walsh University,Cluster_2,Muskingum University,Bethany College,Loyola University New Orleans
+Wilberforce University,Cluster_2,Huston-Tillotson University,Bethany College,Thomas University
+Wilmington College,Cluster_2,Montreat College,Bethany College,Keystone College
+Wittenberg University,Cluster_2,Goshen College,Bethany College,Roanoke College
+The College of Wooster,Cluster_4,Juniata College,University of Health Sciences and Pharmacy in St. Louis,Coe College
+Wright State University-Main Campus,Cluster_1,Texas A&M University-Texarkana,SUNY Polytechnic Institute,Roosevelt University
+Xavier University,Cluster_2,Assumption University,Bethany College,Loyola University New Orleans
+Youngstown State University,Cluster_1,Winona State University,SUNY Polytechnic Institute,Lee University
+Bacone College,Cluster_3,Simmons College of Kentucky,Saint Charles Borromeo Seminary-Overbrook,Johnson University Florida
+Oklahoma Wesleyan University,Cluster_3,William Penn University,Saint Charles Borromeo Seminary-Overbrook,York College
+University of Central Oklahoma,Cluster_1,University of Wisconsin-Platteville,SUNY Polytechnic Institute,Asbury University
+East Central University,Cluster_1,Southeastern Oklahoma State University,SUNY Polytechnic Institute,Bethel University
+Randall University,Cluster_3,Mercy College of Ohio,Saint Charles Borromeo Seminary-Overbrook,York College
+Northeastern State University,Cluster_1,Missouri Southern State University,SUNY Polytechnic Institute,The University of Tennessee Southern
+Northwestern Oklahoma State University,Cluster_1,Southeastern Oklahoma State University,SUNY Polytechnic Institute,Friends University
+Oklahoma Christian University,Cluster_2,North Central University,Bethany College,Eastern Kentucky University
+Oklahoma State University-Main Campus,Cluster_1,Mississippi State University,SUNY Polytechnic Institute,Lee University
+Oklahoma Baptist University,Cluster_2,Charleston Southern University,Randolph College,Austin College
+Oklahoma City University,Cluster_2,Shenandoah University,Bethany College,Lawrence Technological University
+University of Oklahoma-Norman Campus,Cluster_1,West Virginia University,SUNY Polytechnic Institute,Russell Sage College
+Oral Roberts University,Cluster_2,Fontbonne University,Bethany College,Aurora University
+University of Science and Arts of Oklahoma,Cluster_1,Eastern Oregon University,SUNY Polytechnic Institute,Toccoa Falls College
+Southeastern Oklahoma State University,Cluster_1,East Central University,SUNY Polytechnic Institute,Hannibal-LaGrange University
+Southwestern Oklahoma State University,Cluster_1,Mississippi University for Women,SUNY Polytechnic Institute,Asbury University
+University of Tulsa,Cluster_4,Saint Louis University,University of Health Sciences and Pharmacy in St. Louis,Saint Ambrose University
+Eastern Oregon University,Cluster_1,Fairmont State University,SUNY Polytechnic Institute,Columbus College of Art and Design
+New Hope Christian College-Eugene,Cluster_3,Mid-Atlantic Christian University,Saint Charles Borromeo Seminary-Overbrook,Johnson University Florida
+George Fox University,Cluster_2,Gwynedd Mercy University,Bethany College,Duquesne University
+Lewis & Clark College,Cluster_4,Hampshire College,University of Health Sciences and Pharmacy in St. Louis,Lebanon Valley College
+Linfield University-McMinnville Campus,Cluster_4,Washington & Jefferson College,University of Health Sciences and Pharmacy in St. Louis,Keuka College
+Mount Angel Seminary,Cluster_3,Goddard College,California Christian College,Bryan College of Health Sciences
+Multnomah University,Cluster_1,Winthrop University,SUNY Polytechnic Institute,Lake Erie College
+Bushnell University,Cluster_2,Crown College,Bethany College,Multnomah University
+Oregon Institute of Technology,Cluster_1,Western Oregon University,SUNY Polytechnic Institute,University of Mount Union
+Oregon State University,Cluster_1,University of Oregon,SUNY Polytechnic Institute,University of California-Riverside
+University of Oregon,Cluster_1,Oregon State University,SUNY Polytechnic Institute,University of California-Riverside
+Pacific Northwest College of Art,Cluster_4,Curry College,University of Health Sciences and Pharmacy in St. Louis,Wells College
+Pacific University,Cluster_4,Widener University,Principia College,Robert Morris University
+Portland State University,Cluster_1,Western Washington University,SUNY Polytechnic Institute,Endicott College
+University of Portland,Cluster_4,Saint Michael's College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Reed College,Cluster_4,Dickinson College,New England College,Claremont McKenna College
+Southern Oregon University,Cluster_1,Central Washington University,SUNY Polytechnic Institute,Laguna College of Art and Design
+Warner Pacific University,Cluster_2,Central College,Bethany College,Southern Virginia University
+Corban University,Cluster_2,William Peace University,Bethany College,Southwestern University
+Willamette University,Cluster_4,Butler University,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+Western Oregon University,Cluster_1,Central Washington University,SUNY Polytechnic Institute,University of Mount Union
+Bryn Athyn College of the New Church,Cluster_2,Birmingham-Southern College,Randolph College,Randolph-Macon College
+Albright College,Cluster_2,Muskingum University,Bethany College,Merrimack College
+Allegheny College,Cluster_4,Susquehanna University,University of Health Sciences and Pharmacy in St. Louis,Cornell College
+DeSales University,Cluster_2,Seton Hill University,Bethany College,Moravian University
+Alvernia University,Cluster_2,Barry University,Bethany College,Salve Regina University
+Clarks Summit University,Cluster_2,Evangel University,Bethany College,University of the Cumberlands
+Arcadia University,Cluster_2,Mercyhurst University,Bethany College,Saint Edward's University
+Bloomsburg University of Pennsylvania,Cluster_1,Lock Haven University,SUNY Polytechnic Institute,University of Mount Union
+Bryn Mawr College,Cluster_5,Wesleyan University,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Bucknell University,Cluster_4,Trinity College,New England College,Claremont McKenna College
+Cabrini University,Cluster_2,Saint Elizabeth University,Bethany College,High Point University
+California University of Pennsylvania,Cluster_1,Edinboro University of Pennsylvania,SUNY Polytechnic Institute,Virginia Union University
+Carlow University,Cluster_2,Benedictine College,Bethany College,Loyola University New Orleans
+Carnegie Mellon University,Cluster_4,Tufts University,University of Health Sciences and Pharmacy in St. Louis,University of Southern California
+Cedar Crest College,Cluster_4,Cleveland Institute of Art,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Chatham University,Cluster_4,Marietta College,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Chestnut Hill College,Cluster_2,Bluffton University,Bethany College,Loyola University New Orleans
+Clarion University of Pennsylvania,Cluster_1,Westfield State University,SUNY Polytechnic Institute,Hiram College
+Curtis Institute of Music,Cluster_5,The Juilliard School,Cleveland University-Kansas City,Principia College
+Delaware Valley University,Cluster_4,American International College,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Dickinson College,Cluster_4,Connecticut College,University of Health Sciences and Pharmacy in St. Louis,Lebanon Valley College
+Drexel University,Cluster_4,University of Denver,University of Health Sciences and Pharmacy in St. Louis,Arcadia University
+Duquesne University,Cluster_4,Loyola University Chicago,University of Health Sciences and Pharmacy in St. Louis,George Fox University
+East Stroudsburg University of Pennsylvania,Cluster_1,University of Wisconsin-Oshkosh,SUNY Polytechnic Institute,Holy Cross College
+Eastern University,Cluster_2,Saint Ambrose University,Bethany College,University of Dallas
+Edinboro University of Pennsylvania,Cluster_1,California University of Pennsylvania,SUNY Polytechnic Institute,Hiram College
+Elizabethtown College,Cluster_4,Baldwin Wallace University,University of Health Sciences and Pharmacy in St. Louis,St. Joseph's University-New York
+Franklin and Marshall College,Cluster_4,Connecticut College,New England College,Centenary College of Louisiana
+Gannon University,Cluster_2,Marywood University,Bethany College,Salve Regina University
+Geneva College,Cluster_2,Malone University,Bethany College,Moravian University
+Gettysburg College,Cluster_4,St Lawrence University,University of Health Sciences and Pharmacy in St. Louis,Lebanon Valley College
+Grove City College,Cluster_2,Southern Adventist University,Bethany College,Moody Bible Institute
+Gwynedd Mercy University,Cluster_2,Edgewood College,Bethany College,Duquesne University
+Haverford College,Cluster_4,Colorado College,New England College,Claremont McKenna College
+Holy Family University,Cluster_2,Marywood University,Bethany College,Salve Regina University
+Immaculata University,Cluster_2,Waynesburg University,Bethany College,High Point University
+Indiana University of Pennsylvania-Main Campus,Cluster_1,Eastern Michigan University,SUNY Polytechnic Institute,Liberty University
+Johnson College,Cluster_3,Thaddeus Stevens College of Technology,Saint Charles Borromeo Seminary-Overbrook,Dickinson State University
+Juniata College,Cluster_4,Lake Forest College,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Keystone College,Cluster_1,Flagler College,SUNY Polytechnic Institute,Hiram College
+King's College,Cluster_2,Campbell University,Bethany College,Regis College
+Kutztown University of Pennsylvania,Cluster_1,Shippensburg University of Pennsylvania,SUNY Polytechnic Institute,Hiram College
+La Roche University,Cluster_2,Bloomfield College,Bethany College,Regis College
+La Salle University,Cluster_2,Albertus Magnus College,Bethany College,Regis College
+Lafayette College,Cluster_5,Macalester College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Lancaster Bible College,Cluster_1,University of Nevada-Reno,SUNY Polytechnic Institute,University of St Thomas
+Lebanon Valley College,Cluster_2,John Carroll University,Bethany College,Moravian University
+Lehigh University,Cluster_4,George Washington University,University of Health Sciences and Pharmacy in St. Louis,University of Connecticut
+Lincoln University,Cluster_1,Northwest Missouri State University,SUNY Polytechnic Institute,Hiram College
+Lock Haven University,Cluster_1,Bloomsburg University of Pennsylvania,SUNY Polytechnic Institute,Hiram College
+Lycoming College,Cluster_2,Bridgewater College,Bethany College,Roanoke College
+Manor College,Cluster_3,Presentation College,Saint Charles Borromeo Seminary-Overbrook,Columbia College
+Mansfield University of Pennsylvania,Cluster_1,Shippensburg University of Pennsylvania,SUNY Polytechnic Institute,Hiram College
+Marywood University,Cluster_2,Gannon University,Bethany College,Salve Regina University
+Mercyhurst University,Cluster_2,Marywood University,Bethany College,Salve Regina University
+Messiah University,Cluster_2,Carroll College,Bethany College,Moravian University
+Millersville University of Pennsylvania,Cluster_1,Western Connecticut State University,SUNY Polytechnic Institute,Rosemont College
+Misericordia University,Cluster_2,Canisius College,Bethany College,Merrimack College
+Moore College of Art and Design,Cluster_4,Woodbury University,University of Health Sciences and Pharmacy in St. Louis,Maine College of Art & Design
+Moravian University,Cluster_4,Loyola University New Orleans,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Mount Aloysius College,Cluster_2,Hilbert College,Bethany College,Utica University
+Muhlenberg College,Cluster_4,Saint Mary's College,University of Health Sciences and Pharmacy in St. Louis,Augustana College
+Neumann University,Cluster_2,Cabrini University,Bethany College,High Point University
+Pennsylvania Academy of the Fine Arts,Cluster_1,New York School of Interior Design,SUNY Polytechnic Institute,Berklee College of Music
+Pennsylvania College of Art and Design,Cluster_3,Aultman College of Nursing and Health Sciences,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+University of Pennsylvania,Cluster_5,Northwestern University,Cleveland University-Kansas City,Cornell University
+The University of the Arts,Cluster_4,University of New Haven,University of Health Sciences and Pharmacy in St. Louis,University of Massachusetts-Boston
+Cairn University-Langhorne,Cluster_1,Western Kentucky University,SUNY Polytechnic Institute,Asbury University
+University of the Sciences,Cluster_4,University of Vermont,Colby College,Temple University
+University of Pittsburgh-Bradford,Cluster_1,Northern Michigan University,SUNY Polytechnic Institute,Asbury University
+University of Pittsburgh-Greensburg,Cluster_1,Indiana University-South Bend,SUNY Polytechnic Institute,Columbus College of Art and Design
+University of Pittsburgh-Johnstown,Cluster_1,Western Kentucky University,SUNY Polytechnic Institute,Asbury University
+University of Pittsburgh-Pittsburgh Campus,Cluster_1,University of Wisconsin-Madison,National University,University of Virginia-Main Campus
+University of Pittsburgh-Titusville,Cluster_3,Lincoln College,Saint Charles Borromeo Seminary-Overbrook,Metropolitan College of New York
+Point Park University,Cluster_1,Robert Morris University,SUNY Polytechnic Institute,Russell Sage College
+Robert Morris University,Cluster_1,Point Park University,SUNY Polytechnic Institute,Western New England University
+Rosemont College,Cluster_2,Lourdes University,Bethany College,Mercy College
+Saint Francis University,Cluster_2,Point Loma Nazarene University,Bethany College,Sacred Heart University
+Saint Joseph's University,Cluster_4,University of Scranton,University of Health Sciences and Pharmacy in St. Louis,Gannon University
+Saint Vincent College,Cluster_2,Seton Hill University,Bethany College,Moravian University
+University of Scranton,Cluster_4,Saint Joseph's University,University of Health Sciences and Pharmacy in St. Louis,Gannon University
+Seton Hill University,Cluster_2,DeSales University,Bethany College,Moravian University
+Shippensburg University of Pennsylvania,Cluster_1,Kutztown University of Pennsylvania,SUNY Polytechnic Institute,Hiram College
+Slippery Rock University of Pennsylvania,Cluster_1,Minnesota State University-Mankato,SUNY Polytechnic Institute,Holy Cross College
+Saint Charles Borromeo Seminary-Overbrook,Cluster_3,Goddard College,California Christian College,Bryan College of Health Sciences
+Susquehanna University,Cluster_4,Allegheny College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Swarthmore College,Cluster_5,Grinnell College,Cleveland University-Kansas City,Cooper Union for the Advancement of Science and Art
+Thaddeus Stevens College of Technology,Cluster_3,Henderson State University,Saint Charles Borromeo Seminary-Overbrook,Fairmont State University
+Temple University,Cluster_1,Rutgers University-Newark,SUNY Polytechnic Institute,University of Vermont
+Thiel College,Cluster_2,Emory & Henry College,Bethany College,Wagner College
+Thomas Jefferson University,Cluster_4,Illinois Institute of Technology,Principia College,University of Hawaii at Manoa
+Ursinus College,Cluster_4,Wheaton College (Massachusetts),University of Health Sciences and Pharmacy in St. Louis,Lebanon Valley College
+University of Valley Forge,Cluster_2,Shorter University,Bethany College,Universidad del Sagrado Corazon
+Villanova University,Cluster_4,Boston College,University of Health Sciences and Pharmacy in St. Louis,Saint John Fisher College
+Washington & Jefferson College,Cluster_4,Linfield University-McMinnville Campus,University of Health Sciences and Pharmacy in St. Louis,Whitworth University
+Waynesburg University,Cluster_2,Ashland University,Bethany College,High Point University
+West Chester University of Pennsylvania,Cluster_1,University of North Carolina at Charlotte,SUNY Polytechnic Institute,William & Mary
+Westminster College,Cluster_2,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+Westminster College,Cluster_2,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+Westminster College,Cluster_4,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+Widener University,Cluster_4,Adelphi University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Wilkes University,Cluster_4,Delaware Valley University,University of Health Sciences and Pharmacy in St. Louis,Robert Morris University
+Williamson College of the Trades,Cluster_3,Marion Military Institute,Saint Charles Borromeo Seminary-Overbrook,Webb Institute
+Wilson College,Cluster_2,Hilbert College,Bethany College,Keene State College
+York College of Pennsylvania,Cluster_1,Utica University,SUNY Polytechnic Institute,University of Mount Union
+Brown University,Cluster_5,Vanderbilt University,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Bryant University,Cluster_4,Butler University,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Johnson & Wales University-Providence,Cluster_4,Lesley University,University of Health Sciences and Pharmacy in St. Louis,University of Massachusetts-Dartmouth
+Providence College,Cluster_4,Fairfield University,University of Health Sciences and Pharmacy in St. Louis,University of Saint Joseph
+Rhode Island College,Cluster_1,Bowie State University,SUNY Polytechnic Institute,Endicott College
+University of Rhode Island,Cluster_1,The University of Alabama,SUNY Polytechnic Institute,Endicott College
+Rhode Island School of Design,Cluster_4,Oberlin College,University of Health Sciences and Pharmacy in St. Louis,Hope International University
+Roger Williams University,Cluster_4,Wentworth Institute of Technology,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+Salve Regina University,Cluster_4,Seton Hall University,University of Health Sciences and Pharmacy in St. Louis,Le Moyne College
+Allen University,Cluster_3,Livingstone College,Saint Charles Borromeo Seminary-Overbrook,Florida Memorial University
+Anderson University,Cluster_2,Saint Elizabeth University,Bethany College,University of Dallas
+Anderson University,Cluster_2,Saint Elizabeth University,Bethany College,University of Dallas
+Charleston Southern University,Cluster_2,Oklahoma Baptist University,Randolph College,Austin College
+Benedict College,Cluster_2,Paul Quinn College,Bethany College,Southern Utah University
+Southern Wesleyan University,Cluster_2,Evangel University,Bethany College,University of the Cumberlands
+College of Charleston,Cluster_1,University of New Hampshire at Manchester,SUNY Polytechnic Institute,Wentworth Institute of Technology
+Citadel Military College of South Carolina,Cluster_1,Grand Valley State University,SUNY Polytechnic Institute,Asbury University
+Claflin University,Cluster_2,Shaw University,Bethany College,Universidad del Sagrado Corazon
+Clemson University,Cluster_1,University of South Carolina-Columbia,SUNY Polytechnic Institute,Colorado School of Mines
+Coker University,Cluster_2,Sterling College,Bethany College,Marietta College
+Columbia International University,Cluster_1,University of Alaska Southeast,SUNY Polytechnic Institute,Southeastern University
+Columbia College,Cluster_2,Rochester University,Bethany College,Western Colorado University
+Converse University,Cluster_1,Lindenwood University,SUNY Polytechnic Institute,University of Indianapolis
+Erskine College,Cluster_2,Southern Wesleyan University,Bethany College,University of the Cumberlands
+Francis Marion University,Cluster_1,University of South Carolina Aiken,SUNY Polytechnic Institute,Asbury University
+Furman University,Cluster_4,The College of Wooster,University of Health Sciences and Pharmacy in St. Louis,Presbyterian College
+Lander University,Cluster_1,University of South Carolina-Upstate,SUNY Polytechnic Institute,University of Mount Union
+Limestone University,Cluster_3,Texas A&M University-San Antonio,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+Newberry College,Cluster_2,Concordia University Ann Arbor,Bethany College,University of Charleston
+North Greenville University,Cluster_2,Trevecca Nazarene University,Bethany College,University of the Cumberlands
+Presbyterian College,Cluster_2,Cornell College,Bethany College,Wagner College
+University of South Carolina Aiken,Cluster_1,Francis Marion University,SUNY Polytechnic Institute,Friends University
+University of South Carolina Beaufort,Cluster_1,Francis Marion University,SUNY Polytechnic Institute,Rockford University
+University of South Carolina-Columbia,Cluster_1,Clemson University,SUNY Polytechnic Institute,Colorado School of Mines
+University of South Carolina-Lancaster,Cluster_3,University of South Carolina-Sumter,Saint Charles Borromeo Seminary-Overbrook,Gordon State College
+University of South Carolina-Salkehatchie,Cluster_3,University of South Carolina-Union,Saint Charles Borromeo Seminary-Overbrook,Richard Bland College
+University of South Carolina-Sumter,Cluster_3,University of South Carolina-Lancaster,Saint Charles Borromeo Seminary-Overbrook,Gordon State College
+University of South Carolina-Union,Cluster_3,University of South Carolina-Lancaster,Saint Charles Borromeo Seminary-Overbrook,Gordon State College
+Coastal Carolina University,Cluster_1,University of Southern Maine,SUNY Polytechnic Institute,Lawrence Technological University
+South Carolina State University,Cluster_1,University of Southern Maine,SUNY Polytechnic Institute,Lawrence Technological University
+University of South Carolina-Upstate,Cluster_1,Lander University,SUNY Polytechnic Institute,Asbury University
+Winthrop University,Cluster_1,University of South Carolina-Upstate,SUNY Polytechnic Institute,Rockford University
+Wofford College,Cluster_4,Centre College,University of Health Sciences and Pharmacy in St. Louis,Alma College
+Augustana University,Cluster_2,St Catherine University,Randolph College,Gustavus Adolphus College
+Black Hills State University,Cluster_1,University of Wisconsin-Green Bay,SUNY Polytechnic Institute,Virginia Union University
+Dakota State University,Cluster_1,South Dakota School of Mines and Technology,SUNY Polytechnic Institute,Johnson University
+Dakota Wesleyan University,Cluster_2,Marian University,Bethany College,University of Charleston
+Mount Marty University,Cluster_3,Truett McConnell University,Saint Charles Borromeo Seminary-Overbrook,Tennessee Wesleyan University
+Northern State University,Cluster_1,Bemidji State University,SUNY Polytechnic Institute,Asbury University
+Presentation College,Cluster_3,Manor College,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+South Dakota School of Mines and Technology,Cluster_1,South Dakota State University,SUNY Polytechnic Institute,Lee University
+South Dakota State University,Cluster_1,North Dakota State University-Main Campus,SUNY Polytechnic Institute,Lee University
+University of Sioux Falls,Cluster_2,Dallas Baptist University,Randolph College,Lindenwood University
+University of South Dakota,Cluster_1,Minnesota State University-Mankato,SUNY Polytechnic Institute,Lee University
+Austin Peay State University,Cluster_1,Indiana University of Pennsylvania-Main Campus,SUNY Polytechnic Institute,Liberty University
+Baptist Health Sciences University,Cluster_3,Point University,Saint Charles Borromeo Seminary-Overbrook,Toccoa Falls College
+Belmont University,Cluster_2,University of Saint Joseph,Bethany College,Moravian University
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Bethel University,Cluster_2,Wisconsin Lutheran College,Bethany College,Davenport University
+Carson-Newman University,Cluster_2,Gardner-Webb University,Bethany College,Tiffin University
+Christian Brothers University,Cluster_2,Malone University,Bethany College,Loyola University New Orleans
+Cumberland University,Cluster_3,Lincoln College,Saint Charles Borromeo Seminary-Overbrook,Multnomah University
+Lipscomb University,Cluster_2,Saint John Fisher College,Bethany College,High Point University
+East Tennessee State University,Cluster_1,University of Akron Main Campus,SUNY Polytechnic Institute,Lee University
+Fisk University,Cluster_1,St. Mary's College of Maryland,SUNY Polytechnic Institute,Spelman College
+Freed-Hardeman University,Cluster_2,Lee University,Bethany College,University of the Cumberlands
+John A Gupton College,Cluster_3,Conservatory of Music of Puerto Rico,Saint Charles Borromeo Seminary-Overbrook,Eastern New Mexico University-Main Campus
+Johnson University,Cluster_2,University of Mary,Bethany College,Pontifical Catholic University of Puerto Rico-Ponce
+King University,Cluster_2,MidAmerica Nazarene University,Bethany College,Multnomah University
+Le Moyne-Owen College,Cluster_3,Manor College,Saint Charles Borromeo Seminary-Overbrook,Columbia College
+Lee University,Cluster_2,Freed-Hardeman University,Bethany College,University of the Cumberlands
+Lincoln Memorial University,Cluster_4,Embry-Riddle Aeronautical University-Daytona Beach,Principia College,D'Youville College
+The University of Tennessee Southern,Cluster_2,The King's University,Bethany College,Dickinson State University
+Maryville College,Cluster_2,Pfeiffer University,Bethany College,Roanoke College
+University of Memphis,Cluster_1,Southern Illinois University-Edwardsville,SUNY Polytechnic Institute,Liberty University
+Middle Tennessee State University,Cluster_1,Prairie View A & M University,SUNY Polytechnic Institute,Lee University
+Rhodes College,Cluster_4,Southwestern University,University of Health Sciences and Pharmacy in St. Louis,Coe College
+The University of the South,Cluster_4,Rhodes College,University of Health Sciences and Pharmacy in St. Louis,Centenary College of Louisiana
+Southern Adventist University,Cluster_2,Oakwood University,Bethany College,Universidad del Sagrado Corazon
+Tennessee Wesleyan University,Cluster_2,University of Jamestown,Bethany College,Universidad del Sagrado Corazon
+The University of Tennessee-Chattanooga,Cluster_1,Tennessee Technological University,SUNY Polytechnic Institute,Lawrence Technological University
+The University of Tennessee-Knoxville,Cluster_1,University of Nebraska-Lincoln,SUNY Polytechnic Institute,Colorado School of Mines
+The University of Tennessee-Martin,Cluster_1,Southern Utah University,SUNY Polytechnic Institute,Friends University
+Tennessee Technological University,Cluster_1,Prairie View A & M University,SUNY Polytechnic Institute,Lee University
+Trevecca Nazarene University,Cluster_2,North Greenville University,Bethany College,University of the Cumberlands
+Tusculum University,Cluster_2,Bluefield University,Bethany College,University of Charleston
+Union University,Cluster_2,University of Indianapolis,Randolph College,University of St Thomas
+Vanderbilt University,Cluster_5,Brown University,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Abilene Christian University,Cluster_2,Florida Southern College,Bethany College,University of Dallas
+Angelo State University,Cluster_1,McNeese State University,SUNY Polytechnic Institute,Oakwood University
+Austin College,Cluster_4,St Olaf College,University of Health Sciences and Pharmacy in St. Louis,Alma College
+Baylor University,Cluster_4,Gonzaga University,University of Health Sciences and Pharmacy in St. Louis,Wheaton College
+Concordia University Texas,Cluster_2,Concordia University-Chicago,Bethany College,Saint Peter's University
+Texas A & M University-Corpus Christi,Cluster_1,Texas A & M University-Commerce,SUNY Polytechnic Institute,Roosevelt University
+Dallas Baptist University,Cluster_2,University of Indianapolis,Andrew College,University of St Thomas
+Dallas Christian College,Cluster_3,Bacone College,Saint Charles Borromeo Seminary-Overbrook,Johnson University Florida
+University of Dallas,Cluster_4,Salve Regina University,University of Health Sciences and Pharmacy in St. Louis,Saint Martin's University
+East Texas Baptist University,Cluster_3,Oklahoma Wesleyan University,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+Texas A&M University-Texarkana,Cluster_1,Indiana State University,SUNY Polytechnic Institute,Roosevelt University
+Texas A & M University-Commerce,Cluster_1,Fayetteville State University,SUNY Polytechnic Institute,Faulkner University
+Hardin-Simmons University,Cluster_2,Trinity International University-Illinois,Bethany College,Prescott College
+Houston Baptist University,Cluster_3,University of Mobile,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+University of Houston-Clear Lake,Cluster_1,Texas Woman's University,SUNY Polytechnic Institute,Lee University
+University of Houston-Downtown,Cluster_1,Concord University,SUNY Polytechnic Institute,Bethune-Cookman University
+University of Houston-Victoria,Cluster_1,Coppin State University,SUNY Polytechnic Institute,Rockford University
+University of Houston,Cluster_1,Texas Tech University,SUNY Polytechnic Institute,Lee University
+Howard Payne University,Cluster_2,Warner University,Bethany College,Multnomah University
+Huston-Tillotson University,Cluster_2,Florida Memorial University,Bethany College,Johnson C Smith University
+University of the Incarnate Word,Cluster_2,University of Lynchburg,Bethany College,High Point University
+Lamar University,Cluster_1,Arkansas Tech University,SUNY Polytechnic Institute,Lee University
+Texas A & M International University,Cluster_1,Arkansas State University,SUNY Polytechnic Institute,Evangel University
+LeTourneau University,Cluster_2,Spring Arbor University,Bethany College,Southwestern University
+Lubbock Christian University,Cluster_2,North Central University,Bethany College,University of South Carolina Aiken
+University of Mary Hardin-Baylor,Cluster_2,Spalding University,Bethany College,D'Youville College
+McMurry University,Cluster_2,Midway University,Bethany College,University of Charleston
+Midwestern State University,Cluster_1,Fayetteville State University,SUNY Polytechnic Institute,Liberty University
+University of North Texas,Cluster_1,University of North Florida,SUNY Polytechnic Institute,Lee University
+Our Lady of the Lake University,Cluster_2,Texas Wesleyan University,Bethany College,Indiana Institute of Technology
+The University of Texas Rio Grande Valley,Cluster_1,University of North Alabama,SUNY Polytechnic Institute,Freed-Hardeman University
+Paul Quinn College,Cluster_2,Stillman College,Bethany College,University of Maine at Fort Kent
+Prairie View A & M University,Cluster_1,Tennessee Technological University,SUNY Polytechnic Institute,Lee University
+Rice University,Cluster_5,Wellesley College,Cleveland University-Kansas City,Cornell University
+Saint Edward's University,Cluster_4,Saint Peter's University,University of Health Sciences and Pharmacy in St. Louis,Arcadia University
+University of St Thomas,Cluster_4,Hamline University,University of Health Sciences and Pharmacy in St. Louis,Samford University
+University of St Thomas,Cluster_2,Hamline University,University of Health Sciences and Pharmacy in St. Louis,Samford University
+Sam Houston State University,Cluster_1,Stephen F Austin State University,SUNY Polytechnic Institute,Lee University
+Schreiner University,Cluster_2,Lakeland University,Bethany College,University of Charleston
+St. Mary's University,Cluster_2,University of Lynchburg,Bethany College,High Point University
+Southern Methodist University,Cluster_4,Texas Christian University,University of Health Sciences and Pharmacy in St. Louis,Saint John Fisher College
+Southwestern Assemblies of God University,Cluster_3,Southeastern Baptist Theological Seminary,Saint Charles Borromeo Seminary-Overbrook,University of Mary
+Southwestern University,Cluster_4,Rhodes College,University of Health Sciences and Pharmacy in St. Louis,Monmouth College
+Stephen F Austin State University,Cluster_1,Sam Houston State University,SUNY Polytechnic Institute,Lee University
+Texas State University,Cluster_1,University of Louisiana at Lafayette,SUNY Polytechnic Institute,Lee University
+Southwestern Adventist University,Cluster_2,Spring Arbor University,Bethany College,Universidad del Sagrado Corazon
+Sul Ross State University,Cluster_1,Bluefield State College,SUNY Polytechnic Institute,Columbia College
+Tarleton State University,Cluster_1,Montana State University,SUNY Polytechnic Institute,Union College
+Texas A & M University-Kingsville,Cluster_1,University of Houston-Clear Lake,SUNY Polytechnic Institute,Lee University
+Texas A & M University-College Station,Cluster_1,University of Minnesota-Twin Cities,SUNY Polytechnic Institute,William & Mary
+The University of Texas at Arlington,Cluster_1,The University of Texas at El Paso,SUNY Polytechnic Institute,Lawrence Technological University
+The University of Texas at Austin,Cluster_1,North Carolina State University at Raleigh,SUNY Polytechnic Institute,William & Mary
+The University of Texas at Dallas,Cluster_1,Indiana University-Bloomington,SUNY Polytechnic Institute,Endicott College
+The University of Texas at El Paso,Cluster_1,The University of Texas at Arlington,SUNY Polytechnic Institute,Lee University
+The University of Texas at Tyler,Cluster_1,Saint Cloud State University,SUNY Polytechnic Institute,Southwest Baptist University
+Texas Christian University,Cluster_4,Southern Methodist University,University of Health Sciences and Pharmacy in St. Louis,Saint John Fisher College
+Texas Lutheran University,Cluster_2,Hastings College,Bethany College,Moravian University
+The University of Texas Permian Basin,Cluster_1,Angelo State University,SUNY Polytechnic Institute,Lake Erie College
+The University of Texas at San Antonio,Cluster_1,University of Nebraska at Omaha,SUNY Polytechnic Institute,Lee University
+Texas Southern University,Cluster_1,Governors State University,SUNY Polytechnic Institute,Faulkner University
+Texas Tech University,Cluster_1,University of Houston,SUNY Polytechnic Institute,Lee University
+Texas Wesleyan University,Cluster_2,Our Lady of the Lake University,Bethany College,University of Dallas
+Texas Woman's University,Cluster_1,Georgia Southern University,SUNY Polytechnic Institute,Liberty University
+Trinity University,Cluster_4,The University of the South,University of Health Sciences and Pharmacy in St. Louis,Centenary College of Louisiana
+Wayland Baptist University,Cluster_2,Carolina University,Bethany College,University of the Cumberlands
+West Texas A & M University,Cluster_1,James Madison University,SUNY Polytechnic Institute,Union College
+Brigham Young University,Cluster_1,Pontifical Catholic University of Puerto Rico-Ponce,SUNY Polytechnic Institute,Harding University
+Brigham Young University-Hawaii,Cluster_3,Brigham Young University-Idaho,Saint Charles Borromeo Seminary-Overbrook,Life Pacific University
+Southern Utah University,Cluster_1,University of North Texas at Dallas,SUNY Polytechnic Institute,Asbury University
+Utah State University,Cluster_1,The University of Texas at San Antonio,SUNY Polytechnic Institute,Lee University
+University of Utah,Cluster_1,Kansas State University,SUNY Polytechnic Institute,Colorado School of Mines
+Westminster College,Cluster_2,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+Westminster College,Cluster_2,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+Westminster College,Cluster_4,Wisconsin Lutheran College,University of Health Sciences and Pharmacy in St. Louis,Bluffton University
+Bennington College,Cluster_4,Sarah Lawrence College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Champlain College,Cluster_4,Monmouth University,University of Health Sciences and Pharmacy in St. Louis,Daemen University
+Goddard College,Cluster_3,Methodist College,California Christian College,Bryan College of Health Sciences
+Middlebury College,Cluster_5,Carleton College,Cleveland University-Kansas City,Rensselaer Polytechnic Institute
+Norwich University,Cluster_4,Oglethorpe University,University of Health Sciences and Pharmacy in St. Louis,Nichols College
+Saint Michael's College,Cluster_4,Saint Mary's College,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Sterling College,Cluster_2,Tabor College,Andrew College,Westminster College
+Sterling College,Cluster_2,Tabor College,Andrew College,Westminster College
+University of Vermont,Cluster_4,Embry-Riddle Aeronautical University-Daytona Beach,University of Health Sciences and Pharmacy in St. Louis,Temple University
+Averett University,Cluster_2,Brevard College,Bethany College,Southwestern University
+Bluefield University,Cluster_2,Eastern Nazarene College,Bethany College,University of Charleston
+Bridgewater College,Cluster_2,Guilford College,Bethany College,Roanoke College
+William & Mary,Cluster_4,University of Virginia-Main Campus,University of Health Sciences and Pharmacy in St. Louis,Ohio State University-Main Campus
+Regent University,Cluster_1,Tuskegee University,SUNY Polytechnic Institute,Friends University
+Christopher Newport University,Cluster_1,University of Nebraska at Kearney,SUNY Polytechnic Institute,University of Mount Union
+Emory & Henry College,Cluster_2,Campbell University,Bethany College,Moravian University
+Eastern Mennonite University,Cluster_2,Saint Norbert College,Bethany College,Loyola University New Orleans
+Ferrum College,Cluster_2,Kentucky Wesleyan College,Bethany College,Metropolitan College of New York
+George Mason University,Cluster_1,Virginia Commonwealth University,SUNY Polytechnic Institute,Endicott College
+Hampden-Sydney College,Cluster_4,Denison University,University of Health Sciences and Pharmacy in St. Louis,Centenary College of Louisiana
+Hampton University,Cluster_1,Montana State University,SUNY Polytechnic Institute,Queens University of Charlotte
+Hollins University,Cluster_4,Washington & Jefferson College,University of Health Sciences and Pharmacy in St. Louis,Hanover College
+James Madison University,Cluster_1,University of Cincinnati-Main Campus,SUNY Polytechnic Institute,Yeshiva University
+Liberty University,Cluster_2,Cornerstone University,Bethany College,University of the Cumberlands
+Longwood University,Cluster_1,SUNY at Fredonia,SUNY Polytechnic Institute,Wentworth Institute of Technology
+University of Lynchburg,Cluster_2,University of the Incarnate Word,Bethany College,High Point University
+University of Mary Washington,Cluster_1,University of Wisconsin-La Crosse,SUNY Polytechnic Institute,Holy Cross College
+Marymount University,Cluster_2,University of the Incarnate Word,Bethany College,High Point University
+Norfolk State University,Cluster_1,Indiana State University,SUNY Polytechnic Institute,William Woods University
+Old Dominion University,Cluster_1,Frostburg State University,SUNY Polytechnic Institute,Endicott College
+Radford University,Cluster_1,University of Houston-Clear Lake,SUNY Polytechnic Institute,Liberty University
+Randolph-Macon College,Cluster_4,Eckerd College,University of Health Sciences and Pharmacy in St. Louis,Hanover College
+Randolph College,Cluster_2,Andrew College,Union University,Doane University
+Richard Bland College,Cluster_1,The University of Texas Permian Basin,SUNY Polytechnic Institute,Missouri Valley College
+University of Richmond,Cluster_4,Vassar College,New England College,Wellesley College
+Roanoke College,Cluster_4,Moravian University,University of Health Sciences and Pharmacy in St. Louis,California Lutheran University
+Shenandoah University,Cluster_2,Saint Ambrose University,Bethany College,Duquesne University
+Southern Virginia University,Cluster_1,University of Maine at Presque Isle,SUNY Polytechnic Institute,Hiram College
+Sweet Briar College,Cluster_4,Berry College,Rensselaer Polytechnic Institute,St. Mary's College of Maryland
+University of Virginia's College at Wise,Cluster_1,Saginaw Valley State University,SUNY Polytechnic Institute,Mars Hill University
+Virginia Polytechnic Institute and State University,Cluster_1,North Carolina State University at Raleigh,SUNY Polytechnic Institute,William & Mary
+Virginia Commonwealth University,Cluster_1,Washington State University,SUNY Polytechnic Institute,University of Vermont
+University of Virginia-Main Campus,Cluster_4,William & Mary,University of Health Sciences and Pharmacy in St. Louis,University of North Carolina at Chapel Hill
+Virginia Military Institute,Cluster_1,University of Illinois Urbana-Champaign,SUNY Polytechnic Institute,Randolph College
+Virginia State University,Cluster_1,Norfolk State University,SUNY Polytechnic Institute,Virginia Union University
+Virginia Union University,Cluster_2,Paul Quinn College,Bethany College,California University of Pennsylvania
+Virginia Wesleyan University,Cluster_2,Manchester University,Andrew College,Eckerd College
+Washington and Lee University,Cluster_5,Carleton College,Cleveland University-Kansas City,Colby College
+Central Washington University,Cluster_1,Western Oregon University,SUNY Polytechnic Institute,Rosemont College
+Cornish College of the Arts,Cluster_4,Woodbury University,University of Health Sciences and Pharmacy in St. Louis,Maine College of Art & Design
+Eastern Washington University,Cluster_1,Western Washington University,SUNY Polytechnic Institute,Roosevelt University
+The Evergreen State College,Cluster_1,Central Washington University,SUNY Polytechnic Institute,Holy Cross College
+Gonzaga University,Cluster_4,Marquette University,University of Health Sciences and Pharmacy in St. Louis,Saint John Fisher College
+Northwest University,Cluster_2,Baker University,Bethany College,Northwood University
+Pacific Lutheran University,Cluster_2,Whitworth University,Andrew College,Gustavus Adolphus College
+University of Puget Sound,Cluster_4,Stetson University,University of Health Sciences and Pharmacy in St. Louis,Mount Saint Mary's University
+Saint Martin's University,Cluster_2,Mercyhurst University,Bethany College,University of Dallas
+Seattle Pacific University,Cluster_2,University of Lynchburg,Bethany College,DePaul University
+Seattle University,Cluster_4,DePaul University,University of Health Sciences and Pharmacy in St. Louis,Seattle Pacific University
+Washington State University,Cluster_1,University of Nebraska-Lincoln,SUNY Polytechnic Institute,Endicott College
+University of Washington-Seattle Campus,Cluster_4,University of California-Davis,University of Health Sciences and Pharmacy in St. Louis,University of Maryland-College Park
+Western Washington University,Cluster_1,Portland State University,SUNY Polytechnic Institute,Endicott College
+Whitman College,Cluster_4,Furman University,New England College,Presbyterian College
+Whitworth University,Cluster_2,Pacific Lutheran University,Andrew College,Eckerd College
+Alderson Broaddus University,Cluster_3,Kansas Wesleyan University,Saint Charles Borromeo Seminary-Overbrook,Holy Names University
+Appalachian Bible College,Cluster_2,Maranatha Baptist University,Bethany College,Universidad del Sagrado Corazon
+Bethany College,Cluster_2,Andrew College,Harding University,Doane University
+Bethany College,Cluster_2,Andrew College,Harding University,Doane University
+Bluefield State College,Cluster_1,Concord University,SUNY Polytechnic Institute,Shorter University
+University of Charleston,Cluster_1,Keystone College,SUNY Polytechnic Institute,Rockford University
+Concord University,Cluster_1,University of Houston-Downtown,SUNY Polytechnic Institute,Mars Hill University
+Davis & Elkins College,Cluster_2,Bushnell University,Bethany College,University of Charleston
+Fairmont State University,Cluster_1,Colorado State University Pueblo,SUNY Polytechnic Institute,University of Valley Forge
+Marshall University,Cluster_1,Texas Woman's University,SUNY Polytechnic Institute,Liberty University
+Shepherd University,Cluster_1,Colorado State University Pueblo,SUNY Polytechnic Institute,University of Mount Union
+West Virginia State University,Cluster_1,SUNY Buffalo State,SUNY Polytechnic Institute,Virginia Union University
+West Liberty University,Cluster_1,Indiana University-East,SUNY Polytechnic Institute,Asbury University
+West Virginia Wesleyan College,Cluster_2,Aquinas College,Bethany College,Loyola University New Orleans
+West Virginia University,Cluster_1,University of Oklahoma-Norman Campus,SUNY Polytechnic Institute,Lawrence Technological University
+Wheeling University,Cluster_2,Saint Francis University,Bethany College,Saint Anselm College
+Alverno College,Cluster_2,Bethel University,Bethany College,University of Charleston
+Bellin College,Cluster_1,Lancaster Bible College,SUNY Polytechnic Institute,Johnson University
+Beloit College,Cluster_4,Lake Forest College,University of Health Sciences and Pharmacy in St. Louis,Coe College
+Cardinal Stritch University,Cluster_2,Centenary University,Bethany College,Point Park University
+Carroll University,Cluster_2,The College of Saint Scholastica,Bethany College,Moravian University
+Carthage College,Cluster_2,Elmhurst University,Randolph College,Eckerd College
+Concordia University-Wisconsin,Cluster_2,Lewis University,Bethany College,Duquesne University
+Edgewood College,Cluster_2,Gwynedd Mercy University,Bethany College,Duquesne University
+Lakeland University,Cluster_2,Chowan University,Bethany College,University of Charleston
+Lawrence University,Cluster_4,Milwaukee School of Engineering,University of Health Sciences and Pharmacy in St. Louis,Pacific Lutheran University
+Maranatha Baptist University,Cluster_2,Southern Adventist University,Bethany College,Moody Bible Institute
+Marian University,Cluster_2,Shenandoah University,Bethany College,Gonzaga University
+Marian University,Cluster_2,Shenandoah University,Bethany College,Gonzaga University
+Marquette University,Cluster_4,Saint Joseph's University,University of Health Sciences and Pharmacy in St. Louis,Gannon University
+Milwaukee Institute of Art & Design,Cluster_2,Minneapolis College of Art and Design,Bethany College,College for Creative Studies
+Milwaukee School of Engineering,Cluster_4,Cedar Crest College,University of Health Sciences and Pharmacy in St. Louis,Bay Path University
+Mount Mary University,Cluster_2,Mount Saint Joseph University,Bethany College,University of Dallas
+Northland College,Cluster_2,Oklahoma Baptist University,Randolph College,Austin College
+Ripon College,Cluster_4,Lake Forest College,University of Health Sciences and Pharmacy in St. Louis,University of Mount Union
+Saint Norbert College,Cluster_2,Hope College,Bethany College,Moravian University
+Viterbo University,Cluster_2,Geneva College,Bethany College,Stephens College
+University of Wisconsin-Whitewater,Cluster_1,University of Wisconsin-Eau Claire,SUNY Polytechnic Institute,Union College
+University of Wisconsin-Eau Claire,Cluster_1,University of Wisconsin-Whitewater,SUNY Polytechnic Institute,Union College
+University of Wisconsin-Green Bay,Cluster_1,University of Wisconsin-Oshkosh,SUNY Polytechnic Institute,Union College
+University of Wisconsin-La Crosse,Cluster_1,University of Wisconsin-Eau Claire,SUNY Polytechnic Institute,Union College
+Wisconsin Lutheran College,Cluster_2,Bluffton University,Bethany College,Moravian University
+University of Wisconsin-Oshkosh,Cluster_1,University of Wisconsin-Green Bay,SUNY Polytechnic Institute,Union College
+University of Wisconsin-Parkside,Cluster_1,University of Wisconsin-Green Bay,SUNY Polytechnic Institute,Union College
+University of Wisconsin-Stout,Cluster_1,University of Maryland-Baltimore County,SUNY Polytechnic Institute,New College of Florida
+University of Wisconsin-Superior,Cluster_1,Bemidji State University,SUNY Polytechnic Institute,Friends University
+University of Wisconsin-Madison,Cluster_1,University of Pittsburgh-Pittsburgh Campus,National University,University of Virginia-Main Campus
+University of Wisconsin-Milwaukee,Cluster_1,The University of Texas at San Antonio,SUNY Polytechnic Institute,Lee University
+University of Wisconsin-Platteville,Cluster_1,University of Wisconsin-River Falls,SUNY Polytechnic Institute,Asbury University
+University of Wisconsin-River Falls,Cluster_1,University of Wisconsin-Stevens Point,SUNY Polytechnic Institute,Southwestern Adventist University
+University of Wisconsin-Stevens Point,Cluster_1,University of Wisconsin-River Falls,SUNY Polytechnic Institute,Virginia Union University
+University of Wyoming,Cluster_1,University of New Mexico-Main Campus,SUNY Polytechnic Institute,Liberty University
+Universidad Adventista de las Antillas,Cluster_3,Ozark Christian College,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Universidad Central de Bayamon,Cluster_3,The Baptist College of Florida,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Albizu University-San Juan,Cluster_3,Southeastern Baptist Theological Seminary,Saint Charles Borromeo Seminary-Overbrook,Bellin College
+Pontifical Catholic University of Puerto Rico-Ponce,Cluster_1,University of the Cumberlands,SUNY Polytechnic Institute,University of Mary
+Conservatory of Music of Puerto Rico,Cluster_3,John A Gupton College,Saint Charles Borromeo Seminary-Overbrook,Eastern New Mexico University-Main Campus
+Escuela de Artes Plasticas y Diseno de Puerto Rico,Cluster_3,Conservatory of Music of Puerto Rico,Saint Charles Borromeo Seminary-Overbrook,Minot State University
+Universidad del Sagrado Corazon,Cluster_1,West Liberty University,SUNY Polytechnic Institute,Oakwood University
+Universidad Central Del Caribe,Cluster_3,Logan University,Saint Charles Borromeo Seminary-Overbrook,Lincoln Memorial University
+College of Micronesia-FSM,Cluster_3,John A Gupton College,Saint Charles Borromeo Seminary-Overbrook,Valley City State University
+University of the Virgin Islands,Cluster_1,Louisiana State University-Shreveport,SUNY Polytechnic Institute,Southwest Baptist University
+Stanford University,Cluster_5,California Institute of Technology,Cleveland University-Kansas City,Case Western Reserve University
+Purdue University-Main Campus,Cluster_1,Virginia Polytechnic Institute and State University,SUNY Polytechnic Institute,William & Mary
+Georgia State University-Perimeter College,Cluster_1,Nicholls State University,SUNY Polytechnic Institute,University of Valley Forge
+St. John's College,Cluster_3,Pennsylvania College of Art and Design,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+St. John's College,Cluster_3,Pennsylvania College of Art and Design,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+New College of Florida,Cluster_2,Keuka College,Andrew College,The College of Idaho
+California State University-San Marcos,Cluster_1,California State University-Chico,SUNY Polytechnic Institute,Wentworth Institute of Technology
+Beacon College,Cluster_4,Embry-Riddle Aeronautical University-Prescott,University of Health Sciences and Pharmacy in St. Louis,Milwaukee Institute of Art & Design
+Soka University of America,Cluster_5,Pomona College,Cleveland University-Kansas City,Principia College
+California State University-Monterey Bay,Cluster_1,California State Polytechnic University-Humboldt,SUNY Polytechnic Institute,Hiram College
+Messenger College,Cluster_3,Rabbinical Seminary of America,Saint Charles Borromeo Seminary-Overbrook,Institute of American Indian and Alaska Native Culture and Arts Development
+Embry-Riddle Aeronautical University-Worldwide,Cluster_3,National Louis University,Saint Charles Borromeo Seminary-Overbrook,National University
+Delaware College of Art and Design,Cluster_3,University of Hawaii-West Oahu,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+Florida Gulf Coast University,Cluster_1,University of North Carolina at Greensboro,SUNY Polytechnic Institute,Lee University
+The King's University,Cluster_2,Life Pacific University,Bethany College,Moody Bible Institute
+Nevada State College,Cluster_1,University of Central Missouri,SUNY Polytechnic Institute,Asbury University
+California State University-Channel Islands,Cluster_1,Sonoma State University,SUNY Polytechnic Institute,Roger Williams University
+Franklin W Olin College of Engineering,Cluster_5,Amherst College,Cleveland University-Kansas City,Principia College
+Pennsylvania College of Health Sciences,Cluster_3,University of North Carolina School of the Arts,California Christian College,The College of New Jersey
+University of California-Merced,Cluster_4,Endicott College,University of Health Sciences and Pharmacy in St. Louis,University of Massachusetts-Boston
+Ave Maria University,Cluster_2,Kentucky Wesleyan College,Bethany College,Saint Anselm College
+Ecclesia College,Cluster_3,Central Baptist College,Saint Charles Borromeo Seminary-Overbrook,East Central University
+Visible Music College,Cluster_3,Kentucky Mountain Bible College,Saint Charles Borromeo Seminary-Overbrook,Appalachian Bible College
+The King's College,Cluster_2,Millsaps College,Bethany College,Wagner College
+Providence Christian College,Cluster_2,Arizona Christian University,Bethany College,Kansas City Art Institute
+University of Minnesota-Rochester,Cluster_1,Fitchburg State University,SUNY Polytechnic Institute,Hiram College
+Texas A&M University-San Antonio,Cluster_3,Henderson State University,Saint Charles Borromeo Seminary-Overbrook,Mitchell College
+Manna University,Cluster_3,Elim Bible Institute and College,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Simmons College of Kentucky,Cluster_3,Mid-Atlantic Christian University,Saint Charles Borromeo Seminary-Overbrook,Missouri Valley College
+John Paul the Great Catholic University,Cluster_2,William Jessup University,Bethany College,Moody Bible Institute
+Criswell College,Cluster_3,Ozark Christian College,Saint Charles Borromeo Seminary-Overbrook,Oklahoma Christian University
+Mid-South Christian College,Cluster_3,Elim Bible Institute and College,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Augusta University,Cluster_1,University of Louisville,SUNY Polytechnic Institute,Embry-Riddle Aeronautical University-Daytona Beach
+Middle Georgia State University,Cluster_1,Louisiana State University-Shreveport,SUNY Polytechnic Institute,Southwest Baptist University
+University of North Georgia,Cluster_1,Kennesaw State University,SUNY Polytechnic Institute,Lee University
+Florida Polytechnic University,Cluster_3,The Christ College of Nursing and Health Sciences,Saint Charles Borromeo Seminary-Overbrook,Truman State University
+Antioch College,Cluster_3,St. John's College,Saint Charles Borromeo Seminary-Overbrook,Wabash College
+University of North Texas at Dallas,Cluster_1,Morehead State University,SUNY Polytechnic Institute,University of Mount Union
+Kennesaw State University,Cluster_1,University of North Georgia,SUNY Polytechnic Institute,Lee University
+Milligan University,Cluster_2,Clarks Summit University,Bethany College,University of Dallas
+Emory University-Oxford College,Cluster_4,Fairfield University,University of Health Sciences and Pharmacy in St. Louis,University of Evansville
+Husson University,Cluster_1,York College of Pennsylvania,SUNY Polytechnic Institute,University of Mount Union
+Elim Bible Institute and College,Cluster_3,Mid-South Christian College,Saint Charles Borromeo Seminary-Overbrook,Maranatha Baptist University
+Carolina University,Cluster_2,Judson University,Bethany College,University of the Cumberlands
+Purdue University Northwest,Cluster_1,Indiana University-Northwest,SUNY Polytechnic Institute,Asbury University

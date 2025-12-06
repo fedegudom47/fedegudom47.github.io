@@ -1,0 +1,222 @@
+---
+title: "Lead concentration in Flint water samples in 2015"
+author: "Federica & Prof. Hardin"
+date: 11/04/2025
+date-format: "D MMM, YYYY"
+execute: 
+  warning: false
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+library(emojifont)
+load.fontawesome()
+
+# Load data
+flint_mdeq <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-11-04/flint_mdeq.csv')
+
+# Calculate values
+lead_90_all <- quantile(flint_mdeq$lead, 0.9)
+lead_90_filtered <- quantile(flint_mdeq$lead2, 0.9, na.rm = TRUE)
+
+# Prepare plot data
+plot_data <- flint_mdeq |>
+  arrange(sample) |>
+  mutate(lead_bin = floor(lead / 5) * 5) |>
+  group_by(lead_bin) |>
+  mutate(cumulative_count = row_number()) |>
+  ungroup() |>
+  mutate(
+    removed = is.na(lead2), 
+    lead_level = lead
+  )
+
+x_max <- max(plot_data$lead_bin, na.rm = TRUE)
+y_max <- max(plot_data$cumulative_count, na.rm = TRUE)
+```
+
+## The Flint Water Crisis
+
+@cr-section
+
+In 2015, water samples were collected from homes across Flint, Michigan to test for lead contamination.
+```{r}
+#| label: fig-samples
+#| cr-id: samples
+#| echo: false
+p1 <- plot_data |>
+  ggplot(aes(x = lead_bin, y = cumulative_count, color = lead_level)) +
+  geom_text(aes(label = fontawesome('fa-tint')),
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.8) +
+  scale_color_gradient2(
+    low = "steelblue",
+    mid = "lightblue",
+    high = "chocolate2",   
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  ) +
+  coord_cartesian(xlim = c(0, x_max), ylim = c(0, y_max)) +
+  labs(x = "Lead (ppb)", y = "Count") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"),
+        legend.position = "none")
+p1
+```
+
+[Each droplet represents one water sample from a Flint home.]{.cr-sticky}
+
+[The EPA set an action level of 15 parts per billion (ppb) for lead.]{.cr-sticky}
+```{r}
+#| label: fig-epa
+#| cr-id: epa
+#| echo: false
+p2 <- plot_data |>
+  ggplot(aes(x = lead_bin, y = cumulative_count, color = lead_level)) +
+  geom_vline(xintercept = 15, linetype = "dashed", color = "red", linewidth = 1.5) +
+  annotate("text", x = 15, y = Inf, label = "EPA Action Level (15 ppb)", 
+           vjust = 1.5, hjust = -0.1, color = "red", size = 5, fontface = "bold") +
+  geom_text(aes(label = fontawesome('fa-tint')),
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.8) +
+  scale_color_gradient2(
+    low = "steelblue",
+    mid = "lightblue",
+    high = "chocolate2",   
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  ) +
+  coord_cartesian(xlim = c(0, x_max), ylim = c(0, y_max)) +
+  labs(x = "Lead (ppb)", y = "Count") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"),
+        legend.position = "none")
+p2
+```
+
+[Water systems must keep 90% of samples below this threshold.]{.cr-sticky}
+```{r}
+#| label: fig-90th
+#| cr-id: percentile
+#| echo: false
+p3 <- plot_data |>
+  ggplot(aes(x = lead_bin, y = cumulative_count, color = lead_level)) +
+  geom_vline(xintercept = 15, linetype = "dashed", color = "red", linewidth = 1) +
+  geom_vline(xintercept = lead_90_all, linetype = "solid", color = "darkred", linewidth = 1.5) +
+  annotate("text", x = lead_90_all, y = Inf, 
+           label = paste0("90th Percentile\n(", round(lead_90_all, 1), " ppb)"), 
+           vjust = 1.5, hjust = -0.1, color = "darkred", size = 5, fontface = "bold") +
+  geom_text(aes(label = fontawesome('fa-tint')),
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.8) +
+  scale_color_gradient2(
+    low = "steelblue",
+    mid = "lightblue",
+    high = "chocolate2",   
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  ) +
+  coord_cartesian(xlim = c(0, x_max), ylim = c(0, y_max)) +
+  labs(x = "Lead (ppb)", y = "Count") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"),
+        legend.position = "none")
+p3
+```
+
+[But there was a problem. Two samples with high lead levels were removed from the official data.]{.cr-sticky}
+```{r}
+#| label: fig-removed
+#| cr-id: removed
+#| echo: false
+
+p4 <- plot_data |>
+  ggplot(aes(x = lead_bin, y = cumulative_count)) +
+  geom_vline(xintercept = 15, linetype = "dashed", color = "red", linewidth = 1) +
+  geom_vline(xintercept = lead_90_all, linetype = "solid", color = "darkred", linewidth = 1.5) +
+  annotate("text", x = lead_90_all, y = Inf, label = paste0("90th Percentile\n(", round(lead_90_all, 1), " ppb)"), 
+           vjust = 1.5, hjust = -0.1, color = "darkred", size = 5, fontface = "bold") +
+  # kept samples faded
+  geom_text(data = filter(plot_data, !removed), 
+            aes(label = fontawesome('fa-tint'), color = lead_level),
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.3) + scale_color_gradient2(
+    low = "steelblue",
+    mid = "lightblue",
+    high = "chocolate2",   
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  )  +
+geom_text(data = filter(plot_data, removed), 
+            aes(label = fontawesome('fa-tint')),
+            color = "salmon",
+            family = 'fontawesome-webfont',
+            size = 10, 
+            alpha = 1) +
+  coord_cartesian(xlim = c(0, x_max), ylim = c(0, y_max)) +  
+  labs(x = "Lead (ppb)", 
+       y = "Count") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"))
+
+p4
+```
+
+[After removing these samples, the 90th percentile dropped significantly—making the water appear safer than it was.]{.cr-sticky}
+```{r}
+#| label: fig-new
+#| cr-id: filtered
+#| echo: false
+
+p5 <- plot_data |>
+  filter(!removed) |> 
+  ggplot(aes(x = lead_bin, y = cumulative_count, color = lead_level)) +
+  scale_color_gradient2(
+    low = "steelblue",
+    mid = "lightblue",
+    high = "chocolate2",   
+    midpoint = 15,          
+    limits = c(0, max(flint_mdeq$lead, na.rm = TRUE)),
+    name = "Lead (ppb)"
+  )  + 
+  geom_vline(xintercept = 15, linetype = "dashed", color = "red", linewidth = 1) +
+  geom_vline(xintercept = lead_90_filtered, linetype = "solid", color = "darkgreen", linewidth = 1.5) +
+  annotate("text", x = lead_90_filtered, y = Inf, label = paste0("New 90th Percentile\n(", round(lead_90_filtered, 1), " ppb)"), 
+           vjust = 1.5, hjust = -.6, color = "darkgreen", size = 5, fontface = "bold") +
+   geom_text(data = filter(plot_data, !removed), 
+            aes(label = fontawesome('fa-tint'), color = lead_level),
+            family = 'fontawesome-webfont',
+            size = 8, 
+            alpha = 0.8) + 
+  coord_cartesian(xlim = c(0, x_max), ylim = c(0, y_max)) +  
+  labs(x = "Lead (ppb)", 
+       y = "Count") +
+  theme_minimal() + 
+  theme(panel.background = element_rect(fill = "aliceblue"))
+p5
+```
+
+@cr-section
+
+## The Impact
+
+The official 90th percentile was reported as **`r round(lead_90_filtered, 1)` ppb**, just below the EPA action level. 
+
+But with all samples included, it was actually **`r round(lead_90_all, 1)` ppb**—well above the safe threshold.
+
+This data manipulation helped hide the severity of Flint's water crisis, leading to prolonged exposure of residents to dangerous lead levels.
+
+---
+
+### Data Source
+
+Data from [Loux and Gibson (2018)](https://onlinelibrary.wiley.com/doi/pdf/10.1111/test.12187) via [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-11-04/readme.md).

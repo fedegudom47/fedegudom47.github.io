@@ -1,0 +1,51 @@
+Variable,Importance,cluster_pair
+Is Religious,164.2445221878885,Cluster_1_vs_Cluster_2
+Average Grant,103.76604644995639,Cluster_1_vs_Cluster_2
+% Receiving Aid,47.45970880389628,Cluster_1_vs_Cluster_2
+Student Association Budget/Student,35.20173169918445,Cluster_1_vs_Cluster_2
+Tuition Revenue/Student,30.58648955428987,Cluster_1_vs_Cluster_2
+Has Study Abroad,120.10772900408736,Cluster_1_vs_Cluster_3
+Is Religious,37.051642649093644,Cluster_1_vs_Cluster_3
+Yield Rate,15.631508940792285,Cluster_1_vs_Cluster_3
+Instruction Spend/Student,9.680647138414448,Cluster_1_vs_Cluster_3
+% Receiving Aid,7.433221745665632,Cluster_1_vs_Cluster_3
+Average Grant,107.39098257057174,Cluster_1_vs_Cluster_4
+Full Time Tuition,90.34933163892036,Cluster_1_vs_Cluster_4
+Tuition Revenue/Student,54.68139888741794,Cluster_1_vs_Cluster_4
+Student Association Budget/Student,41.93889808675441,Cluster_1_vs_Cluster_4
+Endowment/Student,24.766666015397757,Cluster_1_vs_Cluster_4
+Average Grant,21.400601043163036,Cluster_1_vs_Cluster_5
+Full Time Tuition,18.093449797947535,Cluster_1_vs_Cluster_5
+Endowment/Student,16.17510957356624,Cluster_1_vs_Cluster_5
+Instruction Spend/Student,9.044212151671967,Cluster_1_vs_Cluster_5
+Student Association Budget/Student,8.272207660107036,Cluster_1_vs_Cluster_5
+Has Study Abroad,101.69697281355826,Cluster_2_vs_Cluster_3
+Average Grant,29.07535192968002,Cluster_2_vs_Cluster_3
+Full Time Tuition,19.99041410159864,Cluster_2_vs_Cluster_3
+Yield Rate,19.06595168122009,Cluster_2_vs_Cluster_3
+Tuition Revenue/Student,8.42629080802252,Cluster_2_vs_Cluster_3
+Is Religious,72.47313052102986,Cluster_2_vs_Cluster_4
+Room & Board Cost,68.26979831670187,Cluster_2_vs_Cluster_4
+Full Time Tuition,56.948815140783125,Cluster_2_vs_Cluster_4
+Instruction Spend/Student,35.84446703363778,Cluster_2_vs_Cluster_4
+Tuition Revenue/Student,34.10573819928783,Cluster_2_vs_Cluster_4
+Instruction Spend/Student,23.117164799580145,Cluster_2_vs_Cluster_5
+Endowment/Student,15.986312095405836,Cluster_2_vs_Cluster_5
+Full Time Tuition,14.74957433125044,Cluster_2_vs_Cluster_5
+Admissions Rate,11.21043472228626,Cluster_2_vs_Cluster_5
+Average Grant,8.704977100040123,Cluster_2_vs_Cluster_5
+Has Study Abroad,53.362558776443144,Cluster_3_vs_Cluster_4
+Full Time Tuition,39.278295040843645,Cluster_3_vs_Cluster_4
+Average Grant,29.365740654273658,Cluster_3_vs_Cluster_4
+Room & Board Cost,27.90181362504347,Cluster_3_vs_Cluster_4
+Instruction Spend/Student,11.077171352527417,Cluster_3_vs_Cluster_4
+Instruction Spend/Student,13.596168777816434,Cluster_3_vs_Cluster_5
+Full Time Tuition,12.536674417647918,Cluster_3_vs_Cluster_5
+Average Grant,12.30994900231442,Cluster_3_vs_Cluster_5
+Endowment/Student,10.836205638110552,Cluster_3_vs_Cluster_5
+Has Study Abroad,7.531450951192176,Cluster_3_vs_Cluster_5
+On Campus Required,15.440129096787484,Cluster_4_vs_Cluster_5
+Endowment/Student,15.398211518293333,Cluster_4_vs_Cluster_5
+Instruction Spend/Student,11.59562606861738,Cluster_4_vs_Cluster_5
+Admissions Rate,11.466613668284225,Cluster_4_vs_Cluster_5
+Average Grant,8.407586254888852,Cluster_4_vs_Cluster_5

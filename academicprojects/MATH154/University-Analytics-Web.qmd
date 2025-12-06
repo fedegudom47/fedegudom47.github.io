@@ -1,0 +1,12 @@
+---
+title: "University Analytics"
+format:
+  html:
+    page-layout: full
+---
+
+This project uses Machine Learning (XGBoost, K-Means Clustering and Random Forests) to analyse US Higher Education data.
+
+```{=html}
+<iframe width="100%" height="900" src="https://4cvb4w-federica-d.shinyapps.io/UniversityAnalytics" title="University Analytics App" style="border: 1px solid #dee2e6; border-radius: 4px;"></iframe>
+```
