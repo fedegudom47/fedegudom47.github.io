@@ -5,7 +5,7 @@ account: 4cvb4w-federica-d
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 16257118
-bundleId: 11285301
+bundleId: 11285581
 url: https://4cvb4w-federica-d.shinyapps.io/UniversityAnalytics/
 version: 1
 asMultiple: FALSE

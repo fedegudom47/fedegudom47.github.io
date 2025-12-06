@@ -108,13 +108,13 @@ ui <- navbarPage(
     code_font = font_google("JetBrains Mono"),
     bootswatch = "lux"
   ),
-
-tabPanel(
+  
+  tabPanel(
     "About",
     div(
       style = "padding: 20px; max-width: 800px; margin: auto; font-size: 16px;",
-
-
+      
+      
       HTML("
       <h1>Project Overview</h1>
       <p> Our University Analytics project uses machine learning to try to uncover patterns within U.S. higher education. Our
@@ -204,43 +204,44 @@ tabPanel(
       capable of capturing nonlinearities and interactions. In this project, boosting is particularly effective for modeling yield rates because
       of its ability to incorporate complex relationships between tuition, admissions patterns, institutional characteristics, and geographic variation.
       </p>
-      
-      <h4> Looking at Strong Predictos </h4>
+
+      <h4> Looking at Strong Predictors </h4>
 
      <div style='text-align: center; margin: 20px 0;'>
-         <img src='Images/PredictorsRF.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
+         <img src='/Images/PredictorsRF.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
            <p style='color: #666; font-style: italic; margin-top: 5px;'>Random Forest Predictors</p>
           </div>
-          
-     <p>First we see that <code>Number admitted</code> and <code>Total enrolled</code> are the most important predictors in determining yield rate. This makes sense given that,&nbsp;</p>
+
+     <p>First we see that <code>Number admitted</code> is the most important predictors in determining yield rate. This makes sense given that,&nbsp;</p>
 <p>$$\\text{yield rate} = \\frac{\\text{number students enrolled}}{\\text{number students admitted}}$$</p>
-<p>so they both give us direct information about the yield rate.</p>
-<p><code>Number applied</code>, and <code>Admission rate</code> tell us a similar stories. Elite institutions, (like the Ivy League schools for example), are highly selective, i.e. they will have many applications, and low admission rates. 
-Students accepted to these kinds of schools are likely to enroll because of their prestige, leading to high yield rates. 
+<p>so <code> Number admitted </code> gives us direct information about the yield rate. It might seem like cheating
+to include the number of admitted students in the model, however
+we feel that this model could be implemented by a college admissions officer trying to determine yield rate,
+and being able to play with this value to understand how the number of admitted students affect these predictions.
+
+<p> The next most important feature is <code> Full-time tuition</code>. Expense plays a huge part in students' choice of college and so it makes sense that the price tag would be an important predictor of yield. </p>
+
+<code>Number applied</code>, and <code>Admission rate</code> tell us a similar stories. Elite institutions, (like the Ivy League schools for example), are highly selective, i.e. they will have many applications, and low admission rates.
+Students accepted to these kinds of schools are likely to enroll because of their prestige, leading to high yield rates.
 However, there are also likely instances of big state schools having a large number of applicants, but a lower yield which may be why <code>Admission rate</code> is not as strong a predictor as say, <code>Full-time tuition</code>.</p>
-<p>The next most important feature is <code>Full-time tuition</code>. Expense plays a huge part in students&apos; choice of college and so it makes sense that the price tag would be an important predictor of yield.&nbsp;</p>
+
+<p> <code>Fees</code> and <code>Net price</code> are also both important features, for the same reason as <code>Full-time tuition</code>.
+
 <p><code>Basketball Conference Member</code> is likely a good predictor because it increases institutions visibility, as well as perceptions of student experience. These factors make universities with active sports programs more desirable to applicants,
-and thus makes them more likely to enroll leading to higher yield rates. Small and under-resourced institutions are much less likely to have official basketball teams (among other sports), 
+and thus makes them more likely to enroll leading to higher yield rates. Small and under-resourced institutions are much less likely to have official basketball teams (among other sports),
 and so this variable also helps differentiate between institution types.</p>
 <p><code>Fees</code> and <code>Net price</code> are also both important features, for the same reason <code>Full-time tuition</code> is.</p>
-<p>What about <code>fips 72</code>? Federal Information Processing System (FIPS) codes are numbers which uniquely identify geographic areas. The FIPS codes in this dataset correspond to states, so which state has code 72? It&apos;s actually Puerto Rico. 
+<p>What about <code>fips 72</code>? Federal Information Processing System (FIPS) codes are numbers which uniquely identify geographic areas. The FIPS codes in this dataset correspond to states, so which state has code 72? It&apos;s actually Puerto Rico.
 Puerto Rico&rsquo;s inclusion as a distinct predictor is because of its unique tuition structures, student mobility patterns, and institutional characteristics within IPEDS.
 These factors allow the model to treat Puerto Rican institutions as an isolated enrollment ecosystem, which is why they have such strong predictive power relative to the other states.</p>
-<p>The states with the next highest predictive power on yield rate are New York (<code>fips 36</code>) and California (<code>fips 6</code>).</p>    
-          
-          
-          
-          
-          
-          
-
+<p>The states with the next highest predictive power on yield rate are New York (<code>fips 36</code>) and California (<code>fips 6</code>).</p>
       <hr>
 
       <h2> Clustering & Characterisation </h2>
 
       <p>The primary goal of K-Means clustering is to segment universities into distinct, homogeneous groups (clusters) based on the input variables. </p>
 
-    
+
       <h5 style='margin-top: 20px;'>Finding Optimal K: The Elbow Method</h5>
       <p>We defined the optimal number of groups (k=5) by observing the 'Total Within-Cluster Sum of Squares' (WSS) using the Elbow Method. The WSS measures the compactness of the clustering; lower WSS means data points are closer to their cluster center. We analysed the WSS curve over a number of cluster counts (k=1 to k=15). The 'elbow' point, where the marginal reduction in WSS
       sharply decreases, suggested that <em>k=5</em> provided the best trade-off between maximising inter-cluster distance and minimising intra-cluster variance.</p>
@@ -249,21 +250,21 @@ These factors allow the model to treat Puerto Rican institutions as an isolated 
          <img src='Images/elbow.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
            <p style='color: #666; font-style: italic; margin-top: 5px;'>Total Within-Cluster Sum of Squares</p>
           </div>
-        
-        
+
+
       <h5 style='margin-top: 20px;'>Running K-means</h5>
       <p> After running K-means clustering, we decided to present the output to the viewer in the form of an interactive visualisation. This visualisation displays the distribution
-      of schools in different clusters (encoded via colour) on a map of the United States. This plot is completely interactive, allowing the user to: </p> 
+      of schools in different clusters (encoded via colour) on a map of the United States. This plot is completely interactive, allowing the user to: </p>
       <ul style='list-style-type: none; padding-left: 0;'>
         <li> Select which cluster groups they want to see on the map (the ability to filter through these).</li>
         <li> An interactive tooltip upon hovering, displaying the school's admission rate and its tuition.</li>
         <li> The ability to zoom and pan in order to properly analyse schools that may overdraw on top of each other (if they are in similar geographic locations, as is the case of the 5Cs).</li>
-        <li> Query a specific school. The user can search a school - it's dot will become larger and highlight (regardless of whether its cluster is selected). For said school, multiple details 
-        will be displayed, including common 'Stats', its 'Closest Peer within the Cluster', 'Furthest Peer within the Cluster', and its 'Closest Outsider'. 
+        <li> Query a specific school. The user can search a school - it's dot will become larger and highlight (regardless of whether its cluster is selected). For said school, multiple details
+        will be displayed, including common 'Stats', its 'Closest Peer within the Cluster', 'Furthest Peer within the Cluster', and its 'Closest Outsider'.
       </ul>
-      
+
       <h5> What do we mean by 'Closest Peer within the Cluster', 'Furthest Peer within the Cluster', and 'Closest Outsider'?</h5>
-      
+
       <p>The 'Closest Peer', 'Furthest Peer' and 'Closest Outsider' metrics available in the sidebar are derived from the <b>Euclidean Distance</b> between schools in the normalised, multi-dimensional feature space seen by the K-Means
       algorithm.
       They help contextualise the school within their own cluster and others:</p>
@@ -274,18 +275,18 @@ These factors allow the model to treat Puerto Rican institutions as an isolated 
         <li><b>Closest Peer:</b> The school in the same cluster that is mathematically most dissimilar (shortest Euclidean distance).</li>
         <li><b>Closest Outsider:</b> The school in any other cluster that is mathematically most similar (shortest Euclidean distance across cluster boundaries).</li>
       </ul>
-        
+
       <h5 style='margin-top: 20px;'>Cluster Characterisation (Random Forest)</h5>
       <p>To understand the features that most strongly drive the separation between clusters, we employed a secondary Supervised Learning technique: Random Forest Classification.
       Instead of predicting yield, this RF model was trained to predict the cluster assignment generated by our K-Means clustering.</p>
-      <p>The resulting Variable Importance Plot (displayed below) ranks the features by their ability to accurately predict cluster membership for the five clusters we extracted 
+      <p>The resulting Variable Importance Plot (displayed below) ranks the features by their ability to accurately predict cluster membership for the five clusters we extracted
       from the k-means clustering. Our clustering characterisation tab, runs a RF model for pairwise clusters, helping the user understand the best 5 discriminators between
-      any two groups. The user can select any two schools and look at the discriminators between their corresponding groups. The outputs (and plots) returned by this model are supplemented, 
+      any two groups. The user can select any two schools and look at the discriminators between their corresponding groups. The outputs (and plots) returned by this model are supplemented,
       with the actual (non-normalised) values for these categories, helping the user identify the true differences (and magnitudes of these) that might explain why two schools are not classified
       together. </p>
-      
+
             <div style='text-align: center; margin: 20px 0;'>
-         <img src='Images/clusterdrivers.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
+         <img src='Images/clusterdrivers.png' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
            <p style='color: #666; font-style: italic; margin-top: 5px;'>Cluster Drivers</p>
           </div>
 
@@ -306,14 +307,14 @@ These factors allow the model to treat Puerto Rican institutions as an isolated 
     ")
     )
   ),
-tabPanel(
-  "Admissions over Time",
-  icon = bs_icon("map"),
-  fluidPage( style = "background-color: #F5F5F5; margin: 0; padding: 0;",
-    titlePanel("Yield, Applications, and Admission Rate by State"),
-
-    tags$head(
-      tags$style(HTML("
+  tabPanel(
+    "Admissions over Time",
+    icon = bs_icon("map"),
+    fluidPage( style = "background-color: #F5F5F5; margin: 0; padding: 0;",
+               titlePanel("Yield, Applications, and Admission Rate by State"),
+               
+               tags$head(
+                 tags$style(HTML("
           #year_slider_container {
             display: flex;
             justify-content: center;
@@ -336,46 +337,46 @@ tabPanel(
             border-color: #4C72B0;
           }
         "))
-    ),
-
-    # slider above maps
-    div(
-      id = "year_slider_container",
-      sliderInput(
-        inputId = "map_year",      # NOTE: different ID than 'year'
-        label   = "Select Year:",
-        min     = map_year_min,
-        max     = map_year_max,
-        value   = map_year_min,
-        step    = 1,
-        sep     = "",
-        animate = TRUE
-      )
-    ),
-
-    fluidRow(
-      column(4, plotOutput("yieldMap", height = "300px")),
-      column(4, plotOutput("appsMap",  height = "300px")),
-      column(4, plotOutput("admitMap", height = "300px"))
-    ),
-
-    br(),
-
-    fluidRow(
-      column(4,
-             h4("Yield Rate"),
-             p("Yield rate has steadily decreased since the early 2000's. NACAC (The National Association for College Admission Counseling) noted a 15% decrease in yield rate nationally from 2007 to 2017. This is likely because of the rise in popularity of applying to many schools, (like 15 instead of 5). Then a cycle begins where universities are incentivized to admit more students, since it is less likely for any given student to commit to their school. This actively drives down yield rate.")
-      ),
-      column(4,
-             h4("Applications per Institution"),
-             p("This plot shows the same trend. The number of applications per institution has steadily risen across the country, illuminating the trend of students applying to more and more schools on average. The UC system amplifies this trend because of how students can apply to many universities through one application. The norm might have been closer to 2-4 in the early 2000's, but by the late 2010's perhaps closer to 5-7.")
-      ),
-      column(4,
-             h4("Admission Rate"),
-             p("We don't see a lot of change in admission rates because the number of applications and number of admitted students have been rising for the reasons described above.")
-      )
-    ))
-),
+               ),
+               
+               # slider above maps
+               div(
+                 id = "year_slider_container",
+                 sliderInput(
+                   inputId = "map_year",      # NOTE: different ID than 'year'
+                   label   = "Select Year:",
+                   min     = map_year_min,
+                   max     = map_year_max,
+                   value   = map_year_min,
+                   step    = 1,
+                   sep     = "",
+                   animate = TRUE
+                 )
+               ),
+               
+               fluidRow(
+                 column(4, plotOutput("yieldMap", height = "300px")),
+                 column(4, plotOutput("appsMap",  height = "300px")),
+                 column(4, plotOutput("admitMap", height = "300px"))
+               ),
+               
+               br(),
+               
+               fluidRow(
+                 column(4,
+                        h4("Yield Rate"),
+                        p("Yield rate has steadily decreased since the early 2000's. NACAC (The National Association for College Admission Counseling) noted a 15% decrease in yield rate nationally from 2007 to 2017. This is likely because of the rise in popularity of applying to many schools, (like 15 instead of 5). Then a cycle begins where universities are incentivized to admit more students, since it is less likely for any given student to commit to their school. This actively drives down yield rate.")
+                 ),
+                 column(4,
+                        h4("Applications per Institution"),
+                        p("This plot shows the same trend. The number of applications per institution has steadily risen across the country, illuminating the trend of students applying to more and more schools on average. The UC system amplifies this trend because of how students can apply to many universities through one application. The norm might have been closer to 2-4 in the early 2000's, but by the late 2010's perhaps closer to 5-7.")
+                 ),
+                 column(4,
+                        h4("Admission Rate"),
+                        p("We don't see a lot of change in admission rates because the number of applications and number of admitted students have been rising for the reasons described above.")
+                 )
+               ))
+  ),
   tabPanel("Yield Prediction",
            icon = bs_icon("graph-up"),
            titlePanel("Predicted Yield Rate by Institution and Year"),
@@ -396,29 +397,26 @@ tabPanel(
              mainPanel(
                card(
                  card_header(class = "bg-dark", h3(textOutput("pred_title"))),
-
+                 
                  # minimalist metric layout
                  div(
                    style = "display:flex; gap:60px; align-items:flex-start; margin-top:15px;",
-
+                   
                    div(
                      h5("Estimated Yield", style = "margin:0; color:#555;"),
                      h2(textOutput("pred_value"), style = "margin:0; font-weight:700;")
                    ),
-
+                   
                    div(
                      h5("Actual Yield", style = "margin:0; color:#555;"),
                      h2(textOutput("actual_value"), style = "margin:0; font-weight:700;")
                    )
                  ),
-
+                 
                  p("Note: Predictions based on gradient boosting model.")
                ),
                br(),
-               conditionalPanel(
-                 condition = "input.go > 0",
-                 plotOutput("yield_history_plot", height = "350px")
-               )
+               plotOutput("yield_history_plot", height = "350px")
              )
            )
   ),
@@ -429,7 +427,7 @@ tabPanel(
              sidebarPanel(
                width = 3,
                h5("Filters"),
-
+               
                checkboxGroupInput(
                  inputId = "selected_clusters",
                  label = "Show Clusters:",
@@ -438,9 +436,9 @@ tabPanel(
                  selected = levels(map_data_prepared$.pred_cluster),
                  inline = TRUE
                ),
-
+               
                hr(),
-
+               
                selectizeInput(
                  inputId = "highlight_school",
                  label = "Find a University:",
@@ -448,14 +446,14 @@ tabPanel(
                  selected = NULL,
                  options = list(placeholder = 'Type to search (e.g. Pomona...)')
                ),
-
+               
                # Stats appear here
                uiOutput("school_stats_simple"),
-
+               
                hr(),
                p("Hover for details. Zoom with your mouse wheel.")
              ),
-
+             
              mainPanel(
                card(
                  full_screen = TRUE,
@@ -472,21 +470,21 @@ tabPanel(
              sidebarPanel(
                h4("Compare Institutions"),
                p("Select two schools to see which variables best distinguish their clusters."),
-
+               
                # Input for first school
                selectizeInput("char_school1", "Select School A:",
                               choices = cluster_inst_choices,
                               selected = cluster_inst_choices[1],
                               options = list(placeholder = "Type to search (e.g. Pomona...)", maxOptions = 10)),
-
+               
                # Input for School B
                selectizeInput("char_school2", "Select School B:",
                               choices = cluster_inst_choices,
                               selected = cluster_inst_choices[2],
                               options = list(placeholder = "Type to search(e.g. Pitzer ...)", maxOptions = 10)),
-
+               
                hr(),
-
+               
                # Dynamic text output describing the comparison
                uiOutput("cluster_comparison_text"),
                br(),
@@ -505,12 +503,12 @@ tabPanel(
            icon = bs_icon("database"),
            div(
              style = "padding: 20px; max-width: 800px; margin: auto; font-size: 16px;",
-              h1("Data Used in Models"),
-
+             h1("Data Used in Models"),
+             
              # ------------------------------------
              h2("Yield Prediction (XGBoost) Data"),
              p("Though the original dataset has many variables, only a handful were selected so as to limit unnecessary noise in the model. Variables like 'library hours' are very unlikely to add any predictive value to the model."),
-
+             
              HTML("
         <ul style='list-style-type: none; padding-left: 0;'>
           <li style='margin-bottom: 5px;'><b><code>admit_rate</code></b> - admission rate</li>
@@ -534,7 +532,7 @@ tabPanel(
              h2("Clustering Model Variables (K-Means)"),
              p("Our K-Means clustering model used a standardised set of institutional features designed to measure resources, selectivity, and mission coming from multiple IPEDs datasets.
                The were appropriately standardised, and cleaned."),
-
+             
              HTML("
         <ul style='list-style-type: none; padding-left: 0;'>
           <p> Financial Resources </p>
@@ -562,14 +560,14 @@ tabPanel(
           <li style='margin-bottom: 5px;'><b><code>has_study_abroad</code></b> - Binary indicator for institutions offering study abroad programs.</li>
         </ul>
       "),
-
+             
              # ------------------------------------
              h2("General Data Preparation/Wrangling"),
              p("All modeling data was processed using R and the tidymodels library. We pulled the most recently available data for all the categories (2021). Unfortunately,
                the financial data we wanted to access was discontinued in 2018, hence we pulled the data from the year 2017. We deemed this admissible, because this
                was done for all institutions and the fact that it is unlikely for the overall wealth of a university (relative to others) to change drastically in
                a 4-year span."),
-
+             
              HTML("
         <ul>
           <li><b>Imputation:</b> Missing numeric values (NA) were handled using <em> k-Nearest Neighbors (KNN) imputation </em>, which estimates missing values based on the most similar complete rows in the dataset.</li>
@@ -577,31 +575,31 @@ tabPanel(
           <li><b>Exclusion:</b> Identifier variables (<code>unitid</code>, <code>inst_name</code>) and visual coordinates (<code>latitude</code>, <code>longitude</code>) were assigned an <code>'id'</code> role or explicitly removed so they did not participate in the core clustering algorithm.</li>
         </ul>
       "),
-
-    br(),
-
-
-
-
-
+             
+             br(),
+             
+             
+             
+             
+             
              # ------------------------------------
-    h2("General Data Preparation/Wrangling"),
-    HTML("<p>All data for this project originates from the <a href='https://nces.ed.gov/ipeds' target='_blank'><b>Integrated Postsecondary Education Data System (IPEDS)</b></a> database, the primary source for US college and university statistics. While we initially faced significant data cleaning challenges, we streamlined the process by leveraging the R <code>educationdata</code> package, which provides direct API access to the cleaned IPEDS database. Our dataset concentrates on institutional data from the last 25 years, restricted to 2022 as that is the most recently available data in the API.</p>"),
+             h2("General Data Preparation/Wrangling"),
+             HTML("<p>All data for this project originates from the <a href='https://nces.ed.gov/ipeds' target='_blank'><b>Integrated Postsecondary Education Data System (IPEDS)</b></a> database, the primary source for US college and university statistics. While we initially faced significant data cleaning challenges, we streamlined the process by leveraging the R <code>educationdata</code> package, which provides direct API access to the cleaned IPEDS database. Our dataset concentrates on institutional data from the last 25 years, restricted to 2022 as that is the most recently available data in the API.</p>"),
              br()
            ))
 )
 
 # --- SERVER ---
 server <- function(input, output, session) {
-
+  
   # ---- Yield prediction tab logic ----
-  pred_result <- eventReactive(input$go, {
+  pred_result <- reactive({
     req(input$year, input$inst_name)
-
+  
     row <- pred_df |>
       filter(year == input$year,
              inst_name == input$inst_name)
-
+    
     if (nrow(row) == 0) {
       return(list(
         name         = input$inst_name,
@@ -610,7 +608,7 @@ server <- function(input, output, session) {
         actual_yield = NA_real_
       ))
     }
-
+    
     list(
       name         = input$inst_name,
       year         = input$year,
@@ -618,7 +616,7 @@ server <- function(input, output, session) {
       actual_yield = as.numeric(row$yield[1])
     )
   })
-
+  
   output$pred_title <- renderText({
     res <- pred_result()
     if (is.na(res$pred_yield) || length(res$pred_yield) == 0) {
@@ -626,45 +624,45 @@ server <- function(input, output, session) {
     }
     paste("Predicted yield for", res$name, "in", res$year)
   })
-
+  
   output$pred_value <- renderText({
     res <- pred_result()
     if (is.na(res$pred_yield) || length(res$pred_yield) == 0) return("")
     sprintf("Estimated yield: %.1f%%", 100 * res$pred_yield)
   })
-
+  
   output$actual_value <- renderText({
     res <- pred_result()
     if (is.na(res$actual_yield)) return("")
     sprintf("Actual yield (%s): %.1f%%", res$year, 100 * res$actual_yield)
   })
-
+  
   # time series of yields for the selected institution across all years
   inst_series <- reactive({
     req(input$inst_name)
-
+    
     pred_df |>
       filter(inst_name == input$inst_name) |>
       arrange(year)
   })
-
+  
   output$yield_history_plot <- renderPlot({
     res <- pred_result()
     dat <- inst_series()
     req(nrow(dat) > 0)
-
+    
     # brand color for predicted line
     line_color <- brand_colors |>
       filter(inst_name == res$name) |>
       pull(color)
     if (length(line_color) == 0 || is.na(line_color)) line_color <- "steelblue"
-
+    
     dat$year_num <- as.numeric(as.character(dat$year))
     sel_year     <- as.numeric(as.character(res$year))
-
+    
     # training part for solid line
     dat_train <- dat |> filter(year < 2021)
-
+    
     ggplot(dat, aes(x = year_num)) +
       # vertical cutoff at 2020.1
       geom_vline(
@@ -673,11 +671,11 @@ server <- function(input, output, session) {
         linetype   = "dashed",
         linewidth  = 0.8
       ) +
-
+      
       # ACTUAL: solid black line + points (all years)
       geom_line(aes(y = 100 * yield, color = "Actual"), linewidth = 0.8) +
       geom_point(aes(y = 100 * yield, color = "Actual"), size = 2) +
-
+      
       # PREDICTED: dashed line over all years (continuous)
       geom_line(
         aes(y = 100 * pred_yield, color = "Predicted"),
@@ -688,7 +686,7 @@ server <- function(input, output, session) {
         aes(y = 100 * pred_yield, color = "Predicted"),
         size = 2
       ) +
-
+      
       # PREDICTED (TRAIN ONLY): solid overlay before 2021
       geom_line(
         data = dat_train,
@@ -696,7 +694,7 @@ server <- function(input, output, session) {
         linetype  = "solid",
         linewidth = 0.9
       ) +
-
+      
       # highlight selected year
       geom_point(
         data = subset(dat, year_num == sel_year),
@@ -708,7 +706,7 @@ server <- function(input, output, session) {
         aes(y = 100 * pred_yield, color = "Predicted"),
         size = 4, stroke = 1
       ) +
-
+      
       scale_color_manual(
         values = c(
           "Actual"    = "black",
@@ -730,21 +728,21 @@ server <- function(input, output, session) {
         panel.grid.minor = element_line(colour = "grey90")
       )
   })
-
-
-
+  
+  
+  
   # ---- Nice pictures tab logic (maps) ----
-
+  
   year_data <- reactive({
     state_year_named |>
       filter(year == input$map_year)   # uses map_year
   })
-
+  
   # Map 1 yield
   output$yieldMap <- renderPlot({
     map_df <- states_map |>
       left_join(year_data(), by = c("region" = "state_name"))
-
+    
     ggplot(map_df, aes(long, lat, group = group)) +
       geom_polygon(aes(fill = mean_yield), color = "white", linewidth = 0.2) +
       coord_map() +
@@ -766,12 +764,12 @@ server <- function(input, output, session) {
         plot.background  = element_rect(fill = "#F5F5F5", color = NA)
       )
   },  bg = "transparent")
-
+  
   #  map 2 applications per institution
   output$appsMap <- renderPlot({
     map_df <- states_map |>
       left_join(year_data(), by = c("region" = "state_name"))
-
+    
     ggplot(map_df, aes(long, lat, group = group)) +
       geom_polygon(aes(fill = apps_per_institution), color = "white", linewidth = 0.2) +
       coord_map() +
@@ -793,12 +791,12 @@ server <- function(input, output, session) {
         plot.background  = element_rect(fill = "#F5F5F5", color = NA)
       )
   }, bg = "transparent")
-
+  
   # Map 3: admission rate
   output$admitMap <- renderPlot({
     map_df <- states_map |>
       left_join(year_data(), by = c("region" = "state_name"))
-
+    
     ggplot(map_df, aes(long, lat, group = group)) +
       geom_polygon(aes(fill = mean_admit_rate), color = "white", linewidth = 0.2) +
       coord_map() +
@@ -820,22 +818,22 @@ server <- function(input, output, session) {
         plot.background  = element_rect(fill = "#F5F5F5", color = NA)
       )
   }, bg = "transparent")
-
-# ---- LOGIC FOR CLUSTER MAP
+  
+  # ---- LOGIC FOR CLUSTER MAP
   #  search bar
   observe({
     updateSelectizeInput(session, "highlight_school",
                          choices = sort(unique(map_data_prepared$inst_name)),
                          server = TRUE)
   })
-
+  
   output$map_plot <- renderPlotly({
-
+    
     # filter Data (Checkboxes)
     # default selected
     plot_df <- map_data_prepared |>
       filter(.pred_cluster %in% input$selected_clusters)
-
+    
     # highlighting logic
     if (!is.null(input$highlight_school) && input$highlight_school != "") {
       plot_df <- plot_df |>
@@ -852,13 +850,13 @@ server <- function(input, output, session) {
       plot_df <- plot_df |>
         mutate(opacity_val = 1.0, size_val = 4)
     }
-
+    
     #  Plotly Map
     validate(need(nrow(plot_df) > 0, "No clusters selected."))
-
+    
     zissou_colors <- wesanderson::wes_palette("Zissou1", type = "discrete")
     zissou_colors_clean <- as.character(zissou_colors)
-
+    
     plot_geo(plot_df, locationmode = 'USA-states') |>
       add_markers(
         x = ~longitude,
@@ -875,28 +873,28 @@ server <- function(input, output, session) {
         geo = g_map_settings,
         paper_bgcolor = "#F5F5F5",
         plot_bgcolor = "#F5F5F5",
-
+        
         # Optional: tighter margins to blend even better
         margin = list(l = 0, r = 0, t = 50, b = 0)
       )
   })
-
+  
   # --- SIMPLE STATS RENDERER ---
   output$school_stats_simple <- renderUI({
-
+    
     # Wait for selection
     req(input$highlight_school)
-
+    
     # Find school in our prepared data
     sch <- map_data_prepared |> filter(inst_name == input$highlight_school)
     if(nrow(sch) == 0) return(NULL)
-
+    
     # Formatters
     p_fmt <- function(x) if(is.numeric(x)) percent(x, accuracy=0.1) else "N/A"
     d_fmt <- function(x) if(is.numeric(x)) dollar(x) else "N/A"
     # Just in case checker
     check_nb <- function(x) if(is.na(x) || x == "") "None" else x
-
+    
     HTML(paste0(
       "<h4 style='color: #0072B2; margin-bottom:5px;'>Stats</h4>",
       "<mark><b>Cluster:</mark> ", sch$.pred_cluster, "<br>",
@@ -907,45 +905,45 @@ server <- function(input, output, session) {
       "<mark>Endowment:</mark> ", d_fmt(sch$endowment_per_student),
       "<hr style='margin: 10px 0; border-top: 1px solid #ccc;'>",
       "<h4 style='color: #0072B2; margin-bottom:5px;'>Cluster Context</h4>",
-
+      
       "<mark>Most Similar (Same Cluster):</mark><br>",
       "<strong>", check_nb(sch$closest_peer), "</strong><br>",
-
+      
       "<div style='margin-top:5px;'></div>", # spacer
-
+      
       "<mark>Most Different (Same Cluster):</mark><br>",
       "<strong>", check_nb(sch$furthest_peer), "</strong><br>",
-
+      
       "<div style='margin-top:5px;'></div>", # spacer
-
+      
       "<mark>Closest Outsider (Diff Cluster):</mark><br>",
       "<strong>", check_nb(sch$closest_outsider), "</strong>"
     ))
   })
-
+  
   # Logic for Pairwise
   # ---- Cluster Characterisation Logic ----
-
+  
   # Get cluster assignments for the two selected schools
   selected_pair_info <- reactive({
     req(input$char_school1, input$char_school2)
-
+    
     # Get cluster for School 1
     c1_row <- clustered_set |> filter(inst_name == input$char_school1)
     c1 <- if(nrow(c1_row) > 0) as.character(c1_row$.pred_cluster[1]) else NA
-
+    
     # Get Cluster for School 2
     c2_row <- clustered_set |> filter(inst_name == input$char_school2)
     c2 <- if(nrow(c2_row) > 0) as.character(c2_row$.pred_cluster[1]) else NA
-
+    
     list(c1 = c1, c2 = c2)
   })
-
+  
   # descriptive Text
   output$cluster_comparison_text <- renderUI({
     info <- selected_pair_info()
     if(is.na(info$c1) || is.na(info$c2)) return(p("School not found in cluster data."))
-
+    
     tagList(
       p(strong(input$char_school1), " is in ", strong(paste("Cluster", info$c1))),
       p(strong(input$char_school2), " is in ", strong(paste("Cluster", info$c2))),
@@ -957,23 +955,23 @@ server <- function(input, output, session) {
       }
     )
   })
-
+  
   #comparison values
   output$top_5_metrics <- renderUI({
-
+    
     # get schools
     s1_name <- input$char_school1
     s2_name <- input$char_school2
     info <- selected_pair_info()
-
+    
     req(s1_name, s2_name, info$c1, info$c2)
-
+    
     # id the top 5 variables for this pair (repeated logic as before)
     n1 <- readr::parse_number(as.character(info$c1))
     n2 <- readr::parse_number(as.character(info$c2))
     sorted_nums <- sort(c(n1, n2))
     pair_id <- paste0("Cluster_", sorted_nums[1], "_vs_Cluster_", sorted_nums[2])
-
+    
     # top 5
     top_vars_df <- pairwise_tables |>
       filter(cluster_pair == pair_id) |>
@@ -981,53 +979,53 @@ server <- function(input, output, session) {
       head(5) |>
       # join with clean data
       inner_join(var_metadata, by = c("Variable" = "clean_name"))
-
+    
     if(nrow(top_vars_df) == 0) return(p("No data for this comparison."))
-
+    
     #get data for two schools
     target_cols <- top_vars_df$col_name
-
+    
     schools_data <- clustered_set |>
       filter(inst_name %in% c(s1_name, s2_name)) |>
       select(inst_name, all_of(target_cols))
-
+    
     s1_dat <- schools_data |> filter(inst_name == s1_name)
     s2_dat <- schools_data |> filter(inst_name == s2_name)
-
+    
     # HTML List (gemini)
     rows_html <- lapply(1:nrow(top_vars_df), function(i) {
-
+      
       row_info <- top_vars_df[i, ]
-
+      
       clean_name <- row_info$Variable
       col_code   <- row_info$col_name
       fmt_type   <- row_info$format_type
-
+      
       val1 <- s1_dat[[col_code]]
       val2 <- s2_dat[[col_code]]
-
+      
       # formatting logic
       formatter <- function(v, type) {
         if(is.na(v)) return("N/A")
-
+        
         # Money
         if(type == "money")   return(dollar(v))
-
+        
         # Percentages
         if(type == "percent") return(percent(v, accuracy = 0.1))
-
+        
         # Text / Boolean
         if(type == "text") {
           if(v == 1 || v == "1" || v == TRUE) return("Yes")
           if(v == 0 || v == "0" || v == FALSE) return("No")
           return(as.character(v))
         }
-
+        
         # Default numeric fallback
         if(is.numeric(v))     return(round(v, 2))
         return(v)
       }
-
+      
       # HTML FOR ONE ROW
       tagList(
         div(style="font-size:12px; color:#666; margin-top:8px;", paste0(i, ". ", clean_name)),
@@ -1038,7 +1036,7 @@ server <- function(input, output, session) {
         div(style="background-color:#ddd; height:1px; margin-top:4px;")
       )
     })
-
+    
     # HTML FOR OTHER ROW
     tagList(
       div(style="display:flex; justify-content:space-between; font-weight:bold; color:#0072B2; margin-bottom:5px; border-bottom: 2px solid #0072B2;",
@@ -1048,20 +1046,20 @@ server <- function(input, output, session) {
       rows_html
     )
   })
-
-
+  
+  
   # output: the plot
   output$cluster_diff_plot <- renderPlot({
     info <- selected_pair_info()
-
+    
     # check
     req(info$c1, info$c2)
-
+    
     #  Convert cluster numbers, and sort
     n1 <- readr::parse_number(as.character(info$c1))
     n2 <- readr::parse_number(as.character(info$c2))
     sorted_nums <- sort(c(n1, n2))
-
+    
     # same cluster handling
     if(info$c1 == info$c2) {
       return(
@@ -1071,26 +1069,26 @@ server <- function(input, output, session) {
           theme_void()
       )
     }
-
+    
     # constructing cluster id so that it matches csv output
     #     "Cluster_1_vs_Cluster_2" to match
     pair_id <- paste0("Cluster_", sorted_nums[1], "_vs_Cluster_", sorted_nums[2])
-
+    
     # filter the data
     plot_data <- pairwise_tables |>
       filter(cluster_pair == pair_id) |>
       arrange(desc(Importance)) |>
       mutate(rank_label = row_number())
-
+    
     # validate
     validate(
       need(nrow(plot_data) > 0,
            paste("No data found for ID:", pair_id))
     )
-
+    
     # plot
     plot_data |>
-    ggplot(aes(x = Importance, y = reorder(Variable, Importance))) +
+      ggplot(aes(x = Importance, y = reorder(Variable, Importance))) +
       geom_col(aes(fill = Importance), width = 0.7) +
       geom_text(
         aes(label = rank_label),
