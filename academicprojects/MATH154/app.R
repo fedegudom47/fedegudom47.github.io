@@ -7,6 +7,7 @@ library(wesanderson)
 library(scales)
 library(plotly)
 library(xgboost)
+library(mapproj)
 
 pred_df      <- readRDS("pred_df.rds")
 year_choices <- readRDS("year_choices.rds")
@@ -16,7 +17,6 @@ college <- readRDS("college_clean.rds")
 
 # --- PREP DATA FOR "NICE PICTURES" TAB ----------------------------
 inst_lookup <- read_csv("inst_lookup_base.csv") |> select(unitid, inst_name) |> distinct()
-
 
 # --- For clustering work ---
 clustered_set <- read_csv("./Clustering/df_clustered_set.csv")
