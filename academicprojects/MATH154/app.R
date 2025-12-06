@@ -168,6 +168,7 @@ tabPanel(
       <hr>
 
       <h2> Gradient Boosting Model </h2>
+      <h4> Overview </h4>
       <p>
       Gradient Boosting works similarly to Random Forests in that it combines many decision trees to create a powerful predictive model.
       The key difference is that Gradient Boosting builds many small trees sequentially, with each tree learning from
@@ -193,8 +194,8 @@ tabPanel(
       $$
 
       <p>
-      where \\(F_m(x)\\) is the current full model (with m trees), and \\(\\eta\\) is the learning rate. You can cross validate to find the
-      value of \\(\\eta\\); we ended up with a value of \\(\\eta = 0.05\\). If the learning rate is too small, the model will take too long to
+      where \\(F_m(x)\\) is the current full model (with m trees), and \\(\\eta\\) is the learning rate. When we cross validatd to find the
+      value of \\(\\eta\\), we ended up with a value of \\(\\eta = 0.05\\). If the learning rate is too small, the model will take too long to
       converge to the best solution, and if it is too large, it may miss the best solution entirely.
       </p>
 
@@ -203,11 +204,35 @@ tabPanel(
       capable of capturing nonlinearities and interactions. In this project, boosting is particularly effective for modeling yield rates because
       of its ability to incorporate complex relationships between tuition, admissions patterns, institutional characteristics, and geographic variation.
       </p>
+      
+      <h4> Looking at Strong Predictos </h4>
 
      <div style='text-align: center; margin: 20px 0;'>
          <img src='Images/PredictorsRF.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
            <p style='color: #666; font-style: italic; margin-top: 5px;'>Random Forest Predictors</p>
           </div>
+          
+     <p>First we see that <code>Number admitted</code> and <code>Total enrolled</code> are the most important predictors in determining yield rate. This makes sense given that,&nbsp;</p>
+<p>$$\\text{yield rate} = \\frac{\\text{number students enrolled}}{\\text{number students admitted}}$$</p>
+<p>so they both give us direct information about the yield rate.</p>
+<p><code>Number applied</code>, and <code>Admission rate</code> tell us a similar stories. Elite institutions, (like the Ivy League schools for example), are highly selective, i.e. they will have many applications, and low admission rates. 
+Students accepted to these kinds of schools are likely to enroll because of their prestige, leading to high yield rates. 
+However, there are also likely instances of big state schools having a large number of applicants, but a lower yield which may be why <code>Admission rate</code> is not as strong a predictor as say, <code>Full-time tuition</code>.</p>
+<p>The next most important feature is <code>Full-time tuition</code>. Expense plays a huge part in students&apos; choice of college and so it makes sense that the price tag would be an important predictor of yield.&nbsp;</p>
+<p><code>Basketball Conference Member</code> is likely a good predictor because it increases institutions visibility, as well as perceptions of student experience. These factors make universities with active sports programs more desirable to applicants,
+and thus makes them more likely to enroll leading to higher yield rates. Small and under-resourced institutions are much less likely to have official basketball teams (among other sports), 
+and so this variable also helps differentiate between institution types.</p>
+<p><code>Fees</code> and <code>Net price</code> are also both important features, for the same reason <code>Full-time tuition</code> is.</p>
+<p>What about <code>fips 72</code>? Federal Information Processing System (FIPS) codes are numbers which uniquely identify geographic areas. The FIPS codes in this dataset correspond to states, so which state has code 72? It&apos;s actually Puerto Rico. 
+Puerto Rico&rsquo;s inclusion as a distinct predictor is because of its unique tuition structures, student mobility patterns, and institutional characteristics within IPEDS.
+These factors allow the model to treat Puerto Rican institutions as an isolated enrollment ecosystem, which is why they have such strong predictive power relative to the other states.</p>
+<p>The states with the next highest predictive power on yield rate are New York (<code>fips 36</code>) and California (<code>fips 6</code>).</p>    
+          
+          
+          
+          
+          
+          
 
       <hr>
 
@@ -215,36 +240,54 @@ tabPanel(
 
       <p>The primary goal of K-Means clustering is to segment universities into distinct, homogeneous groups (clusters) based on the input variables. </p>
 
+    
       <h5 style='margin-top: 20px;'>Finding Optimal K: The Elbow Method</h5>
-      <p>We defined the optimal number of groups (k=5) by observing the 'Total Within-Cluster Sum of Squares' (WSS) using the Elbow Method. The WSS measures the compactness of the clustering; lower WSS means data points are closer to their cluster center. We analyzed the WSS curve over a number of cluster counts (k=1 to k=15). The 'elbow' point, where the marginal reduction in WSS
+      <p>We defined the optimal number of groups (k=5) by observing the 'Total Within-Cluster Sum of Squares' (WSS) using the Elbow Method. The WSS measures the compactness of the clustering; lower WSS means data points are closer to their cluster center. We analysed the WSS curve over a number of cluster counts (k=1 to k=15). The 'elbow' point, where the marginal reduction in WSS
       sharply decreases, suggested that <em>k=5</em> provided the best trade-off between maximising inter-cluster distance and minimising intra-cluster variance.</p>
 
         <div style='text-align: center; margin: 20px 0;'>
          <img src='Images/elbow.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
            <p style='color: #666; font-style: italic; margin-top: 5px;'>Total Within-Cluster Sum of Squares</p>
           </div>
-
-        <div style='text-align: center; margin: 20px 0;'>
-         <img src='Images/clusterdrivers.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
-           <p style='color: #666; font-style: italic; margin-top: 5px;'>Cluster Drivers</p>
-          </div>
-
-
-      <h5 style='margin-top: 20px;'>Cluster Characterisation (Random Forest)</h5>
-      <p>To understand the features that most strongly drive the separation between clusters, we employed a secondary Supervised Learning technique: Random Forest Classification.
-      Instead of predicting yield, this RF model was trained to predict the cluster assignment generated by our K-Means clustering.</p>
-      <p>The resulting Variable Importance Plot (displayed in the 'Cluster Characterisation' tab) ranks the features by their ability to accurately predict cluster membership.
-      This helps us understand, for example, whether financial metrics like Endowment are truly better discriminators between Cluster 1 and Cluster 5 than Admission Rate.</p>
-
-      <h5 style='margin-top: 20px;'>Peer Distance Calculation</h5>
-      <p>The 'Closest Peer' and 'Closest Outsider' metrics available in the sidebar are derived from the <b>Euclidean Distance</b> between schools in the normalised, multi-dimensional feature space seen by K-Means.
-      They help provide a quantitative assessment of similarity:</p>
+        
+        
+      <h5 style='margin-top: 20px;'>Running K-means</h5>
+      <p> After running K-means clustering, we decided to present the output to the viewer in the form of an interactive visualisation. This visualisation displays the distribution
+      of schools in different clusters (encoded via colour) on a map of the United States. This plot is completely interactive, allowing the user to: </p> 
+      <ul style='list-style-type: none; padding-left: 0;'>
+        <li> Select which cluster groups they want to see on the map (the ability to filter through these).</li>
+        <li> An interactive tooltip upon hovering, displaying the school's admission rate and its tuition.</li>
+        <li> The ability to zoom and pan in order to properly analyse schools that may overdraw on top of each other (if they are in similar geographic locations, as is the case of the 5Cs).</li>
+        <li> Query a specific school. The user can search a school - it's dot will become larger and highlight (regardless of whether its cluster is selected). For said school, multiple details 
+        will be displayed, including common 'Stats', its 'Closest Peer within the Cluster', 'Furthest Peer within the Cluster', and its 'Closest Outsider'. 
+      </ul>
+      
+      <h5> What do we mean by 'Closest Peer within the Cluster', 'Furthest Peer within the Cluster', and 'Closest Outsider'?</h5>
+      
+      <p>The 'Closest Peer', 'Furthest Peer' and 'Closest Outsider' metrics available in the sidebar are derived from the <b>Euclidean Distance</b> between schools in the normalised, multi-dimensional feature space seen by the K-Means
+      algorithm.
+      They help contextualise the school within their own cluster and others:</p>
       <p>
       </p>
       <ul style='list-style-type: none; padding-left: 0;'>
         <li><b>Closest Peer:</b> The school in the same cluster that is mathematically most similar (shortest Euclidean distance).</li>
+        <li><b>Closest Peer:</b> The school in the same cluster that is mathematically most dissimilar (shortest Euclidean distance).</li>
         <li><b>Closest Outsider:</b> The school in any other cluster that is mathematically most similar (shortest Euclidean distance across cluster boundaries).</li>
       </ul>
+        
+      <h5 style='margin-top: 20px;'>Cluster Characterisation (Random Forest)</h5>
+      <p>To understand the features that most strongly drive the separation between clusters, we employed a secondary Supervised Learning technique: Random Forest Classification.
+      Instead of predicting yield, this RF model was trained to predict the cluster assignment generated by our K-Means clustering.</p>
+      <p>The resulting Variable Importance Plot (displayed below) ranks the features by their ability to accurately predict cluster membership for the five clusters we extracted 
+      from the k-means clustering. Our clustering characterisation tab, runs a RF model for pairwise clusters, helping the user understand the best 5 discriminators between
+      any two groups. The user can select any two schools and look at the discriminators between their corresponding groups. The outputs (and plots) returned by this model are supplemented, 
+      with the actual (non-normalised) values for these categories, helping the user identify the true differences (and magnitudes of these) that might explain why two schools are not classified
+      together. </p>
+      
+            <div style='text-align: center; margin: 20px 0;'>
+         <img src='Images/clusterdrivers.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
+           <p style='color: #666; font-style: italic; margin-top: 5px;'>Cluster Drivers</p>
+          </div>
 
       <hr>
 
