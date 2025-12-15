@@ -8,8 +8,8 @@ resources:
 
 <div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
 
-<a href="GolfGPRDocuments/On_Par_GPR_Leveraged_for_Perfect_Golf.pdf" class="btn btn-primary" target="_blank">
-  {{< fa solid file >}} Full Report
+<a href="GolfGPRDocuments/USRESP_Contest_FinalFD.pdf" class="btn btn-primary" target="_blank">
+  {{< fa solid file >}} Full Paper
 </a>
 &nbsp;&nbsp;
 <a href="GolfGPRDocuments/GPRPoster.pdf" class="btn btn-primary" target="_blank">
