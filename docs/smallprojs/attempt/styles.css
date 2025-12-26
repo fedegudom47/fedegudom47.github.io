@@ -1,0 +1,82 @@
+#scrolly-container {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+#chart-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+#steps {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.step {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.step.is-active {
+  opacity: 1;
+}
+
+.step-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  pointer-events: auto;
+}
+
+.step-content h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.step-content p {
+  font-family: 'Merriweather', serif;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Ensure proper spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.quarto-title-block {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #2c3e50;
+  margin-top: 2rem;
+}
+
+/* Main content area before scrolly */
+#quarto-content > * {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+}

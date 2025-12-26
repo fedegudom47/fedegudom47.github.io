@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>roundabouts – Fede’s Hub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../media/fdl-high-resolution-logo-transparent.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9ac0fa60fcd2ae55f2ddd9f231fc218f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-163f9b87b804ffe89a065d4b42dee7d2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../../site_libs/r2d3-render-0.1.0/r2d3-render.js"></script>
+<script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+<script src="../../site_libs/r2d3-binding-0.2.6/r2d3.js"></script>
+<script src="../../site_libs/d3v4-4.13.0/d3.min.js"></script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../media/fdl-high-resolution-logo-transparent.png" alt="FDL logo" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Fede on Par</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../../academicprojects/GPR4GOLF/gpr4golf.html">
+ <span class="dropdown-text">2025 GPR 4 Golf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academicprojects/TIMECOURSE/timeCourse.html">
+ <span class="dropdown-text">2024 Validating Sicegar</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academicprojects/MATH154/University-Analytics-Web.html">
+ <span class="dropdown-text">University Analytics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academicprojects/FINALS/finals.html">
+ <span class="dropdown-text">Small Coursework</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../smallprojs/index.html"> 
+<span class="menu-text">TidyTuesday &amp; Visuals</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resumes/FedericaDomecq2025Sep.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">roundabouts</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.3.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>qatarcars <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-12-09/qatarcars.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 105 Columns: 15
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (5): origin, make, model, type, enginetype
+dbl (10): length, width, height, seating, trunk, economy, horsepower, price,...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>qatarcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 105 × 15
+   origin  make     model   length width height seating trunk economy horsepower
+   &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;
+ 1 Germany BMW      3 Seri…   4.71  1.83   1.44       5    59     7.6        386
+ 2 Germany BMW      X1        4.50  1.84   1.64       5   505     6.6        313
+ 3 Germany Audi     RS Q8     5.01  1.69   2.00       5   605    12.1        600
+ 4 Germany Audi     RS3       4.54  1.85   1.41       5   321     8.7        400
+ 5 Germany Audi     A3        4.46  1.96   1.42       5   425     6.5        180
+ 6 Germany Mercedes Maybach   5.47  1.92   1.51       4   500    13.3        612
+ 7 Germany Mercedes G-Wagon   4.61  1.98   1.97       5   480    13.1        585
+ 8 Germany Mercedes EQS       5.22  1.93   1.51       5   610    NA          333
+ 9 Germany Mercedes GLA       4.41  1.83   1.61       5   435     5.6        163
+10 Germany Mercedes GLB 200   4.63  4.63   1.66       5   565     7.5        221
+# ℹ 95 more rows
+# ℹ 5 more variables: price &lt;dbl&gt;, mass &lt;dbl&gt;, performance &lt;dbl&gt;, type &lt;chr&gt;,
+#   enginetype &lt;chr&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(r2d3)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">r2d3</span>(<span class="at">data =</span> qatarcars,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">script =</span> <span class="st">"bubbles_cars.js"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">d3_version =</span> <span class="dv">4</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>     )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="r2d3 html-widget html-fill-item" id="htmlwidget-2bbdb8c840142cf71e30" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2bbdb8c840142cf71e30">{"x":{"data":{"origin":["Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Italy","Italy","Italy","Italy","Italy","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","PR China","PR China","PR China","PR China","PR China","PR China","PR China","PR China","PR China","PR China","South Korea","South Korea","South Korea","South Korea","South Korea","South Korea","South Korea","Sweden","Sweden","Sweden","UK","UK","UK","UK","UK","UK","UK","UK","UK","UK","UK","USA","USA","USA","USA","USA","USA","USA","USA","USA","PR China","PR China","PR China","PR China","PR China","PR China","South Korea","Japan","Germany","Germany","Germany","Japan","South Korea","PR China","Japan","South Korea","PR China"],"make":["BMW","BMW","Audi","Audi","Audi","Mercedes","Mercedes","Mercedes","Mercedes","Mercedes","Porsche","Porsche","Porsche","Volkswagen","Volkswagen","Volkswagen","Volkswagen","Bugatti","Bugatti","Maserati","Maserati","Maserati","Toyota","Toyota","Toyota","Toyota","Toyota","Toyota","Honda","Honda","Honda","Lexus","Lexus","Lexus","Lexus","Mazda","Mazda","Mazda","Mazda","Mitsubishi","Mitsubishi","Mitsubishi","Nissan","Nissan","Nissan","Toyota","Toyota","Toyota","Chery","Chery","Geely","Geely","Geely","Jetour","Jetour","MG","MG","MG","Hyundai","Hyundai","Hyundai","Kia","Kia","Kia","Kia","Volvo","Volvo","Volvo","Bentley","Bentley","Bentley","Jaguar","Land Rover","Land Rover","Land Rover","Lotus","McLaren","McLaren","McLaren","Cadillac","Cadillac","Ford","Cadillac","Ford","Ford","Tesla","Tesla","Tesla","BYD","BYD","Jetour","Chery","Bestune","MG","Kia","Toyota","BMW","BMW","BMW","Subaru","Kia","Bestune","Mitsubishi","Hyundai","MG"],"model":["3 Series Sedan","X1","RS Q8","RS3","A3","Maybach","G-Wagon","EQS","GLA","GLB 200","991 Carrera S","Cayenne","Macan Standard","Touareg","Golf","Tiguan","T-Roc","Chiron","Centodieci","Quattroporte","Ghibli","Grecale","Yaris","Raize","RAV4 Adventure","Rav4 Hybrid","Fortuner","Supra","Civic Type R","CR-V","City","RC F","LC 500","UX 200","LX","MX-5","CX-5","3","CX-3","Montero","Xpander","Attrage","Nissan Patrol","Nissan Patrol Safari","Sunny","Land Cruiser","Camry","Corolla","Tiggo 8 Pro Max","Arrizo 8","Lynk & Co 08 EM-P","Monjaro","Emgrand","X90 Plus","X70 Plus","RX8","MG One","MG 5","Ioniq 5","Tuscon","Accent","EV9","K8","K5","Pegas","XC90","Volvo XC60","XC40","Flying Spur","Continental GT","Bentyaga","I-Pace","Defender","Range Rover","Range Rover Evoque","Evija","Senna","720S","Artura","XT5","CT4","Bronco Raptor","Escalade","Explorer","Figo","Model X","Model Y","Model 3","Seal","Atto 3","T2","Arrizo 5","B70","ZS","Telluride","Crown","X3","8 Series Gran Coupe","2 Series Coupe","BRZ 2025","Picanto","Oley","Mirage","Grand i10","MG3 Luxury"],"length":[4.713,4.505,5.012,4.542,4.456,5.469,4.613,5.216,4.41,4.633,4.51,4.92,4.681,4.8,4.287,4.486,4.24,4.544,4.544,5.262,4.971,4.846,4.425,4.03,4.61,4.6,4.795,4.379,4.594,4.586,4.553,4.695,4.759,4.495,5.1,3.914,4.55,4.66,4.275,4.785,4.475,4.245,5.35,5.08,4.496,4.99,4.91,4.63,4.722,4.78,4.82,4.77,4.635,4.858,4.749,4.923,4.679,4.601,4.635,4.63,4.44,5.009,5.015,4.905,4.3,4.953,4.688,4.425,5.316,4.806,5.305,4.682,5.02,4.8,4.371,4.459,4.744,4.543,4.539,4.813,4.75,4.85,5.382,5.04,3.8,5.057,4.751,4.72,4.8,4.455,4.785,4.572,4.8,4.314,5.001,4.98,4.708,5.082,4.432,4.265,3.595,4.555,3.78,3.665,4.055],"width":[1.827,1.845,1.694,1.851,1.96,1.921,1.984,1.926,1.834,4.633,1.852,1.98,1.92,1.9,1.789,1.839,1.819,2.037,2.047,1.948,1.945,1.948,1.74,1.71,1.865,1.855,1.855,1.854,1.89,1.855,1.748,2.069,1.92,1.84,1.9,1.735,1.84,1.795,1.765,1.815,1.75,1.67,2.03,1.94,1.74,1.98,1.84,1.78,1.86,1.843,1.915,1.895,1.785,1.925,1.9,1.81,1.866,1.818,1.89,1.865,1.729,1.979,1.875,1.86,1.7,2.14,1.902,1.91,2.013,2.227,2.01,2.011,2.01,2.03,1.996,2,2.153,2.059,1.976,1.905,1.814,2.18,2.06,2.1,1.68,2.271,1.921,1.85,1.875,1.875,2.006,1.825,1.82,1.809,2.009,1.84,1.891,1.932,1.984,1.775,1.595,1.66,1.665,1.66,1.729],"height":[1.44,1.642,1.998,1.412,1.416,1.51,1.969,1.512,1.611,1.659,1.3,1.7,1.62,1.7,1.478,1.632,1.573,1.212,1.2,1.481,1.461,1.67,1.48,1.635,1.69,1.685,1.835,1.292,1.407,1.678,1.467,1.395,1.346,1.52,1.895,1.235,1.675,1.44,1.535,1.8,1.695,1.515,1.955,1.855,1.455,1.92,1.45,1.435,1.705,1.469,1.685,1.689,1.46,1.78,1.72,1.93,1.617,1.489,1.605,1.665,1.475,1.75,1.455,1.445,1.46,1.776,1.658,1.652,1.483,1.403,1.739,1.565,1.97,1.67,1.649,1.122,1.195,1.196,1.193,1.676,1.422,1.98,1.948,1.78,1.43,1.684,1.624,1.443,1.46,1.615,1.88,1.482,1.472,1.624,1.801,1.54,1.676,1.407,1.418,1.31,1.495,1.465,1.5,1.5,1.504],"seating":[5,5,5,5,5,4,5,5,5,5,4,5,5,5,5,5,5,2,2,5,5,5,5,5,5,5,7,2,5,5,5,4,4,7,7,2,5,5,5,7,7,5,7,7,5,5,5,5,7,5,5,5,5,7,5,7,5,5,5,5,5,7,5,5,5,7,5,5,5,5,7,5,5,5,5,2,2,2,2,5,5,5,8,7,5,5,5,5,5,5,5,5,5,5,7,5,5,4,4,4,5,4,5,5,5],"trunk":[59,505,605,321,425,500,480,610,435,565,132,627,488,300,245,810,445,45,0,530,500,535,286,369,1085,1085,348,290,609,587,506,66,197,371,174,127,824,450,264,131,781,450,550,135,482,1150,428,368,117,455,1200,355,500,510,57,343,336,512,527,539,387,572,510,510,475,71,71,54,351,235,484,656,786,875,472,0,0,0,0,849,303,946,722,595,284,1233,480,542,400,440,580,430,522,448,601,450,550,440,390,178,255,300,235,252,293],"economy":[7.6,6.6,12.1,8.699999999999999,6.5,13.3,13.1,null,5.6,7.5,11.2,11,19,9.5,6.5,6.7,7.3,22.3,22.5,9.1,8.9,8.699999999999999,5.1,5,7.3,4.1,12.4,7.2,9.800000000000001,6.4,7.5,11.5,12.3,5.8,14.2,8.1,6.8,5.5,6.3,7.7,6.7,4.8,11.8,16.7,5.1,10.7,5,6.9,6.7,6.5,1.2,8.4,6.5,8.300000000000001,7.6,9.199999999999999,10.2,8.1,null,8.699999999999999,6.5,null,9.4,6.2,6.1,7.1,7.1,7.7,10.9,10.9,11.4,null,12.8,9.4,7.4,null,12.4,10.7,4.6,10,10.6,15.7,14,10,5.5,null,null,null,null,null,11,7,7.6,5.8,7.8,5.5,7.3,7.2,5.9,9.5,6,6.7,4.8,5.3,6.7],"horsepower":[386,313,600,400,180,612,585,333,163,221,473,453,252,250,245,150,150,1578,1600,350,330,300,97,87,203,219,164,382,315,184,118,471,471,169,509,181,152,153,148,181,105,76,316,280,118,326,181,121,254,250,380,235,102,197,154,220,181,112,302,156,130,215,300,150,95,249,250,197,521,521,542,395,517,376,200,1973,800,710,671,237,240,418,420,290,84,670,342,460,204,201,254,114,145,112,291,345,248,340,252,237,84,101,77,86,109],"price":[164257,264000,630000,310000,165000,1281000,1011500,564500,209500,168997,530000,371500,137000,199000,139000,99900,88900,13103960,33000000,458000,362500,289000,57300,57700,130900,117700,124000,220000,189999,119999,61999,320000,395000,137000,475000,140000,105000,81500,72500,117000,65000,45000,222500,164500,58500,228700,103300,73700,112200,91000,165000,118000,49400,99000,76000,103000,73000,46000,190900,90900,58900,345000,123000,96000,47000,245000,190000,160000,1300000,1150000,990000,355200,232500,204800,221800,8010200,5000000,1120000,945700,174400,141300,359000,341900,159000,37400,318490,188490,158490,164000,148500,129000,53000,59000,59000,205000,173000,305000,435000,224500,125000,58000,35000,44000,46900,57000],"mass":[1653,1701,2490,1565,1325,2376,2588,2495,1565,1656,1495,2160,2580,2164,1446,1703,1516,1996,1976,1920,1940,1895,1135,1680,1583,1674,2620,1410,1446,1575,1178,1770,1970,1622,2660,1099,1492,1427,1294,2045,1255,945,2746,2610,1029,2438,1565,1388,1541,1428,2038,1760,1195,1653,1582,1980,1515,1318,2205,1555,1215,2649,1640,1465,1060,2315,2121,1751,2646,2459,2645,2133,2601,2309,1785,1887,1198,1283,1395,1872,1552,2040,2634,1952,1056,2330,1909,1765,2185,1680,1880,1265,1440,1258,2033,1965,2055,2090,1765,1285,976,1150,1050,1840,1308],"performance":[4.3,5.4,3.6,3.8,6.7,4.1,4.3,5.6,6.8,9,3.3,4.4,4.5,8,4.8,7.5,8,2.4,2.4,5.5,5.7,5.6,11,12,8.199999999999999,7.5,12,4.1,5.4,7.5,10.9,4.5,4.4,4.4,5.8,6.5,9.4,8.5,9,9.699999999999999,12.5,14,6.5,9.9,10.5,6.7,7.2,8.199999999999999,7.3,8.9,4,8,6.9,8.5,8,9,8.800000000000001,7.7,4.5,9.5,11.1,8.199999999999999,7,7.4,12,5.3,4.8,6.4,3.5,3.3,4.5,4.8,7.5,7.5,8.5,2.9,2.8,2.9,3,8.300000000000001,6.4,5.5,7,5.9,9.5,6.9,6.9,3.1,3.8,7.3,6,11.5,9,10.9,6.8,5.9,6.3,5.2,5.6,6.3,13.7,12.1,13.9,14.5,10.8],"type":["Sedan","SUV","SUV","Sedan","Sedan","Sedan","SUV","SUV","SUV","SUV","Coupe","SUV","SUV","SUV","Hatchback","SUV","SUV","Coupe","Coupe","Sedan","Sedan","SUV","Sedan","SUV","SUV","SUV","SUV","Coupe","Hatchback","SUV","Sedan","Coupe","Coupe","SUV","SUV","Sedan","SUV","Sedan","SUV","SUV","SUV","Sedan","SUV","SUV","Sedan","SUV","Sedan","Sedan","SUV","Sedan","SUV","SUV","Sedan","SUV","SUV","SUV","SUV","Sedan","SUV","SUV","Sedan","SUV","Sedan","Sedan","Sedan","SUV","SUV","SUV","Sedan","Coupe","SUV","SUV","SUV","SUV","SUV","Coupe","Coupe","Coupe","Coupe","SUV","Sedan","SUV","SUV","SUV","Hatchback","SUV","SUV","Sedan","Sedan","SUV","SUV","Sedan","Sedan","SUV","SUV","Sedan","SUV","Coupe","Coupe","Coupe","Hatchback","Hatchback","Hatchback","Hatchback","Hatchback"],"enginetype":["Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Electric","Petrol","Hybrid","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Hybrid","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Hybrid","Hybrid","Hybrid","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Electric","Petrol","Petrol","Electric","Hybrid","Petrol","Petrol","Hybrid","Hybrid","Hybrid","Hybrid","Hybrid","Petrol","Electric","Hybrid","Petrol","Petrol","Electric","Petrol","Petrol","Hybrid","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Electric","Electric","Electric","Electric","Electric","Petrol","Petrol","Petrol","Petrol","Petrol","Hybrid","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol","Petrol"]},"type":"data.frame","container":"svg","options":null,"script":"var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\nthis.d3 = d3;\n\nsvg = d3.select(svg.node());\n/* R2D3 Source File:  bubbles_cars.js */\n// bubble_grid.js\n\nsvg.selectAll(\"*\").remove();\nd3.select(\"body\").selectAll(\".d3-tooltip\").remove();\n\nvar width = width; \nvar height = height; \nvar numCols = 5; \nvar rowHeight = 160;\n\nvar tooltip = d3.select(\"body\").append(\"div\")\n    .attr(\"class\", \"d3-tooltip\")\n    .style(\"position\", \"absolute\")\n    .style(\"background\", \"white\")\n    .style(\"padding\", \"8px\")\n    .style(\"border\", \"1px solid #000\")\n    .style(\"border-radius\", \"5px\")\n    .style(\"pointer-events\", \"none\") \n    .style(\"opacity\", 1)\n    .style(\"box-shadow\", \"2px 2px 6px rgba(84, 78, 78, 0.1)\")\n    .style(\"font-family\", \"sans-serif\")\n    .style(\"font-size\", \"12px\");\n\nvar radiusScale = d3.scaleSqrt()\n      .domain([0, d3.max(data, d => d.price)])\n      .range([3, 20]);\n\nvar colorScale = d3.scaleOrdinal(d3.schemeCategory20);\n\nvar makes = [...new Set(data.map(d => d.make))].sort();\nvar centers = {};\n\nmakes.forEach((make, i) => {\n    var col = i % numCols;\n    var row = Math.floor(i / numCols);\n    centers[make] = {\n        x: (col * (width / numCols)) + (width / numCols / 2),\n        y: (row * rowHeight) + 80 \n    };\n});\n\n// 4. Force Simulation\nvar simulation = d3.forceSimulation()\n    .nodes(data)\n    .force('x', d3.forceX().strength(0.6).x(d => centers[d.make].x))\n    .force('y', d3.forceY().strength(0.6).y(d => centers[d.make].y))\n    .force('collide', d3.forceCollide().strength(0.9).radius(d => radiusScale(d.price) + 2))\n    .force('charge', d3.forceManyBody().strength(-10));\n\n\nvar dragHandler = d3.drag()\n    .on(\"start\", function(d) {\n        if (!d3.event.active) simulation.alphaTarget(0.3).restart();\n        d.fx = d.x; \n        d.fy = d.y;\n    })\n    .on(\"drag\", function(d) {\n        d.fx = d3.event.x;\n        d.fy = d3.event.y;\n    })\n    .on(\"end\", function(d) {\n        if (!d3.event.active) simulation.alphaTarget(0);\n        d.fx = null; \n        d.fy = null;\n    });\n\nvar nodes = svg.selectAll(\"circle\")\n    .data(data)\n    .enter()\n    .append(\"circle\")\n    .attr(\"r\", d => radiusScale(d.price))\n    .attr(\"fill\", d => colorScale(d.make))\n    .attr(\"stroke\", \"#fff\")\n    .attr(\"stroke-width\", 1)\n    .attr(\"opacity\", 0.9)\n    .call(dragHandler)\n    \n    // HOVER EVENTS\n    .on(\"mouseover\", function(d) {\n        d3.select(this)\n          .style(\"opacity\", 0.5)\n          .attr(\"stroke\", \"#333\") \n          .attr(\"stroke-width\", 2);\n\n        tooltip.transition().duration(200).style(\"opacity\", 0.9);\n        tooltip.html(`\n            <strong>${d.make} ${d.model}<\/strong><br/>\n            Price: $${Math.round(d.price).toLocaleString()}<br/>\n            Type: ${d.type}<br/>\n            Origin: ${d.origin} <br/>\n            Seating: ${d.seating}<br/>\n            Engine Type: ${d.petrol}\n\n        `)\n        .style(\"left\", (d3.event.pageX + 10) + \"px\")\n        .style(\"top\", (d3.event.pageY - 28) + \"px\");\n    }) //reset\n    .on(\"mouseout\", function(d) {\n        d3.select(this)\n          .style(\"opacity\", 0.9)\n          .attr(\"stroke\", \"#fff\")\n          .attr(\"stroke-width\", 1);\n        tooltip.transition().duration(500).style(\"opacity\", 0);\n    });\n\n// labels\nvar labels = svg.selectAll(\".label-group\")\n    .data(makes)\n    .enter()\n    .append(\"g\")\n    .attr(\"transform\", d => `translate(${centers[d].x}, ${centers[d].y + 60})`);\n\nlabels.append(\"rect\")\n    .attr(\"x\", -50).attr(\"y\", -15).attr(\"width\", 100).attr(\"height\", 25)\n    .attr(\"fill\", \"#eee\").attr(\"rx\", 5);\n\nlabels.append(\"text\")\n    .text(d => d)\n    .attr(\"text-anchor\", \"middle\")\n    .attr(\"dy\", \"0.35em\")\n    .style(\"font-family\", \"sans-serif\")\n    .style(\"font-size\", \"12px\")\n    .style(\"font-weight\", \"bold\")\n    .style(\"fill\", \"#333\");\n\nsimulation.on(\"tick\", () => {\n    nodes\n        .attr(\"cx\", d => d.x)\n        .attr(\"cy\", d => d.y);\n});\n};","style":null,"version":4,"theme":{"default":{"background":"#FFFFFF","foreground":"#000000"},"runtime":null},"useShadow":true},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(qatarcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 105
+Columns: 15
+$ origin      &lt;chr&gt; "Germany", "Germany", "Germany", "Germany", "Germany", "Ge…
+$ make        &lt;chr&gt; "BMW", "BMW", "Audi", "Audi", "Audi", "Mercedes", "Mercede…
+$ model       &lt;chr&gt; "3 Series Sedan", "X1", "RS Q8", "RS3", "A3", "Maybach", "…
+$ length      &lt;dbl&gt; 4.713, 4.505, 5.012, 4.542, 4.456, 5.469, 4.613, 5.216, 4.…
+$ width       &lt;dbl&gt; 1.827, 1.845, 1.694, 1.851, 1.960, 1.921, 1.984, 1.926, 1.…
+$ height      &lt;dbl&gt; 1.440, 1.642, 1.998, 1.412, 1.416, 1.510, 1.969, 1.512, 1.…
+$ seating     &lt;dbl&gt; 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 2, 2, 5…
+$ trunk       &lt;dbl&gt; 59, 505, 605, 321, 425, 500, 480, 610, 435, 565, 132, 627,…
+$ economy     &lt;dbl&gt; 7.6, 6.6, 12.1, 8.7, 6.5, 13.3, 13.1, NA, 5.6, 7.5, 11.2, …
+$ horsepower  &lt;dbl&gt; 386, 313, 600, 400, 180, 612, 585, 333, 163, 221, 473, 453…
+$ price       &lt;dbl&gt; 164257, 264000, 630000, 310000, 165000, 1281000, 1011500, …
+$ mass        &lt;dbl&gt; 1653, 1701, 2490, 1565, 1325, 2376, 2588, 2495, 1565, 1656…
+$ performance &lt;dbl&gt; 4.3, 5.4, 3.6, 3.8, 6.7, 4.1, 4.3, 5.6, 6.8, 9.0, 3.3, 4.4…
+$ type        &lt;chr&gt; "Sedan", "SUV", "SUV", "Sedan", "Sedan", "Sedan", "SUV", "…
+$ enginetype  &lt;chr&gt; "Petrol", "Petrol", "Petrol", "Petrol", "Petrol", "Petrol"…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plot_data <span class="ot">&lt;-</span> qatarcars <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_count</span>(make) <span class="sc">|&gt;</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># SELECT ALL COLUMNS NEEDED FOR SCENES</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(make, model, price, horsepower, mass, performance, origin, type)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">r2d3</span>(<span class="at">data =</span> plot_data, <span class="at">script =</span> <span class="st">"scrolly_cars.js"</span>, <span class="at">d3_version =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="r2d3 html-widget html-fill-item" id="htmlwidget-b77b5a549a76cd633485" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b77b5a549a76cd633485">{"x":{"data":{"make":["BMW","BMW","Audi","Audi","Audi","Mercedes","Mercedes","Mercedes","Mercedes","Mercedes","Porsche","Porsche","Porsche","Volkswagen","Volkswagen","Volkswagen","Volkswagen","Bugatti","Bugatti","Maserati","Maserati","Maserati","Toyota","Toyota","Toyota","Toyota","Toyota","Toyota","Honda","Honda","Honda","Lexus","Lexus","Lexus","Lexus","Mazda","Mazda","Mazda","Mazda","Mitsubishi","Mitsubishi","Mitsubishi","Nissan","Nissan","Nissan","Toyota","Toyota","Toyota","Chery","Chery","Geely","Geely","Geely","Jetour","Jetour","MG","MG","MG","Hyundai","Hyundai","Hyundai","Kia","Kia","Kia","Kia","Volvo","Volvo","Volvo","Bentley","Bentley","Bentley","Jaguar","Land Rover","Land Rover","Land Rover","Lotus","McLaren","McLaren","McLaren","Cadillac","Cadillac","Ford","Cadillac","Ford","Ford","Tesla","Tesla","Tesla","BYD","BYD","Jetour","Chery","Bestune","MG","Kia","Toyota","BMW","BMW","BMW","Subaru","Kia","Bestune","Mitsubishi","Hyundai","MG"],"model":["3 Series Sedan","X1","RS Q8","RS3","A3","Maybach","G-Wagon","EQS","GLA","GLB 200","991 Carrera S","Cayenne","Macan Standard","Touareg","Golf","Tiguan","T-Roc","Chiron","Centodieci","Quattroporte","Ghibli","Grecale","Yaris","Raize","RAV4 Adventure","Rav4 Hybrid","Fortuner","Supra","Civic Type R","CR-V","City","RC F","LC 500","UX 200","LX","MX-5","CX-5","3","CX-3","Montero","Xpander","Attrage","Nissan Patrol","Nissan Patrol Safari","Sunny","Land Cruiser","Camry","Corolla","Tiggo 8 Pro Max","Arrizo 8","Lynk & Co 08 EM-P","Monjaro","Emgrand","X90 Plus","X70 Plus","RX8","MG One","MG 5","Ioniq 5","Tuscon","Accent","EV9","K8","K5","Pegas","XC90","Volvo XC60","XC40","Flying Spur","Continental GT","Bentyaga","I-Pace","Defender","Range Rover","Range Rover Evoque","Evija","Senna","720S","Artura","XT5","CT4","Bronco Raptor","Escalade","Explorer","Figo","Model X","Model Y","Model 3","Seal","Atto 3","T2","Arrizo 5","B70","ZS","Telluride","Crown","X3","8 Series Gran Coupe","2 Series Coupe","BRZ 2025","Picanto","Oley","Mirage","Grand i10","MG3 Luxury"],"price":[164257,264000,630000,310000,165000,1281000,1011500,564500,209500,168997,530000,371500,137000,199000,139000,99900,88900,13103960,33000000,458000,362500,289000,57300,57700,130900,117700,124000,220000,189999,119999,61999,320000,395000,137000,475000,140000,105000,81500,72500,117000,65000,45000,222500,164500,58500,228700,103300,73700,112200,91000,165000,118000,49400,99000,76000,103000,73000,46000,190900,90900,58900,345000,123000,96000,47000,245000,190000,160000,1300000,1150000,990000,355200,232500,204800,221800,8010200,5000000,1120000,945700,174400,141300,359000,341900,159000,37400,318490,188490,158490,164000,148500,129000,53000,59000,59000,205000,173000,305000,435000,224500,125000,58000,35000,44000,46900,57000],"horsepower":[386,313,600,400,180,612,585,333,163,221,473,453,252,250,245,150,150,1578,1600,350,330,300,97,87,203,219,164,382,315,184,118,471,471,169,509,181,152,153,148,181,105,76,316,280,118,326,181,121,254,250,380,235,102,197,154,220,181,112,302,156,130,215,300,150,95,249,250,197,521,521,542,395,517,376,200,1973,800,710,671,237,240,418,420,290,84,670,342,460,204,201,254,114,145,112,291,345,248,340,252,237,84,101,77,86,109],"mass":[1653,1701,2490,1565,1325,2376,2588,2495,1565,1656,1495,2160,2580,2164,1446,1703,1516,1996,1976,1920,1940,1895,1135,1680,1583,1674,2620,1410,1446,1575,1178,1770,1970,1622,2660,1099,1492,1427,1294,2045,1255,945,2746,2610,1029,2438,1565,1388,1541,1428,2038,1760,1195,1653,1582,1980,1515,1318,2205,1555,1215,2649,1640,1465,1060,2315,2121,1751,2646,2459,2645,2133,2601,2309,1785,1887,1198,1283,1395,1872,1552,2040,2634,1952,1056,2330,1909,1765,2185,1680,1880,1265,1440,1258,2033,1965,2055,2090,1765,1285,976,1150,1050,1840,1308],"performance":[4.3,5.4,3.6,3.8,6.7,4.1,4.3,5.6,6.8,9,3.3,4.4,4.5,8,4.8,7.5,8,2.4,2.4,5.5,5.7,5.6,11,12,8.199999999999999,7.5,12,4.1,5.4,7.5,10.9,4.5,4.4,4.4,5.8,6.5,9.4,8.5,9,9.699999999999999,12.5,14,6.5,9.9,10.5,6.7,7.2,8.199999999999999,7.3,8.9,4,8,6.9,8.5,8,9,8.800000000000001,7.7,4.5,9.5,11.1,8.199999999999999,7,7.4,12,5.3,4.8,6.4,3.5,3.3,4.5,4.8,7.5,7.5,8.5,2.9,2.8,2.9,3,8.300000000000001,6.4,5.5,7,5.9,9.5,6.9,6.9,3.1,3.8,7.3,6,11.5,9,10.9,6.8,5.9,6.3,5.2,5.6,6.3,13.7,12.1,13.9,14.5,10.8],"origin":["Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Germany","Italy","Italy","Italy","Italy","Italy","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","PR China","PR China","PR China","PR China","PR China","PR China","PR China","PR China","PR China","PR China","South Korea","South Korea","South Korea","South Korea","South Korea","South Korea","South Korea","Sweden","Sweden","Sweden","UK","UK","UK","UK","UK","UK","UK","UK","UK","UK","UK","USA","USA","USA","USA","USA","USA","USA","USA","USA","PR China","PR China","PR China","PR China","PR China","PR China","South Korea","Japan","Germany","Germany","Germany","Japan","South Korea","PR China","Japan","South Korea","PR China"],"type":["Sedan","SUV","SUV","Sedan","Sedan","Sedan","SUV","SUV","SUV","SUV","Coupe","SUV","SUV","SUV","Hatchback","SUV","SUV","Coupe","Coupe","Sedan","Sedan","SUV","Sedan","SUV","SUV","SUV","SUV","Coupe","Hatchback","SUV","Sedan","Coupe","Coupe","SUV","SUV","Sedan","SUV","Sedan","SUV","SUV","SUV","Sedan","SUV","SUV","Sedan","SUV","Sedan","Sedan","SUV","Sedan","SUV","SUV","Sedan","SUV","SUV","SUV","SUV","Sedan","SUV","SUV","Sedan","SUV","Sedan","Sedan","Sedan","SUV","SUV","SUV","Sedan","Coupe","SUV","SUV","SUV","SUV","SUV","Coupe","Coupe","Coupe","Coupe","SUV","Sedan","SUV","SUV","SUV","Hatchback","SUV","SUV","Sedan","Sedan","SUV","SUV","Sedan","Sedan","SUV","SUV","Sedan","SUV","Coupe","Coupe","Coupe","Hatchback","Hatchback","Hatchback","Hatchback","Hatchback"]},"type":"data.frame","container":"svg","options":null,"script":"var d3Script = function(d3, r2d3, data, svg, width, height, options, theme, console) {\nthis.d3 = d3;\n\nsvg = d3.select(svg.node());\n/* R2D3 Source File:  scrolly_cars.js */\n// grand_prix.js\n\n// --- 1. THEME: \"GRAND PRIX\" ---\n// Load \"Exo 2\" (Italic/Speed look)\nvar fontLink = document.createElement(\"link\");\nfontLink.href = \"https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,400;1,700;1,900&family=Roboto:wght@400;500&display=swap\";\nfontLink.rel = \"stylesheet\";\ndocument.head.appendChild(fontLink);\n\nsvg.selectAll(\"*\").remove();\nd3.select(\"body\").selectAll(\".d3-tooltip\").remove();\n\nvar width = width || 900;\nvar height = height || 600;\n\n// Background: \"Tarmac\" (Neutral Dark Grey, not Blue)\nsvg.append(\"rect\").attr(\"width\", width).attr(\"height\", height).attr(\"fill\", \"#1e1e1e\");\n\nvar mapLayer = svg.append(\"g\").attr(\"class\", \"map-layer\");\nvar gridLayer = svg.append(\"g\").attr(\"class\", \"grid-layer\");\nvar axisLayer = svg.append(\"g\").attr(\"class\", \"axis-layer\");\nvar bubbleLayer = svg.append(\"g\").attr(\"class\", \"bubble-layer\");\nvar uiLayer = svg.append(\"g\").attr(\"class\", \"ui-layer\");\n\n\n// --- 2. SCALES & COLORS ---\nfunction num(x) { return +x || 0; }\n\n// PALETTE: Racing Red, Silver, White, Gold, Asphalt\nvar raceColors = [\n    \"#ff2400\", // Racing Red\n    \"#ffffff\", // Pure White\n    \"#95a5a6\", // Silver\n    \"#f1c40f\", // Gold\n    \"#e74c3c\", // Soft Red\n    \"#bdc3c7\"  // Chrome\n];\nvar colorScale = d3.scaleOrdinal(raceColors);\n\nvar radiusScale = d3.scaleSqrt()\n    .domain([0, d3.max(data, d => num(d.horsepower))])\n    .range([4, 18]);\n\n\n// -- MAP COORDS --\nvar projection = d3.geoMercator()\n    .scale(width / 6.5)\n    .translate([width / 2, height / 1.6]);\nvar pathGenerator = d3.geoPath().projection(projection);\n\nvar countryCoords = {\n    \"Germany\": [10.45, 51.16], \"UK\": [-3.43, 55.37], \"Italy\": [12.56, 41.87],\n    \"USA\": [-95.71, 37.09], \"Japan\": [138.25, 36.20], \"France\": [2.21, 46.22],\n    \"Sweden\": [18.64, 60.12], \"China\": [104.19, 35.86], \"PR China\": [104.19, 35.86],\n    \"Korea\": [127.76, 35.90], \"South Korea\": [127.76, 35.90]\n};\n\n// -- GRID CALCULATIONS --\nvar numCols = 7; \nvar rowHeight = 130;\nvar makes = [...new Set(data.map(d => d.make))].sort();\nvar gridCenters = {};\n\nmakes.forEach((make, i) => {\n    var col = i % numCols;\n    var row = Math.floor(i / numCols);\n    gridCenters[make] = {\n        x: (col * (width / numCols)) + (width / numCols / 2),\n        y: (row * rowHeight) + 180,\n        w: (width / numCols) - 10,\n        h: rowHeight - 20\n    };\n});\n\n// -- AXIS SCALES --\nvar performanceScale = d3.scaleLinear()\n    .domain([d3.min(data,d=>num(d.performance)), d3.max(data,d=>num(d.performance))])\n    .range([160, height - 50]);\n\nvar massScale = d3.scaleLinear().domain([d3.min(data,d=>num(d.mass)), d3.max(data,d=>num(d.mass))]).range([60, width-60]);\nvar hpScale = d3.scaleLinear().domain([0, d3.max(data,d=>num(d.horsepower))]).range([height-60, 160]);\nvar priceLogScale = d3.scaleLog().domain([d3.min(data,d=>num(d.price))||1000, d3.max(data,d=>num(d.price))]).range([60, width-60]);\n\n\n// --- 3. UI (Speed Style) ---\n// Note the 'font-style: italic' to give the \"Running\" look\n\nvar sceneTitle = uiLayer.append(\"text\")\n    .attr(\"x\", width/2).attr(\"y\", 50).attr(\"text-anchor\", \"middle\")\n    .style(\"font-family\", \"'Exo 2', sans-serif\") \n    .style(\"font-style\", \"italic\") // <--- \"RUNNING\" TEXT\n    .style(\"font-size\", \"48px\").style(\"font-weight\", \"900\")\n    .style(\"fill\", \"#fff\")\n    .style(\"text-transform\", \"uppercase\")\n    // A slight skew to make it look even faster\n    // SVG transform doesn't work well on text anchor center without adjustment, \n    // so we rely on the italic font face mostly.\n    .style(\"text-shadow\", \"2px 2px 0px #ff2400\"); // Red Shadow\n\nvar storyText = uiLayer.append(\"text\")\n    .attr(\"x\", width/2).attr(\"y\", 85).attr(\"text-anchor\", \"middle\")\n    .style(\"font-family\", \"'Exo 2', sans-serif\").style(\"font-style\", \"italic\")\n    .style(\"font-size\", \"16px\").style(\"fill\", \"#ccc\"); // Light grey\n\nvar btnNext = uiLayer.append(\"text\")\n    .attr(\"x\", width-30).attr(\"y\", height-30).attr(\"text-anchor\", \"end\")\n    .style(\"font-family\", \"'Exo 2'\").style(\"font-style\", \"italic\")\n    .style(\"font-size\", \"20px\").style(\"font-weight\", \"bold\")\n    .style(\"fill\", \"#ff2400\").style(\"cursor\", \"pointer\")\n    .text(\"NEXT LAP >>\"); // Changed text to match theme\n\nvar tooltip = d3.select(\"body\").append(\"div\").attr(\"class\", \"d3-tooltip\")\n    .style(\"position\", \"absolute\").style(\"background\", \"white\") // Clean white tooltip\n    .style(\"border-left\", \"5px solid #ff2400\") // Racing stripe on side\n    .style(\"color\", \"#111\")\n    .style(\"padding\", \"10px\").style(\"pointer-events\", \"none\").style(\"opacity\", 0)\n    .style(\"font-family\", \"'Exo 2'\").style(\"font-style\", \"italic\")\n    .style(\"font-size\", \"12px\")\n    .style(\"box-shadow\", \"4px 4px 10px rgba(0,0,0,0.5)\");\n\n// --- 4. MAP LOAD ---\nd3.json(\"https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson\", function(error, mapData) {\n    if(!error){\n        mapLayer.selectAll(\"path\").data(mapData.features).enter().append(\"path\")\n            .attr(\"d\", pathGenerator)\n            .attr(\"fill\", \"#2c3e50\") // Asphalt Blue-Grey\n            .attr(\"stroke\", \"#34495e\").attr(\"stroke-width\", 1)\n            .style(\"opacity\", 0);\n    }\n    startSimulation();\n});\n\n// --- 5. SIMULATION ---\nvar simulation, nodes;\n\nfunction startSimulation() {\n    simulation = d3.forceSimulation()\n        .nodes(data)\n        .velocityDecay(0.5)\n        .force('charge', d3.forceManyBody().strength(-15))\n        .force('collide', d3.forceCollide().strength(1).radius(d => radiusScale(num(d.horsepower)) + 1))\n        .on(\"tick\", () => nodes.attr(\"cx\", d => d.x).attr(\"cy\", d => d.y));\n\n    nodes = bubbleLayer.selectAll(\"circle\")\n        .data(data).enter().append(\"circle\")\n        .attr(\"cx\", width/2).attr(\"cy\", height/2)\n        .attr(\"r\", d => radiusScale(num(d.horsepower)))\n        .attr(\"fill\", d => colorScale(d.make))\n        .attr(\"stroke\", \"#1e1e1e\").attr(\"stroke-width\", 1.5).attr(\"opacity\", 0.95)\n        .on(\"mouseover\", function(d) {\n            d3.select(this).attr(\"stroke\", \"#fff\").attr(\"stroke-width\", 3).style(\"opacity\", 1);\n            tooltip.transition().duration(50).style(\"opacity\", 1);\n            tooltip.html(`\n                <strong style=\"font-size:14px; text-transform:uppercase;\">${d.make}<\/strong><br/>\n                ${d.model}<br/>\n                <div style=\"margin-top:5px; color:#555;\">\n                HP: <strong>${d.horsepower}<\/strong> | \n                PRICE: <strong>$${Math.round(num(d.price)).toLocaleString()}<\/strong>\n                <\/div>\n            `).style(\"left\", (d3.event.pageX+15)+\"px\").style(\"top\", (d3.event.pageY-28)+\"px\");\n        })\n        .on(\"mouseout\", function() {\n            d3.select(this).attr(\"stroke\", \"#1e1e1e\").attr(\"stroke-width\", 1.5).style(\"opacity\", 0.95);\n            tooltip.transition().duration(200).style(\"opacity\", 0);\n        });\n\n    drawStep(0);\n}\n\n// --- 6. SCENE LOGIC ---\nfunction drawStep(step) {\n    // Reset\n    axisLayer.selectAll(\"*\").transition().duration(400).style(\"opacity\", 0).remove();\n    gridLayer.selectAll(\"*\").transition().duration(400).style(\"opacity\", 0).remove();\n    mapLayer.selectAll(\"path\").transition().duration(800).style(\"opacity\", step === 0 ? 1 : 0.05);\n    \n    simulation.alpha(1).restart(); // HARD WAKE UP\n\n    if (step === 0) {\n        // MAP\n        updateUI(\"Global Origins\", \"Import Sources\");\n        simulation\n            .force('x', d3.forceX().strength(0.25).x(d => {\n                 var c = countryCoords[d.origin];\n                 return c ? projection(c)[0] : width/2;\n            }))\n            .force('y', d3.forceY().strength(0.25).y(d => {\n                 var c = countryCoords[d.origin];\n                 return c ? projection(c)[1] : height/2;\n            }));\n    } \n    else if (step === 1) {\n        // GRID\n        updateUI(\"Showroom Grid\", \"Grouped by Manufacturer\");\n\n        makes.forEach(m => {\n            var c = gridCenters[m];\n            // Draw racing boxes\n            gridLayer.append(\"rect\")\n                .attr(\"x\", c.x - c.w/2).attr(\"y\", c.y - c.h/2)\n                .attr(\"width\", c.w).attr(\"height\", c.h)\n                .attr(\"stroke\", \"#444\").attr(\"fill\", \"rgba(255,255,255,0.05)\")\n                .style(\"opacity\", 0).transition().duration(1000).style(\"opacity\", 1);\n            \n            drawLabel(m, c.x, c.y - c.h/2 - 12, \"middle\", \"#fff\");\n        });\n\n        simulation\n            .force('x', d3.forceX().strength(0.35).x(d => gridCenters[d.make].x))\n            .force('y', d3.forceY().strength(0.35).y(d => gridCenters[d.make].y));\n    } \n    else if (step === 2) {\n        // ACCELERATION\n        updateUI(\"0-100 km/h\", \"Acceleration Performance\");\n        \n        drawAxisLine(\"y\", 150, height-50, width/2);\n        drawLabel(\"2.0s\", width/2 + 20, 160, \"start\", \"#ff2400\"); // Red for fast\n        drawLabel(\"5.0s+\", width/2 + 20, height-60, \"start\", \"#999\");\n\n        simulation\n            .force('x', d3.forceX().strength(0.08).x(width/2))\n            .force('y', d3.forceY().strength(0.25).y(d => performanceScale(num(d.performance))));\n    } \n    else if (step === 3) {\n        // MASS VS HP\n        updateUI(\"Power to Weight\", \"Mass vs Horsepower\");\n        \n        drawAxis(d3.axisBottom(massScale).ticks(5), 0, height-40);\n        drawAxis(d3.axisLeft(hpScale).ticks(5), 50, 0);\n\n        simulation\n            .force('x', d3.forceX().strength(0.2).x(d => massScale(num(d.mass))))\n            .force('y', d3.forceY().strength(0.2).y(d => hpScale(num(d.horsepower))));\n    }\n}\n\n// Helpers\nfunction updateUI(title, sub) {\n    sceneTitle.text(title);\n    storyText.text(sub);\n}\nfunction drawLabel(txt, x, y, anchor, col) {\n    axisLayer.append(\"text\").attr(\"x\", x).attr(\"y\", y).text(txt)\n        .attr(\"text-anchor\", anchor).style(\"font-family\", \"'Exo 2'\").style(\"font-style\", \"italic\")\n        .style(\"fill\", col).style(\"font-weight\", \"700\").style(\"font-size\", \"14px\")\n        .style(\"opacity\",0).transition().style(\"opacity\",1);\n}\nfunction drawAxisLine(type, start, end, fixed) {\n    axisLayer.append(\"line\")\n        .attr(\"x1\", type==='y'?fixed:start).attr(\"y1\", type==='y'?start:fixed)\n        .attr(\"x2\", type==='y'?fixed:end).attr(\"y2\", type==='y'?end:fixed)\n        .attr(\"stroke\", \"#555\").attr(\"stroke-dasharray\", \"4\");\n}\nfunction drawAxis(axis, x, y) {\n    var g = axisLayer.append(\"g\").attr(\"transform\", `translate(${x},${y})`).call(axis);\n    g.selectAll(\"text\").style(\"fill\", \"#999\").style(\"font-family\", \"'Exo 2'\");\n    g.selectAll(\"line, path\").style(\"stroke\", \"#555\");\n}\n\nvar currentStep = 0;\nsvg.on(\"click\", function() {\n    currentStep = (currentStep + 1) % 4;\n    drawStep(currentStep);\n});\n};","style":null,"version":4,"theme":{"default":{"background":"#FFFFFF","foreground":"#000000"},"runtime":null},"useShadow":true},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(qatarcars <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(price)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 105
+Columns: 15
+$ origin      &lt;chr&gt; "Italy", "Italy", "UK", "UK", "UK", "Germany", "UK", "UK",…
+$ make        &lt;chr&gt; "Bugatti", "Bugatti", "Lotus", "McLaren", "Bentley", "Merc…
+$ model       &lt;chr&gt; "Centodieci", "Chiron", "Evija", "Senna", "Flying Spur", "…
+$ length      &lt;dbl&gt; 4.544, 4.544, 4.459, 4.744, 5.316, 5.469, 4.806, 4.543, 4.…
+$ width       &lt;dbl&gt; 2.047, 2.037, 2.000, 2.153, 2.013, 1.921, 2.227, 2.059, 1.…
+$ height      &lt;dbl&gt; 1.200, 1.212, 1.122, 1.195, 1.483, 1.510, 1.403, 1.196, 1.…
+$ seating     &lt;dbl&gt; 2, 2, 2, 2, 5, 4, 5, 2, 5, 7, 2, 5, 5, 4, 7, 5, 4, 4, 5, 5…
+$ trunk       &lt;dbl&gt; 0, 45, 0, 0, 351, 500, 235, 0, 480, 484, 0, 605, 610, 132,…
+$ economy     &lt;dbl&gt; 22.5, 22.3, NA, 12.4, 10.9, 13.3, 10.9, 10.7, 13.1, 11.4, …
+$ horsepower  &lt;dbl&gt; 1600, 1578, 1973, 800, 521, 612, 521, 710, 585, 542, 671, …
+$ price       &lt;dbl&gt; 33000000, 13103960, 8010200, 5000000, 1300000, 1281000, 11…
+$ mass        &lt;dbl&gt; 1976, 1996, 1887, 1198, 2646, 2376, 2459, 1283, 2588, 2645…
+$ performance &lt;dbl&gt; 2.4, 2.4, 2.9, 2.8, 3.5, 4.1, 3.3, 2.9, 4.3, 4.5, 3.0, 3.6…
+$ type        &lt;chr&gt; "Coupe", "Coupe", "Coupe", "Coupe", "Sedan", "Sedan", "Cou…
+$ enginetype  &lt;chr&gt; "Petrol", "Petrol", "Electric", "Petrol", "Hybrid", "Petro…</code></pre>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2025, Federica Domecq</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This website is built with <i class="fa-solid fa-heart" title="a heart" aria-label="heart"></i>, and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

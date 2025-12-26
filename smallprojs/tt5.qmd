@@ -1,0 +1,85 @@
+---
+title: "Lead concentration in Flint water samples in 2015"
+author: "Federica"
+date: 11/04/2025
+date-format: "D MMM, YYYY"
+image: "media/flintwater.jpeg"
+format: 
+  html:
+     code-fold: true
+execute: 
+  warning: false
+   
+---
+
+## When Officials Cooked the Books
+
+In 2014, Flint, Michigan switched its water source to the Flint River to save money. Almost immediately, residents complained about discoloured, foul-smelling water. By 2015, independent researchers and concerned residents began testing for lead contamination. Under the federal Lead and Copper Rule, if the 90th percentile of water samples exceeds 15 parts per billion (ppb), the water system must take corrective action. When initial tests showed Flint's 90th percentile at a dangerous level well above this threshold, Michigan Department of Environmental Quality (MDEQ) officials faced a crisis: not of public health, but of accountability. Their solution? Remove the highest-reading samples from the dataset on questionable technical grounds, including dismissing a sample of 104 ppb from activist Lee-Anne Walters' home because she had requested a faucet filter weeks earlier. This wasn't just poor judgment, it was deliberate data manipulation, a textbook case of cherry-picking results to reach a predetermined conclusion. By systematically excluding the worst contamination readings, officials manufactured a false sense of safety while residents, including thousands of children, continued drinking poisoned water. What follows is the visual story of how changing the data changed the outcome.
+
+
+```{r, echo=FALSE}
+#| label: setup
+library(tidyverse)
+library(r2d3)
+
+flint_mdeq <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-11-04/flint_mdeq.csv')
+
+d3_data <- flint_mdeq |>
+  arrange(sample) |>
+  mutate(lead_bin = floor(lead / 2.5) * 2.5) |>
+  group_by(lead_bin) |>
+  mutate(
+    stack_pos = row_number(), # y position in the stack
+    is_removed = is.na(lead2) # flag for  removed step
+  ) |>
+  ungroup() |>
+  select(sample, lead, lead_bin, stack_pos, is_removed)
+
+# key stats for JS
+stats <- list(
+  q90_orig = unname(quantile(flint_mdeq$lead, 0.9, na.rm = TRUE)),
+  q90_new  = unname(quantile(flint_mdeq$lead2, 0.9, na.rm = TRUE))
+)
+```
+
+```{r, echo=FALSE}
+r2d3(
+  data = d3_data, 
+  script = "FlintWater.js", 
+  options = stats,
+  d3_version = 4
+)
+```
+This visualisation was built in D3.js.
+
+## TidyTuesday Data
+
+This dataset can be found on the [tidytuesday repo](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-11-04/readme.md).
+
+This week we are exploring lead levels in water samples collected in Flint, Michigan in 2015. 
+The data comes from a paper by [Loux and Gibson (2018)](https://onlinelibrary.wiley.com/doi/pdf/10.1111/test.12187?casa_token=av3lP7OmqS0AAAAA:QAF3yU5kGzsUkqi1VlXkMlIN8ExolHZBSkdJ3hIHnlptUES57dGVoXjE3qdwPPHtLHNRd9VvX1x8f6VN).
+
+The data this week includes samples collected by the Michigan Department of Environment (MDEQ) and data from a citizen science project coordinated by Prof Marc Edwards and colleagues at Virginia Tech. 
+Community-sourced samples were collected after concerns were raised about the MDEQ excluding samples from their data. You can read about the ["murky" story behind this data here](https://academic.oup.com/jrssig/article/14/2/16/7029247). 
+
+### About the visualisation
+This visualisation was built using `D3.js`, some debugging was done using Gemini 3 Pro.
+
+## Data Dictionary
+
+### `flint_mdeq.csv`
+
+|variable |class     |description                           |
+|:--------|:---------|:-------------------------------------|
+|sample   |double |sample number |
+|lead     |double |lead level in parts per billion (all samples) |
+|lead2    |double |lead level in parts per billion (2 samples removed) |
+|notes    |character |comment about data removal |
+
+### `flint_vt.csv`
+
+|variable |class   |description                           |
+|:--------|:-------|:-------------------------------------|
+|sample   |integer |sample number |
+|lead     |double  |lead levels in parts per billion (ppb)|
+

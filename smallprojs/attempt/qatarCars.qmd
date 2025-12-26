@@ -1,0 +1,43 @@
+---
+title: "roundabouts"
+format: html
+project:
+  resources:
+    - "*.js"
+---
+
+```{r}
+library(tidyverse)
+qatarcars <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-12-09/qatarcars.csv')
+
+qatarcars
+```
+```{r}
+library(tidyverse)
+library(r2d3)
+
+r2d3(data = qatarcars,
+     script = "bubbles_cars.js",
+     d3_version = 4
+     )
+```
+
+
+```{r}
+glimpse(qatarcars)
+```
+
+```{r}
+plot_data <- qatarcars |> 
+  add_count(make) |> 
+  # SELECT ALL COLUMNS NEEDED FOR SCENES
+  select(make, model, price, horsepower, mass, performance, origin, type)
+
+r2d3(data = plot_data, script = "scrolly_cars.js", d3_version = 4)
+```
+
+```{r}
+glimpse(qatarcars |> 
+  arrange(desc(price)))
+```
+
