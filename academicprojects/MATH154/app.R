@@ -208,7 +208,7 @@ ui <- navbarPage(
       <h4> Looking at Strong Predictors </h4>
 
      <div style='text-align: center; margin: 20px 0;'>
-         <img src='/Images/PredictorsRF.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
+         <img src='Images/PredictorsRF2.jpeg' style='max-width: 100%; height: auto; border: 1px solid #ccc;'>
            <p style='color: #666; font-style: italic; margin-top: 5px;'>Random Forest Predictors</p>
           </div>
 

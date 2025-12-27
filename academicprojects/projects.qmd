@@ -17,5 +17,8 @@ title: "Projects"
 <a href="FINALS/finals.qmd" class="btn btn-primary" target="_blank" style="max-width: 300px; white-space: normal;">
  {{< fa solid graduation-cap >}} Small Coursework <br> Projects 
 </a>
+<a href="MATH154/University-Analytics-Web.qmd" class="btn btn-primary" target="_blank" style="max-width: 300px; white-space: normal;">
+ {{< fa solid school >}} Computational Statistics <br>  Project
+</a>
 
 </div>
