@@ -4,6 +4,7 @@ author: "Federica"
 date: 11/04/2025
 date-format: "D MMM, YYYY"
 image: "media/flintwater.jpeg"
+categories: [Javascript, D3.js]
 format: 
   html:
      code-fold: true
@@ -50,7 +51,7 @@ r2d3(
   d3_version = 4
 )
 ```
-This visualisation was built in D3.js.
+This visualisation was built in D3.js. You can find the code for this visualisation in the following [repository](https://github.com/fedegudom47/fedegudom47.github.io/blob/main/smallprojs/FlintWater.js).
 
 ## TidyTuesday Data
 

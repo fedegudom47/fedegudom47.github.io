@@ -8,10 +8,11 @@ listing:
     - tt4.qmd
     - tt5.qmd
     - tt6.qmd
+    - tt7.qmd
           # list all files in this folder
   sort: "date desc"
   type: grid         # or "default" for a list
-  categories: false
+  categories: true
   date-format: "long"
 page-layout: full
 ---

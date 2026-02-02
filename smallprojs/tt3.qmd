@@ -3,6 +3,7 @@ title: "UK Met Weather Data"
 author: "Federica & Prof. Jo Hardin"
 date: 10/21/2025
 date-format: "D MMM, YYYY"
+categories: [R, ggplot]
 format: 
   html:
      code-fold: true

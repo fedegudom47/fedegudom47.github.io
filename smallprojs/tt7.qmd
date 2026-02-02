@@ -1,0 +1,229 @@
+---
+title: "Brazilian Companies"
+author: "Federica"
+date: 01/27/2026
+date-format: "D MMM, YYYY"
+categories: [R, ggplot]
+format: 
+  html:
+     code-fold: true
+execute: 
+  warning: false
+---
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(showtext)
+font_add_google("Montserrat", "montserrat")
+showtext_auto()
+```
+
+
+```{r}
+#| echo: false
+companies <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-01-27/companies.csv')
+legal_nature <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-01-27/legal_nature.csv')
+qualifications <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-01-27/qualifications.csv')
+size <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-01-27/size.csv')
+```
+
+```{r}
+#| echo: false
+quantile_data <- companies |> # removing intervenor
+  filter(owner_qualification != "Intervenor / Court-appointed Administrator") |> 
+  mutate(owner_qualification = case_match( # shortening names so that they are not cut in the plot
+    owner_qualification,
+    "Managing Partner / Partner-Administrator" ~ "Managing Partner",
+    "Beneficial Owner (individual) resident or domiciled in Brazil" ~ "Resident Owner",
+    "Administrator / Manager" ~ "Manager",
+    "Entrepreneur / Business Owner" ~ "Entrepreneur",
+    "President / Chair" ~ "President/Chair",
+    "Director / Officer" ~ "Director",
+    "Ostensible Partner (Managing partner in a silent partnership)" ~ "Silent Partner",
+    "Sole Owner of an Individual Real Estate Company" ~ "Real Estate Owner",
+    "Judicial Administrator (Court-appointed)" ~ "Court Admin",
+    "Attorney-in-fact / Legal Representative (Power of Attorney)" ~ "Legal Rep",
+    "Executor / Estate Administrator" ~ "Estate Admin",
+    .default = owner_qualification # Keeps Liquidator as is
+  )) |> 
+  # wrap text - don't stretch the plot
+  mutate(owner_qualification = stringr::str_wrap(owner_qualification, width = 12)) |> 
+  group_by(owner_qualification) |> 
+  summarise(q25 = quantile(capital_stock, p = 0.25), # computing percentiles for the plot
+            q50 = quantile(capital_stock, p = 0.5),
+            q75 = quantile(capital_stock, p = 0.75),
+            q95 = quantile(capital_stock, p = 0.95),
+            q99 = quantile(capital_stock, p = 0.99)) |> 
+  pivot_longer(cols = q25:q99, names_to = "percentile", values_to = "quantile") |> 
+  mutate(log_quantile = log10(quantile))
+```
+
+
+## Final Visualisation
+```{r}
+#| fig-width: 10
+#| fig-height: 10
+#| out-width: "100%"
+#| fig-align: "center" # trying to fill out the plot
+#| 
+library(patchwork)
+# brazil theme palette
+brazil_green <- "#009739"
+flag_palette <- c("#FFDF00", "#FFEC70", "#4DA6FF", "#002776", "#01153E")
+
+log_scale <- quantile_data |> 
+  mutate(percentile = forcats::fct_rev(percentile)) |> 
+   #factor for stacks
+  ggplot(aes(x = owner_qualification, y = log_quantile)) +
+  geom_bar(aes(fill = percentile), stat = "identity", 
+           width = 1, color = brazil_green, linewidth = 0.2) + 
+  scale_fill_manual(values = flag_palette) +
+  coord_polar() + 
+  labs(
+    title = "CAPITAL STOCK BY OWNER ROLE\nLog Scale",
+    subtitle = "Financial distribution across Brazilian legal entities",
+    caption = "Data: TidyTuesday January 2026 | Federica & Friends"
+  ) +
+  theme_void() + 
+  theme(
+    plot.background = element_rect(fill = brazil_green, colour = brazil_green),
+    panel.background = element_rect(fill = brazil_green, colour = brazil_green),
+    text = element_text(family = "montserrat", color = "#FFDF00"), # contrasting colour
+    # nice settings for titles
+    plot.title = element_text(face = "bold", size = 18, margin = margin(t = 20), hjust = 0.5),
+    plot.subtitle = element_text(size = 11, color = "white", margin = margin(b = 10), hjust = 0.5),
+    plot.caption = element_text(size = 8, margin = margin(t = 10), hjust = 0.5, face = "bold"),
+    axis.text.x = element_text(color = "white", size = 9, face = "bold"),
+    plot.margin = margin(5, 5, 5, 5), 
+    legend.position = "bottom",
+    legend.text = element_text(size = 9),
+    legend.title = element_blank(),
+    legend.background = element_rect(fill = brazil_green, colour = "NA"),
+    legend.key = element_rect(fill = brazil_green, colour = "white")
+  )
+
+nonlog_scale <- quantile_data |> 
+  mutate(percentile = forcats::fct_rev(percentile)) |>  #factor for stacks
+  ggplot(aes(x = owner_qualification, y = quantile)) +
+  geom_bar(aes(fill = percentile), stat = "identity", 
+           width = 1, color = brazil_green, linewidth = 0.2) + 
+  scale_fill_manual(values = flag_palette) +
+  coord_polar() + 
+  labs(
+    title = "CAPITAL STOCK BY OWNER ROLE\nRegular Scale",
+    subtitle = "Financial distribution across Brazilian legal entities",
+    caption = "Data: TidyTuesday January 2026 | Federica & Friends"
+  ) +
+  theme_void() + 
+  theme(
+    plot.background = element_rect(fill = brazil_green, colour = brazil_green),
+    panel.background = element_rect(fill = brazil_green, colour = brazil_green),
+    text = element_text(family = "montserrat", color = "#FFDF00"), # contrasting colour
+    # nice settings for titles
+    plot.title = element_text(face = "bold", size = 18, margin = margin(t = 20), hjust = 0.5),
+    plot.subtitle = element_text(size = 11, color = "white", margin = margin(b = 10), hjust = 0.5),
+    plot.caption = element_text(size = 8, margin = margin(t = 10), hjust = 0.5, face = "bold"),
+    axis.text.x = element_text(color = "white", size = 9, face = "bold"),
+    plot.margin = margin(5, 5, 5, 5), 
+    legend.position = "bottom",
+    legend.text = element_text(size = 9),
+    legend.title = element_blank(),
+    legend.background = element_rect(fill = brazil_green, colour = "NA"),
+    legend.key = element_rect(fill = brazil_green, colour = "white")
+  )
+
+log_scale + nonlog_scale
+```
+### Comparison of Capital Stock Scaling
+
+This dual visualisation explores the financial distribution of Brazilian companies by the role of their owners, using the national colors to segment the data into key quantiles (from the 25th to the 99th percentile). The **Log Scale** plot on the left provides a "balanced" view; by compressing the massive range of capital values, it reveals that nearly every owner role follows a similar internal hierarchy where the top 1\% (q99) holds vastly more capital than the median (q50). This view allows us to learn about the roles with lower overall capital, such as **Liquidators** or **Legal Representatives**, which would otherwise be invisible.
+
+Conversely, the **Regular Scale** plot on the right exposes the "absolute" economic reality of wealth concentration in Brazil. When viewed linearly, the logarithmic balancing effect vanishes, replaced by sharp spikes: most notably for **Directors** and **President/Chairs**. This comparison demonstrates that while the *internal* distribution of capital is skewed across all roles, the *total* volume of capital is dominated by a select few elite positions.
+
+## Wrangling and Prep Work
+The raw **CNPJ (Cadastro Nacional da Pessoa Jurídica)** dataset contains highly detailed legal terminology that requires refinement before it can be visualised or understood. I performed several key transformations to prepare the data for the comparative analysis:
+
+* I removed the category **Intervenor / Court-appointed Administrator** to focus the analysis on standard business ownership and management roles rather than temporary legal interventions.
+* I renamed long, technical legal titles into concise equivalents to prevent the text from running off the screen and ensuring the polar plot remains readable.
+* Even after shortening, some labels remained long. I applied `stringr::str_wrap` with a width of 12 characters to ensure that the labels would sit neatly around the circular axis without overlapping or forcing the plot to shrink.
+* Because capital stock in Brazil is highly skewed, a simple mean would be misleading. Instead, I computed five specific percentiles: $Q_{25}, Q_{50}, Q_{75}, Q_{95}, Q_{99}$.
+* Finally, I used `pivot_longer` to move the calculated quantiles into a long format so that we could stack the data in the plot.
+```{r}
+quantile_data <- companies |> # removing intervenor
+  filter(owner_qualification != "Intervenor / Court-appointed Administrator") |> 
+  mutate(owner_qualification = case_match( # shortening names so that they are not cut in the plot
+    owner_qualification,
+    "Managing Partner / Partner-Administrator" ~ "Managing Partner",
+    "Beneficial Owner (individual) resident or domiciled in Brazil" ~ "Resident Owner",
+    "Administrator / Manager" ~ "Manager",
+    "Entrepreneur / Business Owner" ~ "Entrepreneur",
+    "President / Chair" ~ "President/Chair",
+    "Director / Officer" ~ "Director",
+    "Ostensible Partner (Managing partner in a silent partnership)" ~ "Silent Partner",
+    "Sole Owner of an Individual Real Estate Company" ~ "Real Estate Owner",
+    "Judicial Administrator (Court-appointed)" ~ "Court Admin",
+    "Attorney-in-fact / Legal Representative (Power of Attorney)" ~ "Legal Rep",
+    "Executor / Estate Administrator" ~ "Estate Admin",
+    .default = owner_qualification # Keeps Liquidator as is
+  )) |> 
+  # wrap text - don't stretch the plot
+  mutate(owner_qualification = stringr::str_wrap(owner_qualification, width = 12)) |> 
+  group_by(owner_qualification) |> 
+  summarise(q25 = quantile(capital_stock, p = 0.25), # computing percentiles for the plot
+            q50 = quantile(capital_stock, p = 0.5),
+            q75 = quantile(capital_stock, p = 0.75),
+            q95 = quantile(capital_stock, p = 0.95),
+            q99 = quantile(capital_stock, p = 0.99)) |> 
+  pivot_longer(cols = q25:q99, names_to = "percentile", values_to = "quantile")
+```
+
+# Brazilian Companies TidyTuesday Dataset
+
+This dataset was obtained from the [TidyTuesday GitHub Repository](https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-01-27/readme.md?plain=1). This week we’re exploring  **Brazilian Companies**, curated from Brazil’s open **CNPJ (Cadastro Nacional da Pessoa Jurídica)** records published by the **Brazilian Ministry of Finance / Receita Federal** on the national open-data portal ([dados.gov.br](https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica---cnpj)).
+
+> The CNPJ open data is a large-scale public registry of Brazilian legal entities. For this dataset, the raw company records were cleaned and enriched with lookup tables (legal nature, owner qualification, and company size), then filtered to retain firms above a share-capital threshold so the analysis focuses on meaningful variation in capital stock.
+
+Questions that the TidyTuesday community suggested we investiage is:
+
+* Which **legal nature** categories concentrate the highest total and average capital stock?
+* How does **company size** relate to capital stock (and how skewed is it)?
+* Do specific **owner qualification** groups dominate high-capital companies?
+* What patterns emerge when comparing the **top capital-stock tail** across categories (legal nature, size, qualification)?
+
+Thank you to [Marcelo Silva](https://github.com/MarcleoSilva) for curating this week's dataset.
+
+## Data Dictionary
+
+### `companies.csv`
+
+| variable            | class     | description                                                                             |
+| :------------------ | :-------- | :-------------------------------------------------------------------------------------- |
+| company_id          | integer   | Company identifier (8-digit ID used as the primary key in this dataset).                |
+| company_name        | character | Company legal name (as provided in the source registry).                                |
+| legal_nature        | character | Company legal nature (e.g., “Limited Liability Business Company (LLC)”).              |
+| owner_qualification | character | Owner/partner qualification label (e.g., “Managing Partner / Partner-Administrator”). |
+| capital_stock       | numeric   | Declared share capital (**BRL**), numeric.                                        |
+| company_size        | character | Company size category (e.g.,`micro-enterprise`, `small-enterprise`, `other`).     |
+
+### `legal_nature.csv`
+
+| variable     | class     | description                                 |
+| :----------- | :-------- | :------------------------------------------ |
+| id           | integer   | Legal nature code (source registry code).   |
+| legal_nature | character | Legal nature label corresponding to `id`. |
+
+### `qualifications.csv`
+
+| variable            | class     | description                                        |
+| :------------------ | :-------- | :------------------------------------------------- |
+| id                  | integer   | Owner qualification code (source registry code).   |
+| owner_qualification | character | Owner qualification label corresponding to `id`. |
+
+### `size.csv`
+
+| variable     | class     | description                                                                                    |
+| :----------- | :-------- | :--------------------------------------------------------------------------------------------- |
+| id           | integer   | Company size code (source registry code).                                                      |
+| company_size | character | Company size label corresponding to `id` (e.g., `micro-enterprise`, `small-enterprise`). |
+

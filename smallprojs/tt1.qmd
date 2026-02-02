@@ -4,6 +4,7 @@ author: Federica & TidyTuesday Friends
 image: "media/pexels-pixabay-358042.jpg"
 date: 10/07/2025
 date-format: "D MMM, YYYY"
+categories: [R, plotly]
 format: 
   html:
      code-fold: true

@@ -3,6 +3,7 @@ title: "Sherlock Holmes Sentiment Analysis"
 author: "Federica"
 date: 11/18/2025
 date-format: "D MMM, YYYY"
+categories: [R, ggplot]
 format: 
   html:
      code-fold: true

@@ -3,6 +3,7 @@ title: "Selected British Literary Prizes (1990-2022)"
 author: "Federica & TidyTuesday Friends"
 date: 10/28/2025
 date-format: "D MMM, YYYY"
+categories: [R, ggplot]
 format: 
   html:
      code-fold: true
