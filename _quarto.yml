@@ -11,6 +11,10 @@ website:
         text: About Me
       - text: Projects
         menu: 
+          - href: academicprojects/GPR4GOLF/gpr4golf2.qmd
+            text: 2026 GPR 4 Golf
+          - href: academicprojects/SENIORTHESIS/mySeniorThesis.qmd
+            text: 2026 Senior Thesis
           - href: academicprojects/GPR4GOLF/gpr4golf.qmd
             text: 2025 GPR 4 Golf
           - href: academicprojects/TIMECOURSE/timeCourse.qmd
@@ -25,7 +29,9 @@ website:
             #text: Overview
       - href: smallprojs/index.qmd
         text: TidyTuesday & Visuals
-      - href: resumes/FedericaDomecq2025Sep.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
+      - href: randomReflections/index.qmd
+        text: For Fun
+      - href: resumes/FedericaDomecqAug2026.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
         text: CV
         target: _blank # opens link (or page) in a new browser tab
     title: Fede on Par

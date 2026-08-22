@@ -1,0 +1,26 @@
+---
+title: "On Arrow's Impossibility"
+format: html
+---
+
+::: {style="text-align: center;"}
+![with Dr Ami Radunskaya](DrRad.JPG){fig-alt="Dr Ami Radunskaya" width="60%"}
+:::
+
+Can a group of people ever aggregate their preferences into a single, fair decision? This page holds my senior thesis in Mathematics, *The Math of Moral Compromise: Beyond Arrow's Impossibility*, which traces the history of voting theory, proves Arrow's Impossibility Theorem in full, and reframes it through a topological lens using ultrafilters.
+
+<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+
+<a href="Thesis_Paper.pdf" class="btn btn-primary" target="_blank">
+  {{< fa solid file >}} Thesis Paper
+</a>
+&nbsp;&nbsp;
+<a href="Final_Thesis_Presentation.pdf" class="btn btn-primary" target="_blank">
+  {{< fa solid image >}} Presentation Slides
+</a>
+<a href="https://youtu.be/GDxtLtkCYzc" class="btn btn-primary" target="_blank">
+  {{< fa solid video >}} Thesis Talk
+</a>
+</div>
+
+Feel free to read the full paper at your own pace, skim the poster for the highlights, or watch the talk if you'd rather listen than read — no math background required to follow along.

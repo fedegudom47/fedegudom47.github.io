@@ -1,0 +1,82 @@
+---
+title: "tt9"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(rvest)
+agriculture <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-02-17/dataset.csv') |> 
+              rename(year = year_ended_june)
+```
+```{r}
+agriculture |> 
+  filter(str_detect(value_label, "(?i)^number")) |> 
+  group_by(measure) |> 
+  summarise(count_distinct = n()) |> 
+  arrange(desc(count_distinct)) |> 
+  slice_head(n =10) |> 
+  pull(measure) 
+```
+
+
+```{r}
+pop_nz <- read_html("https://commons.wikimedia.org/wiki/Data:New_Zealand_Total_Population.tab") |>
+  html_elements("table") |> 
+  html_table() |> 
+  as.data.frame() |> 
+  slice(-c(1:2)) |> 
+  mutate(year = as.numeric(x),
+         population = as.numeric(y1) * 1000000) |> 
+  select(year, population)
+```
+
+```{r}
+agric_pop <- agriculture |> 
+  left_join(pop_nz, by = join_by(year)) |> 
+   filter(measure %in% c("Total Lambs Marked and/or Tailed", "Total Sheep"                            
+, "Breeding Ewes 2 Tooth and Over put to Ram"        
+, "Number of Farm Holdings"                          
+, "Rising 1 Year Old Dairy Heifers and Heifer Calves"
+, "Beef Cows and Heifers, Bred from"                 
+, "Total Beef Cattle"                                
+, "Total Dairy Cattle (including Bobby Calves)"      
+, "Total Pigs"                                       
+, "Dairy Cows and Heifers, in Milk or Calf"))
+```
+
+
+```{r}
+agric_pop |> 
+  ggplot( ) + 
+  geom_line(aes(x = year, y = value, color = measure)) + 
+  geom_line(aes(x = year, y = population))
+```
+
+
+
+
+# Agricultural Production Statistics in New Zealand
+
+This week we are exploring [agriculture production statistics in New Zealand](https://figure.nz/table/TSQ8lkuKnyzfERF3) using data compiled from [StatsNZ](https://datainfoplus.stats.govt.nz/item/nz.govt.stats/eb7208cf-2f0f-416a-bd77-2fdbb9043255?_ga=2.264735308.2106648024.1715287902-1399521469.1678132138). 
+
+Sheep have long outnumbered people in New Zealand, but the [ratio of sheep to people peaked in the 1980s and has been in steady decline](https://www.rnz.co.nz/news/country/560252/gap-between-people-and-sheep-rapidly-closing)
+
+> The gap between people and sheep in New Zealand is rapidly closing. There's now about 4.5 sheep to every person in New Zealand compared to a peak of 22 sheep per person in the 1980s, that's according to figures released by Stats NZ this week.
+
+- Is sheep production unique in its decline? Do other types of meat production show the same pattern?
+- Which agricultural industries have shown the most production growth?
+
+Thank you to [Jen Richmond](https://github.com/jenrichmond) for curating this week's dataset.
+
+
+## Data Dictionary
+
+### `dataset.csv`
+
+|variable        |class     |description                           |
+|:---------------|:---------|:-------------------------------------|
+|year_ended_june |integer    |Year |
+|measure         |character |Agricultural production category |
+|value           |integer    |Number of units produced |
+|value_label     |character |Unit of production |

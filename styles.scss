@@ -1,706 +1,386 @@
 /*-- scss:defaults --*/
-@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Space+Grotesk:wght@300..700&family=Fira+Code:wght@400..700&display=swap');
 
-// 🎨 Color variables
-$alabaster:  #FAF9F6;// #ebeddf;// #F0F8FF;    //
-$denim:      #275DAD;
-$persian-green:    #2F9C95;
-$pumpkin:       #FE7F2D;
-$our-pink: #E08DAC;
-$dark-green:   #4A4A4A;
-$raisin-black:   #252323;
-$alabaster-combine: #D7DBBE;
+// 🎨 Color variables - Artsy Neo-Brutalist WFU
+$wfu-gold:         #9E7E38;
+$wfu-pop-gold:     #D4AF37; // A slightly punchier gold for interactions
+$wfu-black:        #121212; 
+$wfu-ink:          #222222; // Softer black for reading
+$warm-cream:       #F8F5F0; // Tactile, artsy paper background
+$alabaster:        #FFFFFF; 
 
-// Headings and Display font
-$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$headings-font-family: "Lora", serif;
+// Backward compatibility alias 
+$denim:            $wfu-black; 
+
+// Funky & Professional Typography Stack
+$font-family-sans-serif: "Space Grotesk", sans-serif;
+$headings-font-family: "Fraunces", serif;
 $font-family-monospace: "Fira Code", monospace;
-$font-family-brand: "BBH Sans Bogle", serif;
+$font-family-brand: "Space Grotesk", sans-serif;
 
-// Body text
-$font-family-base: "Inter", $font-family-sans-serif;
+// Map to structural variables
+$primary:          $wfu-black;
+$secondary:        $wfu-pop-gold;
+$accent:           $wfu-pop-gold;
+$background:       $warm-cream;
+$text-color:       $wfu-ink;
+$link-color:       $wfu-black;
+$link-hover-color: $wfu-pop-gold;
 
-$primary: $denim;
-$secondary: $pumpkin;
-$accent:  $pumpkin;
-$background: $alabaster;
-$text-color: $dark-green;
-$link-color: $pumpkin;
-$link-hover-color: $denim;
-$success: $persian-green;
-$warning: $our-pink;
-$danger: $pumpkin;
-$info:  $denim;
-
-
-/* Text */
-$font-family-base:      'Inter', sans-serif;
-$font-family-headings:  'Merriweather', serif;
-$font-size-base:        1rem; 
+/* Text Customizations */
+$font-family-base:      'DM Sans', sans-serif;
+$font-family-headings:  'Fraunces', serif;
+$font-size-base:        1.05rem; 
 $headings-font-weight:  700;
-$line-height-base:      1.6;
+$line-height-base:      1.7;
 
 /*-- scss:rules --*/
 
+/*-----------------------------------------
+ FUNKY & ARTSY HEADINGS
+------------------------------------------*/
 h1 { 
   font-family: $font-family-headings;
-  color: $primary;
-  padding: 0.8rem 0;
-  text-decoration: underline;
-  text-decoration-color: rgba($primary, 0.5);
-  text-decoration-style: solid;
-  text-decoration-thickness: 4px;
-  font-weight: $headings-font-weight;
-  font-size: 2.5rem;
-  line-height: 1.2;
+  color: $wfu-black;
+  font-weight: 800;
+  font-style: italic; // Adds that artsy flair immediately
+  font-size: 3.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  
+  // Custom funky underline
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    bottom: 8px;
+    left: 0;
+    background-color: $wfu-pop-gold;
+    z-index: -1;
+    transform: rotate(-1deg); // Slight tilt for the funky agency vibe
+  }
 }
 
 h2 {
   font-family: $font-family-headings;
-  color: $primary;
-  font-weight: $headings-font-weight;
-  font-size: 2rem; 
-  padding: 0.5rem 0 0.5rem 1rem;
-  margin-bottom: 0.75rem;
+  color: $wfu-black;
+  font-weight: 700;
+  font-size: 2.2rem; 
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  
+  // Brutalist sharp left border
+  border-left: 6px solid $wfu-pop-gold;
+  padding-left: 1rem;
 }
 
 h3 {
-  font-family: $font-family-headings;
-  color: $background;
-  font-weight: $headings-font-weight;
-  font-size: 1.5rem;
-  background-color: $accent;
-  padding: 0.2rem 1rem; 
-  margin-bottom: 0.5rem;
-}
+  font-family: "Space Grotesk", sans-serif; // Contrast serif with tech-sans
+  color: $wfu-black;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  
+  // Funky effect: Snappy horizontal glide on hover
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: default;
 
-h4 {
-  font-family: $font-family-headings;
-  color: $primary;
-  font-weight: $headings-font-weight;
-  font-size: 1.25rem; 
-  padding-left: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-h5, h6 {
-  font-family: $font-family-headings;
-  color: $accent;
-  font-weight: $headings-font-weight;
-  font-size: 1rem; 
-  padding-left: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-h1 code,  h3 code{
-  background: none !important;
-  border: none !important;
-  color: $background !important;
-  padding: 0 !important;
-  font-size: inherit;
-  font-family: inherit;
-  box-shadow: none !important;
+  &:hover {
+    transform: translateX(6px); 
+    color: $wfu-pop-gold; 
+  }
 }
 
 p {
   font-family: $font-family-base;
   color: $text-color;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  line-height: $line-height-base;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
+/* Funky highlight links */
 a {
   font-family: $font-family-base;
-  color: $pumpkin;
+  color: $wfu-black;
+  font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s ease;
+  box-shadow: inset 0 -4px 0 $wfu-pop-gold; // Thick bottom highlight
+  transition: all 0.2s ease-in-out;
+  position: relative;
   
-  &:hover {
-    color: $link-hover-color;
-    text-decoration: underline; 
+  // FIX: Width 0 and hidden overflow removes the "weird spacing" layout bug completely
+  &::after {
+    content: "↗";
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    transform: translate(-4px, 4px);
+    transition: width 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
   }
-}
 
-
-article ul li,
-.content ul li,
-main ul li {
-  padding-left: 0.5em; 
-}
-
-article ul li::marker,
-.content ul li::marker,
-main ul li::marker {
-  color: $denim;
-  content: "\f6e8";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  font-size: 1rem;
-}
-
-
-// Ensure table of contents has no markers
-.table-of-contents ul, 
-.table-of-contents ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-  li::marker {
-    content: none;
+  &:hover {
+    box-shadow: inset 0 -20px 0 $wfu-pop-gold; // Grows to cover text on hover
+    color: $wfu-black;
+    
+    &::after {
+      opacity: 1;
+      width: 1.1em;
+      margin-left: 4px;
+      transform: translate(0, 0);
+    }
   }
 }
 
 /*-----------------------------------------
- GLOBAL LAYOUT
+ GLOBAL LAYOUT & CODE BLOCKS
 ------------------------------------------*/
 body {
   background-color: $background;
   color: $text-color;
-  font-size: $font-size-base;
-  font-family: $font-family-base;
-  line-height: $line-height-base;
-  margin: 0;
-  padding: 0;
-}
-
-.left-align{
-  text-align: left;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  max-width: 1050px; 
 }
 
+/* Artsy Code Snippets for your Analytics */
+:not(pre) > code {
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+  font-weight: 600;
+  background: $wfu-pop-gold;
+  color: $wfu-black;
+  padding: 0.2em 0.5em; 
+  border-radius: 4px;
+  border: 1px solid $wfu-black;
+  box-shadow: 2px 2px 0px $wfu-black; // Neo-brutalist pop
+  display: inline-block;
+  
+  // FIX: Added a playful dynamic spring-tilt when hovered!
+  transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 
-.about-links a {
+  &:hover {
+    transform: translate(-3px, -3px) rotate(-1.5deg); 
+    box-shadow: 5px 5px 0px $wfu-black; 
+    background-color: $alabaster; 
+  }
+}
+
+/*-----------------------------------------
+ THE "FUNKY PROFESSIONAL" BUTTONS
+------------------------------------------*/
+.about-links a, .btn, .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem; 
   background-color: $alabaster; 
-  border: 2px solid $text-color;
-  color: $text-color !important;
-  padding: 0.75rem 1.25rem; 
-  margin: 0.3rem;
-  border-radius: 0.75rem;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 500;
-  transition: all 0.3s ease; 
+  border: 2px solid $wfu-black;
+  color: $wfu-black !important;
+  padding: 0.75rem 1.5rem; 
+  margin: 0.5rem;
+  border-radius: 50px; // Pill shape
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  box-shadow: 4px 4px 0px $wfu-black; // Hard offset shadow
+  transition: all 0.15s ease-out; 
+  
+  // Safety override: Disable link arrow injection inside buttons
+  &::after {
+    content: none !important;
+  }
   
   &:hover {
-    box-shadow: rgba(254, 127, 45, 0.4) 0px 8px, rgba(254, 127, 45, 0.3) 0px 14px;
-    transform: translateY(-2px); 
-    border-color: $pumpkin; 
+    background-color: $wfu-pop-gold;
+    transform: translate(2px, 2px) rotate(1deg); // FIX: Added a sleek kinetic click-tilt
+    box-shadow: 2px 2px 0px $wfu-black; // Shadow shrinks
   }
   
-  .bi {
-    font-size: 1.2em; // Relative sizing
+  &:active {
+    transform: translate(4px, 4px) rotate(0deg);
+    box-shadow: 0px 0px 0px $wfu-black;
   }
-}
-
-:not(pre) > code {
-  font-family: $font-family-monospace;
-  font-size: 0.9em;
-  background: rgba($denim, 0.05);
-  color: $primary;
-  border: 1px solid rgba($denim, 0.2);
-  padding: 0.2em 0.4em; 
-  border-radius: 0.25rem;
-  
-}
-
-li {
-  color: $text-color;
-  padding: 0.3rem 0;
-  margin-bottom: 0.5rem; 
-  font-size: $font-size-base;
-}
-
-
-.thead, .tbody, .code{
-  background: $background;
-}
-
-
-/*ABOUT SECTION*/
-
-.about-links a:hover {
-   box-shadow: rgba(254, 127, 45, 0.4) 0px -5px, rgba(254, 127, 45, 0.3) 0px -10px;
-}
-
-.about-links a .bi {
-  font-size: $font-size-base;
-}
-
-.link-buttons a {
-  display: inline-block;
-  color: $text-color;
-  text-decoration: underline solid $secondary 2px;
-  text-underline-offset: 3px;
-  margin: 0.05rem;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.link-buttons a:hover {
-  //transform: translateY(-2px);
-  box-shadow: rgba(254, 127, 45, 0.4) 0px -3px, rgba(254, 127, 45, 0.3) 0px -6px;
 }
 
 /*-----------------------------------------
-NAVBAR / HEADER - ENHANCED DROPDOWN
+ NAVBAR - BOLD & GEOMETRIC
 ------------------------------------------*/
-
-// Animation keyframes
-@keyframes dropdownEnter {
-  from {
-    opacity: 0;
-    transform: scaleY(0.98) translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes dropdownFade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .navbar {
-  background-color: $primary;
-  color: $alabaster;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
-  ul li::marker {
-    content: none;
-    margin: .2rem;
-    font-weight: 900;
-    font-size: 1rem;
+  background-color: $warm-cream;
+  color: $wfu-black;
+  padding: 1rem 0;
+  border-bottom: 3px solid $wfu-black; // Thick structural divider
+
+  // Protects the navbar logo from aggressive global img rules
+  img {
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    
+    &:hover {
+      transform: none !important;
+    }
   }
   
   .navbar-brand {
-    font-family: $font-family-brand;
-    font-size: 2.2em;
-    font-weight: bold;
-    text-decoration: none;
-    color: inherit;
-    padding: 0.2rem 0.2rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: $wfu-black !important;
+    
+    &::after { content: none !important; } // Safety reset
+    
+    &:hover {
+      box-shadow: none;
+      color: $wfu-pop-gold !important;
+    }
   }
   
-  .navbar-brand img {
-    height: 50px;
-    width: auto;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  
-  /* ---- MAIN NAV LINKS ---- */
   .nav-link {
-    color: $background;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.75rem;
-    position: relative;
-    margin: 0.5rem;
-    transition:
-      color 0.3s ease,
-      background-color 0.3s ease,
-      box-shadow 0.3s ease,
-      transform 0.2s ease;
-    
-    // Animated dot indicator (only for non-dropdown links)
-    &:not(.dropdown-toggle)::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      bottom: -15px;
-      left: calc(50% - 3px);
-      background: $background;
-      will-change: transform;
-      transform: scale(0);
-      transition: transform 0.2s ease;
-    }
-    
-    &:hover {
-      color: $background;
-      background-color: rgba($background, 0.1); 
-      
-      &:not(.dropdown-toggle)::after {
-        transform: scale(1);
-      }
-    }
-    
-    &:active {
-      transform: translateY(2px);
-    }
-  }
-
-  .dropdown {
-    position: relative;
-    
-    // Make dropdown toggle have smooth transitions
-    .dropdown-toggle {
-      position: relative;
-      padding-right: 2rem !important; // Extra space for arrow
-      
-      &::after {
-        position: absolute;
-        right: 0.75rem;
-        top: 50%;
-        transform: translateY(-50%);
-        vertical-align: 0;
-        margin-left: 0;
-        border-top: 0.4em solid;
-        border-right: 0.4em solid transparent;
-        border-left: 0.4em solid transparent;
-        border-top-color: $background;
-        transition: transform 0.3s ease;
-      }
-      
-      &:hover::after {
-        border-top-color: $background;
-      }
-    }
-    
-    // Rotate arrow when dropdown is open
-    &:hover > .dropdown-toggle::after {
-      transform: translateY(-50%) rotate(180deg);
-    }
-    
-    // Add a small invisible bridge between toggle and menu to prevent flicker
-    &::before {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      height: 0.5rem;
-      background: transparent;
-    }
-  }
-  
-  /* ---- DROPDOWN MENU ---- */
-  .dropdown-menu {
-    position: absolute;
-    width: 100%;
-    min-width: 200px;
-    top: calc(100% + 0.5rem);
-    left: 0;
-    background-color: $primary;
-    border: none;
-    //border-radius: 0.75rem;
-    padding: 0.1rem 0;
-    margin: 0 !important;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: scaleY(0.98) translateY(-10px);
-    transform-origin: top;
-    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-    z-index: 1000;
-    overflow: hidden;
-  }
-  
-  /* Show dropdown on hover - removed click behavior conflicts */
-  .dropdown:hover > .dropdown-menu,
-  .dropdown-menu:hover {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: none;
-  }
-  
-  /* ---- DROPDOWN ITEMS ---- */
-  .dropdown-item {
-    color: $background;
-    background-color: transparent;
-    padding: 1rem 1rem;
-    text-decoration: none;
-    display: block;
-    border-radius: 0;
-    margin: 0;
-    font-size: $font-size-base;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    transition: 
-      background-color 0.2s ease,
-      color 0.2s ease;
-    
-    // Accent bar on left side
-    
-    &:hover {
-      background-color: rgba($background, 0.15);
-      color: $background;
-      
-      &::before {
-        width: 4px;
-      }
-    }
-  }
-  
-  // Animate items when menu becomes visible
-  .dropdown:hover > .dropdown-menu .dropdown-item {
-    animation: dropdownEnter 0.2s ease forwards;
-    opacity: 0;
-    
-    // Stagger animation for each item
-    @for $i from 1 through 10 {
-      &:nth-child(#{$i}) {
-        animation-delay: 0.03s * ($i - 1);
-      }
-    }
-  }
-}
-
-/* ---- RESPONSIVE / MOBILE ---- */
-@media screen and (max-width: 768px) {
-  .navbar {
-    .dropdown-toggle {
-      padding-right: 2.5rem !important;
-      
-      &::after {
-        right: 1rem;
-      }
-    }
-    
-    .dropdown-menu {
-      position: static;
-      width: 100%;
-      margin-top: 0 !important;
-      border-radius: 0;
-      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-    
-    .dropdown-item {
-      padding: 1rem 1.5rem;
-    }
-  }
-}
-
-
-
-/*-----------------------------------------
-HERO / LANDING SECTION
-------------------------------------------*/
-.hero {
-  // 🎨 Choose your base background color
-  color: $alabaster;
-  padding: 8rem 2rem;
-  text-align: right;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 90vh;
-
-  h1 {
-    font-family: $font-family-headings;
-    font-size: 3rem;
+    font-family: "Space Grotesk", sans-serif;
+    color: $wfu-black;
     font-weight: 700;
-    color: $raisin-black;
-    text-decoration: underline;
-    text-decoration-color: $accent;
-    text-decoration-style: wavy;
-    margin-bottom: 1.5rem;
-  }
-
-  p {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    max-width: 600px;
-    color: $raisin-black;
-    margin-bottom: 2.5rem;
-    text-align: left;
-  }
-
-  .hero-btn {
-    display: inline-block;
-    padding: 0.9rem 2rem;
-    text-align: center;
-    background-color: $pumpkin;
-    color: white;
-    border-radius: 0.75rem;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
+    font-size: 1.05rem;
+    padding: 0.5rem 0.25rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: inset 0 -3px 0 transparent; // Minimal underline accent, hidden by default
+    transition: box-shadow 0.2s ease, color 0.2s ease;
+    
+    &::after { content: none !important; } // Safety reset
+    
     &:hover {
-      background-color: lighten($pumpkin, 10%);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+      background-color: transparent;
+      box-shadow: inset 0 -3px 0 $wfu-pop-gold; // Underline appears on hover
+      color: $wfu-black !important;
     }
 
-    &:active {
-      transform: translateY(0);
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    // Keeps active/selected tab or expanded dropdown marked with the same underline accent
+    &.active, &.show {
+      background-color: transparent !important;
+      box-shadow: inset 0 -3px 0 $wfu-pop-gold;
+      color: $wfu-black !important;
+      font-weight: 800;
+    }
+  }
+
+  // Simpler, squarer dropdown panel - smaller radius + grounded black shadow
+  // instead of the bouncier large-radius/gold-shadow "pill" look
+  .dropdown-menu {
+    background-color: $alabaster;
+    border: 2px solid $wfu-black;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0px $wfu-black;
+    padding: 0.4rem;
+  }
+  
+  .dropdown-item {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    color: $wfu-black;
+    border-radius: 2px;
+    box-shadow: none;
+    
+    &::after { content: none !important; } // Safety reset
+    
+    &:hover {
+      background-color: $wfu-black;
+      color: $wfu-pop-gold;
     }
   }
 }
 
 /*-----------------------------------------
- BUTTONS
-------------------------------------------*/
-
-.btn,
-.btn-primary,
-.btn-secondary {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: $background;
-  color: $text-color;
-  border-color: $dark-green;
-  border-radius: 0.75rem;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-
-  &:hover {
-    background-color: lighten($background, 10%);
-    color: $text-color;
-    transform: translateY(-3px);
-    box-shadow: rgba(254, 127, 45, 0.4) 0px -3px, rgba(254, 127, 45, 0.3) 0px -6px;
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  }
-}
-
-
-.btn-secondary {
-  background-color: darken($pumpkin, 5%);
-}
-
-
-
-
-/*-----------------------------------------
- IMAGES / MEDIA
+ IMAGES & MEDIA - ARTSY FRAMING
 ------------------------------------------*/
 img {
-  max-width: 100%;
-  height: auto; 
-  border-radius: 0.75rem;
-  object-fit: cover;
-}
-
-
-figure {
-  margin: 2rem 0;
+  border: 3px solid $wfu-black;
+  border-radius: 16px;
+  box-shadow: 8px 8px 0px $wfu-pop-gold;
+  transition: transform 0.3s ease;
   
-  figcaption {
-    text-align: center;
-    font-style: italic;
-    color: rgba($text-color, 0.8);
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+  &:hover {
+    transform: rotate(-1deg) scale(1.01);
   }
 }
-/*-----------------------------------------
-📍 13. FOOTER
-------------------------------------------*/
-footer,
-.quarto-footer,
-.footer,
-.page-footer {
-  background: $denim !important;
-  background-color: $denim !important;
-  color: $alabaster !important;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
 
-  // Force all text to be alabaster
+/*-----------------------------------------
+ TABLES - HIGH IMPACT DATA
+------------------------------------------*/
+.quarto-table table, .table, .cell-output-display table {
+  background-color: $alabaster !important; 
+  border: 3px solid $wfu-black;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0px rgba($wfu-black, 0.1);
+}
+
+.quarto-table th, .table th {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: $wfu-black;
+  color: $wfu-pop-gold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-bottom: 3px solid $wfu-black;
+}
+
+.quarto-table td, .table td {
+  border-bottom: 1px solid rgba($wfu-black, 0.1);
+  padding: 1rem;
+}
+
+// High-impact row highlighter
+.table tbody tr, .quarto-table tbody tr {
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    background-color: rgba($wfu-pop-gold, 0.12) !important; // Delicate gold fill
+    transform: scale(1.005); // Clean pop forward
+    box-shadow: 0 4px 12px rgba($wfu-black, 0.05);
+  }
+}
+
+/*-----------------------------------------
+ FOOTER
+------------------------------------------*/
+footer, .quarto-footer, .footer, .page-footer {
+  background: $wfu-black !important;
+  color: $warm-cream !important;
+  border-top: 6px solid $wfu-pop-gold;
+  padding: 4rem 1rem;
+  margin-top: 5rem;
+
   p, span, div {
-    color: $alabaster !important;
+    color: $warm-cream !important;
+    font-family: "Space Grotesk", sans-serif;
   }
 
   a {
-    color: $alabaster !important;
-    transition: opacity 0.3s ease;
-
-    &:hover { 
-      text-decoration: underline;
-      opacity: 0.8;
+    color: $wfu-pop-gold !important;
+    box-shadow: none;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    
+    &::after { content: none !important; } // Safety reset
+    
+    &:hover {
       color: $alabaster !important;
+      text-decoration-color: $alabaster;
     }
   }
-  
-  // Social links styling
-  .social-links {
-    margin-top: 1rem;
-    
-    a {
-      margin: 0 0.5rem;
-      font-size: 1.5rem;
-    }
-    
-    
-  }
-}
-
-.quarto-table table,
-.table,
-.cell-output-display table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  background-color: $background !important; 
-  color: $text-color;
-  font-family: $font-family-base;
-  font-size: 0.95rem;
-  overflow: hidden;
-}
-
-.quarto-table tbody td,
-.cell-output-display tbody td {
-  padding: 0.75rem 1.25rem;
-  vertical-align: middle;
-}
-
-/* Optional striped effect for readability */
-.quarto-table.table-striped tbody tr:nth-child(even),
-.cell-output-display.table-striped tbody tr:nth-child(even) {
-  background-color: rgba($denim, 0.03);
-}
-
-/* Optional bordered table */
-.quarto-table.table-bordered,
-.cell-output-display.table-bordered {
-  border: 1px solid rgba($denim, 0.2);
-
-  th, td {
-    border: 1px solid rgba($denim, 0.15);
-  }
-}
-
-/* Ensure caption inherits theme */
-.quarto-table caption {
-  caption-side: bottom;
-  color: rgba($text-color, 0.8);
-  font-style: italic;
-  padding-top: 0.5rem;
 }

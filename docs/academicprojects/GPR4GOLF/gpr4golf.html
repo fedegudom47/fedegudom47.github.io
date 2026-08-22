@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9ac0fa60fcd2ae55f2ddd9f231fc218f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-163f9b87b804ffe89a065d4b42dee7d2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-7fc07482418a567914517b5ec1819798.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -103,6 +103,14 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">    
         <li>
+    <a class="dropdown-item" href="../../academicprojects/GPR4GOLF/gpr4golf2.html">
+ <span class="dropdown-text">2026 GPR 4 Golf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../academicprojects/SENIORTHESIS/mySeniorThesis.html">
+ <span class="dropdown-text">2026 Senior Thesis</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../academicprojects/GPR4GOLF/gpr4golf.html">
  <span class="dropdown-text">2025 GPR 4 Golf</span></a>
   </li>  
@@ -125,7 +133,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">TidyTuesday &amp; Visuals</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resumes/FedericaDomecq2025Sep.pdf" target="_blank"> 
+    <a class="nav-link" href="../../randomReflections/index.html"> 
+<span class="menu-text">For Fun</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resumes/FedericaDomecqAug2026.pdf" target="_blank"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -171,6 +183,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="GolfGPRDocuments/pacificGrove.JPG" class="img-fluid figure-img" style="width:60.0%" alt="Player's Finish"></p>
+<figcaption>Pacific Grove, CA</figcaption>
+</figure>
+</div>
+</div>
 <div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
 <p><a href="GolfGPRDocuments/USRESP_Contest_FinalFD.pdf" class="btn btn-primary" target="_blank"> <i class="fa-solid fa-file" aria-label="file"></i> Full Paper </a> &nbsp;&nbsp; <a href="GolfGPRDocuments/GPRPoster.pdf" class="btn btn-primary" target="_blank"> <i class="fa-solid fa-image" aria-label="image"></i> Research Poster </a></p>
 </div>
@@ -180,13 +200,23 @@ ul.task-list li input[type="checkbox"] {
 <p>By digitising course layouts and overlaying shot dispersion data from LPGA TrackMan records, we constructed spatially continuous GPR models that capture how club and aimpoint choices influence scoring outcomes. The model recursively works from the green backward - first fitting a 2D GPR to expected strokes on the putting surface, then extending the framework to evaluate approaches and tee shots, using simulated distributions to identify the optimal strategy for any point on the hole.</p>
 <p>To accommodate different strategic objectives, we explored multiple loss functions: one minimizing expected strokes (for consistent performance) and another maximizing birdie odds (for high-stakes play). Together, these layers form a dynamic, player-adaptive decision system capable of evolving as new data are recorded.</p>
 <p>This project demonstrates the potential of probabilistic modeling and spatial inference in sports analytics, offering a scalable foundation for real-time decision support in golf strategy - a step toward intelligent, data-driven gameplay.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="National Winner, USRESP">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+National Winner, USRESP
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This project was named the <strong>national winner (1st Prize) at USRESP</strong> and accepted for presentation at <strong>eCOTS 2026</strong>.</p>
+</div>
+</div>
 </section>
 <section id="future-directions" class="level2">
 <h2 class="anchored" data-anchor-id="future-directions">Future Directions</h2>
-<p>I am currently in school and in the full swing of things, but I am working on finalising some drafts to publish our findings. The biggest limitation of our current framework is the lack of real shot-level data - datasets like the PGA Tour’s ShotLink system, which record every shot’s position and context, are not publicly accessible.</p>
-<p>To address this, we designed a comprehensive data simulation pipeline that mirrors tournament-level patterns with surprising realism. We digitised course geometries in QGIS, and generated two-dimensional scoring distributions by interpolating Mark Broadie’s Strokes Gained tables. We introduced heteroscedastic noise to emulate real-world uncertainty and variance in shot outcomes, allowing our Gaussian Process Regression models to behave as if they were trained on noisy, heterogeneous field data. This in itself was a huge part of the project!</p>
-<p>I am also working under the advising of <a href="https://www.pomona.edu/directory/people/vin-de-silva">Professor Vin De Silva</a> during this year looking at potential topological interpretations of this research for my senior thesis! We don’t know exactly what we’re doing, but we have some time to figure it out!</p>
-<p>Ultimately, this project represents both a proof of concept and a launchpad: a system already capable of personalized, data-driven strategy, and a framework ready to evolve into a publishable model as the data grows.</p>
+<p>This project did not end here! For more information check out <a href="../../academicprojects/GPR4GOLF/gpr4golf2.html">this page</a>.</p>
 
 
 </section>

@@ -5,6 +5,10 @@ resources:
   - GolfGPRDocuments/On_Par_GPR_Leveraged_for_Perfect_Golf.pdf
   - GolfGPRDocuments/GPRPoster.pdf
 ---
+::: {style="text-align: center;"}
+![Pacific Grove, CA](GolfGPRDocuments/pacificGrove.JPG){fig-alt="Player's Finish" width="60%"}
+:::
+
 
 <div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
 
@@ -28,14 +32,13 @@ To accommodate different strategic objectives, we explored multiple loss functio
 
 This project demonstrates the potential of probabilistic modeling and spatial inference in sports analytics, offering a scalable foundation for real-time decision support in golf strategy - a step toward intelligent, data-driven gameplay.
 
+:::{.callout-tip title="National Winner, USRESP"}
+This project was named the **national winner (1st Prize) at USRESP** and accepted for presentation at **eCOTS 2026**. 
+:::
+
 ## Future Directions
 
-I am currently in school and in the full swing of things, but I am working on finalising some drafts to publish our findings. The biggest limitation of our current framework is the lack of real shot-level data - datasets like the PGA Tour's ShotLink system, which record every shot's position and context, are not publicly accessible.
+This project did not end here! For more information check out [this page](gpr4golf2.qmd).
 
-To address this, we designed a comprehensive data simulation pipeline that mirrors tournament-level patterns with surprising realism. We digitised course geometries in QGIS, and generated two-dimensional scoring distributions by interpolating Mark Broadie’s Strokes Gained tables. We introduced heteroscedastic noise to emulate real-world uncertainty and variance in shot outcomes, allowing our Gaussian Process Regression models to behave as if they were trained on noisy, heterogeneous field data. This in itself was a huge part of the project!
-
- I am also working under the advising of [Professor Vin De Silva](https://www.pomona.edu/directory/people/vin-de-silva) during this year looking at potential topological interpretations of this research for my senior thesis! We don't know exactly what we're doing, but we have some time to figure it out!
- 
-Ultimately, this project represents both a proof of concept and a launchpad: a system already capable of personalized, data-driven strategy, and a framework ready to evolve into a publishable model as the data grows.
 
 

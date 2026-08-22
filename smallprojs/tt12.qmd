@@ -1,0 +1,89 @@
+---
+title: "tt12"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(lubridate)
+pi_digits <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-03-24/pi_digits.csv')
+```
+
+```{r}
+pi_digits |> 
+  filter(digit == 0, 
+         lead(digit) == 1,
+         lead(digit, n = 2) == 1, 
+         lead(digit, n = 3) == 1,
+         lead(digit, n = 4) == 0,
+         lead(digit, n = 5) == 3)
+```
+```{r}
+temp <-  ymd("2000-01-01") + days(0:365)
+
+str(temp)
+```
+
+```{r}
+pi_digits |> 
+  filter(digit == 1, lead(digit) == 1, lead(digit, n = 2) == 2,
+         lead(digit, n = 3) == 9, lead(digit, n = 4) == 7,
+         lead(digit, n = 5) == 3)
+
+
+library(lubridate)
+library(latex2exp)
+temp <- ymd("2000-01-01") + days(0:365) 
+
+data.frame(month = month(temp), day = day(temp)) |> 
+  mutate(month = ifelse(nchar(month) == 1, paste0("0", month), month),
+         day = ifelse(nchar(day) == 1, paste0("0",day), day),
+         bday = paste0(month, day))
+
+
+bdays <- data.frame(month = month(temp), day = day(temp), temp) |> 
+  mutate(month = ifelse(nchar(month) == 1, paste0("0", month), month),
+         day = ifelse(nchar(day) == 1, paste0("0",day), day),
+         bday = paste0(month, day))
+
+
+pi_days <- pi_digits |> 
+  mutate(vals4 = paste0(digit, lead(digit, n = 1), lead(digit, n = 2),
+                        lead(digit, n = 3)))
+
+bdays |> 
+  left_join(pi_days, by = c("bday" = "vals4"))
+
+
+join_days <- bdays |> 
+  left_join(pi_days, by = c("bday" = "vals4")) 
+
+join_days |>  
+  group_by(bday) |> 
+  summarize(num_bday = n())
+
+
+join_days |> 
+  ggplot() + 
+  geom_bar(aes(x = bday))
+
+
+join_days |> 
+  mutate(month_w = month(temp, label = TRUE)) |> 
+  ggplot() + 
+  geom_bar(aes(x = bday, fill = month_w)) + #, color = "white" ) + 
+  coord_polar() + 
+  theme_void() + 
+  scale_fill_brewer(palette = "Set3" )+
+  theme(axis.text.x = element_blank(),
+        axis.text.y = element_blank()) +
+  labs(fill = "", title = "Number of Birthdays Occurring in the first \nMillion Digits of pi") +
+  annotate("text", x = 0, y = 0, label = TeX("$\\pi$"), size = 47,
+           color = "black", alpha = 0.5)
+
+
+
+
+```
+
+

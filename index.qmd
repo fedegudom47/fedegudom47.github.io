@@ -18,7 +18,7 @@ format:
         href: https://github.com/fedegudom47
       - icon: envelope
         text: Email
-        href: mailto:fgdd2022@mymail.pomona.edu
+        href: mailto:domefg26@wfu.edu
 css:
   - styles.scss
 ---
@@ -27,7 +27,7 @@ css:
 
 Hello There! 👋
 
-I’m **Federica Domecq Lacroze**, a senior at **Pomona College**, double majoring in **Mathematics & Computer Science**. Originally from **Madrid, Spain 🇪🇸**, I moved to the U.S. to pursue new opportunities and currently live in **Claremont, California**. 
+I’m **Federica Domecq**, an M.S. in Statistics Student and Teaching Assistant at Wake Forest University. Originally from **Madrid, Spain 🇪🇸**, I moved to the U.S. to pursue my education and recently graduated from Pomona College with a double major in Mathematics & Computer Science.
 
 
 On this website you can learn a little bit [about me](about.qmd), my [research](academicprojects/projects.qmd) and some of my [data wrangling efforts](smallprojs/index.qmd)!
