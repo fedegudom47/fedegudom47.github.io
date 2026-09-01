@@ -38,7 +38,7 @@ This project was named the **national winner (1st Prize) at USRESP** and accepte
 
 ## Future Directions
 
-This project did not end here! For more information check out [this page](gpr4golf2.qmd).
+This project did not end here! For more information check out [this page](take2/gpr4golf2.qmd).
 
 
 
