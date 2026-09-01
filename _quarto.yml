@@ -11,7 +11,7 @@ website:
         text: About Me
       - text: Projects
         menu: 
-          - href: academicprojects/GPR4GOLF/gpr4golf3.qmd
+          - href: academicprojects/GPR4GOLF/take2/gpr4golf2.qmd
             text: 2026 GPR 4 Golf
           - href: academicprojects/SENIORTHESIS/mySeniorThesis.qmd
             text: 2026 Senior Thesis

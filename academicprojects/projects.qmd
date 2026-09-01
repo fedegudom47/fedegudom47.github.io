@@ -5,7 +5,10 @@ title: "Projects"
 
 
 <div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
-
+<a href="GPR4GOLF/take2/gpr4golf2.qmd" class="btn btn-primary" target="_blank" style="max-width: 300px; white-space: normal;">
+ {{< fa solid golf-ball-tee >}} Summer 2026 <br>  GPR <br> for Golf
+</a>
+&nbsp;&nbsp;
 <a href="GPR4GOLF/gpr4golf.qmd" class="btn btn-primary" target="_blank" style="max-width: 300px; white-space: normal;">
  {{< fa solid golf-ball-tee >}} Summer 2025 <br>  GPR <br> for Golf
 </a>
