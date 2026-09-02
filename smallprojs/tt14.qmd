@@ -1,0 +1,329 @@
+---
+title: "Tidy Tuesday - World Castles, Fortresses and Palaces"
+author: Federica
+date: 09/01/2026
+date-format: "D MMM, YYYY"
+categories: [R, ggplot]
+format:
+  html:
+     code-fold: true
+execute:
+  warning: false
+  fig-align: center
+  out-width: "100%"
+knitr:
+  opts_chunk:
+    fig.showtext: true
+---
+
+```{r}
+library(tidyverse)
+library(cartogram)
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+library(showtext)
+library(sysfonts)
+world_castles <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-09-01/world_castles.csv')
+world_map <- map_data("world")
+
+# For nicer fonts
+font_add_google("Space Grotesk", "space_grotesk")
+font_add_google("Inter", "inter")
+showtext_auto()
+showtext_opts(dpi = 300)
+
+bgy <- "#f6ecda"  
+titles <-  "#141414"
+other_text <- "#4c7a5a"
+continent_fill <-  "#1f1f1fea"
+continent_outline <- "#a1a1a1"
+opac <- 0.85
+
+# colours for hexbins
+castle_fill_scale <- scale_fill_gradientn(
+  colours = c("#18261c", "#2f4f38", "#4c7a5a", "#85b090", "#b8d4be"),
+  name   = "# of castles",
+  na.value = "transparent"
+)
+
+fame_fill_scale <- scale_fill_gradientn(
+  colours = c("#2b1a2e", "#6b2d3c", "#a8452f", "#d97a2b", "#f2b134", "#f7dfa0"),
+  name   = "fame weight",
+  na.value = "transparent"
+)
+  
+base_map_theme <- theme_void(base_family = "space_grotesk") +
+  theme(
+    plot.background   = element_rect(fill = bgy, colour = NA),
+    panel.background  = element_rect(fill = bgy, colour = NA),
+    plot.title.position = "plot",
+    plot.caption.position = "plot",
+    plot.title = element_text(colour =titles, size = 14, face = "bold",
+                              hjust = 0, margin = margin(b = 4)),
+    plot.subtitle = element_text(colour = other_text, size = 11,
+                                 hjust = 0, margin = margin(b = 10)),
+    legend.position  = "bottom",
+    legend.title     = element_text(colour = other_text, size = 9),
+    legend.text      = element_text(colour = other_text, size = 8),
+    strip.text       = element_text(colour = other_text, face = "bold", size = 10),
+    plot.margin      = margin(4, 4, 4, 4)
+  )
+```
+
+## What are hexbins?
+Our choice of data visualisations are hexbins which are a way to represent dense 2d data sets by binning individual data points into hexagonal shapes with different hues. The colour of the hexagonal shapes denotes the number of points (in this case number of castles), fall within its area. 
+
+The benefits of hexbins include:
+
+- They prevent overplotting by summarising the density of an area
+- They reduce visual bias, they connect smoothly and therefore have less directional bias than other shapes (say if we plotted squares) since the distance to its neighbours is equal.
+- They work well with maps given that they can replace irregular geographic regions :D
+
+## Castles around the World
+
+### Looking at the Distribution of Castles All Around the World
+Nothing too crazy here. We use `geom_hex` to plot the hexbins on a world map. We plot a world map below in order to help the viewer with their contextual awareness.
+```{r}
+#| fig-width: 10
+#| fig-asp: 0.62
+ggplot() +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               fill = continent_fill, colour = NA, alpha = opac) +  # outline below
+  geom_hex(data = world_castles, aes(x = lon, y = lat), bins = 100, alpha = 1) + # check different bins
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               fill = NA, colour = continent_outline, size = 0.08) +  # outline above
+  castle_fill_scale +
+  coord_fixed(1.3, expand = FALSE) +
+  base_map_theme +
+  labs(title = "Castles All Around the World",
+      subtitle = "Lighter hexagons denote a higher number of castles!")
+```
+
+ Unsuprisingly, majority of the indexed castles seem to be in Europe, but we quite genuinely can find castles everywhere around the world!
+
+### Are there differences between these distribution depending on the castle type?
+Since our dataset discretises between castles, fortresses, palaces and ruins, we might care to observe these differences.
+```{r}
+#| fig-width: 10
+#| fig-asp: 0.68
+ggplot() +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               fill = continent_fill, colour = NA, alpha = 0.6) +  # outline below
+  geom_hex(data = world_castles, aes(x = lon, y = lat), bins = 100, alpha = 1) + # check different bins
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               fill = NA, colour = continent_outline, size = 0.08) +  # outline above
+  castle_fill_scale +
+  coord_fixed(1.3, expand = FALSE) +
+  base_map_theme +
+  labs(title = "Castles Around the World by Type",
+      subtitle = "Where the data concentrates most heavily") +
+  facet_wrap(~category,
+  labeller = as_labeller(str_to_title))
+```
+These are small plots!  We see very similar trends here. With Europe dominating across all categories. Maybe we care to focus a little more...
+
+
+## Looking Closer at Europe
+
+### Some light data-prep/wrangling
+I'm lazy. Instead of manually separating the ISO codes present in this dataset, I used `unique(world_castles$iso)` to pull out all the names, and asked Gemini flash-lite to do the work for me. I then created a continent column using `case_when()`.
+```{r}
+europe_iso <- c("FR", "GR", "RU", "ES", "GB-ENG", "DE", "AT", "CZ", "GB-SCT", 
+                "VA", "IT", "SE", "PT", "PL", "DK", "FI", "HR", "RO", "BY", 
+                "LT", "AZ", "CH", "SK", "HU", "UA", "EE", "AM", "LV", "GB-WLS", 
+                "LI", "IE", "NO", "NL", "SI", "RS", "BE", "MC", "CY", "GE", 
+                "SM", "BG", "MT", "AL", "LU", "GI", "GB-NIR", "BA", "XK", 
+                "FO", "IM", "MD", "GG", "JE", "ME", "IS")
+
+asia_iso <- c("CN", "IN", "TR", "SY", "JP", "IL", "IR", "VN", "KR", "TH", 
+              "PK", "JO", "OM", "BN", "UZ", "TW", "ID", "PH", "KH", "SA", 
+              "PS", "MY", "BT", "MM", "LK", "SG", "BH", "LA", "KP", "AE", "YE")
+
+africa_iso <- c("ET", "DZ", "BJ", "KE", "GH", "EG", "LB", "ZA", "MG", "MA", 
+                "DO", "AO", "ST", "TN", "CV", "TZ", "MZ", "NE", "SD", "CD", "BS")
+
+north_america_iso <- c("CU", "US", "MX", "CA", "PA", "GT", "CW", "AW", "HT", "SX")
+
+south_america_iso <- c("PE", "BR", "PY", "CO", "AR", "SR", "BO", "NI", "CL", "UY", "GY")
+
+oceania_iso <- c("AU", "NZ", "TO")
+
+world_castles <- world_castles |> 
+  mutate(continent = case_when(
+    iso %in% europe_iso        ~ "Europe",
+    iso %in% asia_iso          ~ "Asia",
+    iso %in% africa_iso        ~ "Africa",
+    iso %in% north_america_iso ~ "North America",
+    iso %in% south_america_iso ~ "South America",
+    iso %in% oceania_iso       ~ "Oceania",
+    TRUE                       ~ "Other / Unknown"
+  ))
+```
+
+### A Closer look at Europe Overall
+Finally a pretty visual! Looking at the general distribution of all castles in Europe, we note that a lot of hotspots are where we find many big cities in 2026. Notably, Belgium, the Netherlands, Eastern Germany, Austria, Switzerland, Italy and Czechia have a high number of castles. Specific cities that jump out to me are: Paris, Rome and Vienna. 
+```{r}
+#| fig-width: 9
+#| fig-asp: 1.15
+library(ggplot2)
+library(dplyr)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+
+# Getting europe map
+europe_map <- ne_countries(continent = "Europe", scale = "medium", returnclass = "sf")
+
+# filtering for european castles
+europe_castles <- world_castles |>
+  filter(continent == "Europe")
+
+ggplot() +
+  geom_sf(data = europe_map, fill = continent_fill, colour = continent_outline, linewidth = 0.2, alpha = opac) +
+  geom_hex(data = europe_castles, aes(x = lon, y = lat), bins = 120, alpha = 1) +
+  geom_sf(data = europe_map, fill = NA, colour = continent_outline, linewidth = 0.1) +
+  castle_fill_scale +
+  coord_sf(xlim = c(-12, 45), ylim = c(35, 71), expand = FALSE) +
+  base_map_theme +
+  theme(plot.title = element_text(colour = other_text, size = 15)) +
+  labs(title = "Distribution of Castles Around Europe")
+```
+
+### What about Europe by Type?
+```{r}
+#| fig-width: 9
+#| fig-asp: 1.1
+ggplot() +
+  geom_sf(data = europe_map, fill = continent_fill, colour = continent_outline, linewidth = 0.2, alpha = opac) +
+  geom_hex(data = europe_castles, aes(x = lon, y = lat), bins = 120, alpha = 0.9) +
+  castle_fill_scale +
+  geom_sf(data = europe_map, fill = NA, colour =  continent_outline, linewidth = 0.1) +
+  coord_sf(xlim = c(-12, 45), ylim = c(35, 71), expand = FALSE) +
+  base_map_theme +
+  theme(plot.title = element_text(colour = other_text, size = 15)) +
+  labs(title = "Castle Density Across Europe by Type",
+       subtitle = "Fortresses, palaces, castles & ruin") +
+        facet_wrap(~category,  labeller = as_labeller(str_to_title))
+```
+
+Not sure that there's much more to say here, but another visual doesn't hurt! Looks like a big number of these are castles I guess!
+
+## What About Popularity?
+
+So far every castle has counted for exactly one hexagon's worth of colour, regardless of whether it's the Great Wall of China or a deserted castle nobody has heard of. But the dataset gives us `fame_rank` (a blend of Wikipedia `sitelinks` and `pageviews`, where `1` is the most famous landmark on Earth).
+
+### Turning fame into weight
+
+`fame_rank` is a *rank*, so a smaller number means more famous. To make popular castles pull harder on the map we flip it into a "fame weight": the top-ranked castle gets the biggest weight, and the weight shrinks as we move down the ranking. Then we `uncount()` by that weight so a very famous castle contributes many points to the hexbin instead of just one.
+
+```{r}
+n_castles <- max(world_castles$fame_rank, na.rm = TRUE)
+
+world_castles_pop <- world_castles |>
+  filter(!is.na(fame_rank)) |>
+  mutate(fame_weight = round((n_castles - fame_rank + 1) / n_castles * 40) + 1) |>
+  uncount(fame_weight)
+```
+
+Every castle still shows up at least once, but the famous ones now count for up to 40, so the hexbins lean towards where the well-known castles are rather the sheer count of castles.
+
+### The popularity-weighted world
+
+```{r}
+#| fig-width: 10
+#| fig-asp: 0.62
+ggplot() +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               fill = continent_fill, colour = NA, alpha = opac) +  # outline below
+  geom_hex(data = world_castles_pop, aes(x = lon, y = lat), bins = 200, alpha = 1) +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               fill = NA, colour = continent_outline, size = 0.08) +  # outline above
+  fame_fill_scale +
+  coord_fixed(1.3, expand = FALSE) +
+  base_map_theme +
+  labs(title = "The World's Castles, Weighted by Fame",
+       subtitle = "Each castle counts more the more famous it is (fame_rank)")
+```
+
+Europe still dominates, but theres definitely a bright hotspot in East Asia around the Great Wall and the Chinese and Japanese palace-cities.
+
+### Let's look at Asia and Europe
+
+Let's look at them both simultaneously!
+
+```{r}
+#| fig-width: 10
+#| fig-asp: 0.7
+asia_map <- ne_countries(continent = "Asia", scale = "medium", returnclass = "sf")
+
+europe_pop <- world_castles_pop |> filter(continent == "Europe")
+asia_pop   <- world_castles_pop |> filter(continent == "Asia")
+
+p_europe <- ggplot() +
+  geom_sf(data = europe_map, fill = continent_fill, colour = continent_outline,
+          linewidth = 0.2, alpha = opac) +
+  geom_hex(data = europe_pop, aes(x = lon, y = lat), bins = 120, alpha = 1) +
+  geom_sf(data = europe_map, fill = NA, colour = continent_outline, linewidth = 0.1) +
+  fame_fill_scale +
+  coord_sf(xlim = c(-12, 45), ylim = c(35, 71), expand = FALSE) +
+  base_map_theme +
+  theme(plot.title = element_text(colour = other_text, size = 15)) +
+  labs(title = "Europe")
+
+p_asia <- ggplot() +
+  geom_sf(data = asia_map, fill = continent_fill, colour = continent_outline,
+          linewidth = 0.2, alpha = opac) +
+  geom_hex(data = asia_pop, aes(x = lon, y = lat), bins = 50, alpha = 1) +
+  geom_sf(data = asia_map, fill = NA, colour = continent_outline, linewidth = 0.1) +
+  fame_fill_scale +
+  coord_sf(xlim = c(25, 150), ylim = c(5, 60), expand = FALSE) +
+  base_map_theme +
+  theme(plot.title = element_text(colour = other_text, size = 15)) +
+  labs(title = "Asia")
+
+p_europe + p_asia +
+  plot_layout(guides = "collect") +
+  plot_annotation(
+    title = "Famous Castles: Europe vs Asia",
+    subtitle = "Hexbins weighted by `fame_rank`",
+    theme = base_map_theme
+  ) &
+  theme(legend.position = "bottom")
+```
+
+Cool!
+
+## About this Data
+
+This data comes from [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-10-07/readme.md?plain=1)
+
+This week we're exploring the [Castlemap](https://thecastlemap.com/data/) dataset of 5,793 castles, fortresses, palaces and ruins in 138 countries. The data comes from Wikidata, and every landmark has verified coordinates, a Wikipedia article and a photo on Wikimedia Commons. Each also has a fame rank, based on how many languages have an article on it and how often that article is read. The Great Wall of China is first.
+
+- Which countries have the most castles?
+- Are palaces newer than fortresses?
+- Which landmarks have articles in many languages but few readers?
+
+Thank you to [Georgios Karamanis](https://github.com/gkaramanis) for curating this week's dataset.
+
+## Data Dictionary
+
+### `world_castles.csv`
+
+|variable    |class     |description                           |
+|:-----------|:---------|:-------------------------------------|
+|qid         |character |Wikidata item ID, e.g. `Q1067425`. |
+|name        |character |Landmark name, in English where available, e.g. `Neuschwanstein Castle`. |
+|category    |character |Type of landmark: `castle`, `fortress`, `palace` or `ruin`. |
+|country     |character |Country the landmark is in, e.g. `France`. The UK constituent countries are listed separately, e.g. `Scotland`. |
+|iso         |character |ISO 3166-1 alpha-2 country code, e.g. `FR`. The UK constituent countries use ISO 3166-2 subdivision codes, e.g. `GB-SCT`. |
+|lat         |double    |Latitude in WGS84 decimal degrees, e.g. `48.80472`. |
+|lon         |double    |Longitude in WGS84 decimal degrees, e.g. `2.12028`. |
+|year        |double    |Founding year, e.g. `1661`. Negative for BC dates, e.g. `-3000`. |
+|year_approx |double    |Whether the founding year is an estimate, `1`, or a documented date, `0`. |
+|century     |character |Century the founding year falls in, e.g. `17th century` or `30th century BC`. |
+|wikipedia   |character |URL of the Wikipedia article, e.g. `https://en.wikipedia.org/wiki/Palace_of_Versailles`. |
+|image       |character |URL of a Wikimedia Commons photo, e.g. `https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra%20detail.jpg?width=1280`. |
+|sitelinks   |double    |Number of Wikipedia language editions with an article on the landmark, e.g. `95`. |
+|pageviews   |double    |Wikipedia pageviews over the trailing 365 days, e.g. `756430`. |
+|fame_rank   |double    |Global fame rank, blending `sitelinks` and `pageviews`, where `1` is the most famous. |

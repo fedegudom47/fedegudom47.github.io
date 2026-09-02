@@ -4,3 +4,34 @@ format: html
 ---
 
 # This story is under construction! Coming Soon!
+
+
+::: {layout-ncol=4}
+![Caption 1](images/photo-1.jpg){fig-alt="Description of photo 1"}
+
+![Caption 2](images/photo-2.jpg){fig-alt="Description of photo 2"}
+
+![Caption 3](images/photo-3.jpg){fig-alt="Description of photo 3"}
+
+![Caption 4](images/photo-4.jpg){fig-alt="Description of photo 4"}
+:::
+
+At age of six, I was fortunate enough to travel from Madrid to Florida where my parents and I were to "help" my grandmother, Mercedes Lacroze, move back to Argentina. I didn't know it then, but that coastal Florida stopover would hold my first introduction to the game of golf.
+
+While I have a strong of images in my head that allow me to recall all the circumstances, the name of my very first coach is lost to time. Shelly, Shane, Shaina, or Sharlene-- I am confident that her name started with "S-H". Looking back now as someone who has spent time teaching on the driving range, what seemed strange to a six-year-old makes brilliant sense today. The genius she was, Shelly decided to save me from the frustration of whiffing of whiffing every shot, in our first lesson. Instead, she tasked me with snapping an entire box of wooden tees stuck in the turf. Once I had proven exceptionally skilled at tee-destruction, she granted me my official "ball license." The final rule, repeated like a mantra down the line: hold your finish until the ball comes to a complete stop. 
+
+Golf remained a sporadic hobby for years. Back in Madrid, Saturday lessons at the local public course felt tedious and dull. It was only during visits with my grandmother—whom we called Mem—that the game took on real meaning.
+
+To understand why, you first have to understand Mem. She was, quite simply, an icon.
+
+She originally took up golf to shed pregnancy weight and share an activity with my grandfather, but the game quickly became an obsession. She would leave her newborn in the clubhouse, play nine holes, come back to nurse, and head right back out for nine more. Before long, she left my grandfather in the dust—literally driving him to quit the game because he couldn't match her pace. Mem went on to hit a scratch handicap in the era of wooden-headed clubs, capturing the Argentine National Championship and the Copa Los Andes along the way.
+
+Then, in her late 20s, she walked away cold.
+
+On the eve of the final round of a major tournament—one she had never won, holding a three-stroke lead over a rival she’d never beaten—she was practicing her putting at home when my grandfather suffered a heart attack. Rushing to the hospital, Mem realized with a shock that part of her mind was still fixated on her morning tee time. Terrified by that shift in priorities, she never returned to the locker room to pick up her clubs. My grandfather was later diagnosed with cancer and given a grim prognosis, but Mem brought him to the U.S. for treatment, extending his life by ten full years. She only touched a club again decades later, when her youngest son wanted to learn the game for business.
+
+
+
+
+
+
