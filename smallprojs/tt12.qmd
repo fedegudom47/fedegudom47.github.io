@@ -1,7 +1,29 @@
 ---
-title: "tt12"
-format: html
+title: "Tidy Tuesday - Pi Digits"
+author: Federica & Jo Hardin
+date: 03/24/2026
+date-format: "D MMM, YYYY"
+categories: [R, ggplot]
+image: "media/tt12-polar.png"
+format:
+  html:
+     code-fold: true
+execute:
+  warning: false
 ---
+
+## What are we doing here?
+
+This week's dataset is just the first million digits of $\pi$. Rather than doing anything mathematical with them, the fun question is: **does your birthday show up in $\pi$?**
+
+Every birthday can be written as a 4-digit string (`MMDD`, e.g. `0324` for 24 March). Since $\pi$'s digits are believed to be [normal](https://en.wikipedia.org/wiki/Normal_number) (every digit sequence appears about as often as you'd expect by chance), we'd expect essentially every possible 4-digit `MMDD` string to turn up somewhere in the first million digits - some more often than others just by luck.
+
+So the plan is:
+
+- Build a table of all 366 calendar dates (including 29 Feb) as `MMDD` strings.
+- Slide a 4-digit window along the digits of $\pi$ and record every 4-digit sequence that appears, and where.
+- Join the two on the `MMDD` string, so each calendar date picks up every position in $\pi$ where its birthday string occurs.
+- Plot how many times each date's birthday shows up.
 
 ```{r}
 library(tidyverse)
@@ -9,11 +31,12 @@ library(lubridate)
 pi_digits <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2026/2026-03-24/pi_digits.csv')
 ```
 
+As a sanity check, let's confirm we can actually find a known chunk of $\pi$ (`3.14159`...`26535`...) in the data before completing the rest of our mission.
 ```{r}
-pi_digits |> 
-  filter(digit == 0, 
+pi_digits |>
+  filter(digit == 0,
          lead(digit) == 1,
-         lead(digit, n = 2) == 1, 
+         lead(digit, n = 2) == 1,
          lead(digit, n = 3) == 1,
          lead(digit, n = 4) == 0,
          lead(digit, n = 5) == 3)
@@ -21,11 +44,13 @@ pi_digits |>
 ```{r}
 temp <-  ymd("2000-01-01") + days(0:365)
 
-str(temp)
 ```
 
+## Building the birthday lookup
+
+`temp` above gives us every date in a (leap) year. From there we turn each date into a zero-padded `MMDD` string (`bday`), and do the same for every 4-digit window of $\pi$'s digits (`vals4`), so the two can be joined directly.
 ```{r}
-pi_digits |> 
+pi_digits |>
   filter(digit == 1, lead(digit) == 1, lead(digit, n = 2) == 2,
          lead(digit, n = 3) == 9, lead(digit, n = 4) == 7,
          lead(digit, n = 5) == 3)
@@ -33,57 +58,122 @@ pi_digits |>
 
 library(lubridate)
 library(latex2exp)
-temp <- ymd("2000-01-01") + days(0:365) 
+temp <- ymd("2000-01-01") + days(0:365)
 
-data.frame(month = month(temp), day = day(temp)) |> 
+head(data.frame(month = month(temp), day = day(temp)) |>
+  mutate(month = ifelse(nchar(month) == 1, paste0("0", month), month),
+         day = ifelse(nchar(day) == 1, paste0("0",day), day),
+         bday = paste0(month, day)))
+
+
+bdays <- data.frame(month = month(temp), day = day(temp), temp) |>
   mutate(month = ifelse(nchar(month) == 1, paste0("0", month), month),
          day = ifelse(nchar(day) == 1, paste0("0",day), day),
          bday = paste0(month, day))
 
 
-bdays <- data.frame(month = month(temp), day = day(temp), temp) |> 
-  mutate(month = ifelse(nchar(month) == 1, paste0("0", month), month),
-         day = ifelse(nchar(day) == 1, paste0("0",day), day),
-         bday = paste0(month, day))
-
-
-pi_days <- pi_digits |> 
+pi_days <- pi_digits |>
   mutate(vals4 = paste0(digit, lead(digit, n = 1), lead(digit, n = 2),
                         lead(digit, n = 3)))
 
-bdays |> 
+join_days <- bdays |>
   left_join(pi_days, by = c("bday" = "vals4"))
 
-
-join_days <- bdays |> 
-  left_join(pi_days, by = c("bday" = "vals4")) 
-
-join_days |>  
-  group_by(bday) |> 
+join_days |>
+  group_by(bday) |>
   summarize(num_bday = n())
 
 
-join_days |> 
-  ggplot() + 
+join_days |>
+  ggplot() +
   geom_bar(aes(x = bday))
-
-
-join_days |> 
-  mutate(month_w = month(temp, label = TRUE)) |> 
-  ggplot() + 
-  geom_bar(aes(x = bday, fill = month_w)) + #, color = "white" ) + 
-  coord_polar() + 
-  theme_void() + 
-  scale_fill_brewer(palette = "Set3" )+
-  theme(axis.text.x = element_blank(),
-        axis.text.y = element_blank()) +
-  labs(fill = "", title = "Number of Birthdays Occurring in the first \nMillion Digits of pi") +
-  annotate("text", x = 0, y = 0, label = TeX("$\\pi$"), size = 47,
-           color = "black", alpha = 0.5)
-
-
-
-
 ```
 
+## How many birthdays actually show up?
 
+Every one of the 366 possible dates turns out to occur somewhere in the first million digits of $\pi$ - some many more times than others. The bar chart above already hints at this, but a polar layout makes it easier to see how the counts spread across the calendar. Each wedge is a date, coloured by month, and its length is how many times that date's `MMDD` string appears in $\pi$.
+```{r}
+#| fig-width: 8
+#| fig-height: 8.5
+#| fig.showtext: true
+library(showtext)
+library(sysfonts)
+
+font_add_google("Space Grotesk", "space_grotesk")
+font_add_google("Fraunces", "fraunces")
+showtext_auto()
+showtext_opts(dpi = 300)
+
+cream <- "#F8F5F0"
+ink   <- "#222222"
+
+month_cols <- colorRampPalette(
+  c("#2F4F6F", "#4C7A5A", "#D4AF37", "#A8452F", "#6B2D3C", "#2F4F6F")
+)(13)[1:12]
+
+polar_plot <- join_days |>
+  mutate(month_w = month(temp, label = TRUE)) |>
+  ggplot() +
+  geom_bar(aes(x = bday, fill = month_w), width = 0.75) +
+  coord_polar() +
+  scale_y_continuous(expand = expansion(mult = c(0.8, 0))) + # empty hub for the pi
+  scale_fill_manual(values = month_cols) +
+  annotate("text", x = 0, y = -Inf, label = "\u03c0", size = 40,
+           family = "serif", fontface = "italic", colour = ink) +
+  labs(
+    fill = NULL,
+    title = "Birthdays in Pi",
+    subtitle = "How often each MMDD date appears in the first million digits"
+  ) +
+  theme_void(base_family = "space_grotesk") +
+  theme(
+    plot.background  = element_rect(fill = cream, colour = NA),
+    plot.title       = element_text(family = "fraunces", face = "bold.italic", size = 24,
+                                    colour = ink, hjust = 0.5),
+    plot.subtitle    = element_text(colour = "#9E7E38", size = 12, hjust = 0.5,
+                                    margin = margin(t = 4, b = 6)),
+    legend.position  = "bottom",
+    legend.text      = element_text(colour = ink, size = 10),
+    plot.margin      = margin(15, 15, 15, 15)
+  ) +
+  guides(fill = guide_legend(nrow = 1, keywidth = unit(0.4, "cm")))
+
+polar_plot
+```
+
+```{r}
+#| include: false
+# thumbnail for the Data Lab listing (see `image:` in the front matter)
+ggsave("media/tt12-polar.png", polar_plot, width = 8, height = 8.5, dpi = 150)
+```
+
+So yes - your birthday is (almost certainly) in $\pi$, and probably more than once!
+
+* I'd like to disclose, the colours used in this plot were generated by Claude Code.
+
+
+## About this Data
+
+This week we're exploring the digits of $\pi$ with a [dataset submission](https://dslc-io.github.io/tidytuesdayR/articles/curating.html) in celebration of Pi Day (March 14).
+The dataset contains the first one million digits of π, beginning with 3.14159...,
+collected from publicly available sources and curated for analysis and visualization.
+
+> "Pi is an irrational number, meaning its decimal representation never ends and never settles into a permanent repeating pattern."" — Eve Andersson, collector of the one million digits dataset
+
+The digits are available from multiple open sources, including:
+
+- [PiDay](https://piday.co/million/)  
+- [Eneko Pi (one-million)](https://github.com/eneko/Pi/blob/master/one-million.txt)
+
+These files provide the canonical sequence of π digits, starting with 3.14159, and have been tidied into a structured dataset for this week’s challenge.
+
+This data comes from [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/blob/main/data/2026/2026-03-24/readme.md?plain=1).
+
+## Data Dictionary
+
+### `pi_digits.csv`
+
+| variable       | class   | description                                      |
+|:---------------|:--------|:-------------------------------------------------|
+| digit_position | integer | The sequential index of each digit in the series |
+| digit          | integer | The numeric value of the digit (0–9)             |

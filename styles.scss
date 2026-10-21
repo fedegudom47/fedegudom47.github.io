@@ -318,6 +318,16 @@ img {
   }
 }
 
+// R plots: opt out of the artsy image frame above (buttons/other images keep it)
+.cell-output-display img {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  &:hover {
+    transform: none;
+  }
+}
+
 /*-----------------------------------------
  TABLES - HIGH IMPACT DATA
 ------------------------------------------*/
